@@ -1,0 +1,3776 @@
+{
+  "subject": "tieng_viet",
+  "book": "Tiếng Việt 2 - Quyển 2",
+  "weeks": [
+    {
+      "week": 10,
+      "title": "Ông bà – Từ ngữ về họ hàng, dấu chấm, dấu chấm hỏi",
+      "questions": [
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền c hay k: “___on kiến mà leo cành đa”",
+          "answer": "c",
+          "explain": "Viết c trước o: con kiến.",
+          "skill": "chinh_ta_c_k",
+          "page": 3
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền c hay k: “Con ___iến mà leo cành đào”",
+          "answer": "k",
+          "explain": "Viết k trước i, e, ê: con kiến.",
+          "skill": "chinh_ta_c_k",
+          "page": 3
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền c hay k: “Ở lớp cũng như ở nhà, bé Hà được coi là một ___ây sáng kiến.”",
+          "answer": "c",
+          "explain": "Viết c trước â: cây sáng kiến.",
+          "skill": "chinh_ta_c_k",
+          "page": 3
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền l hay n: “Ngày 8 tháng 3 hằng ___ăm là ngày Quốc tế Phụ nữ.”",
+          "answer": "n",
+          "explain": "Viết đúng là: hằng năm.",
+          "skill": "chinh_ta_l_n",
+          "page": 3
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền l hay n: “Nhớ bà, An ngồi ___ặng lẽ.”",
+          "answer": "l",
+          "explain": "Viết đúng là: lặng lẽ.",
+          "skill": "chinh_ta_l_n",
+          "page": 3
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền d, r hay gi: “Suối chảy ___óc rách.”",
+          "answer": "r",
+          "explain": "Viết đúng là: róc rách.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 3
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Từ nào viết ĐÚNG chính tả?",
+          "options": [
+            "cần cù",
+            "nưu luyến",
+            "lơm nớp",
+            "leo lúi"
+          ],
+          "answer": "cần cù",
+          "explain": "“Cần cù” viết đúng; các từ kia phải là: leo núi, lưu luyến, nơm nớp.",
+          "skill": "chinh_ta_l_n",
+          "page": 3
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Từ nào viết SAI chính tả?",
+          "options": [
+            "kết tóc",
+            "non lớt",
+            "nô nức",
+            "cái kéo"
+          ],
+          "answer": "non lớt",
+          "explain": "“Non lớt” viết sai, phải viết là “non nớt”.",
+          "skill": "chinh_ta_l_n",
+          "page": 3
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Sửa từ viết sai chính tả cho đúng: “nưu luyến” → ___",
+          "answer": "lưu luyến",
+          "explain": "Viết đúng là “lưu luyến” (l, không phải n).",
+          "skill": "chinh_ta_l_n",
+          "page": 3
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu câu thích hợp điền vào chỗ trống: “– Đã đi được chưa con ___”",
+          "options": [
+            "dấu chấm hỏi",
+            "dấu phẩy",
+            "dấu chấm"
+          ],
+          "answer": "dấu chấm hỏi",
+          "explain": "Đây là câu hỏi nên cuối câu dùng dấu chấm hỏi.",
+          "skill": "dau_cau",
+          "page": 4
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu câu thích hợp điền vào chỗ trống: “– Ông đúng là một con người kiên nhẫn ___ – Người phụ nữ nói.”",
+          "options": [
+            "dấu phẩy",
+            "dấu chấm",
+            "dấu chấm hỏi"
+          ],
+          "answer": "dấu chấm",
+          "explain": "Đây là câu kể nên cuối câu dùng dấu chấm.",
+          "skill": "dau_cau",
+          "page": 4
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu nào cần đặt dấu chấm hỏi ở cuối câu?",
+          "options": [
+            "Chúng em đang học môn Tiếng Việt",
+            "Em rất yêu bà nội",
+            "Bà kể chuyện cổ tích cho em nghe",
+            "Cuối tuần này, cậu có ở nhà không"
+          ],
+          "answer": "Cuối tuần này, cậu có ở nhà không",
+          "explain": "Câu có “có… không” là câu hỏi nên cuối câu dùng dấu chấm hỏi.",
+          "skill": "dau_cau",
+          "page": 4
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Trong khu vườn nọ có các bạn Kiến ___ Ong ___ Bướm ___ Chuồn Chuồn chơi với nhau rất thân.” Dấu cần điền vào các chỗ trống là:",
+          "options": [
+            "dấu chấm hỏi",
+            "dấu chấm",
+            "dấu phẩy"
+          ],
+          "answer": "dấu phẩy",
+          "explain": "Dấu phẩy dùng để ngăn cách các từ cùng loại đứng liền nhau.",
+          "skill": "dau_cau",
+          "page": 4
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ người trong gia đình, họ hàng?",
+          "options": [
+            "giáo sư",
+            "công nhân",
+            "ông ngoại",
+            "bác sĩ"
+          ],
+          "answer": "ông ngoại",
+          "explain": "Ông ngoại là người trong họ hàng; các từ kia chỉ nghề nghiệp.",
+          "skill": "tu_ngu_ho_hang",
+          "page": 4
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào KHÔNG chỉ người trong gia đình, họ hàng?",
+          "options": [
+            "nông dân",
+            "em trai",
+            "dì",
+            "bà nội"
+          ],
+          "answer": "nông dân",
+          "explain": "“Nông dân” chỉ nghề nghiệp, không chỉ người trong họ hàng.",
+          "skill": "tu_ngu_ho_hang",
+          "page": 4
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền từ thích hợp: Em gọi em trai của mẹ là ___.",
+          "answer": "cậu",
+          "explain": "Em trai của mẹ, em gọi là cậu.",
+          "skill": "tu_ngu_ho_hang",
+          "page": 4
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền từ thích hợp: Em gọi em trai của bố là ___.",
+          "answer": "chú",
+          "explain": "Em trai của bố, em gọi là chú.",
+          "skill": "tu_ngu_ho_hang",
+          "page": 4
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Em gọi anh trai của bố là gì?",
+          "options": [
+            "dượng",
+            "bác",
+            "chú",
+            "cậu"
+          ],
+          "answer": "bác",
+          "explain": "Anh trai của bố, em gọi là bác.",
+          "skill": "tu_ngu_ho_hang",
+          "page": 4
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Em gọi vợ của em trai bố (vợ của chú) là gì?",
+          "options": [
+            "mợ",
+            "cô",
+            "dì",
+            "thím"
+          ],
+          "answer": "thím",
+          "explain": "Vợ của chú, em gọi là thím.",
+          "skill": "tu_ngu_ho_hang",
+          "page": 7
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Em gọi vợ của em trai mẹ (vợ của cậu) là gì?",
+          "options": [
+            "cô",
+            "bác",
+            "mợ",
+            "thím"
+          ],
+          "answer": "mợ",
+          "explain": "Vợ của cậu, em gọi là mợ.",
+          "skill": "tu_ngu_ho_hang",
+          "page": 7
+        },
+        {
+          "d": 3,
+          "type": "text",
+          "q": "Điền từ thích hợp: Em gái của bố, em gọi là ___.",
+          "answer": "cô",
+          "explain": "Em gái của bố, em gọi là cô.",
+          "skill": "tu_ngu_ho_hang",
+          "page": 7
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Đọc đoạn trích:\n“Cũng như bao đứa trẻ khác cùng làng, tôi lớn lên với hương lúa chín của làng quê nhỏ bé miền trung du. Tuổi thơ của tôi là bà nội, là những bông hoa gạo rực lửa…”\nBạn nhỏ lớn lên ở vùng nào?",
+          "options": [
+            "miền biển",
+            "miền núi cao",
+            "miền trung du",
+            "miền đồng bằng"
+          ],
+          "answer": "miền trung du",
+          "explain": "Bạn nhỏ lớn lên ở làng quê nhỏ bé miền trung du.",
+          "skill": "doc_hieu",
+          "page": 6
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Đọc đoạn trích:\n“Những tối hè nằm trên chiếc chõng tre, tiếng ru của bà cùng tiếng gió từ chiếc quạt nan đưa tôi vào giấc ngủ.”\nĐiều gì đưa bạn nhỏ vào giấc ngủ?",
+          "options": [
+            "tiếng mưa rơi ngoài hiên",
+            "câu chuyện cổ tích của ông",
+            "tiếng xào xạc của rừng lau",
+            "tiếng ru của bà và gió từ chiếc quạt nan"
+          ],
+          "answer": "tiếng ru của bà và gió từ chiếc quạt nan",
+          "explain": "Tiếng ru của bà cùng tiếng gió từ chiếc quạt nan đưa bạn vào giấc ngủ.",
+          "skill": "doc_hieu",
+          "page": 6
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Trong bài “Bà nội”: “…chẳng có gì đáng ngạc nhiên khi trong trí óc non nớt của tôi, bà là tất cả.”\nTrong trí óc non nớt của bạn nhỏ, bà là gì?",
+          "options": [
+            "Bà là tất cả.",
+            "Bà là người ít nói.",
+            "Bà là người rất nghiêm khắc.",
+            "Bà là người ở rất xa."
+          ],
+          "answer": "Bà là tất cả.",
+          "explain": "Bạn nhỏ nói: trong trí óc non nớt của tôi, bà là tất cả.",
+          "skill": "doc_hieu",
+          "page": 6
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Qua bài “Bà nội” (bà ru cháu ngủ, kể chuyện cổ tích, bà là tất cả với cháu), em thấy tình cảm hai bà cháu thế nào?",
+          "options": [
+            "Bà rất nghiêm khắc với cháu",
+            "Hai bà cháu rất yêu thương, gắn bó",
+            "Cháu rất sợ bà",
+            "Hai bà cháu ít khi gặp nhau"
+          ],
+          "answer": "Hai bà cháu rất yêu thương, gắn bó",
+          "explain": "Bà chăm sóc, ru cháu ngủ; với cháu, bà là tất cả – hai bà cháu rất gắn bó.",
+          "skill": "doc_hieu",
+          "page": 6
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào thuộc nhóm “Đồ dùng học tập”?",
+          "options": [
+            "thước kẻ",
+            "nô đùa",
+            "thân thiết",
+            "dạy dỗ"
+          ],
+          "answer": "thước kẻ",
+          "explain": "Thước kẻ là đồ dùng học tập.",
+          "skill": "tu_chi_su_vat",
+          "page": 7
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Từ nào nói về công việc của thầy cô?",
+          "options": [
+            "nô đùa",
+            "giảng bài",
+            "bút chì",
+            "cặp sách"
+          ],
+          "answer": "giảng bài",
+          "explain": "Thầy cô giảng bài cho học sinh.",
+          "skill": "mo_rong_von_tu",
+          "page": 7
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Nhóm từ nào chỉ gồm các từ nói về bạn bè?",
+          "options": [
+            "sách vở, bút chì, cặp sách",
+            "dạy dỗ, bảo ban, giảng bài",
+            "thân thiết, đoàn kết, nô đùa",
+            "thân thiết, thước kẻ, học bài"
+          ],
+          "answer": "thân thiết, đoàn kết, nô đùa",
+          "explain": "Bạn bè thì thân thiết, đoàn kết, cùng nô đùa.",
+          "skill": "mo_rong_von_tu",
+          "page": 7
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu nào thuộc kiểu câu Ai là gì?",
+          "options": [
+            "Bạn Lan rất chăm chỉ.",
+            "Bạn Lan đang đọc sách.",
+            "Bạn Lan chạy ra sân.",
+            "Bạn Lan là bạn thân của em."
+          ],
+          "answer": "Bạn Lan là bạn thân của em.",
+          "explain": "Câu “Bạn Lan là bạn thân của em.” trả lời câu hỏi Ai là gì?",
+          "skill": "cau_ai_la_gi",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "title": "Ông bà – Từ ngữ về đồ dùng và công việc trong nhà",
+      "questions": [
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền g hay gh: ___i nhớ",
+          "answer": "gh",
+          "explain": "Viết gh trước i, e, ê: ghi nhớ.",
+          "skill": "chinh_ta_g_gh",
+          "page": 8
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền g hay gh: con ___à",
+          "answer": "g",
+          "explain": "Viết g trước a: con gà.",
+          "skill": "chinh_ta_g_gh",
+          "page": 8
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền g hay gh: ___é thăm",
+          "answer": "gh",
+          "explain": "Viết gh trước e: ghé thăm.",
+          "skill": "chinh_ta_g_gh",
+          "page": 8
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền g hay gh: ___ọng kính",
+          "answer": "g",
+          "explain": "Viết g trước o: gọng kính.",
+          "skill": "chinh_ta_g_gh",
+          "page": 8
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền g hay gh: xôi ___ấc",
+          "answer": "g",
+          "explain": "Viết g trước â: xôi gấc.",
+          "skill": "chinh_ta_g_gh",
+          "page": 8
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Từ nào viết đúng chính tả?",
+          "options": [
+            "ghồ ghề",
+            "gồ ghề",
+            "gồ gề",
+            "ghồ gề"
+          ],
+          "answer": "gồ ghề",
+          "explain": "Gh đứng trước ê, g đứng trước ô: gồ ghề.",
+          "skill": "chinh_ta_g_gh",
+          "page": 8
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn từ viết đúng (nơi trồng cây quanh nhà):",
+          "options": [
+            "khu vường",
+            "khu vươn",
+            "khu vườn"
+          ],
+          "answer": "khu vườn",
+          "explain": "Viết đúng là “khu vườn” (vần ươn, dấu huyền).",
+          "skill": "chinh_ta_uon_uong",
+          "page": 8
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn từ viết đúng (con vật sống dưới bùn, mình dài và trơn):",
+          "options": [
+            "con lườn",
+            "con lươn",
+            "con lương"
+          ],
+          "answer": "con lươn",
+          "explain": "Con lươn viết với vần ươn.",
+          "skill": "chinh_ta_uon_uong",
+          "page": 8
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn cách viết đúng tên dãy núi:",
+          "options": [
+            "Trường Sơn",
+            "Trườn Sơn",
+            "Chường Sơn"
+          ],
+          "answer": "Trường Sơn",
+          "explain": "Viết đúng là Trường Sơn (tr, vần ương).",
+          "skill": "chinh_ta_uon_uong",
+          "page": 8
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn từ viết đúng:",
+          "options": [
+            "ngang bướng",
+            "ngang bướn",
+            "ngang bứơng"
+          ],
+          "answer": "ngang bướng",
+          "explain": "Viết đúng là “ngang bướng” (vần ương).",
+          "skill": "chinh_ta_uon_uong",
+          "page": 8
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn tiếng thích hợp điền vào chỗ trống: “___ miện” (mũ của vua)",
+          "options": [
+            "vương",
+            "lượn",
+            "lượng",
+            "vươn"
+          ],
+          "answer": "vương",
+          "explain": "Mũ của vua là vương miện.",
+          "skill": "chinh_ta_uon_uong",
+          "page": 8
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn tiếng thích hợp: “Mấy chú chim bay ___ vòng trên bầu trời.”",
+          "options": [
+            "vươn",
+            "vương",
+            "lượng",
+            "lượn"
+          ],
+          "answer": "lượn",
+          "explain": "Chim bay lượn vòng.",
+          "skill": "chinh_ta_uon_uong",
+          "page": 8
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn tiếng thích hợp: “Cây non ___ mình lên đón nắng.”",
+          "options": [
+            "lượn",
+            "lượng",
+            "vươn",
+            "vương"
+          ],
+          "answer": "vươn",
+          "explain": "“Vươn mình” là vươn cao lên.",
+          "skill": "chinh_ta_uon_uong",
+          "page": 8
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Từ nào chứa tiếng có vần “ươn” và chỉ con vật?",
+          "options": [
+            "con vượn",
+            "con chuột",
+            "con gà",
+            "con hươu"
+          ],
+          "answer": "con vượn",
+          "explain": "“Vượn” có vần ươn và là tên con vật.",
+          "skill": "chinh_ta_uon_uong",
+          "page": 8
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Từ nào chứa tiếng có vần “ương” và chỉ hành động?",
+          "options": [
+            "quê hương",
+            "nướng bánh",
+            "cái giường",
+            "con đường"
+          ],
+          "answer": "nướng bánh",
+          "explain": "“Nướng” có vần ương và chỉ hành động.",
+          "skill": "chinh_ta_uon_uong",
+          "page": 8
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ ngữ nào chỉ công việc gia đình?",
+          "options": [
+            "nghe nhạc",
+            "tặng hoa",
+            "quét nhà",
+            "xem phim"
+          ],
+          "answer": "quét nhà",
+          "explain": "Quét nhà là công việc gia đình.",
+          "skill": "tu_ngu_viec_nha",
+          "page": 9
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ ngữ nào KHÔNG chỉ công việc gia đình?",
+          "options": [
+            "rửa bát",
+            "nấu cơm",
+            "trông em",
+            "cưỡi ngựa"
+          ],
+          "answer": "cưỡi ngựa",
+          "explain": "Cưỡi ngựa không phải việc nhà.",
+          "skill": "tu_ngu_viec_nha",
+          "page": 9
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Nhóm nào chỉ gồm các công việc gia đình?",
+          "options": [
+            "tưới cây, nấu cơm, đi chợ",
+            "xem phim, rửa bát, quét nhà",
+            "trông em, cưỡi ngựa, học bài",
+            "đọc truyện, nghe nhạc, tặng hoa"
+          ],
+          "answer": "tưới cây, nấu cơm, đi chợ",
+          "explain": "Tưới cây, nấu cơm, đi chợ đều là việc nhà.",
+          "skill": "tu_ngu_viec_nha",
+          "page": 9
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Bé ngồi luồn chỉ / Cho bà ngồi khâu.”\nBạn nhỏ đã làm việc gì giúp bà?",
+          "options": [
+            "khâu áo",
+            "quét nhà",
+            "luồn chỉ",
+            "nấu cơm"
+          ],
+          "answer": "luồn chỉ",
+          "explain": "Bé luồn chỉ để bà ngồi khâu.",
+          "skill": "tu_ngu_viec_nha",
+          "page": 9
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "“Khi mẹ vắng nhà, em luộc khoai / … em cùng chị giã gạo / … em thổi cơm / … em nhổ cỏ vườn / … em quét sân và quét cổng.”\nViệc nào KHÔNG có trong đoạn thơ?",
+          "options": [
+            "nhổ cỏ vườn",
+            "rửa bát",
+            "luộc khoai",
+            "giã gạo"
+          ],
+          "answer": "rửa bát",
+          "explain": "Đoạn thơ không nhắc đến việc rửa bát.",
+          "skill": "tu_ngu_viec_nha",
+          "page": 10
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Bạn nhỏ trong đoạn thơ “Khi mẹ vắng nhà” (luộc khoai, giã gạo, thổi cơm, quét sân…) có đức tính gì đáng quý?",
+          "options": [
+            "nhút nhát",
+            "lười biếng",
+            "hay nghịch ngợm",
+            "chăm chỉ, thương mẹ"
+          ],
+          "answer": "chăm chỉ, thương mẹ",
+          "explain": "Bạn tự làm nhiều việc nhà giúp mẹ: chăm chỉ và thương mẹ.",
+          "skill": "doc_hieu",
+          "page": 10
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu câu thích hợp điền vào chỗ trống: “Có một cậu bé lười học nên không biết chữ ___”",
+          "options": [
+            "dấu phẩy",
+            "dấu chấm hỏi",
+            "dấu chấm"
+          ],
+          "answer": "dấu chấm",
+          "explain": "Đây là câu kể nên cuối câu dùng dấu chấm.",
+          "skill": "dau_cau",
+          "page": 9
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn dấu câu thích hợp điền vào chỗ trống: Bác bán kính hỏi: “Hay là cháu không biết đọc ___”",
+          "options": [
+            "dấu phẩy",
+            "dấu chấm hỏi",
+            "dấu chấm"
+          ],
+          "answer": "dấu chấm hỏi",
+          "explain": "Bác hỏi cậu bé nên cuối câu dùng dấu chấm hỏi.",
+          "skill": "dau_cau",
+          "page": 9
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "“Một hôm ___ cậu vào một cửa hàng để mua kính.” Chỗ trống cần điền dấu gì?",
+          "options": [
+            "dấu chấm hỏi",
+            "dấu chấm",
+            "dấu phẩy"
+          ],
+          "answer": "dấu phẩy",
+          "explain": "Dấu phẩy ngăn cách “Một hôm” với phần còn lại của câu.",
+          "skill": "dau_cau",
+          "page": 9
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Truyện “Hòn đá nhẵn”: “Tôi bắt đầu tìm những viên đá, chọn kĩ lưỡng, tìm được một viên cuội tuyệt đẹp, nhẵn bóng như một viên bi.”\nBạn nhỏ tìm thấy gì bên bờ suối?",
+          "options": [
+            "một viên cuội đẹp, nhẵn bóng như viên bi",
+            "một viên bi thủy tinh",
+            "một con cá nhỏ",
+            "một chiếc lá vàng"
+          ],
+          "answer": "một viên cuội đẹp, nhẵn bóng như viên bi",
+          "explain": "Bạn tìm được một viên cuội tuyệt đẹp, nhẵn bóng như một viên bi.",
+          "skill": "doc_hieu",
+          "page": 11
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Truyện “Hòn đá nhẵn”: “– Sao con không nhặt đá ở bờ suối mà lại mất công tìm dưới nước? – Vì đá trên bờ đều thô ráp ạ.”\nVì sao bạn nhỏ không nhặt đá trên bờ?",
+          "options": [
+            "Vì trên bờ không có đá.",
+            "Vì đá trên bờ đều thô ráp.",
+            "Vì đá trên bờ quá nặng.",
+            "Vì bà không cho nhặt."
+          ],
+          "answer": "Vì đá trên bờ đều thô ráp.",
+          "explain": "Bạn nói: đá trên bờ đều thô ráp.",
+          "skill": "doc_hieu",
+          "page": 11
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Truyện “Hòn đá nhẵn”: Vì sao viên cuội ở dòng suối lại nhẵn bóng?",
+          "options": [
+            "Vì viên cuội còn rất nhỏ",
+            "Vì có người mài viên cuội",
+            "Nước và đá cọ xát làm mất chỗ gồ ghề",
+            "Vì viên cuội nằm phơi nắng"
+          ],
+          "answer": "Nước và đá cọ xát làm mất chỗ gồ ghề",
+          "explain": "Nhờ nước và viên đá cọ xát vào nhau mà chỗ gồ ghề, thô ráp biến mất.",
+          "skill": "doc_hieu",
+          "page": 11
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Trong truyện “Hòn đá nhẵn”, bà nội bảo cháu hãy nghĩ ba mẹ giống như cái gì?",
+          "options": [
+            "bờ suối",
+            "viên bi",
+            "viên cuội",
+            "dòng nước"
+          ],
+          "answer": "dòng nước",
+          "explain": "Bà nói: “Hãy nghĩ ba mẹ con giống như dòng nước.”",
+          "skill": "doc_hieu",
+          "page": 11
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu chuyện “Hòn đá nhẵn” cho em bài học gì?",
+          "options": [
+            "Phải được rèn luyện mới trưởng thành.",
+            "Không nên chơi gần bờ suối.",
+            "Muốn tìm đá đẹp phải lội xuống suối.",
+            "Đá muốn đẹp cần nhiều thời gian."
+          ],
+          "answer": "Phải được rèn luyện mới trưởng thành.",
+          "explain": "Như viên đá được nước mài nhẵn, con người cần được rèn luyện mới trưởng thành.",
+          "skill": "doc_hieu",
+          "page": 12
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Đồ vật nào dùng để ủi phẳng quần áo?",
+          "options": [
+            "máy giặt",
+            "bàn là",
+            "tủ lạnh",
+            "lọ hoa"
+          ],
+          "answer": "bàn là",
+          "explain": "Bàn là dùng để ủi phẳng quần áo.",
+          "skill": "tu_ngu_do_dung",
+          "page": 12
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Đồ vật nào giữ thực phẩm luôn tươi ngon?",
+          "options": [
+            "bàn là",
+            "cái chổi",
+            "lọ hoa",
+            "tủ lạnh"
+          ],
+          "answer": "tủ lạnh",
+          "explain": "Tủ lạnh giữ thực phẩm tươi ngon.",
+          "skill": "tu_ngu_do_dung",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "title": "Cha mẹ – Từ ngữ về tình cảm, dấu phẩy",
+      "questions": [
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ch hay tr: ___ẻ tre",
+          "answer": "ch",
+          "explain": "Viết đúng là: chẻ tre.",
+          "skill": "chinh_ta_ch_tr",
+          "page": 13
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ch hay tr: ___ung thủy",
+          "answer": "ch",
+          "explain": "Viết đúng là: chung thủy.",
+          "skill": "chinh_ta_ch_tr",
+          "page": 13
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ch hay tr: ___ách nhiệm",
+          "answer": "tr",
+          "explain": "Viết đúng là: trách nhiệm.",
+          "skill": "chinh_ta_ch_tr",
+          "page": 13
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ng hay ngh: ___ênh ngang",
+          "answer": "ngh",
+          "explain": "Viết ngh trước i, e, ê: nghênh ngang.",
+          "skill": "chinh_ta_ng_ngh",
+          "page": 13
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ng hay ngh: con ___ỗng",
+          "answer": "ng",
+          "explain": "Viết ng trước a, o, ô, ơ, u, ư: con ngỗng.",
+          "skill": "chinh_ta_ng_ngh",
+          "page": 13
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ng hay ngh: ___ỉ hè",
+          "answer": "ngh",
+          "explain": "Viết ngh trước i: nghỉ hè.",
+          "skill": "chinh_ta_ng_ngh",
+          "page": 13
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền ng hay ngh: ___ẫm nghĩ",
+          "answer": "ng",
+          "explain": "Trước â viết ng: ngẫm nghĩ.",
+          "skill": "chinh_ta_ng_ngh",
+          "page": 13
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn cách viết đúng của thành ngữ:",
+          "options": [
+            "giây mơ rễ má",
+            "dây mơ dễ má",
+            "dây mơ rễ má",
+            "rây mơ giễ má"
+          ],
+          "answer": "dây mơ rễ má",
+          "explain": "Viết đúng là “dây mơ rễ má”.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 13
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn cách viết đúng của thành ngữ:",
+          "options": [
+            "reo gió gặt bão",
+            "gieo dó gặt bão",
+            "gieo gió gặt bão",
+            "deo dó gặt bão"
+          ],
+          "answer": "gieo gió gặt bão",
+          "explain": "Viết đúng là “gieo gió gặt bão”.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 13
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Con gà ___ dưới gốc cây ngô.”",
+          "options": [
+            "nghủ",
+            "ngủ",
+            "ngũ"
+          ],
+          "answer": "ngủ",
+          "explain": "Viết ng trước u; “ngủ” mang dấu hỏi.",
+          "skill": "chinh_ta_ng_ngh",
+          "page": 13
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “___ gần rơm lâu ngày cũng bén.”",
+          "options": [
+            "Lửa",
+            "Nửa",
+            "Lữa"
+          ],
+          "answer": "Lửa",
+          "explain": "Viết đúng là “Lửa” (l, dấu hỏi).",
+          "skill": "chinh_ta_hoi_nga",
+          "page": 13
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “___ điệu thục nữ”",
+          "options": [
+            "Yểu",
+            "Yễu",
+            "Iểu"
+          ],
+          "answer": "Yểu",
+          "explain": "Viết đúng là “yểu điệu thục nữ”.",
+          "skill": "chinh_ta_hoi_nga",
+          "page": 13
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Nhóm nào chỉ gồm các từ chỉ tình cảm?",
+          "options": [
+            "tươi vui, yêu thương, nhìn ngắm",
+            "yêu thương, kính trọng, mến yêu",
+            "yêu thương, kính trọng, che chắn",
+            "hạnh phúc, mừng rỡ, vui chơi"
+          ],
+          "answer": "yêu thương, kính trọng, mến yêu",
+          "explain": "Yêu thương, kính trọng, mến yêu đều là từ chỉ tình cảm.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 14
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ tình cảm?",
+          "options": [
+            "che chắn",
+            "vui chơi",
+            "nhìn ngắm",
+            "quý mến"
+          ],
+          "answer": "quý mến",
+          "explain": "“Quý mến” là từ chỉ tình cảm.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 14
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "“Chúng em luôn kính trọng thầy cô giáo.” Từ chỉ tình cảm trong câu là:",
+          "options": [
+            "kính trọng",
+            "luôn",
+            "chúng em",
+            "thầy cô"
+          ],
+          "answer": "kính trọng",
+          "explain": "“Kính trọng” là từ chỉ tình cảm.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 14
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền từ còn thiếu vào thành ngữ: “Trên ___ dưới nhường.”",
+          "answer": "kính",
+          "explain": "Thành ngữ: Trên kính dưới nhường.",
+          "skill": "thanh_ngu",
+          "page": 14
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền từ còn thiếu vào thành ngữ: “Chị ngã em ___.”",
+          "answer": "nâng",
+          "explain": "Thành ngữ: Chị ngã em nâng.",
+          "skill": "thanh_ngu",
+          "page": 14
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền từ còn thiếu vào thành ngữ: “Con ___ cháu thảo.”",
+          "answer": "hiền",
+          "explain": "Thành ngữ: Con hiền cháu thảo.",
+          "skill": "thanh_ngu",
+          "page": 14
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền từ còn thiếu vào ca dao: “Anh ___ như thể tay chân / Rách lành đùm bọc dở hay đỡ đần.”",
+          "answer": "em",
+          "explain": "Ca dao: Anh em như thể tay chân.",
+          "skill": "thanh_ngu",
+          "page": 14
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền từ còn thiếu: “___ người như thể thương thân.”",
+          "answer": "thương",
+          "explain": "Tục ngữ: Thương người như thể thương thân.",
+          "skill": "thanh_ngu",
+          "page": 17
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn từ thích hợp: “Cha mẹ ___ con bằng trời, bằng bể.”",
+          "options": [
+            "hiền",
+            "kính",
+            "thảo",
+            "thương"
+          ],
+          "answer": "thương",
+          "explain": "Cha mẹ thương con bằng trời, bằng bể.",
+          "skill": "thanh_ngu",
+          "page": 17
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu nào đặt dấu phẩy ĐÚNG?",
+          "options": [
+            "Thưa cô giấy không nói, được đâu ạ!",
+            "Thưa cô, giấy không nói được đâu ạ!",
+            "Thưa, cô giấy không nói được đâu ạ!",
+            "Thưa cô giấy, không nói được đâu ạ!"
+          ],
+          "answer": "Thưa cô, giấy không nói được đâu ạ!",
+          "explain": "Dấu phẩy đặt sau lời gọi “Thưa cô”.",
+          "skill": "dau_phay",
+          "page": 14
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu nào đặt dấu phẩy ĐÚNG?",
+          "options": [
+            "Ngày xưa ở làng, kia có hai em bé ở với bà.",
+            "Ngày xưa ở, làng kia có hai em bé ở với bà.",
+            "Ngày xưa, ở làng kia, có hai em bé ở với bà.",
+            "Ngày, xưa ở làng kia, có hai em bé ở với bà."
+          ],
+          "answer": "Ngày xưa, ở làng kia, có hai em bé ở với bà.",
+          "explain": "Dấu phẩy ngăn cách “Ngày xưa”, “ở làng kia” với phần chính của câu.",
+          "skill": "dau_phay",
+          "page": 14
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu nào đặt dấu phẩy đúng?",
+          "options": [
+            "Hoa, đào hoa mai là hai loài hoa nở vào mùa xuân.",
+            "Hoa đào hoa mai, là hai loài hoa nở vào mùa xuân.",
+            "Hoa đào, hoa mai là hai loài hoa nở vào mùa xuân."
+          ],
+          "answer": "Hoa đào, hoa mai là hai loài hoa nở vào mùa xuân.",
+          "explain": "Dấu phẩy ngăn cách hai từ cùng loại “hoa đào”, “hoa mai”.",
+          "skill": "dau_phay",
+          "page": 17
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Trong câu “Ông bà rất kính mến các cháu.”, từ nào dùng CHƯA phù hợp?",
+          "options": [
+            "kính mến",
+            "rất",
+            "ông bà",
+            "các cháu"
+          ],
+          "answer": "kính mến",
+          "explain": "Ông bà “yêu thương” các cháu; “kính mến” dùng cho người trên.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 17
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "“Em rất kính trọng bạn bè.” Nên thay từ “kính trọng” bằng từ nào?",
+          "options": [
+            "hiếu thảo",
+            "quý mến",
+            "kính yêu",
+            "phụng dưỡng"
+          ],
+          "answer": "quý mến",
+          "explain": "Với bạn bè, ta dùng “quý mến”.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 17
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Truyện “Câu chuyện về quả cam”: quả cam do người cha hái lần lượt được tặng cho ai?",
+          "options": [
+            "cậu con trai, người mẹ, người cha, người chị",
+            "cậu con trai, người chị, người mẹ, người cha",
+            "cậu con trai, người mẹ, người chị, người cha"
+          ],
+          "answer": "cậu con trai, người chị, người mẹ, người cha",
+          "explain": "Cha cho cậu con trai, cậu tặng chị, chị tặng mẹ, mẹ để phần cha.",
+          "skill": "doc_hieu",
+          "page": 16
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Cậu bé cầm quả cam thích thú… Bỗng cậu nhớ đến chị: “Chị ấy đang làm cỏ, chắc rất mệt”.”\nVì sao cậu con trai không ăn quả cam?",
+          "options": [
+            "Vì cậu không thích ăn cam.",
+            "Vì cậu nghĩ mẹ đang cuốc đất, rất khát.",
+            "Vì cậu nghĩ chị đang làm cỏ, chắc rất mệt.",
+            "Vì quả cam còn xanh."
+          ],
+          "answer": "Vì cậu nghĩ chị đang làm cỏ, chắc rất mệt.",
+          "explain": "Cậu nhớ đến chị đang làm cỏ, chắc rất mệt nên tặng chị.",
+          "skill": "doc_hieu",
+          "page": 16
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Buổi tối, nhìn quả cam trên bàn, người cha xoa đầu các con âu yếm. Sau đó, ông bổ quả cam thành bốn phần…”\nNgười cha đã làm gì với quả cam?",
+          "options": [
+            "Bổ thành bốn phần để cả nhà cùng ăn",
+            "Đem cho hàng xóm",
+            "Ăn hết quả cam",
+            "Để nguyên trên bàn"
+          ],
+          "answer": "Bổ thành bốn phần để cả nhà cùng ăn",
+          "explain": "Người cha bổ quả cam thành bốn phần để cả nhà cùng ăn.",
+          "skill": "doc_hieu",
+          "page": 16
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "“Câu chuyện về quả cam” khuyên chúng ta điều gì?",
+          "options": [
+            "Nên để phần quà cho bố",
+            "Nên ăn nhiều cam cho chóng lớn",
+            "Nên trồng nhiều cây ăn quả",
+            "Biết quan tâm, chia sẻ, yêu thương người thân"
+          ],
+          "answer": "Biết quan tâm, chia sẻ, yêu thương người thân",
+          "explain": "Mỗi người đều nghĩ đến người thân: biết quan tâm, chia sẻ, yêu thương.",
+          "skill": "doc_hieu",
+          "page": 16
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Trong dãy “thổi cơm, luộc rau, quét sân, vẽ tranh”, từ nào KHÔNG chỉ công việc gia đình?",
+          "options": [
+            "vẽ tranh",
+            "luộc rau",
+            "thổi cơm",
+            "quét sân"
+          ],
+          "answer": "vẽ tranh",
+          "explain": "Vẽ tranh không phải công việc gia đình.",
+          "skill": "tu_ngu_viec_nha",
+          "page": 19
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu nào thuộc kiểu câu Ai làm gì?",
+          "options": [
+            "Chú Sơn là người xây bể nước cho nhà em.",
+            "Chiếc áo này là món quà mẹ tặng em.",
+            "Em là học sinh lớp 2.",
+            "Bác sĩ khám bệnh cho bệnh nhân."
+          ],
+          "answer": "Bác sĩ khám bệnh cho bệnh nhân.",
+          "explain": "Câu “Bác sĩ khám bệnh cho bệnh nhân.” nói về hoạt động: Ai làm gì?",
+          "skill": "cau_ai_lam_gi",
+          "page": 19
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn từ chỉ hoạt động thích hợp: “Khi em bé khóc, anh phải ___ em bé.”",
+          "options": [
+            "đánh",
+            "dỗ dành",
+            "mắng",
+            "trêu chọc"
+          ],
+          "answer": "dỗ dành",
+          "explain": "Khi em khóc, anh phải dỗ dành em.",
+          "skill": "tu_chi_hoat_dong",
+          "page": 19
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Đoạn “Cơn giông”: “Một lúc sau gió dịu dần, mưa tạnh hẳn… Nắng vàng màu da chanh phủ lên cây một thứ ánh sáng dịu mát.”\nKhi mưa tạnh, nắng có màu gì?",
+          "options": [
+            "vàng óng",
+            "vàng tươi",
+            "vàng da chanh",
+            "vàng rực"
+          ],
+          "answer": "vàng da chanh",
+          "explain": "Nắng vàng màu da chanh.",
+          "skill": "doc_hieu",
+          "page": 18
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "title": "Cha mẹ – Từ ngữ về công việc gia đình, câu Ai làm gì?",
+      "questions": [
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền iê hay yê (không cần dấu thanh): “Con thu___n trôi trên sông.”",
+          "answer": "yê",
+          "accepted": [
+            "yề"
+          ],
+          "explain": "Sau âm đệm u viết yê: thuyền.",
+          "skill": "chinh_ta_ie_ye",
+          "page": 20
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền iê hay yê (không cần dấu thanh): “Em gọi đ___n rủ Hoa đi sinh nhật Lan.”",
+          "answer": "iê",
+          "accepted": [
+            "iệ"
+          ],
+          "explain": "Có âm đầu đ, không có âm đệm nên viết iê: điện.",
+          "skill": "chinh_ta_ie_ye",
+          "page": 20
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền iê hay yê (không cần dấu thanh): “Em thích đọc quyển tru___n tranh.”",
+          "answer": "yê",
+          "accepted": [
+            "yệ"
+          ],
+          "explain": "Sau âm đệm u viết yê: truyện.",
+          "skill": "chinh_ta_ie_ye",
+          "page": 20
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền r, d hay gi: “Chưa ___à mà đã có râu”",
+          "answer": "gi",
+          "explain": "Viết đúng là: chưa già.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 20
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền r, d hay gi: “Cái con ___ế suốt đêm thâu hát gì”",
+          "answer": "d",
+          "explain": "Viết đúng là: con dế.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 20
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền r, d hay gi: “Không chân con ___ắn vẫn đi”",
+          "answer": "r",
+          "explain": "Viết đúng là: con rắn.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 20
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Dế Mèn và Dế Trũi ___ nhau đi ngao du thiên hạ.”",
+          "options": [
+            "rủ",
+            "dủ",
+            "giủ"
+          ],
+          "answer": "rủ",
+          "explain": "Viết đúng là “rủ nhau”.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 20
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Chị tôi ___ được giải Nhất trong cuộc thi Viết chữ đẹp.”",
+          "options": [
+            "dành",
+            "rành",
+            "giành"
+          ],
+          "answer": "giành",
+          "explain": "“Giành” nghĩa là cố gắng để đạt được (giành giải).",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 20
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Chiếc ví ___ này rất đẹp!”",
+          "options": [
+            "ra",
+            "da",
+            "gia"
+          ],
+          "answer": "da",
+          "explain": "Ví làm bằng da: ví da.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 20
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Bạn Hoa đọc bài to, rõ ___.”",
+          "options": [
+            "ràng",
+            "dàng",
+            "giàng"
+          ],
+          "answer": "ràng",
+          "explain": "Viết đúng là “rõ ràng”.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 20
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "“Cõng nước làm mưa rào / Cho xanh tươi đồng giuộng.” Từ “giuộng” viết sai. Viết lại cho đúng: đồng ___",
+          "answer": "ruộng",
+          "explain": "Viết đúng là “đồng ruộng”.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 20
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Trong câu thơ “Vượt sông rài biển rộng”, tiếng nào viết SAI chính tả?",
+          "options": [
+            "rộng",
+            "rài",
+            "sông",
+            "vượt"
+          ],
+          "answer": "rài",
+          "explain": "“Rài” phải viết là “dài”: vượt sông dài biển rộng.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 20
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Cá heo sinh con và nuôi con bằng ___.”",
+          "options": [
+            "sửa",
+            "xữa",
+            "sữa"
+          ],
+          "answer": "sữa",
+          "explain": "“Sữa” viết với s và dấu ngã.",
+          "skill": "chinh_ta_hoi_nga",
+          "page": 21
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Những ___ mây màu tro kết đặc quánh lách qua lưng núi.”",
+          "options": [
+            "tãng",
+            "tảng",
+            "táng"
+          ],
+          "answer": "tảng",
+          "explain": "“Tảng mây” viết với dấu hỏi.",
+          "skill": "chinh_ta_hoi_nga",
+          "page": 21
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Câu nào thuộc kiểu câu Ai làm gì?",
+          "options": [
+            "Cả nhà gấu đi bẻ măng.",
+            "Hoa cải vàng xuộm trên đất bãi.",
+            "Sách vở là người bạn đồng hành của em."
+          ],
+          "answer": "Cả nhà gấu đi bẻ măng.",
+          "explain": "“Cả nhà gấu đi bẻ măng” nói về hoạt động: Ai làm gì?",
+          "skill": "cau_ai_lam_gi",
+          "page": 21
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Trong câu “Bà chia quà cho các cháu.”, bộ phận trả lời câu hỏi “Làm gì?” là:",
+          "options": [
+            "Bà",
+            "các cháu",
+            "chia quà cho các cháu",
+            "Bà chia quà"
+          ],
+          "answer": "chia quà cho các cháu",
+          "explain": "Bà làm gì? – chia quà cho các cháu.",
+          "skill": "cau_ai_lam_gi",
+          "page": 22
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Trong câu “An và Bình đang chơi cờ.”, bộ phận trả lời câu hỏi “Ai?” là:",
+          "options": [
+            "An và Bình",
+            "An",
+            "đang chơi cờ",
+            "chơi cờ"
+          ],
+          "answer": "An và Bình",
+          "explain": "Ai đang chơi cờ? – An và Bình.",
+          "skill": "cau_ai_lam_gi",
+          "page": 22
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Cách tách nào ĐÚNG hai bộ phận “Ai? / Làm gì?” của câu?",
+          "options": [
+            "Bác nông dân khẩn trương / thu hoạch lúa.",
+            "Bác nông dân khẩn trương thu hoạch / lúa.",
+            "Bác / nông dân khẩn trương thu hoạch lúa.",
+            "Bác nông dân / khẩn trương thu hoạch lúa."
+          ],
+          "answer": "Bác nông dân / khẩn trương thu hoạch lúa.",
+          "explain": "Ai? – Bác nông dân. Làm gì? – khẩn trương thu hoạch lúa.",
+          "skill": "cau_ai_lam_gi",
+          "page": 22
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Cách tách nào ĐÚNG hai bộ phận “Cái gì? / Làm gì?” của câu?",
+          "options": [
+            "Ông / mặt trời xuống núi đi ngủ.",
+            "Ông mặt trời xuống núi / đi ngủ.",
+            "Ông mặt trời / xuống núi đi ngủ."
+          ],
+          "answer": "Ông mặt trời / xuống núi đi ngủ.",
+          "explain": "Cái gì? – Ông mặt trời. Làm gì? – xuống núi đi ngủ.",
+          "skill": "cau_ai_lam_gi",
+          "page": 22
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Em làm dần từng việc: quét nhà, thả gà, cho lợn ăn… em phơi quần áo, rải rơm ra sân phơi… em vào nhóm bếp, nấu cháo cho bà.”\nViệc nào bạn nhỏ KHÔNG làm?",
+          "options": [
+            "rửa bát",
+            "quét nhà",
+            "thả gà",
+            "nấu cháo"
+          ],
+          "answer": "rửa bát",
+          "explain": "Đoạn văn không nhắc đến việc rửa bát.",
+          "skill": "tu_ngu_viec_nha",
+          "page": 22
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Truyện “Sinh nhật mẹ”: “Cậu bé lấy một bìa cứng, gấp thành hình dạng tấm thiệp… cắt một tờ giấy màu vàng thành hình chiếc lẵng hoa, dán trên mặt tấm thiệp.”\nHoàng tự làm món quà gì tặng mẹ?",
+          "options": [
+            "một tấm thiệp khổng lồ",
+            "một lẵng hoa tươi",
+            "một tấm thiệp có lẵng hoa",
+            "một bức tranh vẽ mẹ"
+          ],
+          "answer": "một tấm thiệp có lẵng hoa",
+          "explain": "Hoàng làm một tấm thiệp có lẵng hoa.",
+          "skill": "doc_hieu",
+          "page": 24
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Món quà sinh nhật Hoàng tự tay làm tặng mẹ thể hiện tình cảm gì của Hoàng với mẹ?",
+          "options": [
+            "nhớ thương",
+            "yêu thương",
+            "tôn trọng"
+          ],
+          "answer": "yêu thương",
+          "explain": "Hoàng tự tay làm quà và chúc mẹ – thể hiện tình yêu thương mẹ.",
+          "skill": "doc_hieu",
+          "page": 24
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Sắp xếp “đang / bố mẹ / chuẩn bị / em / bữa cơm tối” thành câu đúng:",
+          "options": [
+            "Bữa cơm tối đang chuẩn bị bố mẹ em.",
+            "Em bố mẹ đang chuẩn bị bữa cơm tối.",
+            "Bố mẹ đang em chuẩn bị bữa cơm tối.",
+            "Bố mẹ em đang chuẩn bị bữa cơm tối."
+          ],
+          "answer": "Bố mẹ em đang chuẩn bị bữa cơm tối.",
+          "explain": "Câu đúng: Bố mẹ em / đang chuẩn bị bữa cơm tối.",
+          "skill": "sap_xep_cau",
+          "page": 25
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Sắp xếp “vắt vẻo / các em bé / trên / ngồi / lưng trâu” thành câu đúng:",
+          "options": [
+            "Các em bé vắt vẻo lưng trâu trên ngồi.",
+            "Các em bé ngồi vắt vẻo trên lưng trâu.",
+            "Trên các em bé ngồi vắt vẻo lưng trâu.",
+            "Lưng trâu ngồi vắt vẻo trên các em bé."
+          ],
+          "answer": "Các em bé ngồi vắt vẻo trên lưng trâu.",
+          "explain": "Câu đúng: Các em bé / ngồi vắt vẻo trên lưng trâu.",
+          "skill": "sap_xep_cau",
+          "page": 25
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Trong câu “Sáng sớm, bà con nông dân đã kéo nhau ra đồng gặt lúa.”, bộ phận trả lời câu hỏi “Ai?” là:",
+          "options": [
+            "đã kéo nhau",
+            "Sáng sớm",
+            "ra đồng gặt lúa",
+            "bà con nông dân"
+          ],
+          "answer": "bà con nông dân",
+          "explain": "Ai kéo nhau ra đồng gặt lúa? – bà con nông dân.",
+          "skill": "cau_ai_lam_gi",
+          "page": 25
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền d, r hay gi: “Cô ___áo em tre trẻ”",
+          "answer": "gi",
+          "explain": "Viết đúng là: cô giáo.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 26
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền d, r hay gi: “___ạy em hát rất hay”",
+          "answer": "d",
+          "explain": "Viết đúng là: dạy em.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 26
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu thơ “Mùa hè cung nghi” (chữ in đậm chưa có dấu) viết đúng là:",
+          "options": [
+            "Mùa hè cũng nghỉ",
+            "Mùa hè củng nghỉ",
+            "Mùa hè củng nghĩ",
+            "Mùa hè cũng nghĩ"
+          ],
+          "answer": "Mùa hè cũng nghỉ",
+          "explain": "“Cũng” mang dấu ngã; “nghỉ” (nghỉ ngơi) mang dấu hỏi.",
+          "skill": "chinh_ta_hoi_nga",
+          "page": 26
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn bộ phận thích hợp để được câu kiểu Ai làm gì?: “Cô giáo ___”",
+          "options": [
+            "rất hiền và xinh.",
+            "giảng bài cho cả lớp.",
+            "là một bông hoa."
+          ],
+          "answer": "giảng bài cho cả lớp.",
+          "explain": "“Cô giáo giảng bài cho cả lớp.” nói về hoạt động.",
+          "skill": "cau_ai_lam_gi",
+          "page": 26
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Sắp xếp các câu thành đoạn văn:\n(a) Tuấn khuyên bạn không nên hái hoa bẻ cành.\n(b) Thấy một bông hoa đẹp, Lan đưa tay định hái.\n(c) Lan và các bạn cùng vào vườn hoa chơi.\n(d) Lan nghe lời bạn, không bao giờ hái hoa nữa.",
+          "options": [
+            "c – a – b – d",
+            "c – b – a – d",
+            "b – c – a – d",
+            "a – b – c – d"
+          ],
+          "answer": "c – b – a – d",
+          "explain": "Vào vườn (c) → định hái hoa (b) → Tuấn khuyên (a) → Lan nghe lời (d).",
+          "skill": "sap_xep_cau",
+          "page": 27
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "title": "Anh em – Từ ngữ về tình cảm gia đình, câu Ai làm gì?",
+      "questions": [
+        {
+          "d": 2,
+          "type": "text",
+          "q": "“Huy học tập rất tín bộ.” Tiếng “tín” viết sai. Viết lại cho đúng: rất ___ bộ",
+          "answer": "tiến",
+          "explain": "Viết đúng là “tiến bộ” (vần iên).",
+          "skill": "chinh_ta_i_ie",
+          "page": 28
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "“Các bạn đã có nhiều kỉ nịm đẹp với nhau.” Viết lại cho đúng: kỉ ___",
+          "answer": "niệm",
+          "explain": "Viết đúng là “kỉ niệm” (vần iêm).",
+          "skill": "chinh_ta_i_ie",
+          "page": 28
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "“Bệnh vịn là nơi khám chữa bệnh.” Viết lại cho đúng: bệnh ___",
+          "answer": "viện",
+          "explain": "Viết đúng là “bệnh viện” (vần iên).",
+          "skill": "chinh_ta_i_ie",
+          "page": 28
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ăt hay ăc (không cần dấu thanh): “Lúa thu nhuộm s___ vàng”",
+          "answer": "ăc",
+          "accepted": [
+            "ắc"
+          ],
+          "explain": "Viết đúng là: sắc vàng.",
+          "skill": "chinh_ta_at_ac",
+          "page": 28
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ăt hay ăc (không cần dấu thanh): “Đón mùa g___ mới sang”",
+          "answer": "ăt",
+          "accepted": [
+            "ặt"
+          ],
+          "explain": "Viết đúng là: mùa gặt.",
+          "skill": "chinh_ta_at_ac",
+          "page": 28
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền i hay iê (không cần dấu thanh): “Vì sao khi quả ch___n / Lại ngạt ngào hương thơm”",
+          "answer": "i",
+          "accepted": [
+            "í"
+          ],
+          "explain": "Viết đúng là: quả chín.",
+          "skill": "chinh_ta_i_ie",
+          "page": 28
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền i hay iê (không cần dấu thanh): “Quả đánh t___ng mười phương”",
+          "answer": "iê",
+          "accepted": [
+            "iế"
+          ],
+          "explain": "Viết đúng là: đánh tiếng.",
+          "skill": "chinh_ta_i_ie",
+          "page": 28
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền i hay iê: “Mời ch___m về múa hát”",
+          "answer": "i",
+          "explain": "Viết đúng là: chim.",
+          "skill": "chinh_ta_i_ie",
+          "page": 28
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền l hay n: “___ăm nay, Mai lên tám tuổi.”",
+          "answer": "n",
+          "explain": "Viết đúng là: năm nay.",
+          "skill": "chinh_ta_l_n",
+          "page": 28
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền l hay n: “Mai chăm ___o luyện chữ.”",
+          "answer": "l",
+          "explain": "Viết đúng là: chăm lo.",
+          "skill": "chinh_ta_l_n",
+          "page": 28
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền l hay n: “Cả lớp im ___ặng lắng nghe.”",
+          "answer": "l",
+          "explain": "Viết đúng là: im lặng.",
+          "skill": "chinh_ta_l_n",
+          "page": 28
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn câu tục ngữ viết đúng chính tả:",
+          "options": [
+            "Một cây nàm chẳng lên non",
+            "Một cây nàm chẳng nên non",
+            "Một cây làm chẳng nên non",
+            "Một cây làm chẳng lên lon"
+          ],
+          "answer": "Một cây làm chẳng nên non",
+          "explain": "Viết đúng: “Một cây làm chẳng nên non”.",
+          "skill": "chinh_ta_l_n",
+          "page": 28
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào nói về tình cảm yêu thương giữa anh chị em?",
+          "options": [
+            "giặt quần áo",
+            "quét nhà",
+            "hòa thuận",
+            "thổi cơm"
+          ],
+          "answer": "hòa thuận",
+          "explain": "Anh chị em hòa thuận, yêu thương nhau.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 33
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào KHÔNG nói về tình cảm giữa anh chị em?",
+          "options": [
+            "chăm sóc",
+            "nhặt rau",
+            "yêu quý",
+            "bảo ban"
+          ],
+          "answer": "nhặt rau",
+          "explain": "“Nhặt rau” là công việc nhà, không chỉ tình cảm.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 33
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Lan yêu quý bà lắm… Bà ôm Lan vào lòng mỉm cười, âu yếm nói: “Cháu của bà ngoan quá!””\nTừ nào chỉ tình cảm bà cháu?",
+          "options": [
+            "âu yếm",
+            "ngoan",
+            "mỉm cười",
+            "ôm"
+          ],
+          "answer": "âu yếm",
+          "explain": "“Âu yếm” là từ chỉ tình cảm yêu thương.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 29
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Từ nào chỉ tình cảm của cháu đối với ông bà?",
+          "options": [
+            "bảo ban",
+            "chiều chuộng",
+            "nuôi nấng",
+            "kính yêu"
+          ],
+          "answer": "kính yêu",
+          "explain": "Cháu kính yêu ông bà.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 29
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Từ nào chỉ tình cảm của bố mẹ đối với con cái?",
+          "options": [
+            "vâng lời",
+            "hiếu thảo",
+            "yêu thương",
+            "kính trọng"
+          ],
+          "answer": "yêu thương",
+          "explain": "Bố mẹ yêu thương con; hiếu thảo, vâng lời, kính trọng là của con với bố mẹ.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 29
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Trong câu “Mẹ ôm bé Hoa vào lòng.”, bộ phận trả lời câu hỏi “Làm gì?” là:",
+          "options": [
+            "vào lòng",
+            "Mẹ",
+            "bé Hoa",
+            "ôm bé Hoa vào lòng"
+          ],
+          "answer": "ôm bé Hoa vào lòng",
+          "explain": "Mẹ làm gì? – ôm bé Hoa vào lòng.",
+          "skill": "cau_ai_lam_gi",
+          "page": 30
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu nào thuộc kiểu câu Ai làm gì?",
+          "options": [
+            "Lớp 2A4 rất đoàn kết.",
+            "Lớp 2A4 là lớp của em.",
+            "Lớp 2A4 đang tập thể dục buổi sáng."
+          ],
+          "answer": "Lớp 2A4 đang tập thể dục buổi sáng.",
+          "explain": "Câu nói về hoạt động “tập thể dục” – kiểu Ai làm gì?",
+          "skill": "cau_ai_lam_gi",
+          "page": 33
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Trong câu “Buổi sáng, bố mẹ đưa bé tới trường.”, bộ phận trả lời câu hỏi “Ai?” là:",
+          "options": [
+            "bố mẹ",
+            "tới trường",
+            "Buổi sáng",
+            "bé"
+          ],
+          "answer": "bố mẹ",
+          "explain": "Ai đưa bé tới trường? – bố mẹ.",
+          "skill": "cau_ai_lam_gi",
+          "page": 33
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Trong câu “Hằng ngày, bé giúp mẹ dọn dẹp nhà cửa.”, bộ phận trả lời câu hỏi “Làm gì?” là:",
+          "options": [
+            "nhà cửa",
+            "giúp mẹ dọn dẹp nhà cửa",
+            "Hằng ngày",
+            "bé giúp mẹ"
+          ],
+          "answer": "giúp mẹ dọn dẹp nhà cửa",
+          "explain": "Bé làm gì? – giúp mẹ dọn dẹp nhà cửa.",
+          "skill": "cau_ai_lam_gi",
+          "page": 33
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu câu thích hợp điền vào chỗ trống: “– Chị Gió đi đâu mà vội thế ___”",
+          "options": [
+            "dấu chấm hỏi",
+            "dấu chấm",
+            "dấu phẩy"
+          ],
+          "answer": "dấu chấm hỏi",
+          "explain": "Đây là câu hỏi nên dùng dấu chấm hỏi.",
+          "skill": "dau_cau",
+          "page": 33
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Cô Mây suốt ngày bay nhởn nhơ ___ rong chơi.” Chỗ trống cần điền dấu gì?",
+          "options": [
+            "dấu phẩy",
+            "dấu chấm hỏi",
+            "dấu chấm"
+          ],
+          "answer": "dấu phẩy",
+          "explain": "Dấu phẩy ngăn cách hai hoạt động “bay nhởn nhơ”, “rong chơi”.",
+          "skill": "dau_cau",
+          "page": 33
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "“– Tôi đang đi rủ các bạn Mây về làm mưa đây ___ Cô có muốn làm mưa không ___”\nHai chỗ trống lần lượt điền dấu gì?",
+          "options": [
+            "dấu chấm hỏi; dấu chấm hỏi",
+            "dấu phẩy; dấu chấm",
+            "dấu chấm hỏi; dấu chấm",
+            "dấu chấm; dấu chấm hỏi"
+          ],
+          "answer": "dấu chấm; dấu chấm hỏi",
+          "explain": "Câu đầu là câu kể (dấu chấm), câu sau là câu hỏi (dấu chấm hỏi).",
+          "skill": "dau_cau",
+          "page": 33
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Khi viết tin nhắn, cuối lời nhắn em cần ghi gì?",
+          "options": [
+            "tên trường học",
+            "địa chỉ nhà",
+            "tên của mình",
+            "ngày sinh của mình"
+          ],
+          "answer": "tên của mình",
+          "explain": "Tin nhắn cần xưng tên người viết ở cuối.",
+          "skill": "viet_tin_nhan",
+          "page": 30
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Truyện “Một người anh như thế”: “Tôi được tặng một chiếc xe đạp rất đẹp nhân dịp sinh nhật của mình.”\nBạn nhỏ được anh trai tặng gì?",
+          "options": [
+            "một chiếc ô tô",
+            "một chiếc xe lăn",
+            "một chiếc xe đạp"
+          ],
+          "answer": "một chiếc xe đạp",
+          "explain": "Anh trai tặng bạn nhỏ một chiếc xe đạp.",
+          "skill": "doc_hieu",
+          "page": 32
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "“– Ước gì tớ có thể trở thành một người anh như thế! – Cậu ấy nói chậm rãi…”\nCậu bé ở công viên ước điều gì?",
+          "options": [
+            "Có một chiếc xe đạp thật đẹp",
+            "Trở thành một người anh như thế",
+            "Được đi chơi công viên",
+            "Có một người anh tặng mình xe"
+          ],
+          "answer": "Trở thành một người anh như thế",
+          "explain": "Cậu ước trở thành một người anh tốt như anh của bạn nhỏ.",
+          "skill": "doc_hieu",
+          "page": 32
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Truyện “Một người anh như thế”: cậu bé hứa sẽ mua tặng em trai nhỏ tàn tật món quà gì?",
+          "options": [
+            "chiếc xe lăn",
+            "quả bóng",
+            "chiếc xe đạp",
+            "chiếc ô tô đồ chơi"
+          ],
+          "answer": "chiếc xe lăn",
+          "explain": "Cậu nói: “…anh sẽ mua tặng em chiếc xe lăn, em nhé!”",
+          "skill": "doc_hieu",
+          "page": 32
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu chuyện “Một người anh như thế” nói về tình cảm của ai với ai?",
+          "options": [
+            "của anh với em",
+            "của mẹ với con",
+            "của hai người bạn",
+            "của em với anh"
+          ],
+          "answer": "của anh với em",
+          "explain": "Câu chuyện nói về tình thương của người anh dành cho em.",
+          "skill": "doc_hieu",
+          "page": 32
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "title": "Anh em – Từ chỉ đặc điểm, câu Ai thế nào?",
+      "questions": [
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ai hay ay (không cần dấu thanh): “Mẹ c___ khăn cho bé”",
+          "answer": "ai",
+          "accepted": [
+            "ài"
+          ],
+          "explain": "Viết đúng là: mẹ cài khăn.",
+          "skill": "chinh_ta_ai_ay",
+          "page": 34
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ai hay ay: “Gió thổi khăn b___ bay”",
+          "answer": "ay",
+          "explain": "Viết đúng là: bay bay.",
+          "skill": "chinh_ta_ai_ay",
+          "page": 34
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Mưa phùn gió ___”",
+          "options": [
+            "bắc",
+            "bấc",
+            "bất"
+          ],
+          "answer": "bấc",
+          "explain": "Thành ngữ: Mưa phùn gió bấc.",
+          "skill": "chinh_ta_at_ac",
+          "page": 34
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Đội trời đạp ___”",
+          "options": [
+            "đất",
+            "đắt",
+            "đấc"
+          ],
+          "answer": "đất",
+          "explain": "Thành ngữ: Đội trời đạp đất.",
+          "skill": "chinh_ta_at_ac",
+          "page": 34
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn tiếng đúng: “Ngủ gà ngủ ___”",
+          "options": [
+            "gặc",
+            "gấc",
+            "gật"
+          ],
+          "answer": "gật",
+          "explain": "Thành ngữ: Ngủ gà ngủ gật.",
+          "skill": "chinh_ta_at_ac",
+          "page": 34
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền ât hay âc (không cần dấu thanh): “Gió mát, chú chìm vào gi___ ngủ.”",
+          "answer": "âc",
+          "accepted": [
+            "ấc"
+          ],
+          "explain": "Viết đúng là: giấc ngủ.",
+          "skill": "chinh_ta_at_ac",
+          "page": 34
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền s hay x: “Những cành ___oan khẳng khiu đương trổ lá.”",
+          "answer": "x",
+          "explain": "Viết đúng là: cành xoan.",
+          "skill": "chinh_ta_s_x",
+          "page": 34
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền s hay x: “Rặng râm bụt cũng ___ắp có nụ.”",
+          "answer": "s",
+          "explain": "Viết đúng là: sắp có nụ.",
+          "skill": "chinh_ta_s_x",
+          "page": 34
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền s hay x: “Chim bay về bầu trời ___anh thẳm.”",
+          "answer": "x",
+          "explain": "Viết đúng là: xanh thẳm.",
+          "skill": "chinh_ta_s_x",
+          "page": 34
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền s hay x: “Một chú ___ơn ca sà xuống.”",
+          "answer": "s",
+          "explain": "Viết đúng là: sơn ca.",
+          "skill": "chinh_ta_s_x",
+          "page": 34
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn cách viết đúng: “Cúc ơi! Cúc ___ làm sao!”",
+          "options": [
+            "sinh sắn",
+            "sinh xắn",
+            "xinh sắn",
+            "xinh xắn"
+          ],
+          "answer": "xinh xắn",
+          "explain": "Viết đúng là “xinh xắn” (cả hai tiếng đều viết x).",
+          "skill": "chinh_ta_s_x",
+          "page": 34
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào là từ chỉ đặc điểm?",
+          "options": [
+            "trung thu",
+            "xanh biếc",
+            "hoa đào",
+            "mùa xuân"
+          ],
+          "answer": "xanh biếc",
+          "explain": "“Xanh biếc” nêu màu sắc – là từ chỉ đặc điểm.",
+          "skill": "tu_chi_dac_diem",
+          "page": 36
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào KHÔNG phải từ chỉ đặc điểm?",
+          "options": [
+            "đỏ rực",
+            "vàng ươm",
+            "hoa phượng vĩ",
+            "mát mẻ"
+          ],
+          "answer": "hoa phượng vĩ",
+          "explain": "“Hoa phượng vĩ” là từ chỉ sự vật.",
+          "skill": "tu_chi_dac_diem",
+          "page": 36
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Từ nào chỉ đặc điểm trong câu “Hoa sen đỏ, nhị sen vàng tỏa hương thơm lừng.”?",
+          "options": [
+            "tỏa",
+            "nhị sen",
+            "hoa sen",
+            "thơm lừng"
+          ],
+          "answer": "thơm lừng",
+          "explain": "“Thơm lừng” nêu đặc điểm của hương sen.",
+          "skill": "tu_chi_dac_diem",
+          "page": 35
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Trong câu “Những tán lá phượng xanh um, mát rượi.”, bộ phận trả lời câu hỏi “Thế nào?” là:",
+          "options": [
+            "xanh um, mát rượi",
+            "Những tán lá phượng",
+            "tán lá",
+            "phượng xanh um"
+          ],
+          "answer": "xanh um, mát rượi",
+          "explain": "Những tán lá phượng thế nào? – xanh um, mát rượi.",
+          "skill": "cau_ai_the_nao",
+          "page": 36
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Trong câu “Hoa sữa nhỏ li ti, trắng ngà, thơm ngát.”, bộ phận trả lời câu hỏi “Cái gì?” là:",
+          "options": [
+            "trắng ngà, thơm ngát",
+            "Hoa sữa",
+            "nhỏ li ti",
+            "Hoa sữa nhỏ"
+          ],
+          "answer": "Hoa sữa",
+          "explain": "Cái gì nhỏ li ti, trắng ngà, thơm ngát? – Hoa sữa.",
+          "skill": "cau_ai_the_nao",
+          "page": 36
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Trong câu “Trong khu rừng nhỏ, Thỏ và Sóc đều rất thông minh, nhanh nhẹn.”, bộ phận trả lời câu hỏi “Con gì?” là:",
+          "options": [
+            "Thỏ",
+            "khu rừng nhỏ",
+            "Thỏ và Sóc",
+            "thông minh, nhanh nhẹn"
+          ],
+          "answer": "Thỏ và Sóc",
+          "explain": "Con gì thông minh, nhanh nhẹn? – Thỏ và Sóc.",
+          "skill": "cau_ai_the_nao",
+          "page": 36
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Trong câu “Càng về sáng, tiết trời càng lạnh giá.”, bộ phận trả lời câu hỏi “Thế nào?” là:",
+          "options": [
+            "về sáng",
+            "tiết trời",
+            "Càng về sáng",
+            "càng lạnh giá"
+          ],
+          "answer": "càng lạnh giá",
+          "explain": "Tiết trời thế nào? – càng lạnh giá.",
+          "skill": "cau_ai_the_nao",
+          "page": 36
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu nào viết theo mẫu Ai là gì?",
+          "options": [
+            "Tất cả đều lóng lánh, lung linh trong nắng.",
+            "Hàng ngàn bông hoa là hàng ngàn ngọn lửa hồng tươi.",
+            "Mùa xuân, cây gạo gọi đến bao nhiêu là chim."
+          ],
+          "answer": "Hàng ngàn bông hoa là hàng ngàn ngọn lửa hồng tươi.",
+          "explain": "Câu có “là” giới thiệu: Hàng ngàn bông hoa là hàng ngàn ngọn lửa hồng tươi.",
+          "skill": "kieu_cau",
+          "page": 36
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu “Mùa xuân, cây gạo gọi đến bao nhiêu là chim.” thuộc kiểu câu nào?",
+          "options": [
+            "Ai thế nào?",
+            "Ai là gì?",
+            "Ai làm gì?"
+          ],
+          "answer": "Ai làm gì?",
+          "explain": "Cây gạo làm gì? – gọi đến bao nhiêu là chim.",
+          "skill": "kieu_cau",
+          "page": 36
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu “Tất cả đều lóng lánh, lung linh trong nắng.” thuộc kiểu câu nào?",
+          "options": [
+            "Ai thế nào?",
+            "Ai là gì?",
+            "Ai làm gì?"
+          ],
+          "answer": "Ai thế nào?",
+          "explain": "Tất cả thế nào? – lóng lánh, lung linh.",
+          "skill": "kieu_cau",
+          "page": 36
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Truyện “Tôi có em rồi”: “Tôi là một chú chuột túi bé con. Cả ngày tôi ở trong cái túi ấm áp của mẹ.”\nKhi còn bé, chú chuột túi thường ở đâu?",
+          "options": [
+            "trong hang",
+            "trong chiếc túi ấm áp của mẹ",
+            "dưới gốc cây",
+            "trong vòng tay của bố"
+          ],
+          "answer": "trong chiếc túi ấm áp của mẹ",
+          "explain": "Chuột túi ở trong cái túi ấm áp của mẹ.",
+          "skill": "doc_hieu",
+          "page": 39
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "“– Nhưng túi của mẹ chỉ đủ cho một đứa, vậy em bé sẽ ngủ ở đâu hả bố?… Chẳng lẽ từ nay trở đi, tôi sẽ phải nhảy lóc cóc theo mẹ?”\nVì sao chuột túi không vui khi nghe tin sắp có em?",
+          "options": [
+            "Vì sẽ không được nằm trong túi của mẹ nữa",
+            "Vì bố mắng nó",
+            "Vì không thích trở thành chàng trai",
+            "Vì không thích có em gái"
+          ],
+          "answer": "Vì sẽ không được nằm trong túi của mẹ nữa",
+          "explain": "Chuột túi biết sẽ phải nhường túi của mẹ cho em.",
+          "skill": "doc_hieu",
+          "page": 39
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Thế rồi em của tôi ra đời… Tôi hãnh diện vì mình có một cô em gái. Đi đâu, gặp ai tôi cũng hớn hở khoe.”\nChuột túi cảm thấy thế nào khi em bé ra đời?",
+          "options": [
+            "không khoái tí nào",
+            "buồn và giận bố",
+            "rất hãnh diện, gặp ai cũng khoe",
+            "cảm thấy tủi thân"
+          ],
+          "answer": "rất hãnh diện, gặp ai cũng khoe",
+          "explain": "Chuột túi hãnh diện, đi đâu cũng khoe có em.",
+          "skill": "doc_hieu",
+          "page": 39
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Nhóm nào chỉ gồm những từ chỉ đặc điểm?",
+          "options": [
+            "chuột túi, nhỏ xíu, xinh, dễ thương",
+            "ấm áp, nhỏ xíu, xinh, dễ thương",
+            "ấm áp, nhỏ xíu, xinh, em bé"
+          ],
+          "answer": "ấm áp, nhỏ xíu, xinh, dễ thương",
+          "explain": "“Chuột túi”, “em bé” là từ chỉ sự vật nên loại hai nhóm kia.",
+          "skill": "tu_chi_dac_diem",
+          "page": 39
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu nào thuộc kiểu câu Ai thế nào?",
+          "options": [
+            "Tôi là một chú chuột túi bé con.",
+            "Bố ôm tôi vào lòng.",
+            "Em nhỏ xíu và rất xinh."
+          ],
+          "answer": "Em nhỏ xíu và rất xinh.",
+          "explain": "Em thế nào? – nhỏ xíu và rất xinh.",
+          "skill": "cau_ai_the_nao",
+          "page": 40
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Điền dấu sắc hay dấu nặng: “T___c bay phơ phất” – chữ viết đúng là:",
+          "options": [
+            "Toc",
+            "Tóc",
+            "Tọc"
+          ],
+          "answer": "Tóc",
+          "explain": "Viết đúng là “Tóc” (dấu sắc).",
+          "skill": "chinh_ta_dau_thanh",
+          "page": 40
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu thơ “Lăn lôi bờ sông” (chưa có dấu ở chữ in đậm) viết đúng là:",
+          "options": [
+            "Lặn lối bờ sông",
+            "Lắn lội bờ sông",
+            "Lặn lội bờ sông",
+            "Lắn lối bờ sông"
+          ],
+          "answer": "Lặn lội bờ sông",
+          "explain": "Viết đúng là “lặn lội” (cả hai tiếng dấu nặng).",
+          "skill": "chinh_ta_dau_thanh",
+          "page": 40
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "title": "Bạn trong nhà – Từ chỉ tính chất, câu Ai thế nào?",
+      "questions": [
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền tr hay ch: “Nhà em ___eo ảnh Bác Hồ”",
+          "answer": "tr",
+          "explain": "Viết đúng là: treo ảnh.",
+          "skill": "chinh_ta_ch_tr",
+          "page": 41
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền tr hay ch: “Bên ___ên là một lá cờ đỏ tươi”",
+          "answer": "tr",
+          "explain": "Viết đúng là: bên trên.",
+          "skill": "chinh_ta_ch_tr",
+          "page": 41
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền tr hay ch: “Bác nhìn ___úng cháu vui chơi”",
+          "answer": "ch",
+          "explain": "Viết đúng là: chúng cháu.",
+          "skill": "chinh_ta_ch_tr",
+          "page": 41
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền tr hay ch: “___ồng rau, quét bếp, đuổi gà”",
+          "answer": "tr",
+          "explain": "Viết đúng là: trồng rau.",
+          "skill": "chinh_ta_ch_tr",
+          "page": 41
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu đố: “Cây gì không quả, không hoa / Không cành, không lá, xông pha ___?” Chọn cách viết đúng:",
+          "options": [
+            "chiến trường",
+            "triến trường",
+            "chiến chường",
+            "triến chường"
+          ],
+          "answer": "chiến trường",
+          "explain": "Viết đúng là “chiến trường”.",
+          "skill": "chinh_ta_ch_tr",
+          "page": 41
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ui hay uy: nội q___",
+          "answer": "uy",
+          "explain": "Viết đúng là: nội quy.",
+          "skill": "chinh_ta_ui_uy",
+          "page": 41
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ui hay uy: niềm v___",
+          "answer": "ui",
+          "explain": "Viết đúng là: niềm vui.",
+          "skill": "chinh_ta_ui_uy",
+          "page": 41
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền ui hay uy (không cần dấu thanh): phá h___",
+          "answer": "uy",
+          "accepted": [
+            "ủy"
+          ],
+          "explain": "Viết đúng là: phá hủy.",
+          "skill": "chinh_ta_ui_uy",
+          "page": 41
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn từ viết đúng chính tả:",
+          "options": [
+            "hắt hủi",
+            "hắt hủy",
+            "hắt hỉu"
+          ],
+          "answer": "hắt hủi",
+          "explain": "Viết đúng là “hắt hủi” (vần ui).",
+          "skill": "chinh_ta_ui_uy",
+          "page": 41
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu thơ “Bao nhiêu tay toa rộng ra” (chữ in đậm chưa có dấu) viết đúng là:",
+          "options": [
+            "Bao nhiêu tay tỏa rộng ra",
+            "Bao nhiêu tay tõa rộng ra",
+            "Bao nhiêu tay tóa rộng ra"
+          ],
+          "answer": "Bao nhiêu tay tỏa rộng ra",
+          "explain": "“Tỏa” mang dấu hỏi.",
+          "skill": "chinh_ta_hoi_nga",
+          "page": 41
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Giải câu đố: “Hè về áo đỏ như son / Hè đi thay lá xanh non mượt mà / Bao nhiêu tay tỏa rộng ra / Như vẫy như đón bạn ta đến trường.” Là cây gì?",
+          "options": [
+            "cây dừa",
+            "cây phượng",
+            "cây lúa",
+            "cây tre"
+          ],
+          "answer": "cây phượng",
+          "explain": "Mùa hè hoa phượng đỏ rực như son – đó là cây phượng.",
+          "skill": "cau_do",
+          "page": 41
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ tính chất (phẩm chất bên trong của người)?",
+          "options": [
+            "nhảy dây",
+            "chạy",
+            "quyển vở",
+            "ngoan"
+          ],
+          "answer": "ngoan",
+          "explain": "“Ngoan” nói về phẩm chất bên trong.",
+          "skill": "tu_chi_tinh_chat",
+          "page": 42
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn từ thích hợp: “Cô bé rất ___, vâng lời bố mẹ và thầy cô.”",
+          "options": [
+            "hiền từ",
+            "ngoan",
+            "cao lớn"
+          ],
+          "answer": "ngoan",
+          "explain": "Cô bé vâng lời bố mẹ và thầy cô là cô bé ngoan.",
+          "skill": "tu_chi_tinh_chat",
+          "page": 42
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn từ thích hợp: “Người bà ___ hiện ra, dang tay ôm hai đứa cháu hiếu thảo vào lòng.”",
+          "options": [
+            "hiếu thảo",
+            "ngoan",
+            "hiền từ"
+          ],
+          "answer": "hiền từ",
+          "explain": "“Hiền từ” thường dùng để nói về người già; “ngoan”, “hiếu thảo” dùng cho con cháu.",
+          "skill": "tu_chi_tinh_chat",
+          "page": 42
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn từ chỉ đặc điểm phù hợp: “bộ lông của gà trống ___”",
+          "options": [
+            "hồng hồng",
+            "dài ngoằng",
+            "rất thính",
+            "sặc sỡ"
+          ],
+          "answer": "sặc sỡ",
+          "explain": "Bộ lông gà trống nhiều màu sặc sỡ.",
+          "skill": "tu_chi_dac_diem",
+          "page": 42
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn từ chỉ đặc điểm phù hợp: “tai chó ___”",
+          "options": [
+            "rất thính",
+            "sặc sỡ",
+            "hồng hồng",
+            "dài ngoằng"
+          ],
+          "answer": "rất thính",
+          "explain": "Tai chó nghe rất thính.",
+          "skill": "tu_chi_dac_diem",
+          "page": 42
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ đặc điểm, tính chất?",
+          "options": [
+            "cày cấy",
+            "chiến đấu",
+            "cần cù",
+            "lao động"
+          ],
+          "answer": "cần cù",
+          "explain": "“Cần cù” chỉ tính chất; các từ kia chỉ hoạt động.",
+          "skill": "tu_chi_tinh_chat",
+          "page": 43
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Nhóm nào chỉ gồm từ chỉ đặc điểm, tính chất?",
+          "options": [
+            "nghiên cứu, tận tụy, nhanh nhẹn",
+            "tháo vát, khéo tay, thông minh",
+            "sản xuất, cày cấy, trồng trọt",
+            "khiêm tốn, chăn nuôi, dịu dàng"
+          ],
+          "answer": "tháo vát, khéo tay, thông minh",
+          "explain": "Tháo vát, khéo tay, thông minh đều chỉ tính chất; các nhóm kia lẫn từ chỉ hoạt động.",
+          "skill": "tu_chi_tinh_chat",
+          "page": 43
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Em Nụ môi đỏ hồng, trông yêu lắm… Có lúc, mắt em mở to, tròn và đen láy.”\nTừ nào chỉ đặc điểm của đôi mắt em Nụ?",
+          "options": [
+            "đỏ hồng",
+            "mở",
+            "đen láy",
+            "lớn lên"
+          ],
+          "answer": "đen láy",
+          "explain": "Mắt em Nụ tròn và đen láy.",
+          "skill": "tu_chi_dac_diem",
+          "page": 43
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Trong câu “Dũng không nói gì, chỉ nhìn em cười cười.”, từ nào chỉ hoạt động?",
+          "options": [
+            "đỏ",
+            "nhìn",
+            "thơm phức",
+            "ngon lành"
+          ],
+          "answer": "nhìn",
+          "explain": "“Nhìn” là từ chỉ hoạt động.",
+          "skill": "tu_chi_hoat_dong",
+          "page": 43
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn bộ phận thích hợp để được câu kiểu Ai thế nào?: “Bộ lông của gà trống ___”",
+          "options": [
+            "sặc sỡ như bộ áo hoa.",
+            "đang gáy vang.",
+            "là của con gà.",
+            "chạy khắp sân."
+          ],
+          "answer": "sặc sỡ như bộ áo hoa.",
+          "explain": "Bộ phận “sặc sỡ như bộ áo hoa” trả lời câu hỏi Thế nào?",
+          "skill": "cau_ai_the_nao",
+          "page": 43
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu nào là câu tỏ ý khen?",
+          "options": [
+            "Hãy đến xem ngôi nhà mới.",
+            "Ngôi nhà mới xây ở đâu?",
+            "Ngôi nhà mới xây xong.",
+            "Ngôi nhà mới cao quá!"
+          ],
+          "answer": "Ngôi nhà mới cao quá!",
+          "explain": "“Ngôi nhà mới cao quá!” bày tỏ lời khen.",
+          "skill": "khen_ngoi",
+          "page": 44
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Bài “Bầy voi”: “Trước đây, trên những cánh rừng Trường Sơn, voi sống thành từng bầy rất đông. Các thành viên trong bầy voi luôn quan tâm, chăm sóc nhau.”\nVoi sống như thế nào?",
+          "options": [
+            "một mình trong rừng",
+            "gia đình nhỏ: voi bố, voi mẹ, voi con",
+            "thành từng bầy rất đông",
+            "gia đình nhỏ: voi mẹ và voi con"
+          ],
+          "answer": "thành từng bầy rất đông",
+          "explain": "Voi sống thành từng bầy rất đông.",
+          "skill": "doc_hieu",
+          "page": 45
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Bài “Bầy voi”: “Voi rất thông minh. Với khối lượng gần 5kg, não của voi lớn hơn bất kì loài nào khác.”\nNão của voi nặng gần ___ kg.",
+          "answer": "5",
+          "explain": "Não voi nặng gần 5 kg.",
+          "skill": "doc_hieu",
+          "page": 45
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Theo bài “Bầy voi”, từ nào chỉ đặc điểm của loài voi?",
+          "options": [
+            "chăm sóc",
+            "biểu diễn",
+            "kéo gỗ",
+            "khéo léo"
+          ],
+          "answer": "khéo léo",
+          "explain": "“Khéo léo” là từ chỉ đặc điểm; các từ kia chỉ hoạt động.",
+          "skill": "tu_chi_dac_diem",
+          "page": 46
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu nào viết theo kiểu câu Ai thế nào?",
+          "options": [
+            "Voi rất thông minh.",
+            "Voi là vật nuôi có ích.",
+            "Voi kéo gỗ giúp người.",
+            "Voi là loài vật có nghĩa."
+          ],
+          "answer": "Voi rất thông minh.",
+          "explain": "Voi thế nào? – rất thông minh.",
+          "skill": "cau_ai_the_nao",
+          "page": 46
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ hoạt động?",
+          "options": [
+            "dịu dàng",
+            "đạp xe",
+            "rộng",
+            "béo"
+          ],
+          "answer": "đạp xe",
+          "explain": "“Đạp xe” là hoạt động; các từ kia chỉ đặc điểm.",
+          "skill": "tu_chi_hoat_dong",
+          "page": 46
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Truyện “Chó cứu hỏa”: “Cứu các em rất khó vì khi lửa bùng lên, các em sợ hãi nên thường nấp vào chỗ kín.”\nVì sao rất khó cứu các em nhỏ khi hỏa hoạn?",
+          "options": [
+            "Các em lo cứu búp bê",
+            "Không có lính cứu hỏa",
+            "Các em không chạy được",
+            "Các em sợ hãi, thường nấp vào chỗ kín"
+          ],
+          "answer": "Các em sợ hãi, thường nấp vào chỗ kín",
+          "explain": "Các em sợ hãi nên thường nấp vào chỗ kín.",
+          "skill": "doc_hieu",
+          "page": 47
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Truyện “Chó cứu hỏa”: “Bốp là một chú chó nổi tiếng vì đã cứu được 12 em nhỏ trong đám cháy.”\nBốp đã cứu được ___ em nhỏ.",
+          "answer": "12",
+          "explain": "Bốp đã cứu được 12 em nhỏ.",
+          "skill": "doc_hieu",
+          "page": 47
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Truyện “Chó cứu hỏa”: lần thứ hai phóng vào nhà cháy, Bốp lôi ra một con búp bê. Điều gì thú vị ở chú chó Bốp?",
+          "options": [
+            "Bốp tưởng cô bé là búp bê",
+            "Bốp rất sợ lửa",
+            "Bốp tưởng búp bê cũng là người cần cứu",
+            "Bốp không chịu vào nhà"
+          ],
+          "answer": "Bốp tưởng búp bê cũng là người cần cứu",
+          "explain": "Bốp tưởng búp bê cũng là người nên lôi ra cứu.",
+          "skill": "doc_hieu",
+          "page": 47
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn từ để tạo hình ảnh so sánh: “chua như ___”",
+          "options": [
+            "nghệ",
+            "giấm",
+            "son",
+            "núi"
+          ],
+          "answer": "giấm",
+          "explain": "Giấm có vị chua: chua như giấm.",
+          "skill": "so_sanh",
+          "page": 48
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn từ để tạo hình ảnh so sánh: “tinh ranh như ___”",
+          "options": [
+            "cáo",
+            "lừa",
+            "nghệ",
+            "son"
+          ],
+          "answer": "cáo",
+          "explain": "Thành ngữ: tinh ranh như cáo.",
+          "skill": "so_sanh",
+          "page": 48
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "title": "Bạn trong nhà – Từ ngữ về vật nuôi, câu Ai thế nào?, so sánh",
+      "questions": [
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền r, d hay gi: “Tiếng mưa trong ___ừng cọ”",
+          "answer": "r",
+          "explain": "Viết đúng là: rừng cọ.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 49
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền r, d hay gi: “Như tiếng thác ___ội về”",
+          "answer": "d",
+          "explain": "Viết đúng là: dội về.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 49
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền r, d hay gi: “Như ào ào trận ___ó”",
+          "answer": "gi",
+          "explain": "Viết đúng là: trận gió.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 49
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền r, d hay gi: “Lá xoè từng tia nắng / ___ống hệt như mặt trời.”",
+          "answer": "gi",
+          "explain": "Viết đúng là: giống hệt.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 49
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền et hay ec (không cần dấu thanh): “Lợn kêu eng ___”",
+          "answer": "ec",
+          "accepted": [
+            "éc"
+          ],
+          "explain": "Viết đúng là: eng éc.",
+          "skill": "chinh_ta_et_ec",
+          "page": 49
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền et hay ec (không cần dấu thanh): “Sấm s___ vang trời”",
+          "answer": "et",
+          "accepted": [
+            "ét"
+          ],
+          "explain": "Viết đúng là: sấm sét.",
+          "skill": "chinh_ta_et_ec",
+          "page": 49
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Điền ao hay au (không cần dấu thanh): “Những anh ch___ m___ đỏm dáng.” (hai chỗ trống điền giống nhau)",
+          "answer": "ao",
+          "accepted": [
+            "ào"
+          ],
+          "explain": "Viết đúng là: chào mào.",
+          "skill": "chinh_ta_ao_au",
+          "page": 49
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ui hay uy (không cần dấu thanh): tàu th___",
+          "answer": "uy",
+          "accepted": [
+            "ủy"
+          ],
+          "explain": "Viết đúng là: tàu thủy.",
+          "skill": "chinh_ta_ui_uy",
+          "page": 49
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ui hay uy: ngọn n___",
+          "answer": "ui",
+          "accepted": [
+            "úi"
+          ],
+          "explain": "Viết đúng là: ngọn núi.",
+          "skill": "chinh_ta_ui_uy",
+          "page": 49
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn từ viết đúng chính tả:",
+          "options": [
+            "huy hiệu",
+            "huy hiêu",
+            "hui hiệu"
+          ],
+          "answer": "huy hiệu",
+          "explain": "Viết đúng là “huy hiệu” (vần uy).",
+          "skill": "chinh_ta_ui_uy",
+          "page": 49
+        },
+        {
+          "d": 2,
+          "type": "text",
+          "q": "Tìm từ có tiếng bắt đầu bằng r, d hay gi: “Làm dính lại bằng hồ” → ___",
+          "answer": "dán",
+          "explain": "Làm dính lại bằng hồ là “dán”.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 49
+        },
+        {
+          "d": 3,
+          "type": "text",
+          "q": "Tìm từ có tiếng bắt đầu bằng r, d hay gi: “Chỉ những người tuổi cao, sức yếu” → người ___",
+          "answer": "già",
+          "accepted": [
+            "già yếu"
+          ],
+          "explain": "Người tuổi cao, sức yếu là người già.",
+          "skill": "chinh_ta_r_d_gi",
+          "page": 49
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Con vật nào là vật nuôi trong nhà?",
+          "options": [
+            "gà mái",
+            "hổ",
+            "cá mập",
+            "hươu cao cổ"
+          ],
+          "answer": "gà mái",
+          "explain": "Gà mái được nuôi trong nhà.",
+          "skill": "tu_ngu_vat_nuoi",
+          "page": 50
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Trong bài “Vè vật nuôi”, con vật nào “bắt chuột tài tình”?",
+          "options": [
+            "trống choai",
+            "gà mái",
+            "lợn sề",
+            "mèo mướp"
+          ],
+          "answer": "mèo mướp",
+          "explain": "Anh em mèo mướp bắt chuột tài tình.",
+          "skill": "tu_ngu_vat_nuoi",
+          "page": 50
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Trong bài “Vè vật nuôi”, con vật nào “giúp người dậy sớm”?",
+          "options": [
+            "lợn sề",
+            "mèo mướp",
+            "trống choai",
+            "gà mái"
+          ],
+          "answer": "trống choai",
+          "explain": "Gà trống gáy vang giúp người dậy sớm.",
+          "skill": "tu_ngu_vat_nuoi",
+          "page": 50
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Câu nào thuộc kiểu câu Ai thế nào?",
+          "options": [
+            "Chi cùng bố đến trường cảm ơn cô giáo.",
+            "Em Nụ cứ nhìn Hoa mãi.",
+            "Bầu trời cao và xanh trong."
+          ],
+          "answer": "Bầu trời cao và xanh trong.",
+          "explain": "Bầu trời thế nào? – cao và xanh trong.",
+          "skill": "cau_ai_the_nao",
+          "page": 50
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu nào thuộc kiểu câu Ai thế nào?",
+          "options": [
+            "Chích bông là một con chim bé xinh đẹp.",
+            "Hai chiếc cánh nhỏ xíu.",
+            "Búp bê làm việc suốt ngày."
+          ],
+          "answer": "Hai chiếc cánh nhỏ xíu.",
+          "explain": "Hai chiếc cánh thế nào? – nhỏ xíu.",
+          "skill": "cau_ai_the_nao",
+          "page": 50
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu nào KHÔNG thuộc kiểu câu Ai thế nào?",
+          "options": [
+            "Cái mào đỏ tươi, xinh xắn.",
+            "Em Nụ ngoan lắm.",
+            "Nhà em nuôi một cô gà mái."
+          ],
+          "answer": "Nhà em nuôi một cô gà mái.",
+          "explain": "“Nhà em nuôi một cô gà mái.” nói về hoạt động nuôi – không phải Ai thế nào?",
+          "skill": "cau_ai_the_nao",
+          "page": 51
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Trong câu “Bộ lông của chú màu xám pha xanh lục.”, bộ phận trả lời câu hỏi “Thế nào?” là:",
+          "options": [
+            "bộ lông",
+            "màu xám pha xanh lục",
+            "Bộ lông của chú",
+            "xanh lục"
+          ],
+          "answer": "màu xám pha xanh lục",
+          "explain": "Bộ lông của chú thế nào? – màu xám pha xanh lục.",
+          "skill": "cau_ai_the_nao",
+          "page": 51
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Đặt câu hỏi cho bộ phận “cao chót vót” trong câu “Ngọn núi cao chót vót.”",
+          "options": [
+            "Cái gì cao chót vót?",
+            "Ngọn núi là gì?",
+            "Ngọn núi thế nào?",
+            "Ngọn núi làm gì?"
+          ],
+          "answer": "Ngọn núi thế nào?",
+          "explain": "“Cao chót vót” chỉ đặc điểm nên hỏi bằng “thế nào?”.",
+          "skill": "dat_cau_hoi",
+          "page": 51
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Đặt câu hỏi cho bộ phận “Trời mùa thu” trong câu “Trời mùa thu mát mẻ.”",
+          "options": [
+            "Trời mùa thu là gì?",
+            "Trời mùa thu thế nào?",
+            "Trời mùa thu làm gì?",
+            "Cái gì mát mẻ?"
+          ],
+          "answer": "Cái gì mát mẻ?",
+          "explain": "“Trời mùa thu” là sự vật nên hỏi bằng “Cái gì?”.",
+          "skill": "dat_cau_hoi",
+          "page": 51
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn từ để tạo hình ảnh so sánh: “trắng như ___”",
+          "options": [
+            "son",
+            "tuyết",
+            "nghệ",
+            "voi"
+          ],
+          "answer": "tuyết",
+          "explain": "Tuyết rất trắng: trắng như tuyết.",
+          "skill": "so_sanh",
+          "page": 51
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tên con vật thích hợp: “khỏe như ___”",
+          "options": [
+            "voi",
+            "sóc",
+            "mèo",
+            "thỏ"
+          ],
+          "answer": "voi",
+          "explain": "Voi rất khỏe: khỏe như voi.",
+          "skill": "so_sanh",
+          "page": 54
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn tên con vật thích hợp: “nhanh như ___”",
+          "options": [
+            "voi",
+            "sóc",
+            "ốc sên",
+            "rùa"
+          ],
+          "answer": "sóc",
+          "explain": "Sóc rất nhanh nhẹn: nhanh như sóc.",
+          "skill": "so_sanh",
+          "page": 54
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn tên con vật thích hợp: “chậm như ___”",
+          "options": [
+            "ngựa",
+            "thỏ",
+            "sóc",
+            "rùa"
+          ],
+          "answer": "rùa",
+          "explain": "Rùa bò rất chậm: chậm như rùa.",
+          "skill": "so_sanh",
+          "page": 54
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn bộ phận thích hợp để có câu so sánh: “Hai mắt của mèo ___”",
+          "options": [
+            "mềm và mượt như nhung.",
+            "vểnh lên như hai dấu hỏi.",
+            "tròn xoe như hai hòn bi ve.",
+            "đỏ như bông hoa mười giờ."
+          ],
+          "answer": "tròn xoe như hai hòn bi ve.",
+          "explain": "Mắt mèo tròn xoe như hai hòn bi ve.",
+          "skill": "so_sanh",
+          "page": 55
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Bài “Con mèo Hung”: “Chà, nó có bộ lông mới đẹp làm sao! Màu lông hung hung có sắc vằn đo đỏ…”\nBộ lông mèo Hung được tả thế nào?",
+          "options": [
+            "rất đẹp, màu hung hung có vằn đo đỏ",
+            "đen tuyền, óng ả",
+            "lông mịn, trắng như bông",
+            "mượt mà và sặc sỡ"
+          ],
+          "answer": "rất đẹp, màu hung hung có vằn đo đỏ",
+          "explain": "Bộ lông rất đẹp, màu hung hung có sắc vằn đo đỏ.",
+          "skill": "doc_hieu",
+          "page": 54
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu “Đôi mắt mèo Hung hiền lành.” thuộc kiểu câu nào?",
+          "options": [
+            "Ai làm gì?",
+            "Ai thế nào?",
+            "Ai là gì?"
+          ],
+          "answer": "Ai thế nào?",
+          "explain": "Đôi mắt mèo Hung thế nào? – hiền lành.",
+          "skill": "kieu_cau",
+          "page": 54
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Cách tách nào ĐÚNG hai bộ phận “Cái gì? / Thế nào?” của câu?",
+          "options": [
+            "Bộ lông của chú / vàng óng, mượt như tơ.",
+            "Bộ lông của chú vàng óng / mượt như tơ.",
+            "Bộ lông / của chú vàng óng, mượt như tơ."
+          ],
+          "answer": "Bộ lông của chú / vàng óng, mượt như tơ.",
+          "explain": "Cái gì? – Bộ lông của chú. Thế nào? – vàng óng, mượt như tơ.",
+          "skill": "cau_ai_the_nao",
+          "page": 55
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu nào thể hiện sự ngạc nhiên, thích thú?",
+          "options": [
+            "Con cất sách vào cặp.",
+            "Ôi, quyển sách mới đẹp quá!",
+            "Mẹ mua sách ở đâu?",
+            "Quyển sách này của mẹ."
+          ],
+          "answer": "Ôi, quyển sách mới đẹp quá!",
+          "explain": "Câu có “Ôi… quá!” thể hiện sự ngạc nhiên, thích thú.",
+          "skill": "ngac_nhien_thich_thu",
+          "page": 52
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Thư dậy lúc 6 giờ 30 phút. 15 phút sau, em vào bếp ăn sáng. Thư ăn sáng lúc mấy giờ?",
+          "options": [
+            "7 giờ 15 phút",
+            "6 giờ 15 phút",
+            "7 giờ",
+            "6 giờ 45 phút"
+          ],
+          "answer": "6 giờ 45 phút",
+          "explain": "6 giờ 30 phút thêm 15 phút là 6 giờ 45 phút.",
+          "skill": "thoi_gian_bieu",
+          "page": 53
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Thư thay quần áo lúc 7 giờ, sau đó mẹ chở em đến trường mất 15 phút. Thư đến trường lúc mấy giờ?",
+          "options": [
+            "7 giờ 15 phút",
+            "7 giờ 30 phút",
+            "8 giờ",
+            "6 giờ 45 phút"
+          ],
+          "answer": "7 giờ 15 phút",
+          "explain": "7 giờ thêm 15 phút là 7 giờ 15 phút.",
+          "skill": "thoi_gian_bieu",
+          "page": 53
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "title": "Ôn tập cuối học kì I – Ba kiểu câu, dấu câu, từ loại",
+      "questions": [
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Bài “Chim chích bông”: “Hai chân chích bông xinh xinh bằng hai chiếc tăm. Thế mà hai cái chân tăm ấy rất nhanh nhẹn, được việc, nhảy cứ liên liến.”\nHai chân chích bông có đặc điểm gì?",
+          "options": [
+            "dài ngoằng",
+            "ngắn và chậm chạp",
+            "xinh xinh bằng hai chiếc tăm, rất nhanh nhẹn",
+            "to và khỏe"
+          ],
+          "answer": "xinh xinh bằng hai chiếc tăm, rất nhanh nhẹn",
+          "explain": "Hai chân xinh xinh bằng hai chiếc tăm mà rất nhanh nhẹn.",
+          "skill": "doc_hieu",
+          "page": 56
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Cặp mỏ tí hon ấy gắp sâu trên lá nhanh thoăn thoắt.”\nThức ăn của chim chích bông được nhắc đến là gì?",
+          "options": [
+            "hạt dẻ",
+            "cá nhỏ",
+            "sâu",
+            "thóc"
+          ],
+          "answer": "sâu",
+          "explain": "Chích bông gắp sâu trên lá.",
+          "skill": "doc_hieu",
+          "page": 56
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "“Chích bông xinh đẹp chẳng những là bạn của trẻ em mà còn là bạn của bà con nông dân.”\nChích bông là bạn của những ai?",
+          "options": [
+            "trẻ em và bà con nông dân",
+            "chỉ trẻ em",
+            "chỉ bà con nông dân",
+            "các loài chim khác"
+          ],
+          "answer": "trẻ em và bà con nông dân",
+          "explain": "Chích bông là bạn của cả trẻ em và bà con nông dân.",
+          "skill": "doc_hieu",
+          "page": 56
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu nào trong bài “Chim chích bông” thuộc kiểu câu Ai là gì?",
+          "options": [
+            "Cặp mỏ tí hon ấy gắp sâu trên lá nhanh thoăn thoắt.",
+            "Chích bông là con chim bé xinh đẹp trong thế giới loài chim.",
+            "Hai chiếc cánh nhỏ xíu."
+          ],
+          "answer": "Chích bông là con chim bé xinh đẹp trong thế giới loài chim.",
+          "explain": "Câu giới thiệu “Chích bông là con chim bé xinh đẹp…” – kiểu Ai là gì?",
+          "skill": "kieu_cau",
+          "page": 56
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Bài “Bác đưa thư”: “Bác đưa thư trao cho Minh một bức thư. Đúng là thư của bố rồi. Minh mừng quýnh.”\nMinh nhận được thư của ai?",
+          "options": [
+            "của bác đưa thư",
+            "của mẹ",
+            "của ông",
+            "của bố"
+          ],
+          "answer": "của bố",
+          "explain": "Đúng là thư của bố rồi.",
+          "skill": "doc_hieu",
+          "page": 57
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Nhưng em chợt thấy bác đưa thư mồ hôi nhễ nhại. Minh chạy vội vào nhà. Em rót một cốc nước mát lạnh…”\nThấy bác đưa thư mồ hôi nhễ nhại, Minh đã làm gì?",
+          "options": [
+            "chạy vào đọc thư với mẹ",
+            "rót cốc nước mát mời bác uống",
+            "mời bác vào nhà nghỉ",
+            "lấy quạt quạt cho bác"
+          ],
+          "answer": "rót cốc nước mát mời bác uống",
+          "explain": "Minh rót một cốc nước mát lạnh, lễ phép mời bác uống.",
+          "skill": "doc_hieu",
+          "page": 57
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu “Bác đưa thư trao cho Minh một bức thư.” thuộc kiểu câu nào?",
+          "options": [
+            "Ai làm gì?",
+            "Ai là gì?",
+            "Ai thế nào?"
+          ],
+          "answer": "Ai làm gì?",
+          "explain": "Bác đưa thư làm gì? – trao cho Minh một bức thư.",
+          "skill": "kieu_cau",
+          "page": 57
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ hoạt động trong câu “Em rót một cốc nước mát lạnh.”?",
+          "options": [
+            "rót",
+            "nước",
+            "mát lạnh",
+            "cốc"
+          ],
+          "answer": "rót",
+          "explain": "“Rót” là từ chỉ hoạt động.",
+          "skill": "tu_chi_hoat_dong",
+          "page": 57
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Đặt câu hỏi cho bộ phận “bác sĩ của bệnh viện thành phố” trong câu “Cô An là bác sĩ của bệnh viện thành phố.”",
+          "options": [
+            "Cô An thế nào?",
+            "Ai là bác sĩ của bệnh viện thành phố?",
+            "Cô An là gì?",
+            "Cô An làm gì?"
+          ],
+          "answer": "Cô An là gì?",
+          "explain": "Bộ phận này trả lời câu hỏi “là gì?”.",
+          "skill": "dat_cau_hoi",
+          "page": 57
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Đặt câu hỏi cho bộ phận “thật đẹp” trong câu “Chiếc cặp sách của Lan thật đẹp.”",
+          "options": [
+            "Chiếc cặp sách của Lan là gì?",
+            "Chiếc cặp sách của Lan thế nào?",
+            "Cái gì thật đẹp?",
+            "Chiếc cặp sách của Lan làm gì?"
+          ],
+          "answer": "Chiếc cặp sách của Lan thế nào?",
+          "explain": "“Thật đẹp” chỉ đặc điểm nên hỏi “thế nào?”.",
+          "skill": "dat_cau_hoi",
+          "page": 57
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Đặt câu hỏi cho bộ phận “đang giúp mẹ nấu cơm” trong câu “Lan đang giúp mẹ nấu cơm.”",
+          "options": [
+            "Lan thế nào?",
+            "Lan là ai?",
+            "Ai đang giúp mẹ nấu cơm?",
+            "Lan đang làm gì?"
+          ],
+          "answer": "Lan đang làm gì?",
+          "explain": "Bộ phận chỉ hoạt động nên hỏi “làm gì?”.",
+          "skill": "dat_cau_hoi",
+          "page": 57
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Sắp xếp “rất / vui / Na / bạn bè / khi / giúp đỡ / trong học tập / được” thành câu đúng:",
+          "options": [
+            "Bạn bè rất vui khi Na trong học tập được giúp đỡ.",
+            "Rất vui Na khi bạn bè được trong học tập giúp đỡ.",
+            "Na rất vui khi được giúp đỡ bạn bè trong học tập.",
+            "Na được giúp đỡ rất vui khi bạn bè trong học tập."
+          ],
+          "answer": "Na rất vui khi được giúp đỡ bạn bè trong học tập.",
+          "explain": "Câu đúng: Na rất vui khi được giúp đỡ bạn bè trong học tập.",
+          "skill": "sap_xep_cau",
+          "page": 57
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "“Ở một cánh đồng nọ ___ có hai anh em cày chung một đám ruộng.” Chỗ trống cần điền dấu gì?",
+          "options": [
+            "dấu chấm",
+            "dấu chấm hỏi",
+            "dấu phẩy"
+          ],
+          "answer": "dấu phẩy",
+          "explain": "Dấu phẩy ngăn cách “Ở một cánh đồng nọ” với phần chính của câu.",
+          "skill": "dau_cau",
+          "page": 58
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu nào dùng dấu phẩy ĐÚNG?",
+          "options": [
+            "Cuối mùa đông, hoa xoài nở trắng cành.",
+            "Cuối mùa đông hoa, xoài nở trắng cành.",
+            "Cuối mùa, đông hoa xoài nở trắng cành.",
+            "Cuối mùa đông hoa xoài, nở trắng cành."
+          ],
+          "answer": "Cuối mùa đông, hoa xoài nở trắng cành.",
+          "explain": "Dấu phẩy đặt sau “Cuối mùa đông” (chỉ thời gian).",
+          "skill": "dau_phay",
+          "page": 58
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu nào dùng dấu phẩy ĐÚNG?",
+          "options": [
+            "Mùi xoài thơm, dịu dàng, vị ngọt, đậm đà.",
+            "Mùi xoài thơm dịu dàng, vị ngọt đậm đà.",
+            "Mùi xoài, thơm dịu dàng vị, ngọt đậm đà.",
+            "Mùi, xoài thơm dịu dàng vị ngọt đậm đà."
+          ],
+          "answer": "Mùi xoài thơm dịu dàng, vị ngọt đậm đà.",
+          "explain": "Dấu phẩy ngăn cách hai ý: “mùi xoài thơm dịu dàng” và “vị ngọt đậm đà”.",
+          "skill": "dau_phay",
+          "page": 58
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ tính cách, phẩm chất?",
+          "options": [
+            "múa hát",
+            "chạy",
+            "leo trèo",
+            "chăm chỉ"
+          ],
+          "answer": "chăm chỉ",
+          "explain": "“Chăm chỉ” chỉ phẩm chất; các từ kia chỉ hoạt động.",
+          "skill": "tu_chi_tinh_chat",
+          "page": 58
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ hoạt động?",
+          "options": [
+            "hiền",
+            "lười biếng",
+            "khiêm tốn",
+            "đọc"
+          ],
+          "answer": "đọc",
+          "explain": "“Đọc” là hoạt động.",
+          "skill": "tu_chi_hoat_dong",
+          "page": 58
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Nhóm nào chỉ gồm các từ chỉ tính cách, phẩm chất?",
+          "options": [
+            "hiền, viết, vẽ",
+            "kiêu căng, ăn, uống",
+            "siêng năng, cần cù, ngoan",
+            "chịu khó, lăn, bò"
+          ],
+          "answer": "siêng năng, cần cù, ngoan",
+          "explain": "Siêng năng, cần cù, ngoan đều chỉ phẩm chất.",
+          "skill": "tu_chi_tinh_chat",
+          "page": 58
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ tình cảm?",
+          "options": [
+            "yêu thương",
+            "giặt giũ",
+            "quét dọn",
+            "ông bà"
+          ],
+          "answer": "yêu thương",
+          "explain": "“Yêu thương” là từ chỉ tình cảm.",
+          "skill": "tu_ngu_tinh_cam",
+          "page": 58
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Từ nào chỉ họ hàng?",
+          "options": [
+            "sẻ chia",
+            "cô chú",
+            "nấu nướng",
+            "kính trọng"
+          ],
+          "answer": "cô chú",
+          "explain": "“Cô chú” là người trong họ hàng.",
+          "skill": "tu_ngu_ho_hang",
+          "page": 58
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu “Hươu thật thông minh và nhanh nhẹn.” thuộc kiểu câu nào?",
+          "options": [
+            "Ai là gì?",
+            "Ai làm gì?",
+            "Ai thế nào?"
+          ],
+          "answer": "Ai thế nào?",
+          "explain": "Hươu thế nào? – thật thông minh và nhanh nhẹn.",
+          "skill": "kieu_cau",
+          "page": 59
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Câu “Cây vạn tuế là cây mà ông Hân thích nhất trong vườn.” thuộc kiểu câu nào?",
+          "options": [
+            "Ai thế nào?",
+            "Ai là gì?",
+            "Ai làm gì?"
+          ],
+          "answer": "Ai là gì?",
+          "explain": "Cây vạn tuế là gì? – là cây ông Hân thích nhất.",
+          "skill": "kieu_cau",
+          "page": 59
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Câu “Bác Hồng đang chăm sóc vườn rau.” thuộc kiểu câu nào?",
+          "options": [
+            "Ai làm gì?",
+            "Ai thế nào?",
+            "Ai là gì?"
+          ],
+          "answer": "Ai làm gì?",
+          "explain": "Bác Hồng làm gì? – đang chăm sóc vườn rau.",
+          "skill": "kieu_cau",
+          "page": 59
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Câu “Mẹ của Hà là một người hiền lành, tốt bụng.” thuộc kiểu câu nào?",
+          "options": [
+            "Ai làm gì?",
+            "Ai thế nào?",
+            "Ai là gì?"
+          ],
+          "answer": "Ai là gì?",
+          "explain": "Câu có “là một người…” giới thiệu mẹ của Hà – kiểu Ai là gì? (dù có từ chỉ tính chất).",
+          "skill": "kieu_cau",
+          "page": 59
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Đoạn “Con chuồn chuồn nước”: câu nào KHÔNG phải kiểu câu Ai thế nào?",
+          "options": [
+            "Bốn cái cánh mỏng như giấy bóng.",
+            "Chú đậu trên một cành lộc vừng ngả dài trên mặt hồ.",
+            "Màu vàng trên lưng chú lấp lánh."
+          ],
+          "answer": "Chú đậu trên một cành lộc vừng ngả dài trên mặt hồ.",
+          "explain": "“Chú đậu trên cành lộc vừng” nói về hoạt động – kiểu Ai làm gì?",
+          "skill": "cau_ai_the_nao",
+          "page": 59
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Bài “Chú Trống Choai”: “Chú ta đang ngất ngưởng trên đống củi trước sân kia kìa.”\nTrống Choai đứng ở đâu để cất tiếng gáy?",
+          "options": [
+            "trên cành chanh",
+            "trên mái nhà",
+            "ngất ngưởng trên đống củi trước sân",
+            "trên cây chuối ở góc sân"
+          ],
+          "answer": "ngất ngưởng trên đống củi trước sân",
+          "explain": "Trống Choai đứng ngất ngưởng trên đống củi trước sân.",
+          "skill": "doc_hieu",
+          "page": 61
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "“Bây giờ đuôi chú đã có dáng cong cong chứ không đuồn đuột như hồi nhỏ nữa. Bộ cánh cũng có duyên lắm rồi.”\nTrống Choai bây giờ khác hồi nhỏ ở điểm nào?",
+          "options": [
+            "Đuôi cong cong, bộ cánh có duyên",
+            "Đôi chân cao, lông đỏ hơn",
+            "Mào to hơn, đuôi dài hơn",
+            "Đôi cánh thẳng, mỏ cứng hơn"
+          ],
+          "answer": "Đuôi cong cong, bộ cánh có duyên",
+          "explain": "Đuôi đã cong cong, không đuồn đuột; bộ cánh có duyên lắm rồi.",
+          "skill": "doc_hieu",
+          "page": 61
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Từ nào chỉ đặc điểm trong câu “Bây giờ đuôi chú đã có dáng cong cong.”?",
+          "options": [
+            "đuôi",
+            "cong cong",
+            "dáng",
+            "bây giờ"
+          ],
+          "answer": "cong cong",
+          "explain": "“Cong cong” chỉ hình dáng – từ chỉ đặc điểm.",
+          "skill": "tu_chi_dac_diem",
+          "page": 61
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền l hay n: “Cũng từ ___úa nếp sinh ra”",
+          "answer": "l",
+          "explain": "Viết đúng là: lúa nếp.",
+          "skill": "chinh_ta_l_n",
+          "page": 62
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ui hay uy: “t___ nhiên”",
+          "answer": "uy",
+          "explain": "Viết đúng là: tuy nhiên.",
+          "skill": "chinh_ta_ui_uy",
+          "page": 62
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Điền ui hay uy (không cần dấu thanh): “m___ thuyền”",
+          "answer": "ui",
+          "accepted": [
+            "ũi"
+          ],
+          "explain": "Viết đúng là: mũi thuyền.",
+          "skill": "chinh_ta_ui_uy",
+          "page": 62
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu câu thích hợp điền vào chỗ trống: “– Có chuyện gì thế con ___”",
+          "options": [
+            "dấu chấm",
+            "dấu phẩy",
+            "dấu chấm hỏi"
+          ],
+          "answer": "dấu chấm hỏi",
+          "explain": "Mẹ hỏi Tũn nên cuối câu dùng dấu chấm hỏi.",
+          "skill": "dau_cau",
+          "page": 62
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "“Thấy vẻ mặt buồn rầu của Tũn ___ mẹ hỏi:” Chỗ trống cần điền dấu gì?",
+          "options": [
+            "dấu chấm hỏi",
+            "dấu phẩy",
+            "dấu chấm"
+          ],
+          "answer": "dấu phẩy",
+          "explain": "Dấu phẩy ngăn cách phần đầu câu với “mẹ hỏi”.",
+          "skill": "dau_cau",
+          "page": 62
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Đặt câu hỏi cho bộ phận “Họa mi” trong câu “Họa mi là loài chim có tiếng hót rất hay.”",
+          "options": [
+            "Họa mi là gì?",
+            "Họa mi thế nào?",
+            "Họa mi làm gì?",
+            "Con gì là loài chim có tiếng hót rất hay?"
+          ],
+          "answer": "Con gì là loài chim có tiếng hót rất hay?",
+          "explain": "“Họa mi” là con vật nên hỏi bằng “Con gì?”.",
+          "skill": "dat_cau_hoi",
+          "page": 62
+        }
+      ]
+    }
+  ]
+}

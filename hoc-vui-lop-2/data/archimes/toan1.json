@@ -1,0 +1,3780 @@
+{
+  "subject": "toan",
+  "book": "Toán 2 - Quyển 1",
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Ôn tập các số đến 100. Số hạng, tổng. Đề-xi-mét",
+      "questions": [
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Số gồm 5 chục và 8 đơn vị là ___.",
+          "answer": "58",
+          "check": "50 + 8",
+          "explain": "5 chục là 50, thêm 8 đơn vị được 58.",
+          "skill": "cau_tao_so",
+          "page": 12
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Có tất cả ___ số có một chữ số.",
+          "answer": "10",
+          "check": "9 - 0 + 1",
+          "explain": "Các số có một chữ số là 0; 1; 2; …; 9, gồm 10 số.",
+          "skill": "cau_tao_so",
+          "page": 12
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Số liền sau của số lớn nhất có hai chữ số là ___.",
+          "answer": "100",
+          "check": "99 + 1",
+          "explain": "Số lớn nhất có hai chữ số là 99, số liền sau của 99 là 100.",
+          "skill": "so_lien_truoc_sau",
+          "page": 12
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 26 + 13 ___ 37 + 2",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "26 + 13 = 39, 37 + 2 = 39, mà 39 = 39.",
+          "skill": "so_sanh",
+          "page": 6
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 44 - 12 ___ 44 - 11",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "44 - 12 = 32, 44 - 11 = 33, mà 32 < 33.",
+          "skill": "so_sanh",
+          "page": 6
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 45 - 24 ___ 17 + 10",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "45 - 24 = 21, 17 + 10 = 27, mà 21 < 27.",
+          "skill": "so_sanh",
+          "page": 6
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 37 - 17 ___ 56 - 36",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "37 - 17 = 20, 56 - 36 = 20, mà 20 = 20.",
+          "skill": "so_sanh",
+          "page": 6
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 31 + 4 ___ 35 + 0",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "31 + 4 = 35, 35 + 0 = 35, mà 35 = 35.",
+          "skill": "so_sanh",
+          "page": 12
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 31 + 3 + 5 = ___",
+          "answer": "39",
+          "check": "31 + 3 + 5",
+          "explain": "Tính từ trái sang phải: 31 + 3 = 34, 34 + 5 = 39.",
+          "skill": "tinh_day_phep_tinh",
+          "page": 6
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 54 + 23 - 17 = ___",
+          "answer": "60",
+          "check": "54 + 23 - 17",
+          "explain": "Tính từ trái sang phải: 54 + 23 = 77, 77 - 17 = 60.",
+          "skill": "tinh_day_phep_tinh",
+          "page": 6
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "3 dm = ___ cm",
+          "answer": "30",
+          "check": "3 x 10",
+          "explain": "1 dm = 10 cm nên 3 dm = 30 cm.",
+          "skill": "doi_don_vi",
+          "page": 10
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "40 cm = ___ dm",
+          "answer": "4",
+          "check": "40 : 10",
+          "explain": "10 cm = 1 dm nên 40 cm = 4 dm.",
+          "skill": "doi_don_vi",
+          "page": 10
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Trong phép cộng 45 + 13 = 58, số 58 được gọi là ___.",
+          "answer": "tổng",
+          "explain": "Trong phép cộng, kết quả được gọi là tổng; 45 và 13 là các số hạng.",
+          "skill": "so_hang_tong",
+          "page": 5
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "3 dm 2 cm = ___ cm",
+          "answer": "32",
+          "check": "30 + 2",
+          "explain": "3 dm = 30 cm, thêm 2 cm được 32 cm.",
+          "skill": "doi_don_vi",
+          "page": 10
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "87 cm - 47 cm = ___ dm",
+          "answer": "4",
+          "check": "(87 - 47) : 10",
+          "explain": "87 cm - 47 cm = 40 cm = 4 dm.",
+          "skill": "doi_don_vi",
+          "page": 10
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "4 dm + 5 dm = ___ cm",
+          "answer": "90",
+          "check": "(4 + 5) x 10",
+          "explain": "4 dm + 5 dm = 9 dm = 90 cm.",
+          "skill": "doi_don_vi",
+          "page": 10
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Một cuộn dây dài 53 dm, người ta cắt đi một đoạn dài 21 dm. Cuộn dây còn lại dài ___ dm.",
+          "answer": "32",
+          "check": "53 - 21",
+          "explain": "Còn lại: 53 - 21 = 32 (dm).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 7
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Nhà An nuôi 14 con vịt và 1 chục con gà. Số con ngan bằng tổng số con gà và vịt. Nhà An nuôi ___ con ngan.",
+          "answer": "24",
+          "check": "14 + 10",
+          "explain": "1 chục = 10, số ngan là 14 + 10 = 24 (con).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 7
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Trong hộp có 30 bút chì màu xanh và 25 bút chì màu đỏ. Trong hộp có tất cả ___ chiếc bút chì.",
+          "answer": "55",
+          "check": "30 + 25",
+          "explain": "Tất cả có: 30 + 25 = 55 (chiếc).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 12
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Mảnh vải xanh dài 12 dm, mảnh vải đỏ dài 70 cm. Cả hai mảnh vải dài ___ dm.",
+          "answer": "19",
+          "check": "12 + 70 : 10",
+          "explain": "70 cm = 7 dm, cả hai mảnh dài 12 + 7 = 19 (dm).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 12
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Băng giấy đỏ dài 41 cm, vàng dài 4 dm, trắng dài 3 dm 8 cm, xanh dài 44 cm, nâu dài 5 dm. Băng giấy nào dài nhất?",
+          "options": [
+            "Băng giấy xanh",
+            "Băng giấy đỏ",
+            "Băng giấy vàng",
+            "Băng giấy nâu"
+          ],
+          "answer": "Băng giấy nâu",
+          "explain": "Đổi ra cm: đỏ 41, vàng 40, trắng 38, xanh 44, nâu 50. Nâu dài nhất.",
+          "skill": "do_dai",
+          "page": 6
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Băng giấy đỏ dài 41 cm, vàng dài 4 dm, trắng dài 3 dm 8 cm, xanh dài 44 cm, nâu dài 5 dm. Băng giấy nào ngắn nhất?",
+          "options": [
+            "Băng giấy vàng",
+            "Băng giấy đỏ",
+            "Băng giấy trắng",
+            "Băng giấy xanh"
+          ],
+          "answer": "Băng giấy trắng",
+          "explain": "Đổi ra cm: đỏ 41, vàng 40, trắng 38, xanh 44, nâu 50. Trắng ngắn nhất.",
+          "skill": "do_dai",
+          "page": 6
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Số thứ nhất là số liền trước của 41, số thứ hai là số liền sau của 29. Tổng của hai số đó là ___.",
+          "answer": "70",
+          "check": "40 + 30",
+          "explain": "Số liền trước của 41 là 40, số liền sau của 29 là 30; 40 + 30 = 70.",
+          "skill": "so_lien_truoc_sau",
+          "page": 8
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Số *7 là số có hai chữ số và *7 < 24. Chữ số * là:",
+          "options": [
+            "2",
+            "1",
+            "0",
+            "3"
+          ],
+          "answer": "1",
+          "explain": "*7 là số có hai chữ số nên * khác 0; 17 < 24 còn 27 > 24, nên * = 1.",
+          "skill": "cau_tao_so",
+          "page": 10
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Khúc gỗ thứ nhất dài 4 dm, khúc gỗ thứ hai dài 10 dm, khúc gỗ thứ ba dài bằng tổng độ dài hai khúc gỗ kia. Cả ba khúc gỗ dài ___ dm.",
+          "answer": "28",
+          "check": "4 + 10 + (4 + 10)",
+          "explain": "Khúc thứ ba dài 4 + 10 = 14 dm; cả ba khúc dài 4 + 10 + 14 = 28 (dm).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 7
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số có hai chữ số, chữ số hàng chục là số chẵn lớn nhất có một chữ số, chữ số hàng đơn vị là số liền trước của số lớn nhất có một chữ số. Số đó là ___.",
+          "answer": "88",
+          "check": "80 + 8",
+          "explain": "Số chẵn lớn nhất có một chữ số là 8; số liền trước của 9 là 8. Số cần tìm là 88.",
+          "skill": "cau_tao_so",
+          "page": 8
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số có hai chữ số, chữ số hàng chục là số liền trước của số bé nhất có hai chữ số, chữ số hàng đơn vị là số liền sau của số bé nhất có một chữ số. Số đó là ___.",
+          "answer": "91",
+          "check": "90 + 1",
+          "explain": "Liền trước của 10 là 9; liền sau của 0 là 1. Số cần tìm là 91.",
+          "skill": "cau_tao_so",
+          "page": 8
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số có hai chữ số, chữ số hàng chục là số liền trước của số chẵn lớn nhất có một chữ số, chữ số hàng đơn vị là số liền trước của số nhỏ nhất có hai chữ số. Số đó là ___.",
+          "answer": "79",
+          "check": "70 + 9",
+          "explain": "Liền trước của 8 là 7; liền trước của 10 là 9. Số cần tìm là 79.",
+          "skill": "cau_tao_so",
+          "page": 8
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số thứ nhất là số lẻ liền trước của 29, số thứ hai là số tròn chục lớn nhất nhỏ hơn 54. Tổng hai số là ___.",
+          "answer": "77",
+          "check": "27 + 50",
+          "explain": "Số lẻ liền trước 29 là 27; số tròn chục lớn nhất nhỏ hơn 54 là 50; 27 + 50 = 77.",
+          "skill": "cau_tao_so",
+          "page": 9
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Viết các số có hai chữ số khác nhau mà tổng các chữ số bằng 8. Tổng của số lớn nhất và số nhỏ nhất trong các số đó là ___.",
+          "answer": "97",
+          "check": "80 + 17",
+          "explain": "Các số: 17, 26, 35, 53, 62, 71, 80. Lớn nhất 80, nhỏ nhất 17; 80 + 17 = 97.",
+          "skill": "cau_tao_so",
+          "page": 9
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số bé nhất có hai chữ số mà tổng các chữ số bằng 6, cộng với số lớn nhất có hai chữ số mà tổng các chữ số bằng 6, được ___.",
+          "answer": "75",
+          "check": "15 + 60",
+          "explain": "Số bé nhất là 15, số lớn nhất là 60; 15 + 60 = 75.",
+          "skill": "cau_tao_so",
+          "page": 11
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Một số là số bé nhất có hai chữ số có tổng các chữ số bằng 5, số kia là số lẻ lớn nhất có hai chữ số có tổng các chữ số bằng 5. Tổng hai số là ___.",
+          "answer": "55",
+          "check": "14 + 41",
+          "explain": "Số bé nhất là 14; số lẻ lớn nhất là 41 (50 là số chẵn); 14 + 41 = 55.",
+          "skill": "cau_tao_so",
+          "page": 11
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tìm một số, biết lấy 14 cộng với số đó thì được kết quả bằng 49 trừ đi 22. Số đó là ___.",
+          "answer": "13",
+          "check": "49 - 22 - 14",
+          "explain": "49 - 22 = 27; số cần tìm là 27 - 14 = 13.",
+          "skill": "tim_so",
+          "page": 13
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Viết các số có hai chữ số khác nhau từ hai trong ba chữ số 1; 2; 4. Tổng của số lớn nhất và số bé nhất là ___.",
+          "answer": "54",
+          "check": "42 + 12",
+          "explain": "Các số: 12, 14, 21, 24, 41, 42. Lớn nhất 42, bé nhất 12; 42 + 12 = 54.",
+          "skill": "cau_tao_so",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Số bị trừ, số trừ, hiệu",
+      "questions": [
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 46 - 24 = ___",
+          "answer": "22",
+          "check": "46 - 24",
+          "explain": "Ta tính: 46 - 24 = 22.",
+          "skill": "tru_khong_nho",
+          "page": 15
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 99 - 18 = ___",
+          "answer": "81",
+          "check": "99 - 18",
+          "explain": "Ta tính: 99 - 18 = 81.",
+          "skill": "tru_khong_nho",
+          "page": 15
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 69 - 12 = ___",
+          "answer": "57",
+          "check": "69 - 12",
+          "explain": "Ta tính: 69 - 12 = 57.",
+          "skill": "tru_khong_nho",
+          "page": 15
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "12 dm - 2 dm = ___ dm",
+          "answer": "10",
+          "check": "12 - 2",
+          "explain": "Ta tính: 12 - 2 = 10.",
+          "skill": "do_dai",
+          "page": 15
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "8 dm + 21 dm = ___ dm",
+          "answer": "29",
+          "check": "8 + 21",
+          "explain": "Ta tính: 8 + 21 = 29.",
+          "skill": "do_dai",
+          "page": 15
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Số chẵn liền trước của 100 là ___.",
+          "answer": "98",
+          "check": "100 - 2",
+          "explain": "Hai số chẵn liên tiếp hơn kém nhau 2 đơn vị: 100 - 2 = 98.",
+          "skill": "so_lien_truoc_sau",
+          "page": 15
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Số lẻ liền sau của 39 là ___.",
+          "answer": "41",
+          "check": "39 + 2",
+          "explain": "Hai số lẻ liên tiếp hơn kém nhau 2 đơn vị: 39 + 2 = 41.",
+          "skill": "so_lien_truoc_sau",
+          "page": 15
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Trong phép trừ 49 - 15 = 34, số 49 được gọi là ___.",
+          "answer": "số bị trừ",
+          "explain": "Trong phép trừ: 49 là số bị trừ, 15 là số trừ, 34 là hiệu.",
+          "skill": "thanh_phan_phep_tru",
+          "page": 14
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Trong phép trừ 49 - 15 = 34, số 34 được gọi là ___.",
+          "answer": "hiệu",
+          "explain": "Kết quả của phép trừ được gọi là hiệu.",
+          "skill": "thanh_phan_phep_tru",
+          "page": 14
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Một số bất kì trừ đi chính nó thì được kết quả là:",
+          "options": [
+            "0",
+            "Chính số đó",
+            "1",
+            "10"
+          ],
+          "answer": "0",
+          "explain": "Ví dụ 32 - 32 = 0.",
+          "skill": "thanh_phan_phep_tru",
+          "page": 14
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính nhẩm: 80 - 60 + 10 = ___",
+          "answer": "30",
+          "check": "80 - 60 + 10",
+          "explain": "Ta tính: 80 - 60 + 10 = 30.",
+          "skill": "tinh_nham",
+          "page": 17
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "19 + 7 = 19 + 1 + ___",
+          "answer": "6",
+          "check": "7 - 1",
+          "explain": "Tách 7 = 1 + 6 để 19 + 1 được 20 tròn chục.",
+          "skill": "tinh_nham",
+          "page": 17
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 37 + 12 - 24 = ___",
+          "answer": "25",
+          "check": "37 + 12 - 24",
+          "explain": "37 + 12 = 49, 49 - 24 = 25.",
+          "skill": "tinh_day_phep_tinh",
+          "page": 21
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Nam đọc một quyển truyện dày 96 trang. Nam đã đọc được 45 trang. Nam còn ___ trang chưa đọc.",
+          "answer": "51",
+          "check": "96 - 45",
+          "explain": "Số trang chưa đọc: 96 - 45 = 51 (trang).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 15
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Lớp 2A có 35 bạn. Có 5 bạn đi tập văn nghệ, các bạn còn lại trang trí lớp. Có ___ bạn trang trí lớp.",
+          "answer": "30",
+          "check": "35 - 5",
+          "explain": "Số bạn trang trí lớp: 35 - 5 = 30 (bạn).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 16
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hiệu của số lớn nhất có hai chữ số và 34 là ___.",
+          "answer": "65",
+          "check": "99 - 34",
+          "explain": "Số lớn nhất có hai chữ số là 99; 99 - 34 = 65.",
+          "skill": "bai_toan_co_loi_van",
+          "page": 16
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hai lớp 2A và 2B có 64 học sinh, trong đó có 31 học sinh nữ. Hai lớp có ___ học sinh nam.",
+          "answer": "33",
+          "check": "64 - 31",
+          "explain": "Số học sinh nam: 64 - 31 = 33 (học sinh).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 17
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Lan có 19 cái nhãn vở, Lan cho Huệ và Mai mỗi bạn 4 cái. Lan còn lại ___ cái nhãn vở.",
+          "answer": "11",
+          "check": "19 - 4 - 4",
+          "explain": "Lan cho đi 4 + 4 = 8 cái, còn 19 - 8 = 11 (cái).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 17
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Đàn gà có 75 con. Người ta bán đi 3 chục con và 5 con nữa. Đàn gà còn lại ___ con.",
+          "answer": "40",
+          "check": "75 - 30 - 5",
+          "explain": "3 chục = 30; 75 - 30 - 5 = 40 (con).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 18
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hiệu của 45 cm và 2 dm là ___ cm.",
+          "answer": "25",
+          "check": "45 - 20",
+          "explain": "2 dm = 20 cm; 45 - 20 = 25 (cm).",
+          "skill": "do_dai",
+          "page": 21
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Mẹ biếu bà 2 chục quả cam thì mẹ còn lại 12 quả. Lúc đầu mẹ có ___ quả cam.",
+          "answer": "32",
+          "check": "20 + 12",
+          "explain": "2 chục = 20; lúc đầu mẹ có 20 + 12 = 32 (quả).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 21
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Bố có cuộn dây điện dài 88 dm. Sau khi dùng một đoạn thì còn lại 34 dm. Bố đã dùng ___ dm dây.",
+          "answer": "54",
+          "check": "88 - 34",
+          "explain": "Đoạn đã dùng: 88 - 34 = 54 (dm).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 21
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Mai gấp được 25 ngôi sao. Mai tặng bạn một số ngôi sao thì còn lại 1 chục ngôi sao. Mai đã tặng bạn ___ ngôi sao.",
+          "answer": "15",
+          "check": "25 - 10",
+          "explain": "1 chục = 10; số sao đã tặng: 25 - 10 = 15.",
+          "skill": "bai_toan_co_loi_van",
+          "page": 20
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Điền dấu + hoặc - vào hai ô trống: 40 ☐ 30 ☐ 20 = 30. Hai dấu lần lượt là:",
+          "options": [
+            "+, -",
+            "+, +",
+            "-, -",
+            "-, +"
+          ],
+          "answer": "-, +",
+          "explain": "40 - 30 + 20 = 10 + 20 = 30.",
+          "skill": "dien_dau",
+          "page": 19
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tính bằng cách thuận tiện: 19 + 17 - 9 - 7 = ___",
+          "answer": "20",
+          "check": "19 + 17 - 9 - 7",
+          "explain": "(19 - 9) + (17 - 7) = 10 + 10 = 20.",
+          "skill": "tinh_thuan_tien",
+          "page": 19
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hiện nay, tổng số tuổi của hai anh em là 21 tuổi. Ba năm nữa, tổng số tuổi của hai anh em là ___ tuổi.",
+          "answer": "27",
+          "check": "21 + 3 + 3",
+          "explain": "Mỗi người thêm 3 tuổi nên tổng tăng 6: 21 + 6 = 27.",
+          "skill": "tuoi",
+          "page": 16
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hiện nay, tổng số tuổi của hai bà cháu là 69 tuổi. Ba năm trước, tổng số tuổi của hai bà cháu là ___ tuổi.",
+          "answer": "63",
+          "check": "69 - 3 - 3",
+          "explain": "Mỗi người bớt 3 tuổi nên tổng giảm 6: 69 - 6 = 63.",
+          "skill": "tuoi",
+          "page": 16
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hai năm nữa, tổng số tuổi của bố, mẹ và con gái là 69 tuổi. Hiện nay, tổng số tuổi của ba người là ___ tuổi.",
+          "answer": "63",
+          "check": "69 - 2 - 2 - 2",
+          "explain": "Ba người, mỗi người bớt 2 tuổi nên tổng giảm 6: 69 - 6 = 63.",
+          "skill": "tuoi",
+          "page": 20
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tìm một số, biết số đó cộng với 36 rồi trừ đi 2 thì được 67. Số đó là ___.",
+          "answer": "33",
+          "check": "67 + 2 - 36",
+          "explain": "Trước khi trừ 2 là 67 + 2 = 69; số cần tìm là 69 - 36 = 33.",
+          "skill": "tim_so",
+          "page": 18
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tìm một số, biết lấy 87 trừ đi số đó rồi trừ tiếp đi 32 thì được 50. Số đó là ___.",
+          "answer": "5",
+          "check": "87 - (50 + 32)",
+          "explain": "87 trừ số đó được 50 + 32 = 82; số cần tìm là 87 - 82 = 5.",
+          "skill": "tim_so",
+          "page": 18
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Trên xe buýt có 28 hành khách. Tới trạm thứ nhất có 6 người xuống và 7 người lên. Tới trạm thứ hai có 8 người xuống và 9 người lên. Lúc này trên xe có ___ hành khách.",
+          "answer": "30",
+          "check": "28 - 6 + 7 - 8 + 9",
+          "explain": "28 - 6 + 7 = 29; 29 - 8 + 9 = 30 (hành khách).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 20
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Trong rổ có 56 quả cam và quýt. Bác Hà lấy ra 12 quả cam và bỏ vào rổ 24 quả quýt. Lúc này trong rổ có ___ quả cam và quýt.",
+          "answer": "68",
+          "check": "56 - 12 + 24",
+          "explain": "56 - 12 = 44; 44 + 24 = 68 (quả).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 19
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Trong một phép trừ, số bị trừ và hiệu đều bằng 65. Số trừ là ___.",
+          "answer": "0",
+          "check": "65 - 65",
+          "explain": "Số trừ = số bị trừ - hiệu = 65 - 65 = 0.",
+          "skill": "thanh_phan_phep_tru",
+          "page": 21
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hiệu lớn nhất của hai số có một chữ số là ___.",
+          "answer": "9",
+          "check": "9 - 0",
+          "explain": "Lấy số lớn nhất có một chữ số (9) trừ số bé nhất (0): 9 - 0 = 9.",
+          "skill": "thanh_phan_phep_tru",
+          "page": 21
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hiệu của số chẵn lớn nhất có hai chữ số giống nhau với số lẻ nhỏ nhất có hai chữ số khác nhau là ___.",
+          "answer": "75",
+          "check": "88 - 13",
+          "explain": "Số chẵn lớn nhất có hai chữ số giống nhau là 88; số lẻ nhỏ nhất có hai chữ số khác nhau là 13; 88 - 13 = 75.",
+          "skill": "cau_tao_so",
+          "page": 22
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tính bằng cách thuận tiện: 23 + 24 + 25 - 13 - 14 - 15 = ___",
+          "answer": "30",
+          "check": "23 + 24 + 25 - 13 - 14 - 15",
+          "explain": "(23 - 13) + (24 - 14) + (25 - 15) = 10 + 10 + 10 = 30.",
+          "skill": "tinh_thuan_tien",
+          "page": 22
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Phép cộng có tổng bằng 10. Phép cộng dạng 26 + 4; 36 + 24. 9 cộng với một số",
+      "questions": [
+        {
+          "d": 1,
+          "type": "number",
+          "q": "6 + ___ = 10",
+          "answer": "4",
+          "check": "10 - 6",
+          "explain": "Vì 6 + 4 = 10.",
+          "skill": "tong_bang_10",
+          "page": 23
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "3 + ___ = 10",
+          "answer": "7",
+          "check": "10 - 3",
+          "explain": "Vì 3 + 7 = 10.",
+          "skill": "tong_bang_10",
+          "page": 23
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "9 + 7 = ___",
+          "answer": "16",
+          "check": "9 + 7",
+          "explain": "9 + 1 = 10, thêm 6 nữa được 16.",
+          "skill": "bang_cong_9",
+          "page": 23
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "9 + 5 = ___",
+          "answer": "14",
+          "check": "9 + 5",
+          "explain": "9 + 1 = 10, thêm 4 nữa được 14.",
+          "skill": "bang_cong_9",
+          "page": 23
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 52 + 8 = ___",
+          "answer": "60",
+          "check": "52 + 8",
+          "explain": "Ta tính: 52 + 8 = 60.",
+          "skill": "cong_tron_chuc",
+          "page": 24
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 59 + 21 = ___",
+          "answer": "80",
+          "check": "59 + 21",
+          "explain": "Ta tính: 59 + 21 = 80.",
+          "skill": "cong_tron_chuc",
+          "page": 24
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 28 + 42 = ___",
+          "answer": "70",
+          "check": "28 + 42",
+          "explain": "Ta tính: 28 + 42 = 70.",
+          "skill": "cong_tron_chuc",
+          "page": 24
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 26 + 4 ___ 13 + 17",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "26 + 4 = 30, 13 + 17 = 30, mà 30 = 30.",
+          "skill": "so_sanh",
+          "page": 26
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 66 + 24 ___ 40 + 52",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "66 + 24 = 90, 40 + 52 = 92, mà 90 < 92.",
+          "skill": "so_sanh",
+          "page": 26
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 43 + 17 ___ 89 - 29",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "43 + 17 = 60, 89 - 29 = 60, mà 60 = 60.",
+          "skill": "so_sanh",
+          "page": 26
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 59 + 41 ___ 48 + 50",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "59 + 41 = 100, 48 + 50 = 98, mà 100 > 98.",
+          "skill": "so_sanh",
+          "page": 26
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Khi đổi chỗ các số hạng trong một tổng thì tổng ___.",
+          "answer": "không thay đổi",
+          "explain": "Ví dụ 26 + 4 = 4 + 26 = 30.",
+          "skill": "tinh_chat_giao_hoan",
+          "page": 23,
+          "accepted": [
+            "không đổi"
+          ]
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "18 cm + 32 cm = ___ dm",
+          "answer": "5",
+          "check": "(18 + 32) : 10",
+          "explain": "18 cm + 32 cm = 50 cm = 5 dm.",
+          "skill": "doi_don_vi",
+          "page": 24
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Rổ thứ nhất có 21 quả cam, rổ thứ hai có 29 quả, rổ thứ ba có 31 quả. Cả ba rổ có ___ quả cam.",
+          "answer": "81",
+          "check": "21 + 29 + 31",
+          "explain": "21 + 29 = 50; 50 + 31 = 81 (quả).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 24
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Bố cưa một khúc gỗ, lần đầu cưa đi 36 cm, lần thứ hai cưa đi 14 cm. Sau hai lần cưa, khúc gỗ ngắn đi ___ dm.",
+          "answer": "5",
+          "check": "(36 + 14) : 10",
+          "explain": "36 + 14 = 50 cm = 5 dm.",
+          "skill": "bai_toan_co_loi_van",
+          "page": 25
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Trong hộp có 6 viên bi. Nam bỏ vào thêm 4 viên, rồi bỏ tiếp 10 viên. Lúc sau trong hộp có ___ viên bi.",
+          "answer": "20",
+          "check": "6 + 4 + 10",
+          "explain": "6 + 4 = 10; 10 + 10 = 20 (viên).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 25
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tính bằng cách thuận tiện: 17 + 35 + 25 + 13 = ___",
+          "answer": "90",
+          "check": "17 + 35 + 25 + 13",
+          "explain": "(17 + 13) + (35 + 25) = 30 + 60 = 90.",
+          "skill": "tinh_thuan_tien",
+          "page": 26
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tính bằng cách thuận tiện: 15 + 32 + 48 + 5 = ___",
+          "answer": "100",
+          "check": "15 + 32 + 48 + 5",
+          "explain": "(15 + 5) + (32 + 48) = 20 + 80 = 100.",
+          "skill": "tinh_thuan_tien",
+          "page": 26
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Đoạn thẳng AB dài 1 dm, BC dài 6 cm, CD dài 3 dm. Cả ba đoạn thẳng dài ___ cm.",
+          "answer": "46",
+          "check": "10 + 6 + 30",
+          "explain": "1 dm = 10 cm, 3 dm = 30 cm; 10 + 6 + 30 = 46 (cm).",
+          "skill": "do_dai",
+          "page": 27
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 9 + 2 + 39 ___ 39 - 18 + 26",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "9 + 2 + 39 = 50, 39 - 18 + 26 = 47, mà 50 > 47.",
+          "skill": "so_sanh",
+          "page": 30
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hà có 25 cái kẹo. Mẹ cho thêm Hà 5 cái, Hà lại cho bạn 10 cái. Hà còn lại ___ cái kẹo.",
+          "answer": "20",
+          "check": "25 + 5 - 10",
+          "explain": "25 + 5 = 30; 30 - 10 = 20 (cái).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 30
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hồng tặng Mai 1 chục con tem thì Hồng còn lại 16 con tem. Lúc đầu Hồng có ___ con tem.",
+          "answer": "26",
+          "check": "10 + 16",
+          "explain": "1 chục = 10; lúc đầu Hồng có 10 + 16 = 26 (con tem).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 30
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tổng của 5 và số liền trước của số nhỏ nhất có hai chữ số là ___.",
+          "answer": "14",
+          "check": "5 + 9",
+          "explain": "Số nhỏ nhất có hai chữ số là 10, số liền trước là 9; 5 + 9 = 14.",
+          "skill": "bai_toan_co_loi_van",
+          "page": 30
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Đoạn thẳng AB dài 2 dm, đoạn thẳng CD dài 12 cm. Tổng độ dài hai đoạn thẳng là ___ cm.",
+          "answer": "32",
+          "check": "20 + 12",
+          "explain": "2 dm = 20 cm; 20 + 12 = 32 (cm).",
+          "skill": "do_dai",
+          "page": 30
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: a7 + 12 ___ a8 + 12 (a khác 0)",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "Hai số a7 và a8 cùng chữ số hàng chục, mà 7 < 8 nên a7 < a8, cộng cùng 12 thì vẫn bé hơn.",
+          "skill": "so_sanh_chu_so",
+          "page": 28
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: a9 + 15 ___ a9 - 15 (a khác 0)",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "Cùng số a9: cộng thêm 15 thì lớn hơn trừ đi 15.",
+          "skill": "so_sanh_chu_so",
+          "page": 28
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 6a - 32 ___ 32 + 6a",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "Cùng số 6a: trừ đi 32 thì nhỏ hơn cộng thêm 32.",
+          "skill": "so_sanh_chu_so",
+          "page": 28
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tính bằng cách thuận tiện: 3 + 5 + 7 + 13 + 15 + 17 = ___",
+          "answer": "60",
+          "check": "3 + 5 + 7 + 13 + 15 + 17",
+          "explain": "(3 + 17) + (5 + 15) + (7 + 13) = 20 + 20 + 20 = 60.",
+          "skill": "tinh_thuan_tien",
+          "page": 28
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tính: 1 + 2 - 3 + 4 - 5 + 6 - 7 + 8 - 9 + 10 = ___",
+          "answer": "7",
+          "check": "1 + 2 - 3 + 4 - 5 + 6 - 7 + 8 - 9 + 10",
+          "explain": "Tổng các số được cộng: 1 + 2 + 4 + 6 + 8 + 10 = 31; các số bị trừ: 3 + 5 + 7 + 9 = 24; 31 - 24 = 7.",
+          "skill": "tinh_thuan_tien",
+          "page": 28
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số thứ nhất là tổng của 9 và 7, số thứ hai là hiệu của số thứ nhất và 12. Tổng của hai số là ___.",
+          "answer": "20",
+          "check": "(9 + 7) + (9 + 7 - 12)",
+          "explain": "Số thứ nhất 9 + 7 = 16; số thứ hai 16 - 12 = 4; tổng 16 + 4 = 20.",
+          "skill": "tim_so",
+          "page": 28
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hai số có hai chữ số có tổng là 74. Số thứ nhất có chữ số hàng đơn vị là 9, số thứ hai có chữ số hàng chục là 5. Số thứ nhất là ___.",
+          "answer": "19",
+          "check": "74 - 55",
+          "explain": "Hàng đơn vị: 9 + 5 = 14 (viết 4 nhớ 1) nên số thứ hai là 55; số thứ nhất là 74 - 55 = 19.",
+          "skill": "tim_so",
+          "page": 28
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hai số có hai chữ số có tổng là 80. Số thứ nhất có chữ số hàng đơn vị là 0, số thứ hai có chữ số hàng chục là 3. Số thứ hai là ___.",
+          "answer": "30",
+          "check": "80 - 50",
+          "explain": "Hàng đơn vị: 0 + ? có tận cùng là 0 nên ? = 0, số thứ hai là 30 (số thứ nhất là 50).",
+          "skill": "tim_so",
+          "page": 29
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tuấn tặng Bình 15 cái nhãn vở, sau đó Bình tặng lại Tuấn 3 cái thì mỗi bạn đều có 28 cái. Lúc đầu Tuấn có ___ cái nhãn vở.",
+          "answer": "40",
+          "check": "28 - 3 + 15",
+          "explain": "Ngược lại: Tuấn trả 3 cái còn 25, nhận lại 15 cái được 40.",
+          "skill": "tim_so",
+          "page": 29
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Chuyển 14 viên bi từ túi A sang túi B, rồi chuyển 10 viên từ túi B sang túi A thì mỗi túi có 26 viên. Ban đầu túi A có ___ viên bi.",
+          "answer": "30",
+          "check": "26 - 10 + 14",
+          "explain": "Ngược lại: túi A bớt 10 viên còn 16, thêm lại 14 viên được 30.",
+          "skill": "tim_so",
+          "page": 29
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Ba bạn Hải, Minh, Long ngồi thành một hàng để chụp ảnh. Có tất cả bao nhiêu cách sắp xếp chỗ ngồi?",
+          "options": [
+            "3",
+            "4",
+            "6",
+            "9"
+          ],
+          "answer": "6",
+          "explain": "Mỗi bạn ngồi đầu hàng thì có 2 cách xếp hai bạn còn lại: 2 + 2 + 2 = 6 cách.",
+          "skill": "suy_luan",
+          "page": 27
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Cuộn dây được cắt thành ba đoạn: đoạn thứ nhất dài 13 dm, đoạn thứ hai dài 17 dm, đoạn thứ ba bằng tổng độ dài hai đoạn kia. Cả cuộn dây dài ___ dm.",
+          "answer": "60",
+          "check": "13 + 17 + (13 + 17)",
+          "explain": "Đoạn thứ ba: 13 + 17 = 30 dm; cả cuộn: 13 + 17 + 30 = 60 (dm).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 31
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Phép cộng dạng 29 + 5; 49 + 25. 8 cộng với một số. Phép cộng dạng 28 + 5; 38 + 25",
+      "questions": [
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 29 + 5 = ___",
+          "answer": "34",
+          "check": "29 + 5",
+          "explain": "Ta tính: 29 + 5 = 34.",
+          "skill": "cong_co_nho",
+          "page": 33
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 39 + 24 = ___",
+          "answer": "63",
+          "check": "39 + 24",
+          "explain": "Ta tính: 39 + 24 = 63.",
+          "skill": "cong_co_nho",
+          "page": 33
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 49 + 26 = ___",
+          "answer": "75",
+          "check": "49 + 26",
+          "explain": "Ta tính: 49 + 26 = 75.",
+          "skill": "cong_co_nho",
+          "page": 33
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "8 + 5 = ___",
+          "answer": "13",
+          "check": "8 + 5",
+          "explain": "8 + 2 = 10, thêm 3 nữa được 13.",
+          "skill": "bang_cong_8",
+          "page": 32
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "8 + 7 = ___",
+          "answer": "15",
+          "check": "8 + 7",
+          "explain": "8 + 2 = 10, thêm 5 nữa được 15.",
+          "skill": "bang_cong_8",
+          "page": 32
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 28 + 49 = ___",
+          "answer": "77",
+          "check": "28 + 49",
+          "explain": "Ta tính: 28 + 49 = 77.",
+          "skill": "cong_co_nho",
+          "page": 35
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Phép tính nào có kết quả bằng 74?",
+          "options": [
+            "19 + 33",
+            "49 + 25",
+            "29 + 17",
+            "69 + 16"
+          ],
+          "answer": "49 + 25",
+          "explain": "49 + 25 = 74; còn 19 + 33 = 52, 29 + 17 = 46, 69 + 16 = 85.",
+          "skill": "cong_co_nho",
+          "page": 33
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Phép tính nào có kết quả bằng 52?",
+          "options": [
+            "9 + 43",
+            "79 + 6",
+            "19 + 27",
+            "39 + 35"
+          ],
+          "answer": "9 + 43",
+          "explain": "9 + 43 = 52; còn 79 + 6 = 85, 19 + 27 = 46, 39 + 35 = 74.",
+          "skill": "cong_co_nho",
+          "page": 33
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 18 + 17 ___ 19 + 16",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "18 + 17 = 35, 19 + 16 = 35, mà 35 = 35.",
+          "skill": "so_sanh",
+          "page": 35
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 29 - 11 ___ 9 + 8",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "29 - 11 = 18, 9 + 8 = 17, mà 18 > 17.",
+          "skill": "so_sanh",
+          "page": 35
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 91 - 50 ___ 38 + 3",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "91 - 50 = 41, 38 + 3 = 41, mà 41 = 41.",
+          "skill": "so_sanh",
+          "page": 35
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 58 + 26 ___ 48 + 27",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "58 + 26 = 84, 48 + 27 = 75, mà 84 > 75.",
+          "skill": "so_sanh",
+          "page": 35
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 29 + 51 - 20 = ___",
+          "answer": "60",
+          "check": "29 + 51 - 20",
+          "explain": "29 + 51 = 80; 80 - 20 = 60.",
+          "skill": "tinh_day_phep_tinh",
+          "page": 39
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Một cửa hàng có 34 hộp bút màu xanh và 29 hộp bút màu đỏ. Cửa hàng có tất cả ___ hộp bút.",
+          "answer": "63",
+          "check": "34 + 29",
+          "explain": "34 + 29 = 63 (hộp).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 33
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Sợi dây thứ nhất dài 90 cm, sợi thứ hai dài 7 dm. Sợi thứ ba dài bằng tổng độ dài hai sợi đầu. Sợi thứ ba dài ___ dm.",
+          "answer": "16",
+          "check": "90 : 10 + 7",
+          "explain": "90 cm = 9 dm; 9 + 7 = 16 (dm).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 34
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Ngăn thứ nhất có 19 quyển sách, ngăn thứ hai có 25 quyển, ngăn thứ ba có 9 quyển. Cả ba ngăn có ___ quyển sách.",
+          "answer": "53",
+          "check": "19 + 25 + 9",
+          "explain": "19 + 25 = 44; 44 + 9 = 53 (quyển).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 34
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Đoạn thẳng AB gồm đoạn AC dài 3 dm và đoạn CB dài 24 cm. Đoạn thẳng AB dài ___ cm.",
+          "answer": "54",
+          "check": "30 + 24",
+          "explain": "3 dm = 30 cm; 30 + 24 = 54 (cm).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 36
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Có 68 con gà và vịt, trong đó có 36 con gà. Có ___ con vịt.",
+          "answer": "32",
+          "check": "68 - 36",
+          "explain": "Số vịt: 68 - 36 = 32 (con).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 36
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Mùa hè mẹ đi công tác ba đợt: đợt một 1 chục ngày, đợt hai 9 ngày, đợt ba 1 tuần lễ. Mẹ đi công tác tất cả ___ ngày.",
+          "answer": "26",
+          "check": "10 + 9 + 7",
+          "explain": "1 chục = 10 ngày, 1 tuần lễ = 7 ngày; 10 + 9 + 7 = 26 (ngày).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 36
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Một phép cộng có tổng bằng 29, một số hạng là số lớn nhất có một chữ số. Số hạng còn lại là ___.",
+          "answer": "20",
+          "check": "29 - 9",
+          "explain": "Số lớn nhất có một chữ số là 9; số hạng còn lại là 29 - 9 = 20.",
+          "skill": "tim_so_hang",
+          "page": 35
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Sáng nay dì Út mang trứng ra chợ bán. Dì bán đi 48 quả thì còn lại 35 quả. Dì Út đã mang ___ quả trứng ra chợ.",
+          "answer": "83",
+          "check": "48 + 35",
+          "explain": "Số trứng mang ra chợ: 48 + 35 = 83 (quả).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 39
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 35 + 49 ___ 77 - 43 + 19",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "35 + 49 = 84, 77 - 43 + 19 = 53, mà 84 > 53.",
+          "skill": "so_sanh",
+          "page": 39
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tổng của hai số là 50. Nếu số hạng thứ nhất tăng thêm 4, số hạng thứ hai giữ nguyên thì tổng mới là ___.",
+          "answer": "54",
+          "check": "50 + 4",
+          "explain": "Một số hạng tăng 4 thì tổng tăng 4: 50 + 4 = 54.",
+          "skill": "thay_doi_tong",
+          "page": 37
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tổng của hai số là 43. Nếu số hạng thứ nhất bớt đi 3, số hạng thứ hai giữ nguyên thì tổng mới là ___.",
+          "answer": "40",
+          "check": "43 - 3",
+          "explain": "Một số hạng bớt 3 thì tổng bớt 3: 43 - 3 = 40.",
+          "skill": "thay_doi_tong",
+          "page": 38
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tổng của hai số là 68. Nếu số hạng thứ nhất tăng thêm 4, số hạng thứ hai tăng thêm 8 thì tổng mới là ___.",
+          "answer": "80",
+          "check": "68 + 4 + 8",
+          "explain": "Tổng tăng 4 + 8 = 12: 68 + 12 = 80.",
+          "skill": "thay_doi_tong",
+          "page": 38
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tổng của hai số là 98. Nếu số hạng thứ nhất bớt đi 7, số hạng thứ hai bớt đi 10 thì tổng mới là ___.",
+          "answer": "81",
+          "check": "98 - 7 - 10",
+          "explain": "Tổng bớt 7 + 10 = 17: 98 - 17 = 81.",
+          "skill": "thay_doi_tong",
+          "page": 38
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tổng của hai số là 74. Nếu số hạng thứ nhất tăng thêm 9, số hạng thứ hai bớt đi 3 thì tổng mới là ___.",
+          "answer": "80",
+          "check": "74 + 9 - 3",
+          "explain": "74 + 9 = 83; 83 - 3 = 80.",
+          "skill": "thay_doi_tong",
+          "page": 38
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Nếu tăng số hạng thứ nhất thêm 18 và tăng số hạng thứ hai thêm 15 thì tổng tăng thêm ___ đơn vị.",
+          "answer": "33",
+          "check": "18 + 15",
+          "explain": "Tổng tăng thêm 18 + 15 = 33 đơn vị.",
+          "skill": "thay_doi_tong",
+          "page": 38
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tính bằng cách thuận tiện: 9 + 13 + 15 + 27 + 11 + 5 = ___",
+          "answer": "80",
+          "check": "9 + 13 + 15 + 27 + 11 + 5",
+          "explain": "(9 + 11) + (13 + 27) + (15 + 5) = 20 + 40 + 20 = 80.",
+          "skill": "tinh_thuan_tien",
+          "page": 37
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tính bằng cách thuận tiện: 45 + 17 + 29 - 7 - 15 - 9 = ___",
+          "answer": "60",
+          "check": "45 + 17 + 29 - 7 - 15 - 9",
+          "explain": "(45 - 15) + (17 - 7) + (29 - 9) = 30 + 10 + 20 = 60.",
+          "skill": "tinh_thuan_tien",
+          "page": 37
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Có bao nhiêu số có hai chữ số mà tổng hai chữ số bằng 15?",
+          "options": [
+            "3",
+            "5",
+            "6",
+            "4"
+          ],
+          "answer": "4",
+          "explain": "Đó là các số 69, 78, 87, 96.",
+          "skill": "cau_tao_so",
+          "page": 37
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Viết các số có hai chữ số khác nhau mà hiệu hai chữ số bằng 7. Tổng của số tròn chục và số nhỏ nhất trong các số đó là ___.",
+          "answer": "88",
+          "check": "70 + 18",
+          "explain": "Các số: 18, 29, 70, 81, 92. Số tròn chục là 70, số nhỏ nhất là 18; 70 + 18 = 88.",
+          "skill": "cau_tao_so",
+          "page": 37
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số thứ nhất là tổng của 19 và số nhỏ nhất có hai chữ số mà tổng các chữ số là 7. Số thứ hai là tổng của số thứ nhất và số nhỏ nhất có hai chữ số. Số thứ hai là ___.",
+          "answer": "45",
+          "check": "19 + 16 + 10",
+          "explain": "Số nhỏ nhất có tổng chữ số là 7 là 16; số thứ nhất 19 + 16 = 35; số thứ hai 35 + 10 = 45.",
+          "skill": "tim_so",
+          "page": 34
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "89 - ___ = 37 + 19",
+          "answer": "33",
+          "check": "89 - (37 + 19)",
+          "explain": "37 + 19 = 56; số cần điền là 89 - 56 = 33.",
+          "skill": "tim_so",
+          "page": 39
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hai số có tổng bằng 85. Số hạng thứ nhất có chữ số hàng chục là 4, số hạng thứ hai có chữ số hàng đơn vị là 9. Số hạng thứ nhất là ___.",
+          "answer": "46",
+          "check": "85 - 39",
+          "explain": "Hàng đơn vị: ? + 9 có tận cùng 5 nên ? = 6 (nhớ 1); hàng chục: 4 + ? + 1 = 8 nên ? = 3. Hai số là 46 và 39.",
+          "skill": "tim_so",
+          "page": 39
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Cho 4 điểm A, B, C, D cùng nằm trên một đường thẳng. Nối các điểm đó với nhau ta được tất cả ___ đoạn thẳng.",
+          "answer": "6",
+          "check": "3 + 2 + 1",
+          "explain": "Các đoạn: AB, AC, AD, BC, BD, CD, tất cả 6 đoạn.",
+          "skill": "hinh_hoc",
+          "page": 39
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tổng của hai số là số lớn nhất có hai chữ số khác nhau, biết một số là 25. Số còn lại là ___.",
+          "answer": "73",
+          "check": "98 - 25",
+          "explain": "Số lớn nhất có hai chữ số khác nhau là 98; số còn lại là 98 - 25 = 73.",
+          "skill": "tim_so_hang",
+          "page": 40
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Hình chữ nhật, hình tứ giác. Bài toán về nhiều hơn",
+      "questions": [
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 18 + 26 = ___",
+          "answer": "44",
+          "check": "18 + 26",
+          "explain": "Ta tính: 18 + 26 = 44.",
+          "skill": "cong_co_nho",
+          "page": 42
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 78 + 9 = ___",
+          "answer": "87",
+          "check": "78 + 9",
+          "explain": "Ta tính: 78 + 9 = 87.",
+          "skill": "cong_co_nho",
+          "page": 42
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 35 + 38 = ___",
+          "answer": "73",
+          "check": "35 + 38",
+          "explain": "Ta tính: 35 + 38 = 73.",
+          "skill": "cong_co_nho",
+          "page": 42
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 38 + 17 = ___",
+          "answer": "55",
+          "check": "38 + 17",
+          "explain": "Ta tính: 38 + 17 = 55.",
+          "skill": "cong_co_nho",
+          "page": 42
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 48 + 7 = ___",
+          "answer": "55",
+          "check": "48 + 7",
+          "explain": "Ta tính: 48 + 7 = 55.",
+          "skill": "cong_co_nho",
+          "page": 49
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 9 + 53 = ___",
+          "answer": "62",
+          "check": "9 + 53",
+          "explain": "Ta tính: 9 + 53 = 62.",
+          "skill": "cong_co_nho",
+          "page": 49
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 44 + 38 - 22 = ___",
+          "answer": "60",
+          "check": "44 + 38 - 22",
+          "explain": "44 + 38 = 82; 82 - 22 = 60.",
+          "skill": "tinh_day_phep_tinh",
+          "page": 48
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Số hạng thứ nhất là 78, số hạng thứ hai là số lớn nhất có một chữ số. Tổng của hai số là ___.",
+          "answer": "87",
+          "check": "78 + 9",
+          "explain": "Số lớn nhất có một chữ số là 9; 78 + 9 = 87.",
+          "skill": "tinh_day_phep_tinh",
+          "page": 48
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Hình tứ giác có mấy cạnh?",
+          "options": [
+            "3 cạnh",
+            "5 cạnh",
+            "4 cạnh",
+            "6 cạnh"
+          ],
+          "answer": "4 cạnh",
+          "explain": "Hình tứ giác có 4 cạnh và 4 đỉnh.",
+          "skill": "hinh_hoc",
+          "page": 41
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Hình nào dưới đây cũng là một hình tứ giác?",
+          "options": [
+            "Hình chữ nhật",
+            "Hình tam giác",
+            "Hình tròn"
+          ],
+          "answer": "Hình chữ nhật",
+          "explain": "Hình chữ nhật có 4 cạnh, 4 đỉnh nên cũng là hình tứ giác.",
+          "skill": "hinh_hoc",
+          "page": 41
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Hình chữ nhật ABCD có ___ đỉnh là A, B, C, D.",
+          "answer": "bốn",
+          "explain": "Hình chữ nhật ABCD có 4 đỉnh: A, B, C, D.",
+          "skill": "hinh_hoc",
+          "page": 41,
+          "accepted": [
+            "4"
+          ]
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 14 + 25 + 37 ___ 65 - 32 + 24",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "14 + 25 + 37 = 76, 65 - 32 + 24 = 57, mà 76 > 57.",
+          "skill": "so_sanh",
+          "page": 48
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Đoạn thẳng thứ nhất dài 18 cm, đoạn thứ hai dài 17 cm, đoạn thứ ba dài 9 cm. Cả ba đoạn thẳng dài ___ cm.",
+          "answer": "44",
+          "check": "18 + 17 + 9",
+          "explain": "18 + 17 = 35; 35 + 9 = 44 (cm).",
+          "skill": "do_dai",
+          "page": 42
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hùng có 15 viên bi, Hải có nhiều hơn Hùng 9 viên bi. Hải có ___ viên bi.",
+          "answer": "24",
+          "check": "15 + 9",
+          "explain": "Nhiều hơn thì làm phép cộng: 15 + 9 = 24 (viên).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 44
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hiện nay mẹ 38 tuổi, bố nhiều hơn mẹ 9 tuổi. Hiện nay bố ___ tuổi.",
+          "answer": "47",
+          "check": "38 + 9",
+          "explain": "Tuổi bố: 38 + 9 = 47 (tuổi).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 44
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Bình 7 tuổi, Linh 18 tuổi. Linh nhiều hơn Bình ___ tuổi.",
+          "answer": "11",
+          "check": "18 - 7",
+          "explain": "Tìm phần hơn thì làm phép trừ: 18 - 7 = 11 (tuổi).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 45
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Đoạn thẳng AB dài 8 cm. Đoạn thẳng BC dài hơn đoạn AB là 3 cm. Đoạn BC dài ___ cm.",
+          "answer": "11",
+          "check": "8 + 3",
+          "explain": "BC dài: 8 + 3 = 11 (cm).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 45
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Lớp 2A có 28 học sinh. Lớp 2B có nhiều hơn lớp 2A là 7 học sinh. Lớp 2B có ___ học sinh.",
+          "answer": "35",
+          "check": "28 + 7",
+          "explain": "Lớp 2B có: 28 + 7 = 35 (học sinh).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 48
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Cô giáo thưởng cho học sinh 48 quyển vở thì cô còn lại 23 quyển. Lúc đầu cô có ___ quyển vở.",
+          "answer": "71",
+          "check": "48 + 23",
+          "explain": "Lúc đầu cô có: 48 + 23 = 71 (quyển).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 48
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Mảnh vải hoa dài 68 cm, mảnh vải xanh dài 32 cm. Cả hai mảnh vải dài ___ dm.",
+          "answer": "10",
+          "check": "(68 + 32) : 10",
+          "explain": "68 + 32 = 100 cm = 10 dm.",
+          "skill": "bai_toan_co_loi_van",
+          "page": 48
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tổng của hai số là 18. Giữ nguyên một số hạng và tăng số hạng kia thêm 4 thì tổng mới là ___.",
+          "answer": "22",
+          "check": "18 + 4",
+          "explain": "Một số hạng tăng 4 thì tổng tăng 4: 18 + 4 = 22.",
+          "skill": "thay_doi_tong",
+          "page": 48
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Ngăn sách thứ hai có 35 quyển và nhiều hơn ngăn thứ ba 5 quyển. Ngăn thứ ba có ___ quyển sách.",
+          "answer": "30",
+          "check": "35 - 5",
+          "explain": "Ngăn thứ hai nhiều hơn nên ngăn thứ ba ít hơn 5 quyển: 35 - 5 = 30.",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 46
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Một hình chữ nhật được kẻ thêm một đoạn thẳng chia thành 2 hình chữ nhật nhỏ. Có tất cả ___ hình chữ nhật.",
+          "answer": "3",
+          "check": "2 + 1",
+          "explain": "2 hình chữ nhật nhỏ và 1 hình chữ nhật lớn: 3 hình.",
+          "skill": "hinh_hoc",
+          "page": 43
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Một hình chữ nhật được kẻ thêm 2 đoạn thẳng dọc chia thành 3 hình chữ nhật nhỏ xếp thành một hàng. Có tất cả ___ hình chữ nhật.",
+          "answer": "6",
+          "check": "3 + 2 + 1",
+          "explain": "3 hình đơn, 2 hình ghép đôi, 1 hình ghép ba: 3 + 2 + 1 = 6.",
+          "skill": "hinh_hoc",
+          "page": 43
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Đoạn thẳng MN dài 18 cm và dài hơn đoạn thẳng PQ 1 dm. Đoạn thẳng PQ dài ___ cm.",
+          "answer": "8",
+          "check": "18 - 10",
+          "explain": "1 dm = 10 cm; PQ dài 18 - 10 = 8 (cm).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 46
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Đoạn thẳng MN dài 18 cm và dài hơn đoạn thẳng PQ 1 dm. Cả hai đoạn thẳng dài ___ cm.",
+          "answer": "26",
+          "check": "18 + (18 - 10)",
+          "explain": "PQ dài 18 - 10 = 8 cm; cả hai đoạn: 18 + 8 = 26 (cm).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 46
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Kệ sách có ba ngăn. Ngăn thứ nhất có 28 quyển, ngăn thứ hai có 35 quyển và nhiều hơn ngăn thứ ba 5 quyển. Cả ba ngăn có ___ quyển.",
+          "answer": "93",
+          "check": "28 + 35 + (35 - 5)",
+          "explain": "Ngăn thứ ba: 35 - 5 = 30; cả ba ngăn: 28 + 35 + 30 = 93 (quyển).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 46
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Bình gấp được 48 con hạc. Hoa gấp nhiều hơn Bình 3 con nhưng ít hơn Nam 8 con. Nam gấp được ___ con hạc.",
+          "answer": "59",
+          "check": "48 + 3 + 8",
+          "explain": "Hoa: 48 + 3 = 51; Nam nhiều hơn Hoa 8: 51 + 8 = 59 (con).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 46
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Lan gấp nhiều hơn Mai 6 ngôi sao. Sau đó Lan gấp thêm 9 ngôi sao, Mai gấp thêm 11 ngôi sao. Lúc này thì:",
+          "options": [
+            "Mai nhiều hơn Lan 2 ngôi sao",
+            "Lan nhiều hơn Mai 4 ngôi sao",
+            "Lan nhiều hơn Mai 6 ngôi sao",
+            "Lan nhiều hơn Mai 8 ngôi sao"
+          ],
+          "answer": "Lan nhiều hơn Mai 4 ngôi sao",
+          "explain": "Mai gấp thêm nhiều hơn Lan 11 - 9 = 2 ngôi sao, nên Lan còn nhiều hơn 6 - 2 = 4 ngôi sao.",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 47
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Quân có nhiều hơn Bảo 10 quyển truyện. Quân phải cho Bảo mượn ___ quyển để số truyện của hai bạn bằng nhau.",
+          "answer": "5",
+          "check": "10 : 2",
+          "explain": "Cho mượn 5 quyển thì Quân bớt 5, Bảo thêm 5, hai bạn bằng nhau.",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 47
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Lúc đầu số bi ở hộp xanh bằng số bi ở hộp đỏ. An chuyển 3 viên bi từ hộp xanh sang hộp đỏ. Lúc này:",
+          "options": [
+            "Hộp đỏ nhiều hơn 6 viên",
+            "Hộp đỏ nhiều hơn 3 viên",
+            "Hộp xanh nhiều hơn 3 viên",
+            "Hai hộp bằng nhau"
+          ],
+          "answer": "Hộp đỏ nhiều hơn 6 viên",
+          "explain": "Hộp xanh bớt 3 viên, hộp đỏ thêm 3 viên nên hộp đỏ nhiều hơn 3 + 3 = 6 viên.",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 47
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Có bao nhiêu số có hai chữ số mà chữ số hàng đơn vị lớn hơn chữ số hàng chục 5 đơn vị?",
+          "options": [
+            "5",
+            "3",
+            "6",
+            "4"
+          ],
+          "answer": "4",
+          "explain": "Đó là các số 16, 27, 38, 49.",
+          "skill": "cau_tao_so",
+          "page": 45
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Trong rổ có một số quả trứng. Mẹ bán lần đầu 18 quả, lần sau 2 chục quả thì trong rổ còn 19 quả. Lúc đầu trong rổ có ___ quả trứng.",
+          "answer": "57",
+          "check": "18 + 20 + 19",
+          "explain": "Mẹ đã bán 18 + 20 = 38 quả; lúc đầu có 38 + 19 = 57 (quả).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 49
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Đoạn thẳng AB dài 29 cm, đoạn thẳng CD dài hơn AB là 11 cm. Đoạn thẳng CD dài ___ dm.",
+          "answer": "4",
+          "check": "(29 + 11) : 10",
+          "explain": "CD dài 29 + 11 = 40 cm = 4 dm.",
+          "skill": "bai_toan_co_loi_van",
+          "page": 49
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "title": "Phép cộng dạng 7 + 5; 47 + 5; 47 + 25. Bài toán về ít hơn",
+      "questions": [
+        {
+          "d": 1,
+          "type": "number",
+          "q": "7 + 5 = ___",
+          "answer": "12",
+          "check": "7 + 5",
+          "explain": "7 + 3 = 10, thêm 2 nữa được 12.",
+          "skill": "bang_cong_7",
+          "page": 50
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "7 + 8 = ___",
+          "answer": "15",
+          "check": "7 + 8",
+          "explain": "7 + 3 = 10, thêm 5 nữa được 15.",
+          "skill": "bang_cong_7",
+          "page": 50
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 17 + 58 = ___",
+          "answer": "75",
+          "check": "17 + 58",
+          "explain": "Ta tính: 17 + 58 = 75.",
+          "skill": "cong_co_nho",
+          "page": 51
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 27 + 36 = ___",
+          "answer": "63",
+          "check": "27 + 36",
+          "explain": "Ta tính: 27 + 36 = 63.",
+          "skill": "cong_co_nho",
+          "page": 51
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 7 + 89 = ___",
+          "answer": "96",
+          "check": "7 + 89",
+          "explain": "Ta tính: 7 + 89 = 96.",
+          "skill": "cong_co_nho",
+          "page": 51
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 47 + 4 = ___",
+          "answer": "51",
+          "check": "47 + 4",
+          "explain": "Ta tính: 47 + 4 = 51.",
+          "skill": "cong_co_nho",
+          "page": 51
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "25 cm + 17 cm = ___ cm",
+          "answer": "42",
+          "check": "25 + 17",
+          "explain": "Ta tính: 25 + 17 = 42.",
+          "skill": "do_dai",
+          "page": 53
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "47 dm + 36 dm = ___ dm",
+          "answer": "83",
+          "check": "47 + 36",
+          "explain": "Ta tính: 47 + 36 = 83.",
+          "skill": "do_dai",
+          "page": 53
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "97 dm - 63 dm = ___ dm",
+          "answer": "34",
+          "check": "97 - 63",
+          "explain": "Ta tính: 97 - 63 = 34.",
+          "skill": "do_dai",
+          "page": 53
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 32 + 15 + 49 = ___",
+          "answer": "96",
+          "check": "32 + 15 + 49",
+          "explain": "32 + 15 = 47; 47 + 49 = 96.",
+          "skill": "tinh_day_phep_tinh",
+          "page": 57
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 39 + 15 ___ 59 - 12 + 34",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "39 + 15 = 54, 59 - 12 + 34 = 81, mà 54 < 81.",
+          "skill": "so_sanh",
+          "page": 57
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 28 + 17 - 11 ___ 19 + 27",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "28 + 17 - 11 = 34, 19 + 27 = 46, mà 34 < 46.",
+          "skill": "so_sanh",
+          "page": 55
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 37 + 6 + 28 ___ 39 + 22",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "37 + 6 + 28 = 71, 39 + 22 = 61, mà 71 > 61.",
+          "skill": "so_sanh",
+          "page": 55
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 67 - 31 + 49 ___ 25 + 61",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "67 - 31 + 49 = 85, 25 + 61 = 86, mà 85 < 86.",
+          "skill": "so_sanh",
+          "page": 55
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "___ + 25 = 57",
+          "answer": "32",
+          "check": "57 - 25",
+          "explain": "Muốn tìm số hạng, lấy tổng trừ số hạng kia: 57 - 25 = 32.",
+          "skill": "tim_so_hang",
+          "page": 53
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "___ - 17 = 60",
+          "answer": "77",
+          "check": "60 + 17",
+          "explain": "Muốn tìm số bị trừ, lấy hiệu cộng số trừ: 60 + 17 = 77.",
+          "skill": "tim_so_hang",
+          "page": 53
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "49 - ___ = 27",
+          "answer": "22",
+          "check": "49 - 27",
+          "explain": "Muốn tìm số trừ, lấy số bị trừ trừ hiệu: 49 - 27 = 22.",
+          "skill": "tim_so_hang",
+          "page": 53
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Lớp 2A trồng được 37 cây, ít hơn lớp 2B 5 cây. Lớp 2B trồng được ___ cây.",
+          "answer": "42",
+          "check": "37 + 5",
+          "explain": "2A ít hơn nghĩa là 2B nhiều hơn 5 cây: 37 + 5 = 42 (cây).",
+          "skill": "bai_toan_it_hon",
+          "page": 51
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tuần thứ nhất cửa hàng bán được 45 gói đường, tuần thứ hai bán ít hơn tuần thứ nhất 13 gói. Tuần thứ hai bán được ___ gói đường.",
+          "answer": "32",
+          "check": "45 - 13",
+          "explain": "Ít hơn thì làm phép trừ: 45 - 13 = 32 (gói).",
+          "skill": "bai_toan_it_hon",
+          "page": 52
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Đoạn thẳng AB dài 15 cm, đoạn thẳng CD ngắn hơn AB là 5 cm. Đoạn CD dài ___ cm.",
+          "answer": "10",
+          "check": "15 - 5",
+          "explain": "CD dài: 15 - 5 = 10 (cm).",
+          "skill": "bai_toan_it_hon",
+          "page": 52
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Một đàn gà có 67 con gà trống, ít hơn số gà mái 14 con. Đàn gà có ___ con gà mái.",
+          "answer": "81",
+          "check": "67 + 14",
+          "explain": "Gà trống ít hơn nên gà mái nhiều hơn 14 con: 67 + 14 = 81 (con).",
+          "skill": "bai_toan_it_hon",
+          "page": 53
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Buổi sáng cửa hàng bán được 28 túi kẹo, buổi chiều bán ít hơn buổi sáng 12 túi. Buổi chiều bán được ___ túi kẹo.",
+          "answer": "16",
+          "check": "28 - 12",
+          "explain": "Buổi chiều: 28 - 12 = 16 (túi).",
+          "skill": "bai_toan_it_hon",
+          "page": 53
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hùng có 25 thẻ bài, Hải ít hơn Hùng 4 thẻ bài. Hải có ___ thẻ bài.",
+          "answer": "21",
+          "check": "25 - 4",
+          "explain": "Hải có: 25 - 4 = 21 (thẻ).",
+          "skill": "bai_toan_it_hon",
+          "page": 54
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hiện nay mẹ 39 tuổi, mẹ ít hơn bố 5 tuổi. Hiện nay bố ___ tuổi.",
+          "answer": "44",
+          "check": "39 + 5",
+          "explain": "Mẹ ít hơn bố 5 tuổi nên bố hơn mẹ 5 tuổi: 39 + 5 = 44.",
+          "skill": "bai_toan_it_hon",
+          "page": 57
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Dũng có 37 cái kẹo, Hùng có 22 cái kẹo. Hùng ít hơn Dũng ___ cái kẹo.",
+          "answer": "15",
+          "check": "37 - 22",
+          "explain": "Hùng ít hơn Dũng: 37 - 22 = 15 (cái).",
+          "skill": "bai_toan_it_hon",
+          "page": 57
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tùng có 98 cái tem và nhiều hơn Hải 12 cái. Hải có ___ cái tem.",
+          "answer": "86",
+          "check": "98 - 12",
+          "explain": "Tùng nhiều hơn nên Hải ít hơn 12 cái: 98 - 12 = 86.",
+          "skill": "bai_toan_it_hon",
+          "page": 57
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Chi gấp được 57 ngôi sao. Nếu Chi gấp thêm 14 ngôi sao nữa thì bằng số ngôi sao Hà gấp được. Hà gấp được ___ ngôi sao.",
+          "answer": "71",
+          "check": "57 + 14",
+          "explain": "Hà gấp được: 57 + 14 = 71 (ngôi sao).",
+          "skill": "bai_toan_it_hon",
+          "page": 57
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Buổi sáng cửa hàng bán 28 túi kẹo, buổi chiều bán ít hơn buổi sáng 12 túi, buổi tối bán 25 túi. Cả ngày bán được ___ túi kẹo.",
+          "answer": "69",
+          "check": "28 + (28 - 12) + 25",
+          "explain": "Buổi chiều: 28 - 12 = 16; cả ngày: 28 + 16 + 25 = 69 (túi).",
+          "skill": "bai_toan_it_hon",
+          "page": 53
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Mảnh vải thứ nhất dài 37 dm, mảnh thứ hai ngắn hơn mảnh thứ nhất 13 dm. Cả hai mảnh vải dài ___ dm.",
+          "answer": "61",
+          "check": "37 + (37 - 13)",
+          "explain": "Mảnh thứ hai: 37 - 13 = 24 dm; cả hai: 37 + 24 = 61 (dm).",
+          "skill": "bai_toan_it_hon",
+          "page": 54
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hùng có 25 thẻ bài, Hải ít hơn Hùng 4 thẻ, Dũng nhiều hơn Hùng 2 thẻ. Cả ba bạn có ___ thẻ bài.",
+          "answer": "73",
+          "check": "25 + (25 - 4) + (25 + 2)",
+          "explain": "Hải 21 thẻ, Dũng 27 thẻ; cả ba: 25 + 21 + 27 = 73 (thẻ).",
+          "skill": "bai_toan_it_hon",
+          "page": 54
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "An, Hải, Bình có số bi là các số tròn chục khác nhau, tổng là 60 viên. An có ít bi nhất, Bình có nhiều bi nhất. Bình có ___ viên bi.",
+          "answer": "30",
+          "check": "60 - 10 - 20",
+          "explain": "Ba số tròn chục khác nhau có tổng 60 chỉ có 10, 20, 30. Bình nhiều nhất: 30 viên.",
+          "skill": "suy_luan",
+          "page": 55
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Nam, Bình, Minh có số bi là các số tròn chục khác nhau, tổng là 70 viên. Nam có ít bi nhất, Minh có nhiều bi nhất. Minh có ___ viên bi.",
+          "answer": "40",
+          "check": "70 - 10 - 20",
+          "explain": "Ba số tròn chục khác nhau có tổng 70 chỉ có 10, 20, 40. Minh nhiều nhất: 40 viên.",
+          "skill": "suy_luan",
+          "page": 55
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Thùng cam có 65 quả, thùng quýt có 85 quả. Mẹ bán số cam và số quýt bằng nhau. Lúc này:",
+          "options": [
+            "Quýt còn ít hơn cam 20 quả",
+            "Cam còn ít hơn quýt 10 quả",
+            "Cam còn ít hơn quýt 20 quả",
+            "Cam và quýt còn bằng nhau"
+          ],
+          "answer": "Cam còn ít hơn quýt 20 quả",
+          "explain": "Bớt đi hai số bằng nhau thì phần hơn kém không đổi: 85 - 65 = 20, cam vẫn ít hơn.",
+          "skill": "suy_luan",
+          "page": 55
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tổng số tem của Lan và Mai là 27 cái. Tổng số tem của Mai và Chi là 19 cái. Mai có 11 cái. Cả ba bạn có ___ cái tem.",
+          "answer": "35",
+          "check": "27 + 19 - 11",
+          "explain": "Lan: 27 - 11 = 16, Chi: 19 - 11 = 8; cả ba: 16 + 11 + 8 = 35 (cái).",
+          "skill": "suy_luan",
+          "page": 56
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số cam ở hai đĩa bằng nhau. Lan lấy 2 quả từ đĩa thứ nhất chuyển sang đĩa thứ hai. Lúc này đĩa thứ hai nhiều hơn đĩa thứ nhất ___ quả.",
+          "answer": "4",
+          "check": "2 + 2",
+          "explain": "Đĩa thứ nhất bớt 2, đĩa thứ hai thêm 2 nên hơn nhau 2 + 2 = 4 quả.",
+          "skill": "suy_luan",
+          "page": 56
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Hải có nhiều hơn Đức 8 quả bóng bay. Hải cho Đức 3 quả. Lúc này:",
+          "options": [
+            "Hải nhiều hơn Đức 5 quả",
+            "Hải nhiều hơn Đức 2 quả",
+            "Đức nhiều hơn Hải 3 quả",
+            "Hải nhiều hơn Đức 11 quả"
+          ],
+          "answer": "Hải nhiều hơn Đức 2 quả",
+          "explain": "Hải bớt 3, Đức thêm 3 nên phần hơn giảm 6: 8 - 6 = 2 quả.",
+          "skill": "suy_luan",
+          "page": 56
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Vườn có 29 cây táo, số cây cam ít hơn cây táo 5 cây, số cây nhãn nhiều hơn cây cam 6 cây. Vườn có tất cả ___ cây.",
+          "answer": "83",
+          "check": "29 + (29 - 5) + (29 - 5 + 6)",
+          "explain": "Cam: 29 - 5 = 24; nhãn: 24 + 6 = 30; tất cả: 29 + 24 + 30 = 83 (cây).",
+          "skill": "suy_luan",
+          "page": 58
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Trà gấp 38 con thuyền. Tú gấp ít hơn Trà 10 con nhưng nhiều hơn Vy 3 con. Vy gấp nhiều hơn Hân 4 con. Hân gấp được ___ con thuyền.",
+          "answer": "21",
+          "check": "38 - 10 - 3 - 4",
+          "explain": "Tú: 38 - 10 = 28; Vy: 28 - 3 = 25; Hân: 25 - 4 = 21 (con).",
+          "skill": "suy_luan",
+          "page": 58
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Ki-lô-gam. Phép cộng dạng 6 + 5; 26 + 5; 36 + 15",
+      "questions": [
+        {
+          "d": 1,
+          "type": "number",
+          "q": "6 + 5 = ___",
+          "answer": "11",
+          "check": "6 + 5",
+          "explain": "6 + 4 = 10, thêm 1 nữa được 11.",
+          "skill": "bang_cong_6",
+          "page": 59
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "6 + 8 = ___",
+          "answer": "14",
+          "check": "6 + 8",
+          "explain": "6 + 4 = 10, thêm 4 nữa được 14.",
+          "skill": "bang_cong_6",
+          "page": 59
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 26 + 9 = ___",
+          "answer": "35",
+          "check": "26 + 9",
+          "explain": "Ta tính: 26 + 9 = 35.",
+          "skill": "cong_co_nho",
+          "page": 62
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 46 + 8 = ___",
+          "answer": "54",
+          "check": "46 + 8",
+          "explain": "Ta tính: 46 + 8 = 54.",
+          "skill": "cong_co_nho",
+          "page": 62
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 76 + 5 = ___",
+          "answer": "81",
+          "check": "76 + 5",
+          "explain": "Ta tính: 76 + 5 = 81.",
+          "skill": "cong_co_nho",
+          "page": 62
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "9 kg + 21 kg = ___ kg",
+          "answer": "30",
+          "check": "9 + 21",
+          "explain": "Ta tính: 9 + 21 = 30.",
+          "skill": "khoi_luong",
+          "page": 62
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "29 kg + 14 kg = ___ kg",
+          "answer": "43",
+          "check": "29 + 14",
+          "explain": "Ta tính: 29 + 14 = 43.",
+          "skill": "khoi_luong",
+          "page": 62
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "49 kg - 27 kg = ___ kg",
+          "answer": "22",
+          "check": "49 - 27",
+          "explain": "Ta tính: 49 - 27 = 22.",
+          "skill": "khoi_luong",
+          "page": 62
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Ki-lô-gam viết tắt là ___.",
+          "answer": "kg",
+          "explain": "Ki-lô-gam kí hiệu là kg.",
+          "skill": "khoi_luong",
+          "page": 59
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Đơn vị nào dùng để đo độ nặng (khối lượng) của một vật?",
+          "options": [
+            "Ki-lô-gam",
+            "Xăng-ti-mét",
+            "Đề-xi-mét"
+          ],
+          "answer": "Ki-lô-gam",
+          "explain": "Ki-lô-gam (kg) là đơn vị đo khối lượng; cm, dm dùng đo độ dài.",
+          "skill": "khoi_luong",
+          "page": 59
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Số gồm 7 chục và 5 đơn vị là ___.",
+          "answer": "75",
+          "check": "70 + 5",
+          "explain": "7 chục là 70, thêm 5 đơn vị được 75.",
+          "skill": "cau_tao_so",
+          "page": 66
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Số lớn nhất trong các số 82; 47; 91; 89; 45 là:",
+          "options": [
+            "91",
+            "89",
+            "82",
+            "47"
+          ],
+          "answer": "91",
+          "explain": "So sánh hàng chục: 9 lớn nhất, trong 91 và 89 thì 91 lớn hơn.",
+          "skill": "cau_tao_so",
+          "page": 66
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "38 kg + 16 kg - 21 kg = ___ kg",
+          "answer": "33",
+          "check": "38 + 16 - 21",
+          "explain": "38 + 16 = 54; 54 - 21 = 33 (kg).",
+          "skill": "cau_tao_so",
+          "page": 66
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Trên bãi cỏ có 45 con trâu. Số bò ít hơn số trâu 11 con. Có ___ con bò.",
+          "answer": "34",
+          "check": "45 - 11",
+          "explain": "Số bò: 45 - 11 = 34 (con).",
+          "skill": "bai_toan_it_hon",
+          "page": 60
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Vườn nhà Hoa có 55 cây bưởi. Số cây bưởi ít hơn số cây nhãn 13 cây. Vườn có ___ cây nhãn.",
+          "answer": "68",
+          "check": "55 + 13",
+          "explain": "Bưởi ít hơn nên nhãn nhiều hơn 13 cây: 55 + 13 = 68.",
+          "skill": "bai_toan_it_hon",
+          "page": 60
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hiện nay mẹ 34 tuổi và ít hơn bố 7 tuổi. Hiện nay bố ___ tuổi.",
+          "answer": "41",
+          "check": "34 + 7",
+          "explain": "Bố hơn mẹ 7 tuổi: 34 + 7 = 41.",
+          "skill": "bai_toan_it_hon",
+          "page": 60
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Quyển sách thứ nhất có 48 trang, quyển thứ hai ít hơn quyển thứ nhất 16 trang. Quyển thứ hai có ___ trang.",
+          "answer": "32",
+          "check": "48 - 16",
+          "explain": "Quyển thứ hai: 48 - 16 = 32 (trang).",
+          "skill": "bai_toan_it_hon",
+          "page": 61
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Bà mang ra chợ 46 quả trứng gà và 28 quả trứng vịt. Bà mang tất cả ___ quả trứng.",
+          "answer": "74",
+          "check": "46 + 28",
+          "explain": "46 + 28 = 74 (quả).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 62
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Cửa hàng bán được 68 kg gạo gồm gạo nếp và gạo tẻ, trong đó có 34 kg gạo nếp. Cửa hàng bán được ___ kg gạo tẻ.",
+          "answer": "34",
+          "check": "68 - 34",
+          "explain": "Gạo tẻ: 68 - 34 = 34 (kg).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 62
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Bao thóc thứ nhất nặng 58 kg và nặng hơn bao thứ hai 17 kg. Bao thóc thứ hai nặng ___ kg.",
+          "answer": "41",
+          "check": "58 - 17",
+          "explain": "Bao thứ hai nhẹ hơn 17 kg: 58 - 17 = 41 (kg).",
+          "skill": "khoi_luong",
+          "page": 63
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Bao bột mì nặng 28 kg. Bao gạo nặng hơn bao bột mì 7 kg. Bao gạo nặng ___ kg.",
+          "answer": "35",
+          "check": "28 + 7",
+          "explain": "Bao gạo: 28 + 7 = 35 (kg).",
+          "skill": "khoi_luong",
+          "page": 66
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Mỗi túi gạo nặng 26 kg. Hai túi gạo như thế nặng ___ kg.",
+          "answer": "52",
+          "check": "26 + 26",
+          "explain": "Hai túi: 26 + 26 = 52 (kg).",
+          "skill": "khoi_luong",
+          "page": 66
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Chữ số thích hợp điền vào chỗ trống: 7___ > 69 + 9",
+          "options": [
+            "8",
+            "7",
+            "0",
+            "9"
+          ],
+          "answer": "9",
+          "explain": "69 + 9 = 78; cần số 7_ lớn hơn 78 nên chữ số là 9 (79 > 78).",
+          "skill": "so_sanh",
+          "page": 66
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Hà có số tờ giấy màu là số tròn chục liền sau của 54. Hà ít hơn Mai 17 tờ. Mai có ___ tờ giấy màu.",
+          "answer": "77",
+          "check": "60 + 17",
+          "explain": "Số tròn chục liền sau 54 là 60; Mai có 60 + 17 = 77 (tờ).",
+          "skill": "bai_toan_it_hon",
+          "page": 67
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Năm nay ông 76 tuổi và cháu 8 tuổi. Hai năm nữa, tổng số tuổi của hai ông cháu là ___ tuổi.",
+          "answer": "88",
+          "check": "76 + 8 + 2 + 2",
+          "explain": "Hiện nay tổng là 84; hai năm nữa mỗi người thêm 2 tuổi: 84 + 4 = 88.",
+          "skill": "tuoi",
+          "page": 61
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Nam giải được 37 câu đố, ít hơn Minh 19 câu. Cả hai bạn giải được ___ câu đố.",
+          "answer": "93",
+          "check": "37 + (37 + 19)",
+          "explain": "Minh: 37 + 19 = 56; cả hai: 37 + 56 = 93 (câu).",
+          "skill": "bai_toan_it_hon",
+          "page": 61
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Ngày thứ nhất cửa hàng bán 34 kg bột mì, ngày thứ hai bán nhiều hơn ngày thứ nhất 7 kg. Cả hai ngày bán được ___ kg.",
+          "answer": "75",
+          "check": "34 + (34 + 7)",
+          "explain": "Ngày thứ hai: 34 + 7 = 41 kg; cả hai ngày: 34 + 41 = 75 (kg).",
+          "skill": "khoi_luong",
+          "page": 63
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hồng cho Đào và Mai mỗi bạn 1 chục con tem thì số tem của ba bạn bằng nhau và bằng 54 con. Lúc đầu Hồng có ___ con tem.",
+          "answer": "74",
+          "check": "54 + 10 + 10",
+          "explain": "Hồng đã cho đi 10 + 10 = 20 con; lúc đầu có 54 + 20 = 74 (con).",
+          "skill": "suy_luan",
+          "page": 63
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tùng có 30 viên bi. Tùng cho Toàn 5 viên, Toàn lại cho Dũng 3 viên thì số bi của ba bạn bằng nhau. Lúc đầu Toàn có ___ viên bi.",
+          "answer": "23",
+          "check": "30 - 5 + 3 - 5",
+          "explain": "Tùng còn 25 viên nên mỗi bạn có 25; Toàn trước khi cho Dũng có 28, trước khi nhận của Tùng có 28 - 5 = 23.",
+          "skill": "suy_luan",
+          "page": 65
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số hạng thứ nhất là số liền trước của 60, số hạng thứ hai bé hơn số hạng thứ nhất 20 đơn vị. Tổng hai số là ___.",
+          "answer": "98",
+          "check": "59 + (59 - 20)",
+          "explain": "Số thứ nhất 59; số thứ hai 59 - 20 = 39; tổng 59 + 39 = 98.",
+          "skill": "tim_so",
+          "page": 65
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số bị trừ là số chẵn lớn nhất có hai chữ số. Số trừ là số lẻ liền sau số có chữ số hàng chục là 5 và chữ số hàng đơn vị là số lẻ nhỏ nhất có một chữ số. Hiệu là ___.",
+          "answer": "45",
+          "check": "98 - 53",
+          "explain": "Số bị trừ 98; số có hàng chục 5, hàng đơn vị 1 là 51, số lẻ liền sau là 53; 98 - 53 = 45.",
+          "skill": "tim_so",
+          "page": 65
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Một số trừ đi 7, rồi trừ tiếp 16, rồi cộng 21, rồi cộng 15 thì được 79. Số đó là ___.",
+          "answer": "66",
+          "check": "79 - 15 - 21 + 16 + 7",
+          "explain": "Tính ngược: 79 - 15 = 64, 64 - 21 = 43, 43 + 16 = 59, 59 + 7 = 66.",
+          "skill": "tim_so",
+          "page": 64
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Một số cộng 4, rồi trừ 20 thì được 64. Số đó là ___.",
+          "answer": "80",
+          "check": "64 + 20 - 4",
+          "explain": "Tính ngược: 64 + 20 = 84, 84 - 4 = 80.",
+          "skill": "tim_so",
+          "page": 64
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Điền dấu + hoặc - vào các ô trống: 12 ☐ 34 ☐ 5 ☐ 20 ☐ 21 = 0. Các dấu lần lượt là:",
+          "options": [
+            "+, +, -, -",
+            "+, -, +, -",
+            "+, -, -, -",
+            "-, +, -, -"
+          ],
+          "answer": "+, -, -, -",
+          "explain": "12 + 34 = 46; 46 - 5 - 20 - 21 = 0.",
+          "skill": "dien_dau",
+          "page": 64
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Cách điền dấu nào đúng: 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5 ☐ 6 = 1?",
+          "options": [
+            "1 + 2 - 3 + 4 - 5 + 6",
+            "1 + 2 + 3 - 4 + 5 - 6",
+            "1 + 2 + 3 - 4 - 5 + 6",
+            "1 + 2 + 3 + 4 - 5 - 6"
+          ],
+          "answer": "1 + 2 + 3 - 4 + 5 - 6",
+          "explain": "1 + 2 + 3 = 6; 6 - 4 = 2; 2 + 5 = 7; 7 - 6 = 1.",
+          "skill": "dien_dau",
+          "page": 64
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Từ các chữ số 0; 1; 3; 5; 7; 8, viết được những số có hai chữ số nào mà tổng các chữ số bằng 9?",
+          "options": [
+            "18 và 81",
+            "18; 81 và 90",
+            "27 và 72",
+            "36 và 63"
+          ],
+          "answer": "18 và 81",
+          "explain": "Chỉ có 1 + 8 = 9 dùng được các chữ số đã cho, nên có 18 và 81.",
+          "skill": "cau_tao_so",
+          "page": 64
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Dãy số: 1; 1; 2; 3; 5; 8; … (mỗi số bằng tổng hai số đứng trước). Số thứ chín của dãy là ___.",
+          "answer": "34",
+          "check": "13 + 21",
+          "explain": "Dãy tiếp theo: 13; 21; 34. Số thứ chín là 34.",
+          "skill": "day_so",
+          "page": 66
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Minh có 95 viên bi, Bình nhiều hơn Minh 4 viên, An ít hơn Bình 2 chục viên. An có ___ viên bi.",
+          "answer": "79",
+          "check": "95 + 4 - 20",
+          "explain": "Bình: 95 + 4 = 99; An: 99 - 20 = 79 (viên).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 67
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Thùng thứ nhất có 26 kg bột mì, thùng thứ hai nhiều hơn thùng thứ nhất 16 kg, thùng thứ ba ít hơn thùng thứ nhất 5 kg. Cả ba thùng có ___ kg.",
+          "answer": "89",
+          "check": "26 + (26 + 16) + (26 - 5)",
+          "explain": "Thùng hai: 42 kg; thùng ba: 21 kg; cả ba: 26 + 42 + 21 = 89 (kg).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 67
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Bảng cộng. Phép cộng có tổng bằng 100",
+      "questions": [
+        {
+          "d": 1,
+          "type": "number",
+          "q": "9 + 6 = ___",
+          "answer": "15",
+          "check": "9 + 6",
+          "explain": "Ta tính: 9 + 6 = 15.",
+          "skill": "bang_cong",
+          "page": 68
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "8 + 6 = ___",
+          "answer": "14",
+          "check": "8 + 6",
+          "explain": "Ta tính: 8 + 6 = 14.",
+          "skill": "bang_cong",
+          "page": 68
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "7 + 6 = ___",
+          "answer": "13",
+          "check": "7 + 6",
+          "explain": "Ta tính: 7 + 6 = 13.",
+          "skill": "bang_cong",
+          "page": 68
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 64 + 36 = ___",
+          "answer": "100",
+          "check": "64 + 36",
+          "explain": "4 + 6 = 10 viết 0 nhớ 1; 6 + 3 thêm 1 bằng 10. Kết quả 100.",
+          "skill": "tong_bang_100",
+          "page": 75
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 51 + 39 = ___",
+          "answer": "90",
+          "check": "51 + 39",
+          "explain": "Ta tính: 51 + 39 = 90.",
+          "skill": "cong_co_nho",
+          "page": 75
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 88 + 3 = ___",
+          "answer": "91",
+          "check": "88 + 3",
+          "explain": "Ta tính: 88 + 3 = 91.",
+          "skill": "cong_co_nho",
+          "page": 75
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 35 - 21 + 86 = ___",
+          "answer": "100",
+          "check": "35 - 21 + 86",
+          "explain": "35 - 21 = 14; 14 + 86 = 100.",
+          "skill": "tinh_day_phep_tinh",
+          "page": 69
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "90 cm + 10 cm - 20 cm = ___ cm",
+          "answer": "80",
+          "check": "90 + 10 - 20",
+          "explain": "90 + 10 = 100; 100 - 20 = 80 (cm).",
+          "skill": "tinh_day_phep_tinh",
+          "page": 69
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "67 kg - 25 kg - 20 kg = ___ kg",
+          "answer": "22",
+          "check": "67 - 25 - 20",
+          "explain": "67 - 25 = 42; 42 - 20 = 22 (kg).",
+          "skill": "khoi_luong",
+          "page": 75
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 18 + 29 ___ 28 + 19",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "18 + 29 = 47, 28 + 19 = 47, mà 47 = 47.",
+          "skill": "so_sanh",
+          "page": 71
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 34 + 39 ___ 68 + 24",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "34 + 39 = 73, 68 + 24 = 92, mà 73 < 92.",
+          "skill": "so_sanh",
+          "page": 71
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 11 + 28 + 19 ___ 79 - 22",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "11 + 28 + 19 = 58, 79 - 22 = 57, mà 58 > 57.",
+          "skill": "so_sanh",
+          "page": 71
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 23 + 27 + 12 ___ 73 - 10",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "23 + 27 + 12 = 62, 73 - 10 = 63, mà 62 < 63.",
+          "skill": "so_sanh",
+          "page": 71
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "___ + 14 = 25",
+          "answer": "11",
+          "check": "25 - 14",
+          "explain": "Lấy tổng trừ số hạng đã biết: 25 - 14 = 11.",
+          "skill": "tim_so_hang",
+          "page": 71
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "60 + ___ = 92",
+          "answer": "32",
+          "check": "92 - 60",
+          "explain": "Lấy tổng trừ số hạng đã biết: 92 - 60 = 32.",
+          "skill": "tim_so_hang",
+          "page": 71
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Số hạng thứ nhất là 23, tổng là 45. Số hạng thứ hai là ___.",
+          "answer": "22",
+          "check": "45 - 23",
+          "explain": "Số hạng thứ hai: 45 - 23 = 22.",
+          "skill": "tim_so_hang",
+          "page": 69
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Mai có 12 cái nhãn vở, chị Lan cho Mai 4 cái, sau đó mẹ cho Mai 15 cái nữa. Lúc này Mai có ___ cái nhãn vở.",
+          "answer": "31",
+          "check": "12 + 4 + 15",
+          "explain": "12 + 4 = 16; 16 + 15 = 31 (cái).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 69
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Nhà bà Nga nuôi 27 con gà, 33 con vịt và 40 con thỏ. Nhà bà Nga nuôi tất cả ___ con.",
+          "answer": "100",
+          "check": "27 + 33 + 40",
+          "explain": "27 + 33 = 60; 60 + 40 = 100 (con).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 71
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Có 34 xe khách rời bến, trên bến còn 19 xe khách chưa rời bến. Lúc đầu bến có ___ xe khách.",
+          "answer": "53",
+          "check": "34 + 19",
+          "explain": "Lúc đầu có: 34 + 19 = 53 (xe khách).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 71
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Từ một thùng sách lấy ra 12 quyển thì còn lại 38 quyển. Lúc đầu thùng có ___ quyển sách.",
+          "answer": "50",
+          "check": "12 + 38",
+          "explain": "Lúc đầu có: 12 + 38 = 50 (quyển).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 75
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tổng số tuổi của hai mẹ con Khánh là 52 tuổi, Khánh 12 tuổi. Mẹ Khánh ___ tuổi.",
+          "answer": "40",
+          "check": "52 - 12",
+          "explain": "Tuổi mẹ: 52 - 12 = 40 (tuổi).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 75
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tổng của số lớn nhất có hai chữ số với số liền sau của 0 là ___.",
+          "answer": "100",
+          "check": "99 + 1",
+          "explain": "Số lớn nhất có hai chữ số là 99, số liền sau của 0 là 1; 99 + 1 = 100.",
+          "skill": "bai_toan_co_loi_van",
+          "page": 75
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Điền số tiếp theo của dãy: 1; 4; 7; 10; ___",
+          "answer": "13",
+          "check": "10 + 3",
+          "explain": "Mỗi số hơn số trước 3 đơn vị: 10 + 3 = 13.",
+          "skill": "day_so",
+          "page": 75
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Điền số tiếp theo của dãy: 97; 86; 75; 64; ___",
+          "answer": "53",
+          "check": "64 - 11",
+          "explain": "Mỗi số kém số trước 11 đơn vị: 64 - 11 = 53.",
+          "skill": "day_so",
+          "page": 75
+        },
+        {
+          "d": 2,
+          "type": "mcq",
+          "q": "Có bao nhiêu số có hai chữ số mà tổng hai chữ số bằng 10?",
+          "options": [
+            "10",
+            "8",
+            "5",
+            "9"
+          ],
+          "answer": "9",
+          "explain": "Đó là 19, 28, 37, 46, 55, 64, 73, 82, 91.",
+          "skill": "cau_tao_so",
+          "page": 75
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Lớp 2A có 27 học sinh, lớp 2B có 29 học sinh, lớp 2C nhiều hơn lớp 2B 3 học sinh. Cả ba lớp có ___ học sinh.",
+          "answer": "88",
+          "check": "27 + 29 + (29 + 3)",
+          "explain": "Lớp 2C: 29 + 3 = 32; cả ba lớp: 27 + 29 + 32 = 88.",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 70
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Thảo nặng 21 kg, Vân nặng 24 kg, Linh nặng hơn Vân 5 kg. Cả ba bạn nặng ___ kg.",
+          "answer": "74",
+          "check": "21 + 24 + (24 + 5)",
+          "explain": "Linh: 24 + 5 = 29 kg; cả ba: 21 + 24 + 29 = 74 (kg).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 70
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Năm trước lớp 1A có 17 bạn nam, lớp 1B có 19 bạn nam. Lên lớp 2, mỗi lớp có thêm 4 bạn nam chuyển đến. Lúc này hai lớp có ___ bạn nam.",
+          "answer": "44",
+          "check": "17 + 19 + 4 + 4",
+          "explain": "17 + 19 = 36; thêm 4 + 4 = 8 bạn: 36 + 8 = 44.",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 70
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Bến xe có 25 xe buýt và 34 xe khách rời bến, trên bến còn 16 xe buýt và 19 xe khách. Lúc đầu bến có tất cả ___ xe buýt và xe khách.",
+          "answer": "94",
+          "check": "25 + 16 + 34 + 19",
+          "explain": "Xe buýt: 25 + 16 = 41; xe khách: 34 + 19 = 53; tất cả: 41 + 53 = 94.",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 71
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Ba lớp 2A, 2B, 2C có 96 học sinh. Lớp 2A và 2B có 61 học sinh, lớp 2B và 2C có 65 học sinh. Lớp 2B có ___ học sinh.",
+          "answer": "30",
+          "check": "65 - (96 - 61)",
+          "explain": "Lớp 2C: 96 - 61 = 35; lớp 2B: 65 - 35 = 30.",
+          "skill": "suy_luan",
+          "page": 72
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Bắc có số bi là số nhỏ nhất có hai chữ số giống nhau, Trung có số bi là số chẵn lớn nhất có một chữ số, Nam có số bi bằng tổng số bi hai bạn. Nam phải cho Bắc ___ viên để hai bạn bằng nhau.",
+          "answer": "4",
+          "check": "(19 - 11) : 2",
+          "explain": "Bắc 11, Trung 8, Nam 19. Nam hơn Bắc 8 viên, cho Bắc 4 viên thì bằng nhau.",
+          "skill": "suy_luan",
+          "page": 72
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Điền chữ số thích hợp: ☐3 + 18 = 81. Chữ số cần điền là ___.",
+          "answer": "6",
+          "check": "(81 - 18 - 3) : 10",
+          "explain": "81 - 18 = 63, nên chữ số cần điền là 6.",
+          "skill": "cau_tao_so",
+          "page": 73
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số 67 thay đổi thế nào nếu xóa chữ số 7? Số đó giảm đi ___ đơn vị.",
+          "answer": "61",
+          "check": "67 - 6",
+          "explain": "Xóa chữ số 7 còn số 6; 67 - 6 = 61.",
+          "skill": "cau_tao_so",
+          "page": 73
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Một số có hai chữ số, nếu chữ số hàng chục tăng thêm 4 thì số đó tăng thêm ___ đơn vị.",
+          "answer": "40",
+          "check": "4 x 10",
+          "explain": "Mỗi đơn vị ở hàng chục là 10, tăng 4 chục là tăng 40 đơn vị.",
+          "skill": "cau_tao_so",
+          "page": 73
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Một số có hai chữ số, nếu chữ số hàng chục tăng thêm 1 và chữ số hàng đơn vị giảm đi 1 thì số đó:",
+          "options": [
+            "Không thay đổi",
+            "Giảm 9 đơn vị",
+            "Tăng 9 đơn vị",
+            "Tăng 11 đơn vị"
+          ],
+          "answer": "Tăng 9 đơn vị",
+          "explain": "Tăng 1 chục (10) và giảm 1 đơn vị: 10 - 1 = 9, số tăng 9 đơn vị.",
+          "skill": "cau_tao_so",
+          "page": 73
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hai số có hai chữ số có cùng chữ số hàng đơn vị, chữ số hàng chục hơn kém nhau 3. Hai số đó hơn kém nhau ___ đơn vị.",
+          "answer": "30",
+          "check": "3 x 10",
+          "explain": "Hơn kém 3 chục tức là 30 đơn vị.",
+          "skill": "cau_tao_so",
+          "page": 74
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Có bao nhiêu số có hai chữ số mà khi đổi chỗ chữ số hàng chục và hàng đơn vị thì số đó không đổi?",
+          "options": [
+            "10",
+            "9",
+            "8",
+            "11"
+          ],
+          "answer": "9",
+          "explain": "Đó là các số có hai chữ số giống nhau: 11, 22, …, 99.",
+          "skill": "cau_tao_so",
+          "page": 74
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Huy có 40 viên bi đựng trong hai túi. Chuyển 15 viên từ túi A sang túi B, rồi chuyển 12 viên từ túi B sang túi A thì hai túi bằng nhau. Ban đầu túi A có ___ viên bi.",
+          "answer": "23",
+          "check": "40 : 2 - 12 + 15",
+          "explain": "Cuối cùng mỗi túi 20 viên; tính ngược túi A: 20 - 12 + 15 = 23.",
+          "skill": "suy_luan",
+          "page": 74
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Mai nhiều hơn Hoa một số kẹo. Mai cho Hoa 5 cái thì Mai lại ít hơn Hoa 2 cái. Lúc đầu Mai nhiều hơn Hoa ___ cái kẹo.",
+          "answer": "8",
+          "check": "5 + 5 - 2",
+          "explain": "Cho 5 cái thì phần hơn giảm 10; từ hơn thành kém 2 nên lúc đầu hơn 10 - 2 = 8 cái.",
+          "skill": "suy_luan",
+          "page": 74
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 46 + x ___ 45 + x",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "Cùng cộng x, mà 46 > 45 nên 46 + x > 45 + x.",
+          "skill": "so_sanh_chu_so",
+          "page": 71
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: x + 12 ___ 5 + 7 + x",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "5 + 7 = 12 nên 5 + 7 + x = 12 + x = x + 12.",
+          "skill": "so_sanh_chu_so",
+          "page": 71
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 46 - x ___ 47 - x",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "Cùng trừ đi x, mà 46 < 47 nên 46 - x < 47 - x.",
+          "skill": "so_sanh_chu_so",
+          "page": 76
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 25 + x - 15 ___ 15 + 4 + x",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "25 + x - 15 = 10 + x, còn 15 + 4 + x = 19 + x, mà 10 < 19.",
+          "skill": "so_sanh_chu_so",
+          "page": 76
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hiện nay mẹ 26 tuổi. Khi tuổi con bằng tuổi mẹ hiện nay thì mẹ 49 tuổi. Hiện nay con ___ tuổi.",
+          "answer": "3",
+          "check": "26 - (49 - 26)",
+          "explain": "Mẹ hơn con 49 - 26 = 23 tuổi; tuổi con hiện nay: 26 - 23 = 3.",
+          "skill": "tuoi",
+          "page": 76
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Nếu Chủ nhật tuần này là ngày 22 tháng 5 thì thứ Bảy tuần sau là ngày ___ tháng 5.",
+          "answer": "28",
+          "check": "22 + 6",
+          "explain": "Thứ Hai tuần sau là ngày 23, đến thứ Bảy là thêm 6 ngày: 22 + 6 = 28.",
+          "skill": "suy_luan",
+          "page": 75
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "title": "Lít. Tìm số hạng trong một tổng. Ôn tập",
+      "questions": [
+        {
+          "d": 1,
+          "type": "number",
+          "q": "23 l + 17 l = ___ l",
+          "answer": "40",
+          "check": "23 + 17",
+          "explain": "Ta tính: 23 + 17 = 40.",
+          "skill": "lit",
+          "page": 78
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "43 l - 32 l = ___ l",
+          "answer": "11",
+          "check": "43 - 32",
+          "explain": "Ta tính: 43 - 32 = 11.",
+          "skill": "lit",
+          "page": 78
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "27 l + 14 l = ___ l",
+          "answer": "41",
+          "check": "27 + 14",
+          "explain": "Ta tính: 27 + 14 = 41.",
+          "skill": "lit",
+          "page": 78
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "38 kg + 45 kg = ___ kg",
+          "answer": "83",
+          "check": "38 + 45",
+          "explain": "Ta tính: 38 + 45 = 83.",
+          "skill": "cong_don_vi",
+          "page": 78
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "97 dm - 82 dm = ___ dm",
+          "answer": "15",
+          "check": "97 - 82",
+          "explain": "Ta tính: 97 - 82 = 15.",
+          "skill": "cong_don_vi",
+          "page": 78
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 25 + 7 ___ 37 - 6",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": ">",
+          "explain": "25 + 7 = 32, 37 - 6 = 31, mà 32 > 31.",
+          "skill": "so_sanh",
+          "page": 78
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 43 + 19 ___ 25 + 38",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "<",
+          "explain": "43 + 19 = 62, 25 + 38 = 63, mà 62 < 63.",
+          "skill": "so_sanh",
+          "page": 78
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 16 + 8 ___ 29 - 5",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "16 + 8 = 24, 29 - 5 = 24, mà 24 = 24.",
+          "skill": "so_sanh",
+          "page": 78
+        },
+        {
+          "d": 1,
+          "type": "mcq",
+          "q": "Chọn dấu thích hợp: 75 + 25 ___ 46 + 54",
+          "options": [
+            ">",
+            "<",
+            "="
+          ],
+          "answer": "=",
+          "explain": "75 + 25 = 100, 46 + 54 = 100, mà 100 = 100.",
+          "skill": "so_sanh",
+          "page": 78
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "7 dm = ___ cm",
+          "answer": "70",
+          "check": "7 x 10",
+          "explain": "1 dm = 10 cm nên 7 dm = 70 cm.",
+          "skill": "doi_don_vi",
+          "page": 84
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "4 l < ___ l < 6 l",
+          "answer": "5",
+          "check": "4 + 1",
+          "explain": "Số lớn hơn 4 và bé hơn 6 là 5.",
+          "skill": "doi_don_vi",
+          "page": 84
+        },
+        {
+          "d": 1,
+          "type": "text",
+          "q": "Lít viết tắt là ___.",
+          "answer": "l",
+          "explain": "Lít kí hiệu là l.",
+          "skill": "lit",
+          "page": 77
+        },
+        {
+          "d": 1,
+          "type": "number",
+          "q": "Tính: 37 + 48 = ___",
+          "answer": "85",
+          "check": "37 + 48",
+          "explain": "Ta tính: 37 + 48 = 85.",
+          "skill": "cong_co_nho",
+          "page": 84
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "___ + 14 = 46",
+          "answer": "32",
+          "check": "46 - 14",
+          "explain": "Lấy tổng trừ số hạng đã biết: 46 - 14 = 32.",
+          "skill": "tim_so_hang",
+          "page": 80
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "35 + ___ = 95",
+          "answer": "60",
+          "check": "95 - 35",
+          "explain": "Lấy tổng trừ số hạng đã biết: 95 - 35 = 60.",
+          "skill": "tim_so_hang",
+          "page": 80
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "21 + 19 + ___ = 90",
+          "answer": "50",
+          "check": "90 - (21 + 19)",
+          "explain": "21 + 19 = 40; số cần điền: 90 - 40 = 50.",
+          "skill": "tim_so_hang",
+          "page": 84
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tuấn nặng 29 kg. Hà nặng hơn Tuấn 5 kg. Hà nặng ___ kg.",
+          "answer": "34",
+          "check": "29 + 5",
+          "explain": "Hà nặng: 29 + 5 = 34 (kg).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 78
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Thùng thứ nhất có 29 l nước, thùng thứ hai có ít hơn thùng thứ nhất 14 l. Thùng thứ hai có ___ l nước.",
+          "answer": "15",
+          "check": "29 - 14",
+          "explain": "Thùng thứ hai: 29 - 14 = 15 (l).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 78
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Nam nặng 32 kg, nặng hơn Hà 2 kg nhưng nhẹ hơn Bình 5 kg. Bình nặng ___ kg.",
+          "answer": "37",
+          "check": "32 + 5",
+          "explain": "Nam nhẹ hơn Bình 5 kg nên Bình nặng 32 + 5 = 37 (kg).",
+          "skill": "bai_toan_nhieu_hon",
+          "page": 79
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Số lớn nhất có hai chữ số mà tổng hai chữ số bằng 11 là ___.",
+          "answer": "92",
+          "check": "90 + 2",
+          "explain": "Chọn chữ số hàng chục lớn nhất là 9, hàng đơn vị là 11 - 9 = 2: số 92.",
+          "skill": "cau_tao_so",
+          "page": 80
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Từ một can nước mắm lấy đi 7 l thì còn lại 15 l. Lúc đầu can có ___ l nước mắm.",
+          "answer": "22",
+          "check": "7 + 15",
+          "explain": "Lúc đầu có: 7 + 15 = 22 (l).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 84
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Bao gạo thứ nhất nặng 40 kg. Bao thứ hai nặng hơn bao thứ nhất 8 kg. Bao thứ hai nặng ___ kg.",
+          "answer": "48",
+          "check": "40 + 8",
+          "explain": "Bao thứ hai: 40 + 8 = 48 (kg).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 84
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Tuần thứ nhất cửa hàng bán 45 l nước mắm, tuần thứ hai bán 36 l. Cả hai tuần bán được ___ l.",
+          "answer": "81",
+          "check": "45 + 36",
+          "explain": "45 + 36 = 81 (l).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 85
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Khối Năm trồng được 37 cây, khối Bốn trồng 28 cây, khối Ba trồng 19 cây. Cả ba khối trồng được ___ cây.",
+          "answer": "84",
+          "check": "37 + 28 + 19",
+          "explain": "37 + 28 = 65; 65 + 19 = 84 (cây).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 81
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Điền số tiếp theo của dãy: 18; 23; 28; 33; 38; ___",
+          "answer": "43",
+          "check": "38 + 5",
+          "explain": "Mỗi số hơn số trước 5 đơn vị: 38 + 5 = 43.",
+          "skill": "day_so",
+          "page": 82
+        },
+        {
+          "d": 2,
+          "type": "number",
+          "q": "Điền số tiếp theo của dãy: 29; 38; 47; 56; 65; ___",
+          "answer": "74",
+          "check": "65 + 9",
+          "explain": "Mỗi số hơn số trước 9 đơn vị: 65 + 9 = 74.",
+          "skill": "day_so",
+          "page": 82
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tìm x, biết: x + 15 = 48. Vậy x = ___",
+          "answer": "33",
+          "check": "48 - 15",
+          "explain": "Muốn tìm số hạng, lấy tổng trừ số hạng kia: x = 48 - 15 = 33.",
+          "skill": "tim_so_hang",
+          "page": 84
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "24 + ___ = 98 - 13",
+          "answer": "61",
+          "check": "98 - 13 - 24",
+          "explain": "98 - 13 = 85; số cần điền: 85 - 24 = 61.",
+          "skill": "tim_so_hang",
+          "page": 80
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "21 + 45 = ___ + 14",
+          "answer": "52",
+          "check": "21 + 45 - 14",
+          "explain": "21 + 45 = 66; số cần điền: 66 - 14 = 52.",
+          "skill": "tim_so_hang",
+          "page": 80
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Tìm một số, biết số đó cộng với 10 rồi cộng với 14 thì được 44. Số đó là ___.",
+          "answer": "20",
+          "check": "44 - 14 - 10",
+          "explain": "Tính ngược: 44 - 14 = 30; 30 - 10 = 20.",
+          "skill": "tim_so_hang",
+          "page": 80
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hiệu của số chẵn lớn nhất có hai chữ số và số lớn nhất có hai chữ số mà tổng hai chữ số là 13 là ___.",
+          "answer": "4",
+          "check": "98 - 94",
+          "explain": "Số chẵn lớn nhất có hai chữ số là 98; số lớn nhất có tổng hai chữ số bằng 13 là 94; 98 - 94 = 4.",
+          "skill": "tim_so_hang",
+          "page": 80
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Nam có 57 cái tem, Bình có ít hơn Nam 15 cái. Cả hai bạn có ___ cái tem.",
+          "answer": "99",
+          "check": "57 + (57 - 15)",
+          "explain": "Bình: 57 - 15 = 42; cả hai: 57 + 42 = 99 (cái).",
+          "skill": "bai_toan_it_hon",
+          "page": 79
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Nam nặng 32 kg, nặng hơn Hà 2 kg nhưng nhẹ hơn Bình 5 kg. Cả ba bạn nặng ___ kg.",
+          "answer": "99",
+          "check": "32 + (32 - 2) + (32 + 5)",
+          "explain": "Hà 30 kg, Bình 37 kg; cả ba: 32 + 30 + 37 = 99 (kg).",
+          "skill": "bai_toan_it_hon",
+          "page": 79
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Mẹ mang ra chợ 78 quả trứng. Buổi sáng bán được 34 quả, buổi chiều bán được 37 quả. Mẹ còn lại ___ quả trứng.",
+          "answer": "7",
+          "check": "78 - (34 + 37)",
+          "explain": "Cả hai buổi bán 34 + 37 = 71 quả; còn lại 78 - 71 = 7 (quả).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 81
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Ngày thứ nhất cửa hàng bán 47 kg gạo và bán nhiều hơn ngày thứ hai 10 kg. Cả hai ngày bán được ___ kg gạo.",
+          "answer": "84",
+          "check": "47 + (47 - 10)",
+          "explain": "Ngày thứ hai: 47 - 10 = 37 kg; cả hai ngày: 47 + 37 = 84 (kg).",
+          "skill": "bai_toan_co_loi_van",
+          "page": 85
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hai bao ngô nặng tất cả 56 kg. Người ta đổ 8 kg từ bao thứ nhất sang bao thứ hai. Lúc đó cả hai bao nặng ___ kg.",
+          "answer": "56",
+          "check": "56 - 8 + 8",
+          "explain": "Chỉ đổ từ bao này sang bao kia nên tổng vẫn là 56 kg.",
+          "skill": "suy_luan",
+          "page": 84
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Cách đây một năm Hùng 8 tuổi. Sau ba năm nữa Hùng ___ tuổi.",
+          "answer": "12",
+          "check": "8 + 1 + 3",
+          "explain": "Hiện nay Hùng 8 + 1 = 9 tuổi; ba năm nữa: 9 + 3 = 12 tuổi.",
+          "skill": "tuoi",
+          "page": 84
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số tự nhiên y lớn nhất thỏa mãn y + 14 < 45 là ___.",
+          "answer": "30",
+          "check": "45 - 14 - 1",
+          "explain": "y + 14 < 45 nên y < 31; y lớn nhất là 30.",
+          "skill": "tim_so_hang",
+          "page": 82
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Số tự nhiên y lớn nhất thỏa mãn 22 + y < 32 + 47 là ___.",
+          "answer": "56",
+          "check": "32 + 47 - 22 - 1",
+          "explain": "32 + 47 = 79; 22 + y < 79 nên y < 57; y lớn nhất là 56.",
+          "skill": "tim_so_hang",
+          "page": 82
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Điền số tiếp theo của dãy: 15; 16; 18; 21; 25; ___",
+          "answer": "30",
+          "check": "25 + 5",
+          "explain": "Các khoảng cách tăng dần 1, 2, 3, 4 nên tiếp theo cộng 5: 25 + 5 = 30.",
+          "skill": "day_so",
+          "page": 82
+        },
+        {
+          "d": 3,
+          "type": "number",
+          "q": "Hai số liền nhau, mỗi số có một chữ số, có tổng bằng 15. Số lớn hơn là ___.",
+          "answer": "8",
+          "check": "(15 + 1) : 2",
+          "explain": "Hai số liền nhau có tổng 15 là 7 và 8; số lớn hơn là 8.",
+          "skill": "day_so",
+          "page": 82
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Có ba mũ màu xanh, đỏ, vàng cho ba bạn Hà, Bình, An. An không đội mũ vàng. Mũ của Bình không phải màu vàng, cũng không phải màu xanh. An đội mũ màu gì?",
+          "options": [
+            "Màu xanh",
+            "Màu đỏ",
+            "Màu vàng"
+          ],
+          "answer": "Màu xanh",
+          "explain": "Bình không vàng, không xanh nên Bình đội mũ đỏ; An không vàng nên An đội mũ xanh; Hà đội mũ vàng.",
+          "skill": "suy_luan",
+          "page": 83
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Duy, Phúc, Bảo mỗi bạn thích một cầu thủ khác nhau: Xuân Trường, Quang Hải, Công Phượng. Duy thích Quang Hải. Bạn thích Xuân Trường nói chuyện với Bảo. Bảo thích cầu thủ nào?",
+          "options": [
+            "Quang Hải",
+            "Công Phượng",
+            "Xuân Trường"
+          ],
+          "answer": "Công Phượng",
+          "explain": "Bạn thích Xuân Trường không phải Duy, cũng không phải Bảo nên là Phúc; vậy Bảo thích Công Phượng.",
+          "skill": "suy_luan",
+          "page": 83
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Năm hộp quà: đỏ lớn hơn trắng; vàng lớn hơn trắng; đen nhỏ hơn đỏ; xanh lớn hơn vàng nhưng nhỏ hơn đen. Hộp lớn nhất màu gì?",
+          "options": [
+            "Màu đỏ",
+            "Màu đen",
+            "Màu xanh",
+            "Màu vàng"
+          ],
+          "answer": "Màu đỏ",
+          "explain": "Sắp xếp từ lớn đến nhỏ: đỏ, đen, xanh, vàng, trắng. Hộp đỏ lớn nhất.",
+          "skill": "suy_luan",
+          "page": 83
+        },
+        {
+          "d": 3,
+          "type": "mcq",
+          "q": "Năm hộp quà: đỏ lớn hơn trắng; vàng lớn hơn trắng; đen nhỏ hơn đỏ; xanh lớn hơn vàng nhưng nhỏ hơn đen. Hộp nhỏ nhất màu gì?",
+          "options": [
+            "Màu vàng",
+            "Màu xanh",
+            "Màu đen",
+            "Màu trắng"
+          ],
+          "answer": "Màu trắng",
+          "explain": "Sắp xếp từ lớn đến nhỏ: đỏ, đen, xanh, vàng, trắng. Hộp trắng nhỏ nhất.",
+          "skill": "suy_luan",
+          "page": 83
+        }
+      ]
+    }
+  ]
+}

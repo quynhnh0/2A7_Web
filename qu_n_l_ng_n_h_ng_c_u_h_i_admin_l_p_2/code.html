@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-container":"#007d55","on-secondary-container":"#684000","on-error-container":"#93000a","outline-variant":"#c3c6d7","on-error":"#ffffff","on-primary-fixed":"#00174b","secondary-fixed-dim":"#ffb95f","surface-container-lowest":"#ffffff","on-secondary-fixed":"#2a1700","on-tertiary-fixed":"#002113","tertiary":"#006242","inverse-on-surface":"#ecf1ff","secondary-fixed":"#ffddb8","tertiary-fixed-dim":"#4edea3","surface-container-highest":"#d8e3fb","primary-fixed-dim":"#b4c5ff","background":"#f9f9ff","surface":"#f9f9ff","on-surface-variant":"#434655","tertiary-fixed":"#6ffbbe","error":"#ba1a1a","secondary-container":"#fea619","on-tertiary":"#ffffff","primary":"#004ac6","surface-container-low":"#f0f3ff","on-surface":"#111c2d","on-secondary":"#ffffff","on-secondary-fixed-variant":"#653e00","surface-container":"#e7eeff","outline":"#737686","surface-bright":"#f9f9ff","primary-fixed":"#dbe1ff","on-primary-container":"#eeefff","surface-container-high":"#dee8ff","inverse-primary":"#b4c5ff","on-tertiary-fixed-variant":"#005236","on-background":"#111c2d","on-primary":"#ffffff","surface-dim":"#cfdaf2","on-primary-fixed-variant":"#003ea8","error-container":"#ffdad6","surface-variant":"#d8e3fb","on-tertiary-container":"#bdffdb","primary-container":"#2563eb","secondary":"#855300","surface-tint":"#0053db","inverse-surface":"#263143"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-mobile":"1rem","gutter":"1.5rem","space-xs":"0.375rem","margin-mobile":"1rem","space-lg":"2rem","space-xl":"3rem","space-sm":"0.75rem","margin":"2rem","space-md":"1.25rem"},"fontFamily":{"headline-lg":["Quicksand"],"label-sm":["Be Vietnam Pro"],"headline-lg-mobile":["Quicksand"],"headline-sm":["Quicksand"],"label-lg":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"body-xl":["Be Vietnam Pro"],"headline-xl-mobile":["Quicksand"],"body-lg":["Be Vietnam Pro"],"headline-md":["Quicksand"],"label-md":["Be Vietnam Pro"],"headline-xl":["Quicksand"],"body-sm":["Be Vietnam Pro"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"42px","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["18px",{"lineHeight":"24px","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-xl":["20px",{"lineHeight":"32px","fontWeight":"500"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-xl":["44px",{"lineHeight":"54px","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div><div class="font-headline-sm text-[17px] font-bold text-primary leading-tight">Học Vui Lớp 2</div><div class="font-label-sm text-[11px] text-on-surface-variant font-medium tracking-wide">CỔNG GIÁO VIÊN / ADMIN</div></div></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tong-quan" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-label-md text-label-md">Tổng quan</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="quan-ly-bai-tap-&amp;-de-thi" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-label-md text-label-md">Quản lý bài tập &amp; Đề thi</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ngan-hang-cau-hoi" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span class="font-label-md text-label-md">Ngân hàng câu hỏi</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="danh-sach-hoc-sinh" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-label-md text-label-md">Danh sách học sinh</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="bao-cao-&amp;-xep-hang" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-label-md text-label-md">Báo cáo &amp; Xếp hạng</span></a></nav></div><div class="px-space-sm flex flex-col gap-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="trang-chu-bai-tap" href="#"><span class="material-symbols-outlined text-[18px]">switch_account</span><span class="font-label-sm text-label-sm">Chuyển sang Học sinh</span></a><div class="p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col leading-none"><span class="font-label-sm text-label-sm font-bold text-on-surface">Cô Mai Lan</span><span class="text-[11px] text-on-surface-variant font-medium">Chủ nhiệm 2A1</span></div></div><button class="text-on-surface-variant hover:text-error transition-colors" title="Đăng xuất" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-full w-72"><span class="material-symbols-outlined text-outline text-[18px]">search</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Tìm kiếm học sinh, bài tập..." type="text"/></div><div class="flex items-center gap-space-sm"><button class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="w-2 h-2 rounded-full bg-error absolute top-2 right-2"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-[1440px] mx-auto w-full flex flex-col gap-space-lg">
+<!-- Breadcrumb & Page Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-outline font-label-sm">
+<span class="hover:text-primary cursor-pointer transition-colors">Lớp 2A1</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Quản trị</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Ngân hàng câu hỏi</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Ngân Hàng Câu Hỏi Lớp 2</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+          Quản lý, tìm kiếm và tạo mới câu hỏi cho Toán và Tiếng Việt theo tuần học, bài học và mức độ nhận thức của học sinh lớp 2.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm">
+<button class="flex items-center gap-2 px-space-sm py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-tertiary">file_download</span>
+<span>Xuất ngân hàng</span>
+</button>
+<button class="flex items-center gap-2 px-space-sm py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">upload_file</span>
+<span>Import CSV/Excel</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md transition-all shadow-md active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Thêm câu hỏi mới</span>
+</button>
+</div>
+</div>
+<!-- Metrics Cards (4 Bento Stats) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Total Questions Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Tổng số câu hỏi</span>
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">database</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">248 <span class="font-body-md text-on-surface-variant text-[16px] font-normal">câu</span></div>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm">
+              145 Toán
+            </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm">
+              103 Tiếng Việt
+            </span>
+</div>
+</div>
+</div>
+<!-- Easy Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-tertiary/5 rounded-full blur-xl group-hover:bg-tertiary/10 transition-colors"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Mức độ Dễ</span>
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">sentiment_satisfied</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">110 <span class="font-body-md text-tertiary text-[16px] font-semibold">(45%)</span></div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+</div>
+<!-- Medium Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-secondary-container/10 rounded-full blur-xl group-hover:bg-secondary-container/20 transition-colors"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Mức độ Trung bình</span>
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">95 <span class="font-body-md text-secondary text-[16px] font-semibold">(38%)</span></div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 38%;"></div>
+</div>
+</div>
+</div>
+<!-- Hard / Advanced Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-error-container/20 rounded-full blur-xl group-hover:bg-error-container/30 transition-colors"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Mức độ Nâng cao</span>
+<div class="w-10 h-10 rounded-xl bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">43 <span class="font-body-md text-error text-[16px] font-semibold">(17%)</span></div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-3 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 17%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Control Bar -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-sm items-center">
+<!-- Search Input -->
+<div class="lg:col-span-4 flex items-center gap-space-xs bg-surface-container-low px-space-sm py-2.5 rounded-xl">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Tìm nội dung câu hỏi, đáp án, mã câu..." type="text"/>
+</div>
+<!-- Subject Select -->
+<div class="lg:col-span-2 relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md py-2.5 px-space-sm pr-8 rounded-xl outline-none cursor-pointer">
+<option>Tất cả môn học</option>
+<option>Toán Lớp 2</option>
+<option>Tiếng Việt Lớp 2</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[18px] absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+<!-- Week Select -->
+<div class="lg:col-span-2 relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md py-2.5 px-space-sm pr-8 rounded-xl outline-none cursor-pointer">
+<option>Tuần 5 (Hiện tại)</option>
+<option>Tuần 1</option>
+<option>Tuần 2</option>
+<option>Tuần 3</option>
+<option>Tuần 4</option>
+<option>Tuần 6</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[18px] absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+<!-- Difficulty Select -->
+<div class="lg:col-span-2 relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md py-2.5 px-space-sm pr-8 rounded-xl outline-none cursor-pointer">
+<option>Tất cả độ khó</option>
+<option>Dễ (+10đ)</option>
+<option>Trung bình (+15đ)</option>
+<option>Nâng cao (+25đ)</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[18px] absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+<!-- Type Select -->
+<div class="lg:col-span-2 relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md py-2.5 px-space-sm pr-8 rounded-xl outline-none cursor-pointer">
+<option>Tất cả dạng câu</option>
+<option>Trắc nghiệm (MCQ)</option>
+<option>Điền số vào chỗ trống</option>
+<option>Điền từ thích hợp</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[18px] absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Sub-filter row: Lesson & Toggle -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-2">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">bookmark</span>
+<span class="text-on-surface font-bold">Chủ đề/Bài:</span>
+<div class="relative inline-block">
+<select class="appearance-none bg-surface-container text-on-surface font-label-sm py-1.5 px-3 pr-7 rounded-lg outline-none cursor-pointer">
+<option>Bài 15: Phép cộng có nhớ (qua 10) trong phạm vi 100</option>
+<option>Bài 16: Phép trừ có nhớ (qua 10)</option>
+<option>Bài 17: Mở rộng vốn từ: Em là học sinh</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[16px] absolute right-2 top-2 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Error Rate Warning Toggle -->
+<label class="flex items-center gap-3 cursor-pointer select-none">
+<div class="relative">
+<input checked="" class="sr-only peer" id="errorToggle" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-error"></div>
+</div>
+<span class="font-label-sm text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+            Chỉ hiện câu học sinh hay làm sai (&gt;25% sai)
+          </span>
+</label>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-space-md w-12 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-3.5 px-space-sm w-36">Mã &amp; Dạng</th>
+<th class="py-3.5 px-space-sm">Nội dung câu hỏi &amp; Đáp án</th>
+<th class="py-3.5 px-space-sm w-44">Tuần &amp; Bài học</th>
+<th class="py-3.5 px-space-sm w-36">Mức độ</th>
+<th class="py-3.5 px-space-sm w-44">Thống kê thực tế</th>
+<th class="py-3.5 px-space-md w-36 text-right">Thao tác</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm">
+<!-- Row 1: Math Addition with Regrouping (High Error Alert) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1 items-start">
+<span class="font-label-sm font-bold text-primary">#MAT-2051</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px]">
+                    Trắc nghiệm MCQ
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1.5 max-w-lg">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+                    27 + 18 = ?
+                  </div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-tertiary/10 text-tertiary font-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                      45 (Đúng)
+                    </span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm">Nhiễu: 35</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm">Nhiễu: 44</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm">Nhiễu: 55</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface font-bold">Tuần 5</span>
+<span class="font-body-sm text-on-surface-variant text-[13px] truncate">Bài 15: Phép cộng có nhớ</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col items-start gap-1">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm">
+                    Vừa (+15đ)
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-on-surface-variant">32 lượt</span>
+<span class="font-bold text-error flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+                      66% đúng
+                    </span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 66%;"></div>
+</div>
+<span class="text-[11px] text-error font-medium">Hay nhầm nhớ số 1 sang hàng chục</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" onclick="openPreviewModal('MAT-2051', '27 + 18 = ?', '45', 'Trắc nghiệm (4 lựa chọn)', 'Toán Lớp 2', 'Tuần 5 - Bài 15')" title="Xem trước giao diện học sinh" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" title="Chỉnh sửa câu hỏi" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Nhân bản" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<label class="relative inline-flex items-center cursor-pointer ml-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</td>
+</tr>
+<!-- Row 2: Math Fill-in-Blank Missing Number -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/20">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1 items-start">
+<span class="font-label-sm font-bold text-primary">#MAT-2052</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px]">
+                    Điền số
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1.5 max-w-lg">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+                    17 + <span class="px-2 py-0.5 rounded-md bg-primary-fixed text-primary font-bold">?</span> = 25
+                  </div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-tertiary/10 text-tertiary font-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                      Đáp án chấp nhận: 8, số 8
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface font-bold">Tuần 5</span>
+<span class="font-body-sm text-on-surface-variant text-[13px] truncate">Bài 16: Tìm thành phần chưa biết</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col items-start gap-1">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm">
+                    Dễ (+10đ)
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-on-surface-variant">30 lượt</span>
+<span class="font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                      90% đúng
+                    </span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" onclick="openPreviewModal('MAT-2052', '17 + [?] = 25', '8', 'Điền số vào ô trống', 'Toán Lớp 2', 'Tuần 5 - Bài 16')" title="Xem trước" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" title="Chỉnh sửa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Nhân bản" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<label class="relative inline-flex items-center cursor-pointer ml-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</td>
+</tr>
+<!-- Row 3: Vietnamese Fill-in-Blank Word -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1 items-start">
+<span class="font-label-sm font-bold text-secondary">#VIE-2019</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px]">
+                    Điền từ
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1.5 max-w-lg">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+                    Con mèo đang <span class="px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-bold">...</span> trên chiếc ghế ấm.
+                  </div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-tertiary/10 text-tertiary font-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                      Từ đúng: nằm, sưởi ấm, ngủ
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface font-bold">Tuần 5</span>
+<span class="font-body-sm text-on-surface-variant text-[13px] truncate">Bài 10: Từ chỉ hoạt động của con vật</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col items-start gap-1">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm">
+                    Dễ (+10đ)
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-on-surface-variant">28 lượt</span>
+<span class="font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                      85% đúng
+                    </span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" onclick="openPreviewModal('VIE-2019', 'Con mèo đang [?] trên chiếc ghế ấm.', 'nằm', 'Điền từ thích hợp vào chỗ trống', 'Tiếng Việt Lớp 2', 'Tuần 5 - Bài 10')" title="Xem trước" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" title="Chỉnh sửa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Nhân bản" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<label class="relative inline-flex items-center cursor-pointer ml-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</td>
+</tr>
+<!-- Row 4: Advanced Problem Solving (Math) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/20">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1 items-start">
+<span class="font-label-sm font-bold text-primary">#MAT-2098</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px]">
+                    Toán đố có lời
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1.5 max-w-lg">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+                    Lan có 35 viên kẹo, Lan cho Mai 12 viên và nhận thêm từ mẹ 8 viên. Hỏi Lan còn lại bao nhiêu viên?
+                  </div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-tertiary/10 text-tertiary font-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                      31 viên (Đúng)
+                    </span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm">Nhiễu: 30 viên</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm">Nhiễu: 23 viên</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface font-bold">Tuần 5</span>
+<span class="font-body-sm text-on-surface-variant text-[13px] truncate">Bài 18: Bài toán hai bước tính</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col items-start gap-1">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-error-container text-error font-label-sm font-bold">
+                    Nâng cao (+25đ)
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-on-surface-variant">31 lượt</span>
+<span class="font-bold text-error flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                      52% đúng
+                    </span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 52%;"></div>
+</div>
+<span class="text-[11px] text-error font-medium">Học sinh quên cộng thêm 8 viên</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" onclick="openPreviewModal('MAT-2098', 'Lan có 35 viên kẹo, Lan cho Mai 12 viên và nhận thêm từ mẹ 8 viên. Hỏi Lan còn lại bao nhiêu viên?', '31 viên', 'Toán giải 2 bước tính', 'Toán Lớp 2', 'Tuần 5 - Bài 18')" title="Xem trước" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" title="Chỉnh sửa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Nhân bản" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<label class="relative inline-flex items-center cursor-pointer ml-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</td>
+</tr>
+<!-- Row 5: Vietnamese Spelling Differentiation (c / k / q) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1 items-start">
+<span class="font-label-sm font-bold text-secondary">#VIE-2044</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px]">
+                    Trắc nghiệm
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1.5 max-w-lg">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+                    Điền "c" hoặc "k" thích hợp: "...on ...iến"
+                  </div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-tertiary/10 text-tertiary font-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                      c - k (Đúng: con kiến)
+                    </span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm">Nhiễu: k - c</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm">Nhiễu: c - c</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface font-bold">Tuần 4</span>
+<span class="font-body-sm text-on-surface-variant text-[13px] truncate">Bài 7: Quy tắc chính tả phân biệt c/k</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col items-start gap-1">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm">
+                    Dễ (+10đ)
+                  </span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-on-surface-variant">33 lượt</span>
+<span class="font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                      94% đúng
+                    </span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button 'c="" 'tiếng="" 'trắc="" 'tuần="" -="" ...iến\"',="" 2',="" 4="" 7')"="" \"...on="" \"k\"="" bài="" c\"="" chính="" class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" hoặc="" hợp:="" k',="" lớp="" nghiệm="" onclick="openPreviewModal('VIE-2044', 'Điền \" thích="" title="Xem trước" type="button" tả',="" việt="">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" title="Chỉnh sửa" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Nhân bản" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<label class="relative inline-flex items-center cursor-pointer ml-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Table Controls -->
+<div class="p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-low/40">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-[13px]">
+<span>Hiển thị</span>
+<select class="bg-surface-container-lowest text-on-surface font-label-sm py-1 px-2 rounded-lg outline-none cursor-pointer">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+<span>trên tổng số <strong class="text-on-surface">248</strong> câu hỏi</span>
+</div>
+<!-- Pagination Pager -->
+<div class="flex items-center gap-1 font-label-md">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container-high transition-colors" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary text-on-primary font-bold shadow-sm" type="button">
+            1
+          </button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+            2
+          </button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+            3
+          </button>
+<span class="w-8 h-8 flex items-center justify-center text-outline">...</span>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+            25
+          </button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Student View Modal / Drawer Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm hidden transition-opacity" id="previewModal">
+<div class="bg-surface rounded-3xl max-w-2xl w-full mx-4 shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Xem trước: Giao diện học sinh lớp 2</h3>
+<p class="font-label-sm text-on-surface-variant" id="modalQuestionMeta">Mã câu: #MAT-2051 • Toán Lớp 2</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-error hover:text-on-error flex items-center justify-center text-on-surface-variant transition-colors" onclick="closePreviewModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Student Simulated Canvas (Playful child view) -->
+<div class="p-space-lg bg-surface flex flex-col gap-space-md items-center text-center">
+<!-- Question Badge -->
+<div class="inline-flex items-center gap-2 px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>Thử thách Toán Vui • +15 Xu Vàng</span>
+</div>
+<!-- Big Question Card for Child -->
+<div class="w-full bg-surface-container-lowest p-space-lg rounded-3xl shadow-md border-0 flex flex-col items-center justify-center min-h-[140px]">
+<span class="font-label-sm text-outline uppercase tracking-wider mb-1" id="modalQuestionType">Dạng câu hỏi</span>
+<div class="font-headline-xl text-headline-xl text-primary font-bold" id="modalQuestionText">
+            27 + 18 = ?
+          </div>
+</div>
+<!-- Simulated Student Answer Choices -->
+<div class="grid grid-cols-2 gap-space-sm w-full">
+<button class="py-4 px-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md active:translate-y-1 font-headline-md text-headline-md text-on-surface transition-all flex items-center justify-center gap-2 group" type="button">
+<span class="w-8 h-8 rounded-full bg-surface-container text-primary font-bold flex items-center justify-center text-[15px]">A</span>
+<span>35</span>
+</button>
+<button class="py-4 px-space-md rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed shadow-md active:translate-y-1 font-headline-md text-headline-md font-bold transition-all flex items-center justify-center gap-2 ring-2 ring-tertiary" type="button">
+<span class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary font-bold flex items-center justify-center text-[15px]">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</span>
+<span id="modalCorrectAnswer">45</span>
+</button>
+<button class="py-4 px-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md active:translate-y-1 font-headline-md text-headline-md text-on-surface transition-all flex items-center justify-center gap-2 group" type="button">
+<span class="w-8 h-8 rounded-full bg-surface-container text-primary font-bold flex items-center justify-center text-[15px]">C</span>
+<span>44</span>
+</button>
+<button class="py-4 px-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md active:translate-y-1 font-headline-md text-headline-md text-on-surface transition-all flex items-center justify-center gap-2 group" type="button">
+<span class="w-8 h-8 rounded-full bg-surface-container text-primary font-bold flex items-center justify-center text-[15px]">D</span>
+<span>55</span>
+</button>
+</div>
+<!-- Student Voice Button Helper -->
+<div class="flex items-center gap-2 text-outline font-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">volume_up</span>
+<span>Bé có thể nhấn vào loa để nghe cô giáo đọc câu hỏi</span>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-outline">Giao diện tương thích máy tính bảng &amp; màn hình cảm ứng</span>
+<button class="px-space-md py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md transition-colors" onclick="closePreviewModal()" type="button">
+          Đóng lại
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Scripts -->
+<script>
+    function openPreviewModal(code, text, answer, type, subject, lesson) {
+      const modal = document.getElementById('previewModal');
+      document.getElementById('modalQuestionMeta').textContent = 'Mã câu: #' + code + ' • ' + subject + ' (' + lesson + ')';
+      document.getElementById('modalQuestionText').textContent = text;
+      document.getElementById('modalCorrectAnswer').textContent = answer;
+      document.getElementById('modalQuestionType').textContent = type;
+      modal.classList.remove('hidden');
+    }
+
+    function closePreviewModal() {
+      const modal = document.getElementById('previewModal');
+      modal.classList.add('hidden');
+    }
+
+    // Close preview on escape key or backdrop click
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closePreviewModal();
+      }
+    });
+
+    document.getElementById('previewModal').addEventListener('click', function(event) {
+      if (event.target === this) {
+        closePreviewModal();
+      }
+    });
+  </script>
+</div></main></div></body></html>

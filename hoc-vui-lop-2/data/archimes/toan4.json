@@ -1,0 +1,4058 @@
+{
+ "subject": "toan",
+ "book": "Toán 2 - Quyển 4",
+ "weeks": [
+  {
+   "week": 28,
+   "title": "Số có ba chữ số. Số tròn chục, tròn trăm",
+   "questions": [
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Số gồm 5 trăm, 3 chục và 2 đơn vị viết là ___",
+     "answer": "532",
+     "check": "500 + 30 + 2",
+     "explain": "5 trăm, 3 chục, 2 đơn vị viết là 532.",
+     "skill": "cau_tao_so",
+     "page": 5
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Số gồm 7 trăm và 2 chục viết là ___",
+     "answer": "720",
+     "check": "700 + 20",
+     "explain": "7 trăm là 700, 2 chục là 20, không có đơn vị nên viết 0 ở hàng đơn vị: 720.",
+     "skill": "cau_tao_so",
+     "page": 5
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Số gồm 4 trăm và 6 đơn vị viết là ___",
+     "answer": "406",
+     "check": "400 + 6",
+     "explain": "Không có chục nên viết 0 ở hàng chục: 406.",
+     "skill": "cau_tao_so",
+     "page": 5
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Số 725 đọc là:",
+     "options": [
+      "Bảy trăm hai mươi lăm",
+      "Bảy trăm hai mươi năm",
+      "Bảy hai mươi lăm",
+      "Bảy trăm năm mươi hai"
+     ],
+     "answer": "Bảy trăm hai mươi lăm",
+     "explain": "725 gồm 7 trăm, 2 chục, 5 đơn vị, đọc là bảy trăm hai mươi lăm.",
+     "skill": "doc_viet_so",
+     "page": 5
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Số “Hai trăm chín mươi” viết là:",
+     "options": [
+      "209",
+      "290",
+      "2090",
+      "219"
+     ],
+     "answer": "290",
+     "explain": "Hai trăm chín mươi gồm 2 trăm, 9 chục, 0 đơn vị: 290.",
+     "skill": "doc_viet_so",
+     "page": 5
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Viết số thành tổng: 534 = 500 + ___ + 4",
+     "answer": "30",
+     "check": "534 - 500 - 4",
+     "explain": "534 gồm 5 trăm, 3 chục, 4 đơn vị nên 534 = 500 + 30 + 4.",
+     "skill": "phan_tich_so",
+     "page": 5
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Trong số 453, giá trị của chữ số 5 là ___",
+     "answer": "50",
+     "check": "5 x 10",
+     "explain": "Chữ số 5 ở hàng chục nên có giá trị là 50.",
+     "skill": "gia_tri_chu_so",
+     "page": 6
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 416 ___ 425",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": "<",
+     "explain": "Hàng trăm đều là 4, hàng chục 1 < 2 nên 416 < 425.",
+     "skill": "so_sanh_so",
+     "page": 6
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 999 ___ 900 + 99",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": "=",
+     "explain": "900 + 99 = 999 nên hai bên bằng nhau.",
+     "skill": "so_sanh_so",
+     "page": 6
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 178 ___ 187",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": "<",
+     "explain": "Hàng trăm đều là 1, hàng chục 7 < 8 nên 178 < 187.",
+     "skill": "so_sanh_so",
+     "page": 7
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Viết tiếp tiếng còn thiếu: số 115 đọc là “Một trăm mười ___”",
+     "answer": "lăm",
+     "explain": "Hàng đơn vị là 5 đứng sau “mười” thì đọc là “lăm”.",
+     "skill": "doc_viet_so",
+     "page": 5
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Viết tiếp tiếng còn thiếu: số 204 đọc là “Hai trăm ___ tư”",
+     "answer": "linh",
+     "accepted": [
+      "lẻ"
+     ],
+     "explain": "Hàng chục là 0 thì đọc “linh” (hoặc “lẻ”): hai trăm linh tư.",
+     "skill": "doc_viet_so",
+     "page": 5
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Số liền sau số 915 là ___",
+     "answer": "916",
+     "check": "915 + 1",
+     "explain": "Số liền sau thì hơn 1 đơn vị: 915 + 1 = 916.",
+     "skill": "so_lien_truoc_lien_sau",
+     "page": 8
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Số liền trước số 249 là ___",
+     "answer": "248",
+     "check": "249 - 1",
+     "explain": "Số liền trước thì kém 1 đơn vị: 249 - 1 = 248.",
+     "skill": "so_lien_truoc_lien_sau",
+     "page": 8
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Số bé nhất có ba chữ số là ___",
+     "answer": "100",
+     "check": "99 + 1",
+     "explain": "Số bé nhất có ba chữ số là 100.",
+     "skill": "cau_tao_so",
+     "page": 8
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tính: 74 + 40 : 5 = ___",
+     "answer": "82",
+     "check": "74 + 40 : 5",
+     "explain": "Chia trước, cộng sau: 40 : 5 = 8, 74 + 8 = 82.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 9
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tính: 50 : 5 x 4 = ___",
+     "answer": "40",
+     "check": "50 : 5 x 4",
+     "explain": "Tính từ trái sang phải: 50 : 5 = 10, 10 x 4 = 40.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 9
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Dãy số nào được viết theo thứ tự từ lớn đến bé?",
+     "options": [
+      "170; 140; 150; 130; 110",
+      "110; 130; 140; 150; 170",
+      "170; 150; 140; 130; 110",
+      "170; 150; 130; 140; 110"
+     ],
+     "answer": "170; 150; 140; 130; 110",
+     "explain": "So sánh các số tròn chục rồi xếp từ số lớn nhất 170 đến số bé nhất 110.",
+     "skill": "sap_xep_so",
+     "page": 6
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 860 ___ 800 + 50 + 9",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": ">",
+     "explain": "800 + 50 + 9 = 859, mà 860 > 859.",
+     "skill": "so_sanh_so",
+     "page": 6
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 244 ___ 200 + 44",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": "=",
+     "explain": "200 + 44 = 244 nên hai bên bằng nhau.",
+     "skill": "so_sanh_so",
+     "page": 7
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Có ___ số tròn trăm lớn hơn 300 và bé hơn 700.",
+     "answer": "3",
+     "check": "(700 - 300) : 100 - 1",
+     "explain": "Đó là các số 400; 500; 600.",
+     "skill": "so_tron_tram",
+     "page": 7
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Có ___ số tròn chục lớn hơn 80 và bé hơn 130.",
+     "answer": "4",
+     "check": "(130 - 80) : 10 - 1",
+     "explain": "Đó là các số 90; 100; 110; 120.",
+     "skill": "so_tron_chuc",
+     "page": 7
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Số tròn trăm liền sau số 115 là ___",
+     "answer": "200",
+     "check": "100 + 100",
+     "explain": "115 nằm giữa 100 và 200, số tròn trăm liền sau là 200.",
+     "skill": "so_tron_tram",
+     "page": 8
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Số lớn nhất có ba chữ số khác nhau là ___",
+     "answer": "987",
+     "check": "900 + 80 + 7",
+     "explain": "Chọn các chữ số lớn nhất, khác nhau: 9, 8, 7 → 987.",
+     "skill": "cau_tao_so",
+     "page": 8
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Số chẵn lớn nhất có ba chữ số khác nhau là ___",
+     "answer": "986",
+     "check": "900 + 80 + 6",
+     "explain": "Hàng trăm 9, hàng chục 8, hàng đơn vị là số chẵn lớn nhất còn lại là 6: 986.",
+     "skill": "cau_tao_so",
+     "page": 8
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Số lẻ nhỏ nhất có ba chữ số khác nhau là ___",
+     "answer": "103",
+     "check": "100 + 3",
+     "explain": "Hàng trăm 1, hàng chục 0, hàng đơn vị lẻ nhỏ nhất khác 1 là 3: 103.",
+     "skill": "cau_tao_so",
+     "page": 8
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tính: 19 + 29 + 39 + 49 = ___",
+     "answer": "136",
+     "check": "19 + 29 + 39 + 49",
+     "explain": "19 + 29 = 48, 48 + 39 = 87, 87 + 49 = 136.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 9
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm y, biết: y - 60 + 20 = 50. y = ___",
+     "answer": "90",
+     "check": "50 - 20 + 60",
+     "explain": "y - 60 = 50 - 20 = 30, nên y = 30 + 60 = 90.",
+     "skill": "tim_thanh_phan",
+     "page": 10
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Số gồm 5 trăm, 2 chục và 42 đơn vị là:",
+     "options": [
+      "5242",
+      "542",
+      "524",
+      "562"
+     ],
+     "answer": "562",
+     "explain": "500 + 20 + 42 = 562.",
+     "skill": "cau_tao_so",
+     "page": 5
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 200 ___ 10 : 5 + 98",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": ">",
+     "explain": "10 : 5 + 98 = 2 + 98 = 100, mà 200 > 100.",
+     "skill": "so_sanh_so",
+     "page": 11
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hiệu của hai số bằng 37, số bị trừ là số tròn trăm bé nhất có ba chữ số. Số trừ là ___",
+     "answer": "63",
+     "check": "100 - 37",
+     "explain": "Số bị trừ là 100. Số trừ = 100 - 37 = 63.",
+     "skill": "tim_thanh_phan",
+     "page": 11
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm số có ba chữ số, biết chữ số hàng trăm là số liền sau số nhỏ nhất có một chữ số, chữ số hàng chục là số lẻ lớn nhất có một chữ số, chữ số hàng đơn vị là tích của 2 và 3. Số đó là ___",
+     "answer": "196",
+     "check": "100 + 90 + 2 x 3",
+     "explain": "Hàng trăm: liền sau 0 là 1; hàng chục: 9; hàng đơn vị: 2 x 3 = 6. Số đó là 196.",
+     "skill": "cau_tao_so",
+     "page": 6
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: y x 5 + y = 4 x 6. y = ___",
+     "answer": "4",
+     "check": "4 x 6 : 6",
+     "explain": "y x 5 + y = y x 6 = 24, nên y = 24 : 6 = 4.",
+     "skill": "tim_thanh_phan",
+     "page": 9
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: y + y + y + y - 30 = 6. y = ___",
+     "answer": "9",
+     "check": "(6 + 30) : 4",
+     "explain": "y x 4 = 6 + 30 = 36, nên y = 36 : 4 = 9.",
+     "skill": "tim_thanh_phan",
+     "page": 10
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Bác An nhốt thỏ vào 8 chuồng, mỗi chuồng 4 con. Bác bán đi 2 con rồi chia đều số thỏ còn lại vào 5 chuồng. Lúc sau mỗi chuồng có ___ con thỏ.",
+     "answer": "6",
+     "check": "(8 x 4 - 2) : 5",
+     "explain": "Đàn thỏ có 8 x 4 = 32 con, bán 2 còn 30 con, 30 : 5 = 6 con.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 10
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Một đường gấp khúc gồm ba đoạn thẳng: đoạn thứ nhất dài 7 cm, đoạn thứ hai dài 2 dm, đoạn thứ ba dài hơn đoạn thứ hai 12 cm. Đường gấp khúc dài ___ cm.",
+     "answer": "59",
+     "check": "7 + 20 + 20 + 12",
+     "explain": "2 dm = 20 cm; đoạn thứ ba 20 + 12 = 32 cm; độ dài: 7 + 20 + 32 = 59 cm.",
+     "skill": "duong_gap_khuc",
+     "page": 10
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Nam có 4 chục quyển vở và ít hơn Hưng 12 quyển. Cả hai bạn có tất cả ___ quyển vở.",
+     "answer": "92",
+     "check": "40 + 40 + 12",
+     "explain": "Nam có 40 quyển, Hưng có 40 + 12 = 52 quyển, cả hai có 40 + 52 = 92 quyển.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 11
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: y x 4 + y = 3 x 5. y = ___",
+     "answer": "3",
+     "check": "3 x 5 : 5",
+     "explain": "y x 4 + y = y x 5 = 15, nên y = 15 : 5 = 3.",
+     "skill": "tim_thanh_phan",
+     "page": 11
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Linh xếp bánh vào 5 hộp, mỗi hộp 5 cái thì thừa 3 cái. Nếu xếp đều số bánh đó vào 4 hộp thì mỗi hộp có ___ cái bánh.",
+     "answer": "7",
+     "check": "(5 x 5 + 3) : 4",
+     "explain": "Số bánh là 5 x 5 + 3 = 28 cái, 28 : 4 = 7 cái.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 11
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Mẹ cắm hoa vào 6 lọ, mỗi lọ 4 bông thì thừa 3 bông. Nếu cắm đều số hoa đó vào 3 lọ thì mỗi lọ có ___ bông.",
+     "answer": "9",
+     "check": "(6 x 4 + 3) : 3",
+     "explain": "Số hoa là 6 x 4 + 3 = 27 bông, 27 : 3 = 9 bông.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 12
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Số gồm 20 chục và 20 đơn vị là ___",
+     "answer": "220",
+     "check": "20 x 10 + 20",
+     "explain": "20 chục = 200, thêm 20 đơn vị được 220.",
+     "skill": "cau_tao_so",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "week": 29,
+   "title": "Số có ba chữ số",
+   "questions": [
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Số 639 gồm 6 trăm, ___ chục và 9 đơn vị.",
+     "answer": "3",
+     "check": "(639 - 600 - 9) : 10",
+     "explain": "639 = 600 + 30 + 9, tức là 6 trăm, 3 chục, 9 đơn vị.",
+     "skill": "cau_tao_so",
+     "page": 13
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Viết tiếp tiếng còn thiếu: số 639 đọc là “Sáu trăm ba mươi ___”",
+     "answer": "chín",
+     "explain": "639 gồm 6 trăm, 3 chục, 9 đơn vị: sáu trăm ba mươi chín.",
+     "skill": "doc_viet_so",
+     "page": 13
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Viết số: 7 x 100 + 2 x 10 + 5 = ___",
+     "answer": "725",
+     "check": "7 x 100 + 2 x 10 + 5",
+     "explain": "7 trăm, 2 chục, 5 đơn vị là số 725.",
+     "skill": "cau_tao_so",
+     "page": 13
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Chữ số a nào thích hợp để có 295 > 29a?",
+     "options": [
+      "3",
+      "5",
+      "6",
+      "9"
+     ],
+     "answer": "3",
+     "explain": "Hàng trăm, hàng chục bằng nhau nên cần a < 5; chỉ có 3 thỏa mãn.",
+     "skill": "so_sanh_so",
+     "page": 14
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Chữ số a nào thích hợp để có a98 > 797?",
+     "options": [
+      "7",
+      "8",
+      "6",
+      "5"
+     ],
+     "answer": "8",
+     "explain": "Cần chữ số hàng trăm a lớn hơn 7, trong các lựa chọn chỉ có 8.",
+     "skill": "so_sanh_so",
+     "page": 14
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Số nào là số tròn chục có ba chữ số bé hơn 200?",
+     "options": [
+      "175",
+      "210",
+      "170",
+      "90"
+     ],
+     "answer": "170",
+     "explain": "170 có ba chữ số, tận cùng là 0 và bé hơn 200.",
+     "skill": "so_tron_chuc",
+     "page": 18
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tính: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = ___",
+     "answer": "45",
+     "check": "1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9",
+     "explain": "Ghép cặp: (1 + 9) + (2 + 8) + (3 + 7) + (4 + 6) + 5 = 40 + 5 = 45.",
+     "skill": "tinh_nhanh",
+     "page": 19
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 1 m ___ 90 cm",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": ">",
+     "explain": "1 m = 100 cm, mà 100 cm > 90 cm.",
+     "skill": "do_dai",
+     "page": 20
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "18 m : 3 + 35 m = ___ m",
+     "answer": "41",
+     "check": "18 : 3 + 35",
+     "explain": "18 : 3 = 6, 6 + 35 = 41 (m).",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 20
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Các số 687; 213; 900; 182; 620 xếp theo thứ tự từ lớn đến bé là:",
+     "options": [
+      "182; 213; 620; 687; 900",
+      "900; 687; 620; 182; 213",
+      "900; 620; 687; 213; 182",
+      "900; 687; 620; 213; 182"
+     ],
+     "answer": "900; 687; 620; 213; 182",
+     "explain": "So sánh hàng trăm trước: 9 > 6 > 2 > 1; 687 > 620 vì hàng chục 8 > 2.",
+     "skill": "sap_xep_so",
+     "page": 20
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tính: 3 x 7 - 19 = ___",
+     "answer": "2",
+     "check": "3 x 7 - 19",
+     "explain": "3 x 7 = 21, 21 - 19 = 2.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 21
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tính: 52 - 8 x 3 = ___",
+     "answer": "28",
+     "check": "52 - 8 x 3",
+     "explain": "Nhân trước, trừ sau: 8 x 3 = 24, 52 - 24 = 28.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 21
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tính: 18 + 27 - 6 = ___",
+     "answer": "39",
+     "check": "18 + 27 - 6",
+     "explain": "18 + 27 = 45, 45 - 6 = 39.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 21
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm số có ba chữ số, biết chữ số hàng trăm là số chẵn lớn nhất có một chữ số, chữ số hàng chục là 0, chữ số hàng đơn vị là tích của 2 và 4. Số đó là ___",
+     "answer": "808",
+     "check": "8 x 100 + 2 x 4",
+     "explain": "Hàng trăm: 8; hàng chục: 0; hàng đơn vị: 2 x 4 = 8. Số đó là 808.",
+     "skill": "cau_tao_so",
+     "page": 14
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm số có ba chữ số, biết chữ số hàng trăm là số chẵn lớn nhất có một chữ số, chữ số hàng chục là số lẻ nhỏ nhất có một chữ số, chữ số hàng đơn vị là số liền trước số 5. Số đó là ___",
+     "answer": "814",
+     "check": "8 x 100 + 1 x 10 + 4",
+     "explain": "Hàng trăm 8, hàng chục 1, hàng đơn vị 4. Số đó là 814.",
+     "skill": "cau_tao_so",
+     "page": 14
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Số tròn chục có ba chữ số, có chữ số hàng trăm là 9 và chữ số hàng chục là số liền trước chữ số hàng trăm. Số đó là ___",
+     "answer": "980",
+     "check": "900 + 80",
+     "explain": "Hàng trăm 9, hàng chục 8, số tròn chục nên hàng đơn vị là 0: 980.",
+     "skill": "cau_tao_so",
+     "page": 15
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Có ___ số có hai chữ số mà tổng các chữ số bằng 13.",
+     "answer": "6",
+     "check": "9 - 4 + 1",
+     "explain": "Đó là 49; 58; 67; 76; 85; 94.",
+     "skill": "lap_so",
+     "page": 16
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Từ ba chữ số 1; 2; 4, số lớn nhất có ba chữ số khác nhau là:",
+     "options": [
+      "421",
+      "412",
+      "241",
+      "124"
+     ],
+     "answer": "421",
+     "explain": "Xếp chữ số lớn nhất ở hàng trăm, rồi đến hàng chục: 421.",
+     "skill": "lap_so",
+     "page": 16
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Từ ba chữ số 0; 7; 9 lập được ___ số có ba chữ số khác nhau.",
+     "answer": "4",
+     "check": "2 x 2",
+     "explain": "Đó là 709; 790; 907; 970 (chữ số 0 không đứng ở hàng trăm).",
+     "skill": "lap_so",
+     "page": 17
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Các số có ba chữ số khác nhau lập từ 0; 7; 9, xếp từ lớn đến bé là:",
+     "options": [
+      "970; 790; 907; 709",
+      "970; 907; 790; 709",
+      "709; 790; 907; 970",
+      "970; 907; 709; 790"
+     ],
+     "answer": "970; 907; 790; 709",
+     "explain": "Hàng trăm 9 lớn hơn 7; 970 > 907 và 790 > 709.",
+     "skill": "sap_xep_so",
+     "page": 17
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm một số, biết số đó nhân với số liền sau số nhỏ nhất có một chữ số thì được 7. Số đó là ___",
+     "answer": "7",
+     "check": "7 : 1",
+     "explain": "Số nhỏ nhất có một chữ số là 0, liền sau là 1. Số cần tìm: 7 : 1 = 7.",
+     "skill": "tim_thanh_phan",
+     "page": 17
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Cho a x 4 = 20 và b : 3 = 5. Tính a + b = ___",
+     "answer": "20",
+     "check": "20 : 4 + 5 x 3",
+     "explain": "a = 20 : 4 = 5; b = 5 x 3 = 15; a + b = 20.",
+     "skill": "tim_thanh_phan",
+     "page": 20
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hiệu của số liền sau số lớn nhất có hai chữ số với số nhỏ nhất có một chữ số là ___",
+     "answer": "100",
+     "check": "99 + 1 - 0",
+     "explain": "Liền sau 99 là 100; số nhỏ nhất có một chữ số là 0; 100 - 0 = 100.",
+     "skill": "cau_tao_so",
+     "page": 20
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Viết tiếp ba số để được dãy có quy luật: 987; 876; 765; ___",
+     "options": [
+      "654; 543; 423",
+      "755; 745; 735",
+      "654; 543; 432",
+      "654; 553; 432"
+     ],
+     "answer": "654; 543; 432",
+     "explain": "Mỗi số sau kém số trước 111: 765 - 111 = 654, 543, 432.",
+     "skill": "day_so",
+     "page": 20
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Một sợi dây dài 32 m được cắt thành 4 đoạn bằng nhau. Mỗi đoạn dài ___ m.",
+     "answer": "8",
+     "check": "32 : 4",
+     "explain": "32 : 4 = 8 (m).",
+     "skill": "bai_toan_chia",
+     "page": 20
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tính: 2 + 5 + 8 + 11 + 14 + 17 = ___",
+     "answer": "57",
+     "check": "2 + 5 + 8 + 11 + 14 + 17",
+     "explain": "Ghép cặp: (2 + 17) + (5 + 14) + (8 + 11) = 19 x 3 = 57.",
+     "skill": "tinh_nhanh",
+     "page": 19
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Ba số tự nhiên liên tiếp có tổng là 15. Số lớn nhất trong ba số đó là ___",
+     "answer": "6",
+     "check": "15 : 3 + 1",
+     "explain": "Ba số đó là 4; 5; 6 (4 + 5 + 6 = 15).",
+     "skill": "suy_luan",
+     "page": 19
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tính: 5 + 10 + 15 + 20 + 25 + 30 + 35 = ___",
+     "answer": "140",
+     "check": "5 + 10 + 15 + 20 + 25 + 30 + 35",
+     "explain": "(5 + 35) + (10 + 30) + (15 + 25) + 20 = 40 x 3 + 20 = 140.",
+     "skill": "tinh_nhanh",
+     "page": 19
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm số có ba chữ số, biết chữ số hàng chục là số lẻ nhỏ nhất có một chữ số, chữ số hàng đơn vị là số liền sau số chẵn lớn nhất có một chữ số, chữ số hàng trăm là hiệu của chữ số hàng đơn vị và chữ số hàng chục. Số đó là ___",
+     "answer": "819",
+     "check": "(9 - 1) x 100 + 1 x 10 + 9",
+     "explain": "Hàng chục 1, hàng đơn vị 9, hàng trăm 9 - 1 = 8. Số đó là 819.",
+     "skill": "cau_tao_so",
+     "page": 15
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Số nào có chữ số hàng trăm lớn hơn chữ số hàng chục 1 đơn vị và bằng một nửa chữ số hàng đơn vị?",
+     "options": [
+      "324",
+      "236",
+      "436",
+      "326"
+     ],
+     "answer": "326",
+     "explain": "326: hàng trăm 3 = 2 + 1, và 3 là một nửa của 6.",
+     "skill": "cau_tao_so",
+     "page": 15
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Có ___ số có ba chữ số khác nhau mà tổng các chữ số bằng 5.",
+     "answer": "8",
+     "check": "4 + 4",
+     "explain": "Đó là 104; 140; 401; 410; 203; 230; 302; 320.",
+     "skill": "lap_so",
+     "page": 16
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Từ bốn chữ số 0; 1; 2; 6 lập được ___ số có ba chữ số khác nhau nhỏ hơn 300.",
+     "answer": "12",
+     "check": "6 + 6",
+     "explain": "Hàng trăm là 1 có 6 số (102; 106; 120; 126; 160; 162), hàng trăm là 2 cũng có 6 số.",
+     "skill": "lap_so",
+     "page": 16
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Khi làm phép trừ một số cho 82, bạn Nam chép nhầm số trừ thành 32 nên được kết quả là 59. Kết quả đúng là ___",
+     "answer": "9",
+     "check": "59 + 32 - 82",
+     "explain": "Số bị trừ là 59 + 32 = 91. Kết quả đúng: 91 - 82 = 9.",
+     "skill": "suy_luan",
+     "page": 17
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Có ___ số có ba chữ số khác nhau mà chữ số hàng chục gấp 5 lần chữ số hàng đơn vị.",
+     "answer": "7",
+     "check": "9 - 2",
+     "explain": "Hàng đơn vị 1, hàng chục 5; hàng trăm là 2, 3, 4, 6, 7, 8, 9 (7 số).",
+     "skill": "lap_so",
+     "page": 18
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Có ___ số có ba chữ số lớn hơn 900 mà tổng các chữ số bằng 15.",
+     "answer": "7",
+     "check": "6 + 1",
+     "explain": "Đó là 906; 915; 924; 933; 942; 951; 960.",
+     "skill": "lap_so",
+     "page": 18
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: 99 < y x 4 + 64 < 101. y = ___",
+     "answer": "9",
+     "check": "(100 - 64) : 4",
+     "explain": "y x 4 + 64 = 100, nên y x 4 = 36, y = 9.",
+     "skill": "tim_thanh_phan",
+     "page": 20
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm số có ba chữ số, biết hiệu của chữ số hàng trăm và chữ số hàng chục là 0, hiệu của chữ số hàng chục và chữ số hàng đơn vị là 9. Số đó là ___",
+     "answer": "990",
+     "check": "9 x 100 + 9 x 10",
+     "explain": "Hiệu hai chữ số bằng 9 thì đó là 9 và 0: hàng chục 9, hàng đơn vị 0; hàng trăm bằng hàng chục là 9. Số 990.",
+     "skill": "cau_tao_so",
+     "page": 20
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Ba số chẵn liên tiếp có tổng là 36. Số bé nhất trong ba số đó là ___",
+     "answer": "10",
+     "check": "36 : 3 - 2",
+     "explain": "Số ở giữa là 36 : 3 = 12. Ba số là 10; 12; 14.",
+     "skill": "suy_luan",
+     "page": 19
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Cắt sợi dây thành 4 đoạn bằng nhau (không gấp dây) thì cần ___ lần cắt.",
+     "answer": "3",
+     "check": "4 - 1",
+     "explain": "Số lần cắt ít hơn số đoạn 1: 4 - 1 = 3 lần.",
+     "skill": "suy_luan",
+     "page": 20
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Từ bốn chữ số 0; 1; 3; 5 lập được ___ số có ba chữ số khác nhau lớn hơn 350.",
+     "answer": "7",
+     "check": "1 + 6",
+     "explain": "Hàng trăm 3 chỉ có 351; hàng trăm 5 có 501; 503; 510; 513; 530; 531.",
+     "skill": "lap_so",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "week": 30,
+   "title": "Mét. Ki-lô-mét. Mi-li-mét",
+   "questions": [
+    {
+     "d": 1,
+     "type": "number",
+     "q": "2 m = ___ cm",
+     "answer": "200",
+     "check": "2 x 100",
+     "explain": "1 m = 100 cm nên 2 m = 200 cm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 23
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "4 dm 4 cm = ___ cm",
+     "answer": "44",
+     "check": "4 x 10 + 4",
+     "explain": "4 dm = 40 cm, 40 cm + 4 cm = 44 cm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 23
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "3 dm = ___ mm",
+     "answer": "300",
+     "check": "3 x 100",
+     "explain": "1 dm = 100 mm nên 3 dm = 300 mm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 23
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "9 m 5 dm = ___ dm",
+     "answer": "95",
+     "check": "9 x 10 + 5",
+     "explain": "9 m = 90 dm, 90 dm + 5 dm = 95 dm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 23
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "2 cm 1 mm = ___ mm",
+     "answer": "21",
+     "check": "2 x 10 + 1",
+     "explain": "2 cm = 20 mm, 20 mm + 1 mm = 21 mm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 23
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "1 km = ___ m",
+     "answer": "1000",
+     "check": "10 x 100",
+     "explain": "1 km = 1000 m.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 22
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Mi-li-mét viết tắt là ___",
+     "answer": "mm",
+     "explain": "Mi-li-mét viết tắt là mm.",
+     "skill": "don_vi_do_dai",
+     "page": 22
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Ki-lô-mét viết tắt là ___",
+     "answer": "km",
+     "explain": "Ki-lô-mét viết tắt là km.",
+     "skill": "don_vi_do_dai",
+     "page": 22
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "54 m + 12 m - 47 m = ___ m",
+     "answer": "19",
+     "check": "54 + 12 - 47",
+     "explain": "54 + 12 = 66, 66 - 47 = 19 (m).",
+     "skill": "tinh_so_do_do_dai",
+     "page": 23
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "5 km x 4 + 60 km = ___ km",
+     "answer": "80",
+     "check": "5 x 4 + 60",
+     "explain": "5 x 4 = 20, 20 + 60 = 80 (km).",
+     "skill": "tinh_so_do_do_dai",
+     "page": 23
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "102 km + 37 km = ___ km",
+     "answer": "139",
+     "check": "102 + 37",
+     "explain": "102 + 37 = 139 (km).",
+     "skill": "tinh_so_do_do_dai",
+     "page": 24
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 999 m ___ 1 km",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": "<",
+     "explain": "1 km = 1000 m, mà 999 m < 1000 m.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 29
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Trong các số 987; 789; 978; 897, số nhỏ nhất là:",
+     "options": [
+      "789",
+      "987",
+      "978",
+      "897"
+     ],
+     "answer": "789",
+     "explain": "789 có chữ số hàng trăm nhỏ nhất (7).",
+     "skill": "so_sanh_so",
+     "page": 29
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tính: 234 + 162 = ___",
+     "answer": "396",
+     "check": "234 + 162",
+     "explain": "Cộng từng hàng: 4 + 2 = 6, 3 + 6 = 9, 2 + 1 = 3 → 396.",
+     "skill": "cong_khong_nho",
+     "page": 29
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Đơn vị nào thích hợp nhất để đo quãng đường giữa hai thành phố?",
+     "options": [
+      "mi-li-mét",
+      "ki-lô-mét",
+      "xăng-ti-mét",
+      "đề-xi-mét"
+     ],
+     "answer": "ki-lô-mét",
+     "explain": "Quãng đường dài giữa hai thành phố thường đo bằng ki-lô-mét.",
+     "skill": "don_vi_do_dai",
+     "page": 22
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Viết tiếp ba số để được dãy có quy luật: 222; 333; 444; ___",
+     "options": [
+      "455; 466; 477",
+      "544; 644; 744",
+      "555; 666; 777",
+      "555; 665; 777"
+     ],
+     "answer": "555; 666; 777",
+     "explain": "Mỗi số sau hơn số trước 111.",
+     "skill": "day_so",
+     "page": 29
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "2 dm 25 mm = ___ mm",
+     "answer": "225",
+     "check": "2 x 100 + 25",
+     "explain": "2 dm = 200 mm, 200 + 25 = 225 (mm).",
+     "skill": "doi_don_vi_do_dai",
+     "page": 23
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "40 cm - 32 cm : 4 = ___ cm",
+     "answer": "32",
+     "check": "40 - 32 : 4",
+     "explain": "Chia trước: 32 : 4 = 8, rồi 40 - 8 = 32 (cm).",
+     "skill": "tinh_so_do_do_dai",
+     "page": 23
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "42 km - 5 km x 6 = ___ km",
+     "answer": "12",
+     "check": "42 - 5 x 6",
+     "explain": "5 x 6 = 30, 42 - 30 = 12 (km).",
+     "skill": "tinh_so_do_do_dai",
+     "page": 24
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "36 km : 4 x 2 = ___ km",
+     "answer": "18",
+     "check": "36 : 4 x 2",
+     "explain": "36 : 4 = 9, 9 x 2 = 18 (km).",
+     "skill": "tinh_so_do_do_dai",
+     "page": 24
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hình tam giác có độ dài các cạnh là 18 mm, 4 cm, 35 mm. Chu vi hình tam giác là ___ mm.",
+     "answer": "93",
+     "check": "18 + 40 + 35",
+     "explain": "4 cm = 40 mm; chu vi: 18 + 40 + 35 = 93 (mm).",
+     "skill": "chu_vi",
+     "page": 24
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Một sợi dây đồng được uốn thành hình tứ giác có mỗi cạnh dài 3 m. Đoạn dây đồng dài ___ m.",
+     "answer": "12",
+     "check": "3 x 4",
+     "explain": "Tứ giác có 4 cạnh: 3 x 4 = 12 (m).",
+     "skill": "chu_vi",
+     "page": 24
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Một người đi xe đạp trong 3 giờ được 27 km, mỗi giờ đi được như nhau. Mỗi giờ người đó đi được ___ km.",
+     "answer": "9",
+     "check": "27 : 3",
+     "explain": "27 : 3 = 9 (km).",
+     "skill": "bai_toan_chia",
+     "page": 25
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Trong một giờ, ô tô đi được 70 km, xe máy đi được 40 km. Xe máy đi chậm hơn ô tô ___ km mỗi giờ.",
+     "answer": "30",
+     "check": "70 - 40",
+     "explain": "70 - 40 = 30 (km).",
+     "skill": "bai_toan_it_hon",
+     "page": 25
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Một người đi 17 km để đến thị trấn, rồi đi tiếp 25 km để đến thành phố. Người đó đã đi ___ km.",
+     "answer": "42",
+     "check": "17 + 25",
+     "explain": "17 + 25 = 42 (km).",
+     "skill": "bai_toan_tong",
+     "page": 25
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Nhà Minh cách trường 6 km, nhà Bình cách trường 9 km. Bình đi đến nhà Minh phải đi qua trường. Quãng đường từ nhà Bình đến nhà Minh dài ___ km.",
+     "answer": "15",
+     "check": "6 + 9",
+     "explain": "9 + 6 = 15 (km).",
+     "skill": "bai_toan_tong",
+     "page": 26
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tứ giác ABCD có các cạnh dài 20 cm, 3 dm, 50 cm, 6 dm. Chu vi tứ giác là ___ dm.",
+     "answer": "16",
+     "check": "2 + 3 + 5 + 6",
+     "explain": "Đổi ra dm: 2 dm, 3 dm, 5 dm, 6 dm; chu vi 2 + 3 + 5 + 6 = 16 (dm).",
+     "skill": "chu_vi",
+     "page": 29
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Một hình tứ giác có bốn cạnh bằng nhau và chu vi là 40 mm. Mỗi cạnh dài ___ mm.",
+     "answer": "10",
+     "check": "40 : 4",
+     "explain": "40 : 4 = 10 (mm).",
+     "skill": "chu_vi",
+     "page": 29
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tam giác ABC có AB = 2 cm, BC = 36 mm, CA = 1 cm 8 mm. Chu vi tam giác là ___ mm.",
+     "answer": "74",
+     "check": "20 + 36 + 18",
+     "explain": "2 cm = 20 mm, 1 cm 8 mm = 18 mm; chu vi 20 + 36 + 18 = 74 (mm).",
+     "skill": "chu_vi",
+     "page": 30
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: y - 102 = 532 + 4 x 5. y = ___",
+     "answer": "654",
+     "check": "532 + 4 x 5 + 102",
+     "explain": "532 + 20 = 552; y = 552 + 102 = 654.",
+     "skill": "tim_thanh_phan",
+     "page": 29
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Minh và Bình cách nhau 170 m, cùng lúc đi tới gặp nhau. Khi Minh đi được 40 m thì Bình đi được ít hơn Minh 10 m. Lúc đó hai bạn còn cách nhau ___ m.",
+     "answer": "100",
+     "check": "170 - 40 - (40 - 10)",
+     "explain": "Bình đi 40 - 10 = 30 m; còn cách: 170 - 40 - 30 = 100 (m).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 24
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Một người đi xe đạp trong 3 giờ được 27 km, mỗi giờ đi được như nhau. Trong 2 giờ người đó đi được ___ km.",
+     "answer": "18",
+     "check": "27 : 3 x 2",
+     "explain": "Mỗi giờ 27 : 3 = 9 km; 2 giờ: 9 x 2 = 18 (km).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 25
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tứ giác ABCD có AB = 8 cm và ngắn hơn BC 4 cm, BC dài hơn CD 5 cm, AD dài bằng số lớn nhất có một chữ số (cm). Chu vi tứ giác là ___ cm.",
+     "answer": "36",
+     "check": "8 + (8 + 4) + (8 + 4 - 5) + 9",
+     "explain": "BC = 12 cm, CD = 7 cm, AD = 9 cm; chu vi 8 + 12 + 7 + 9 = 36 (cm).",
+     "skill": "chu_vi",
+     "page": 26
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Độ dài các cạnh của tứ giác ABCD là bốn số tự nhiên liên tiếp, cạnh ngắn nhất AB = 15 cm. Chu vi tứ giác là ___ cm.",
+     "answer": "66",
+     "check": "15 + 16 + 17 + 18",
+     "explain": "Các cạnh là 15, 16, 17, 18 cm; chu vi 66 cm.",
+     "skill": "chu_vi",
+     "page": 26
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Sợi dây dài 4 m 5 dm được cắt thành các đoạn 5 dm. Không gấp dây thì phải cắt ___ lần.",
+     "answer": "8",
+     "check": "45 : 5 - 1",
+     "explain": "4 m 5 dm = 45 dm, được 45 : 5 = 9 đoạn, cần 9 - 1 = 8 lần cắt.",
+     "skill": "suy_luan",
+     "page": 27
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Bác thợ cưa khúc gỗ dài 2 m thành các đoạn dài 5 dm. Bác phải cưa ___ lần.",
+     "answer": "3",
+     "check": "20 : 5 - 1",
+     "explain": "2 m = 20 dm, được 20 : 5 = 4 đoạn, cần 4 - 1 = 3 lần cưa.",
+     "skill": "suy_luan",
+     "page": 27
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Đoạn đường có trồng 7 cây xanh thẳng hàng, hai cây liền nhau cách nhau 3 m. Cây thứ nhất và cây thứ bảy cách nhau ___ m.",
+     "answer": "18",
+     "check": "(7 - 1) x 3",
+     "explain": "7 cây có 6 khoảng cách: 6 x 3 = 18 (m).",
+     "skill": "suy_luan",
+     "page": 27
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Lồng hai ống dài 20 cm và 30 cm vào nhau thì được một ống mới dài 35 cm. Đoạn lồng vào nhau dài ___ cm.",
+     "answer": "15",
+     "check": "20 + 30 - 35",
+     "explain": "20 + 30 = 50 cm, đoạn lồng: 50 - 35 = 15 (cm).",
+     "skill": "suy_luan",
+     "page": 28
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Chi xếp kẹo thành hình tam giác, mỗi đỉnh 1 viên, mỗi cạnh có 5 viên (kể cả hai đỉnh). Chi dùng tất cả ___ viên kẹo.",
+     "answer": "12",
+     "check": "5 x 3 - 3",
+     "explain": "3 cạnh x 5 viên = 15, mỗi đỉnh bị đếm 2 lần nên bớt 3: 12 viên.",
+     "skill": "suy_luan",
+     "page": 28
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Quãng đường AB dài 47 km và dài hơn quãng đường CD 9 km. Cả hai quãng đường dài ___ km.",
+     "answer": "85",
+     "check": "47 + 47 - 9",
+     "explain": "CD = 47 - 9 = 38 km; cả hai: 47 + 38 = 85 (km).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 29
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Khúc gỗ dài 3 m 5 dm được cưa thành các đoạn 5 dm. Cần ___ lần cưa.",
+     "answer": "6",
+     "check": "35 : 5 - 1",
+     "explain": "3 m 5 dm = 35 dm, được 7 đoạn, cần 7 - 1 = 6 lần cưa.",
+     "skill": "suy_luan",
+     "page": 30
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Có 2 quả cân 1 kg, 2 quả cân 2 kg và 1 quả cân 5 kg. Mỗi lần đặt đúng 3 quả cân lên một đĩa thì cân được bao nhiêu túi cam có cân nặng khác nhau?",
+     "options": [
+      "6",
+      "4",
+      "7",
+      "5"
+     ],
+     "answer": "5",
+     "explain": "Các cách: 1+1+2 = 4, 1+2+2 = 5, 1+1+5 = 7, 1+2+5 = 8, 2+2+5 = 9 → 5 cân nặng.",
+     "skill": "suy_luan",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "week": 31,
+   "title": "Phép cộng, phép trừ không nhớ trong phạm vi 1000",
+   "questions": [
+    {
+     "d": 1,
+     "type": "number",
+     "q": "222 + 145 = ___",
+     "answer": "367",
+     "check": "222 + 145",
+     "explain": "Cộng từng hàng: 2 + 5 = 7, 2 + 4 = 6, 2 + 1 = 3 → 367.",
+     "skill": "cong_khong_nho",
+     "page": 32
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "307 + 512 = ___",
+     "answer": "819",
+     "check": "307 + 512",
+     "explain": "7 + 2 = 9, 0 + 1 = 1, 3 + 5 = 8 → 819.",
+     "skill": "cong_khong_nho",
+     "page": 32
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "589 - 145 = ___",
+     "answer": "444",
+     "check": "589 - 145",
+     "explain": "9 - 5 = 4, 8 - 4 = 4, 5 - 1 = 4 → 444.",
+     "skill": "tru_khong_nho",
+     "page": 34
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "789 - 45 = ___",
+     "answer": "744",
+     "check": "789 - 45",
+     "explain": "9 - 5 = 4, 8 - 4 = 4, hàng trăm 7 → 744.",
+     "skill": "tru_khong_nho",
+     "page": 34
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "999 - 781 = ___",
+     "answer": "218",
+     "check": "999 - 781",
+     "explain": "9 - 1 = 8, 9 - 8 = 1, 9 - 7 = 2 → 218.",
+     "skill": "tru_khong_nho",
+     "page": 34
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 635 + 344 ___ 344 + 635",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": "=",
+     "explain": "Đổi chỗ các số hạng thì tổng không đổi.",
+     "skill": "so_sanh_so",
+     "page": 38
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "253 + 316 = ___",
+     "answer": "569",
+     "check": "253 + 316",
+     "explain": "3 + 6 = 9, 5 + 1 = 6, 2 + 3 = 5 → 569.",
+     "skill": "cong_khong_nho",
+     "page": 39
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "865 - 751 = ___",
+     "answer": "114",
+     "check": "865 - 751",
+     "explain": "5 - 1 = 4, 6 - 5 = 1, 8 - 7 = 1 → 114.",
+     "skill": "tru_khong_nho",
+     "page": 39
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "673 + 25 = ___",
+     "answer": "698",
+     "check": "673 + 25",
+     "explain": "3 + 5 = 8, 7 + 2 = 9, hàng trăm 6 → 698.",
+     "skill": "cong_khong_nho",
+     "page": 39
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tứ giác ABCD có AB = 4 cm, BC = 5 cm, CD = 7 cm, DA = 3 cm. Chu vi tứ giác là ___ cm.",
+     "answer": "19",
+     "check": "4 + 5 + 7 + 3",
+     "explain": "Chu vi bằng tổng độ dài bốn cạnh: 4 + 5 + 7 + 3 = 19 (cm).",
+     "skill": "chu_vi",
+     "page": 38
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Viết tiếp hai số để được dãy có quy luật: 894; 896; 898; ___",
+     "options": [
+      "900; 902",
+      "899; 900",
+      "900; 910",
+      "902; 904"
+     ],
+     "answer": "900; 902",
+     "explain": "Mỗi số sau hơn số trước 2 đơn vị: 900; 902.",
+     "skill": "day_so",
+     "page": 38
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Trong phép cộng 222 + 145 = 367, số 367 được gọi là ___",
+     "answer": "tổng",
+     "explain": "Kết quả của phép cộng gọi là tổng.",
+     "skill": "thanh_phan_phep_tinh",
+     "page": 32
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Cho số 322. Nếu đổi chỗ chữ số hàng chục và chữ số hàng đơn vị thì số đó:",
+     "options": [
+      "tăng 9 đơn vị",
+      "không thay đổi",
+      "giảm 9 đơn vị",
+      "tăng 10 đơn vị"
+     ],
+     "answer": "không thay đổi",
+     "explain": "Hàng chục và hàng đơn vị đều là 2, đổi chỗ vẫn được 322.",
+     "skill": "cau_tao_so",
+     "page": 36
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Phép cộng nào có hai số hạng đều là số có ba chữ số giống nhau và có tổng là 999?",
+     "options": [
+      "444 + 444",
+      "555 + 555",
+      "333 + 666",
+      "333 + 555"
+     ],
+     "answer": "333 + 666",
+     "explain": "333 + 666 = 999.",
+     "skill": "cong_khong_nho",
+     "page": 33
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "124 + 41 + 123 = ___",
+     "answer": "288",
+     "check": "124 + 41 + 123",
+     "explain": "124 + 41 = 165, 165 + 123 = 288.",
+     "skill": "cong_khong_nho",
+     "page": 32
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "123 + 212 + 312 = ___",
+     "answer": "647",
+     "check": "123 + 212 + 312",
+     "explain": "123 + 212 = 335, 335 + 312 = 647.",
+     "skill": "cong_khong_nho",
+     "page": 32
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "594 - 41 - 123 = ___",
+     "answer": "430",
+     "check": "594 - 41 - 123",
+     "explain": "594 - 41 = 553, 553 - 123 = 430.",
+     "skill": "tru_khong_nho",
+     "page": 34
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "799 - 347 + 126 = ___",
+     "answer": "578",
+     "check": "799 - 347 + 126",
+     "explain": "799 - 347 = 452, 452 + 126 = 578.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 34
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "652 + 225 - 346 = ___",
+     "answer": "531",
+     "check": "652 + 225 - 346",
+     "explain": "652 + 225 = 877, 877 - 346 = 531.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 34
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Đội Một trồng được 810 cây, đội Hai trồng nhiều hơn đội Một 60 cây. Đội Hai trồng được ___ cây.",
+     "answer": "870",
+     "check": "810 + 60",
+     "explain": "810 + 60 = 870 (cây).",
+     "skill": "bai_toan_nhieu_hon",
+     "page": 32
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hai giá sách có tất cả 415 quyển, giá thứ nhất có 202 quyển. Giá thứ hai có ___ quyển.",
+     "answer": "213",
+     "check": "415 - 202",
+     "explain": "415 - 202 = 213 (quyển).",
+     "skill": "bai_toan_tong",
+     "page": 35
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Bình cao 145 cm, Minh cao hơn Bình 14 cm. Minh cao ___ cm.",
+     "answer": "159",
+     "check": "145 + 14",
+     "explain": "145 + 14 = 159 (cm).",
+     "skill": "bai_toan_nhieu_hon",
+     "page": 35
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Bình cao 145 cm, Nam thấp hơn Bình 4 cm. Nam cao ___ cm.",
+     "answer": "141",
+     "check": "145 - 4",
+     "explain": "145 - 4 = 141 (cm).",
+     "skill": "bai_toan_it_hon",
+     "page": 35
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Một đàn gà có 547 con, trong đó có 312 con gà mái. Đàn gà có ___ con gà trống.",
+     "answer": "235",
+     "check": "547 - 312",
+     "explain": "547 - 312 = 235 (con).",
+     "skill": "bai_toan_tong",
+     "page": 38
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Quãng đường Hà Nội - Vinh dài 308 km, quãng đường Vinh - Huế dài 368 km. Quãng đường Hà Nội - Vinh ngắn hơn ___ km.",
+     "answer": "60",
+     "check": "368 - 308",
+     "explain": "368 - 308 = 60 (km).",
+     "skill": "bai_toan_it_hon",
+     "page": 38
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Số thứ nhất là số tròn trăm lớn nhất có ba chữ số, số thứ hai là số tròn chục lớn nhất có hai chữ số. Tổng hai số là ___",
+     "answer": "990",
+     "check": "900 + 90",
+     "explain": "900 + 90 = 990.",
+     "skill": "cong_khong_nho",
+     "page": 33
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tổng của hai số hạng là 869, số hạng thứ nhất là 213. Số hạng thứ hai là ___",
+     "answer": "656",
+     "check": "869 - 213",
+     "explain": "Lấy tổng trừ số hạng đã biết: 869 - 213 = 656.",
+     "skill": "tim_so_hang",
+     "page": 36
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hiệu của số lớn nhất có ba chữ số và số nhỏ nhất có ba chữ số là ___",
+     "answer": "899",
+     "check": "999 - 100",
+     "explain": "999 - 100 = 899.",
+     "skill": "tru_khong_nho",
+     "page": 36
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm x, biết: 199 < x + 100 < 201. x = ___",
+     "answer": "100",
+     "check": "200 - 100",
+     "explain": "x + 100 = 200 nên x = 100.",
+     "skill": "tim_thanh_phan",
+     "page": 38
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hiệu của số lớn nhất có ba chữ số với số chẵn lớn nhất có một chữ số là ___",
+     "answer": "991",
+     "check": "999 - 8",
+     "explain": "999 - 8 = 991.",
+     "skill": "tru_khong_nho",
+     "page": 38
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tú đến trường lúc 7 giờ 30 phút sáng, lúc 4 giờ 30 phút chiều Tú bắt đầu về nhà. Tú đã ở trường ___ giờ.",
+     "answer": "9",
+     "check": "16 - 7",
+     "explain": "4 giờ 30 phút chiều là 16 giờ 30 phút; từ 7 giờ 30 đến 16 giờ 30 là 9 giờ.",
+     "skill": "thoi_gian",
+     "page": 38
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm a, biết: a + 314 = 650 + 35. a = ___",
+     "answer": "371",
+     "check": "650 + 35 - 314",
+     "explain": "650 + 35 = 685; a = 685 - 314 = 371.",
+     "skill": "tim_thanh_phan",
+     "page": 34
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm a, biết: a - 315 = 689 - 326. a = ___",
+     "answer": "678",
+     "check": "689 - 326 + 315",
+     "explain": "689 - 326 = 363; a = 363 + 315 = 678.",
+     "skill": "tim_thanh_phan",
+     "page": 34
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm a, biết: a x 5 = 895 - 855. a = ___",
+     "answer": "8",
+     "check": "(895 - 855) : 5",
+     "explain": "895 - 855 = 40; a = 40 : 5 = 8.",
+     "skill": "tim_thanh_phan",
+     "page": 34
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Đổ thêm 46 l dầu vào can thứ nhất thì can thứ nhất có 178 l và nhiều hơn can thứ hai 32 l. Can thứ hai có ___ l dầu.",
+     "answer": "146",
+     "check": "178 - 32",
+     "explain": "178 - 32 = 146 (l).",
+     "skill": "bai_toan_it_hon",
+     "page": 35
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Đổ thêm 46 l dầu vào can thứ nhất thì can đó có 178 l và nhiều hơn can thứ hai 32 l. Trước khi đổ thêm thì:",
+     "options": [
+      "Can thứ nhất nhiều hơn 14 l",
+      "Can thứ hai nhiều hơn 32 l",
+      "Can thứ nhất nhiều hơn 46 l",
+      "Can thứ hai nhiều hơn 14 l"
+     ],
+     "answer": "Can thứ hai nhiều hơn 14 l",
+     "explain": "Lúc đầu can một có 178 - 46 = 132 l, can hai có 146 l; 146 - 132 = 14 l.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 35
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Cho số 322. Nếu chữ số hàng trăm và chữ số hàng đơn vị đều tăng thêm 2 đơn vị thì số đó tăng ___ đơn vị.",
+     "answer": "202",
+     "check": "524 - 322",
+     "explain": "Số mới là 524; 524 - 322 = 202.",
+     "skill": "cau_tao_so",
+     "page": 36
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tổng của số lớn nhất có ba chữ số khác nhau bé hơn 145 và số bé nhất có ba chữ số khác nhau là ___",
+     "answer": "245",
+     "check": "143 + 102",
+     "explain": "Số thứ nhất là 143 (144 có hai chữ số 4), số thứ hai là 102; 143 + 102 = 245.",
+     "skill": "cong_khong_nho",
+     "page": 33
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tổng của số chẵn nhỏ nhất có ba chữ số khác nhau với số lẻ nhỏ nhất có ba chữ số là ___",
+     "answer": "203",
+     "check": "102 + 101",
+     "explain": "102 + 101 = 203.",
+     "skill": "cong_khong_nho",
+     "page": 37
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hiệu của số tròn chục lớn nhất có ba chữ số với số nhỏ nhất có ba chữ số là ___",
+     "answer": "890",
+     "check": "990 - 100",
+     "explain": "990 - 100 = 890.",
+     "skill": "tru_khong_nho",
+     "page": 37
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Các số có ba chữ số khác nhau có tổng các chữ số bằng 3 là 102; 120; 201; 210. Tổng của số lớn nhất và số nhỏ nhất là ___",
+     "answer": "312",
+     "check": "210 + 102",
+     "explain": "210 + 102 = 312.",
+     "skill": "lap_so",
+     "page": 37
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Phép cộng nào có ba số hạng khác nhau, đều là số có ba chữ số giống nhau và có tổng là 888?",
+     "options": [
+      "111 + 333 + 444",
+      "222 + 222 + 444",
+      "111 + 222 + 444",
+      "222 + 333 + 444"
+     ],
+     "answer": "111 + 333 + 444",
+     "explain": "111 + 333 + 444 = 888 và ba số hạng khác nhau.",
+     "skill": "cong_khong_nho",
+     "page": 33
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Con bò nặng 203 kg và nhẹ hơn con trâu 32 kg. Cả bò và trâu nặng ___ kg.",
+     "answer": "438",
+     "check": "203 + 203 + 32",
+     "explain": "Trâu nặng 203 + 32 = 235 kg; cả hai: 203 + 235 = 438 (kg).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 38
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tổng của các số có ba chữ số giống nhau và bé hơn 400 là ___",
+     "answer": "666",
+     "check": "111 + 222 + 333",
+     "explain": "Các số đó là 111; 222; 333; tổng là 666.",
+     "skill": "cong_khong_nho",
+     "page": 38
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm x, biết: 567 - x = 278 - 35. x = ___",
+     "answer": "324",
+     "check": "567 - (278 - 35)",
+     "explain": "278 - 35 = 243; x = 567 - 243 = 324.",
+     "skill": "tim_thanh_phan",
+     "page": 39
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm x, biết: 235 + x - 124 = 354. x = ___",
+     "answer": "243",
+     "check": "354 + 124 - 235",
+     "explain": "235 + x = 354 + 124 = 478; x = 478 - 235 = 243.",
+     "skill": "tim_thanh_phan",
+     "page": 39
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Một trường có 476 học sinh nam, số học sinh nam nhiều hơn số học sinh nữ 63 em. Trường có tất cả ___ học sinh.",
+     "answer": "889",
+     "check": "476 + 476 - 63",
+     "explain": "Nữ: 476 - 63 = 413 em; tất cả: 476 + 413 = 889 em.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 39
+    }
+   ]
+  },
+  {
+   "week": 32,
+   "title": "Luyện tập cộng, trừ trong phạm vi 1000",
+   "questions": [
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Số hạng là 560 và 238. Tổng là ___",
+     "answer": "798",
+     "check": "560 + 238",
+     "explain": "560 + 238 = 798.",
+     "skill": "cong_khong_nho",
+     "page": 41
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "112 + 777 = ___",
+     "answer": "889",
+     "check": "112 + 777",
+     "explain": "2 + 7 = 9, 1 + 7 = 8, 1 + 7 = 8 → 889.",
+     "skill": "cong_khong_nho",
+     "page": 41
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "552 + 46 = ___",
+     "answer": "598",
+     "check": "552 + 46",
+     "explain": "2 + 6 = 8, 5 + 4 = 9, hàng trăm 5 → 598.",
+     "skill": "cong_khong_nho",
+     "page": 41
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "567 - 102 = ___",
+     "answer": "465",
+     "check": "567 - 102",
+     "explain": "7 - 2 = 5, 6 - 0 = 6, 5 - 1 = 4 → 465.",
+     "skill": "tru_khong_nho",
+     "page": 43
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "947 - 602 = ___",
+     "answer": "345",
+     "check": "947 - 602",
+     "explain": "7 - 2 = 5, 4 - 0 = 4, 9 - 6 = 3 → 345.",
+     "skill": "tru_khong_nho",
+     "page": 43
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "378 - 243 = ___",
+     "answer": "135",
+     "check": "378 - 243",
+     "explain": "8 - 3 = 5, 7 - 4 = 3, 3 - 2 = 1 → 135.",
+     "skill": "tru_khong_nho",
+     "page": 43
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "1 cm 5 mm = ___ mm",
+     "answer": "15",
+     "check": "10 + 5",
+     "explain": "1 cm = 10 mm, 10 mm + 5 mm = 15 mm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 47
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "543 + 32 = ___",
+     "answer": "575",
+     "check": "543 + 32",
+     "explain": "3 + 2 = 5, 4 + 3 = 7, hàng trăm 5 → 575.",
+     "skill": "cong_khong_nho",
+     "page": 48
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "869 - 543 = ___",
+     "answer": "326",
+     "check": "869 - 543",
+     "explain": "9 - 3 = 6, 6 - 4 = 2, 8 - 5 = 3 → 326.",
+     "skill": "tru_khong_nho",
+     "page": 48
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "734 - 32 = ___",
+     "answer": "702",
+     "check": "734 - 32",
+     "explain": "4 - 2 = 2, 3 - 3 = 0, hàng trăm 7 → 702.",
+     "skill": "tru_khong_nho",
+     "page": 48
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "4 cm = ___ mm",
+     "answer": "40",
+     "check": "4 x 10",
+     "explain": "1 cm = 10 mm nên 4 cm = 40 mm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 48
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "9 m 22 cm = ___ cm",
+     "answer": "922",
+     "check": "9 x 100 + 22",
+     "explain": "9 m = 900 cm, 900 + 22 = 922 (cm).",
+     "skill": "doi_don_vi_do_dai",
+     "page": 48
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "300 cm = ___ dm",
+     "answer": "30",
+     "check": "300 : 10",
+     "explain": "10 cm = 1 dm nên 300 cm = 30 dm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 48
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Trong phép trừ 869 - 543 = 326, số 543 được gọi là ___",
+     "answer": "số trừ",
+     "explain": "Trong phép trừ: số bị trừ - số trừ = hiệu; 543 là số trừ.",
+     "skill": "thanh_phan_phep_tinh",
+     "page": 48
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Phép tính nào có kết quả bằng 345?",
+     "options": [
+      "777 - 432",
+      "567 - 432",
+      "978 - 513",
+      "567 - 102"
+     ],
+     "answer": "777 - 432",
+     "explain": "777 - 432 = 345; các phép còn lại bằng 135, 465, 465.",
+     "skill": "tru_khong_nho",
+     "page": 43
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Từ 300 đến 600, các số có ba chữ số giống nhau là:",
+     "options": [
+      "333; 444; 555; 666",
+      "333; 444; 555",
+      "300; 400; 500; 600",
+      "444; 555"
+     ],
+     "answer": "333; 444; 555",
+     "explain": "Các số có ba chữ số giống nhau trong khoảng đó là 333, 444, 555 (666 > 600).",
+     "skill": "cau_tao_so",
+     "page": 47
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 322 m + 466 m ___ 1 km",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": "<",
+     "explain": "322 + 466 = 788 m, 1 km = 1000 m, mà 788 < 1000.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 47
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm số hạng còn thiếu: ___ + 344 = 979",
+     "answer": "635",
+     "check": "979 - 344",
+     "explain": "Lấy tổng trừ số hạng đã biết: 979 - 344 = 635.",
+     "skill": "tim_so_hang",
+     "page": 41
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm số hạng còn thiếu: 86 + ___ = 789",
+     "answer": "703",
+     "check": "789 - 86",
+     "explain": "789 - 86 = 703.",
+     "skill": "tim_so_hang",
+     "page": 41
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "442 + 321 - 132 = ___",
+     "answer": "631",
+     "check": "442 + 321 - 132",
+     "explain": "442 + 321 = 763, 763 - 132 = 631.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 41
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "985 - 234 + 111 = ___",
+     "answer": "862",
+     "check": "985 - 234 + 111",
+     "explain": "985 - 234 = 751, 751 + 111 = 862.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 41
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "756 - 56 + 189 = ___",
+     "answer": "889",
+     "check": "756 - 56 + 189",
+     "explain": "756 - 56 = 700, 700 + 189 = 889.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 41
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm x, biết: x + 241 = 245 + 101. x = ___",
+     "answer": "105",
+     "check": "245 + 101 - 241",
+     "explain": "245 + 101 = 346; x = 346 - 241 = 105.",
+     "skill": "tim_thanh_phan",
+     "page": 41
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm y, biết: 80 - y = 4 x 9. y = ___",
+     "answer": "44",
+     "check": "80 - 4 x 9",
+     "explain": "4 x 9 = 36; y = 80 - 36 = 44.",
+     "skill": "tim_thanh_phan",
+     "page": 42
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Kiện hàng thứ nhất nặng 230 kg, kiện thứ hai nặng hơn kiện thứ nhất 36 kg. Kiện thứ hai nặng ___ kg.",
+     "answer": "266",
+     "check": "230 + 36",
+     "explain": "230 + 36 = 266 (kg).",
+     "skill": "bai_toan_nhieu_hon",
+     "page": 42
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Quãng đường từ A đến C dài 25 km, đi từ A đến C phải qua B. Quãng đường BC dài 9 km. Quãng đường AB dài ___ km.",
+     "answer": "16",
+     "check": "25 - 9",
+     "explain": "AB = AC - BC = 25 - 9 = 16 (km).",
+     "skill": "bai_toan_tong",
+     "page": 43
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tổng của số lớn nhất và số nhỏ nhất trong bốn số 427; 324; 435; 321 là ___",
+     "answer": "756",
+     "check": "435 + 321",
+     "explain": "Số lớn nhất 435, số nhỏ nhất 321; 435 + 321 = 756.",
+     "skill": "so_sanh_so",
+     "page": 47
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Đường gấp khúc ABCDE có AB = 10 cm, BC = 35 cm, CD = 11 cm, DE = 44 cm. Độ dài đường gấp khúc là ___ cm.",
+     "answer": "100",
+     "check": "10 + 35 + 11 + 44",
+     "explain": "10 + 35 + 11 + 44 = 100 (cm).",
+     "skill": "duong_gap_khuc",
+     "page": 47
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "12 cm : 2 + 38 cm = ___ cm",
+     "answer": "44",
+     "check": "12 : 2 + 38",
+     "explain": "12 : 2 = 6, 6 + 38 = 44 (cm).",
+     "skill": "tinh_so_do_do_dai",
+     "page": 48
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "5 dm 2 mm = ___ mm",
+     "answer": "502",
+     "check": "5 x 100 + 2",
+     "explain": "5 dm = 500 mm, 500 + 2 = 502 (mm).",
+     "skill": "doi_don_vi_do_dai",
+     "page": 48
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "436 cm = ___ dm 6 cm",
+     "answer": "43",
+     "check": "(436 - 6) : 10",
+     "explain": "436 cm = 430 cm + 6 cm = 43 dm 6 cm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 48
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Thùng thứ nhất đựng 156 l dầu, thùng thứ hai đựng 140 l dầu. Cả hai thùng đựng ___ l dầu.",
+     "answer": "296",
+     "check": "156 + 140",
+     "explain": "156 + 140 = 296 (l).",
+     "skill": "bai_toan_tong",
+     "page": 48
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Các số có ba chữ số khác nhau lập từ 1; 2; 4, xếp theo thứ tự từ lớn đến bé là:",
+     "options": [
+      "421; 412; 214; 241; 142; 124",
+      "124; 142; 214; 241; 412; 421",
+      "421; 412; 241; 214; 142; 124",
+      "421; 412; 241; 214; 124; 142"
+     ],
+     "answer": "421; 412; 241; 214; 142; 124",
+     "explain": "So sánh hàng trăm trước, rồi đến hàng chục: 421 > 412 > 241 > 214 > 142 > 124.",
+     "skill": "sap_xep_so",
+     "page": 46
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm x, biết: x + 213 + 222 = 785. x = ___",
+     "answer": "350",
+     "check": "785 - 213 - 222",
+     "explain": "x = 785 - 213 - 222 = 350.",
+     "skill": "tim_thanh_phan",
+     "page": 41
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm x, biết: x - 32 + 410 = 721. x = ___",
+     "answer": "343",
+     "check": "721 - 410 + 32",
+     "explain": "x - 32 = 721 - 410 = 311; x = 311 + 32 = 343.",
+     "skill": "tim_thanh_phan",
+     "page": 41
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: y + 124 = 5 x 9 + 253. y = ___",
+     "answer": "174",
+     "check": "5 x 9 + 253 - 124",
+     "explain": "5 x 9 + 253 = 298; y = 298 - 124 = 174.",
+     "skill": "tim_thanh_phan",
+     "page": 42
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: y : 2 + 264 = 268. y = ___",
+     "answer": "8",
+     "check": "(268 - 264) x 2",
+     "explain": "y : 2 = 268 - 264 = 4; y = 4 x 2 = 8.",
+     "skill": "tim_thanh_phan",
+     "page": 42
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Kiện hàng thứ nhất nặng 230 kg, kiện thứ hai nặng hơn kiện thứ nhất 36 kg. Cả hai kiện nặng ___ kg.",
+     "answer": "496",
+     "check": "230 + 230 + 36",
+     "explain": "Kiện thứ hai 266 kg; cả hai: 230 + 266 = 496 (kg).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 42
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Khu An Nam có 587 người và nhiều hơn khu Tân Tiến 185 người. Cả hai khu có ___ người.",
+     "answer": "989",
+     "check": "587 + 587 - 185",
+     "explain": "Tân Tiến có 587 - 185 = 402 người; cả hai: 587 + 402 = 989 người.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 43
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Bể thứ nhất chứa 321 l nước và chứa ít hơn bể thứ hai 12 l. Cả hai bể chứa ___ l nước.",
+     "answer": "654",
+     "check": "321 + 321 + 12",
+     "explain": "Bể thứ hai chứa 321 + 12 = 333 l; cả hai: 321 + 333 = 654 (l).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 44
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hiệu của số chẵn lớn nhất có ba chữ số khác nhau với số lẻ nhỏ nhất có ba chữ số khác nhau là ___",
+     "answer": "883",
+     "check": "986 - 103",
+     "explain": "986 - 103 = 883.",
+     "skill": "tru_khong_nho",
+     "page": 44
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Cho số 488. Nếu chữ số hàng trăm bớt 2, chữ số hàng chục bớt 6, hàng đơn vị giữ nguyên thì số đó:",
+     "options": [
+      "giảm 8 đơn vị",
+      "giảm 26 đơn vị",
+      "tăng 260 đơn vị",
+      "giảm 260 đơn vị"
+     ],
+     "answer": "giảm 260 đơn vị",
+     "explain": "Số mới là 228; 488 - 228 = 260.",
+     "skill": "cau_tao_so",
+     "page": 45
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hai số có cùng chữ số hàng trăm và hàng đơn vị, chữ số hàng chục kém nhau 4. Hai số đó hơn kém nhau ___ đơn vị.",
+     "answer": "40",
+     "check": "4 x 10",
+     "explain": "4 chục = 40 đơn vị.",
+     "skill": "cau_tao_so",
+     "page": 45
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Có ___ số có ba chữ số mà chữ số hàng trăm hơn chữ số hàng chục 2 đơn vị, chữ số hàng chục hơn chữ số hàng đơn vị 2 đơn vị.",
+     "answer": "6",
+     "check": "5 + 1",
+     "explain": "Đó là 420; 531; 642; 753; 864; 975.",
+     "skill": "lap_so",
+     "page": 45
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Một số có ba chữ số, nếu chữ số hàng trăm tăng 1, chữ số hàng chục giảm 4, hàng đơn vị giữ nguyên thì được 555. Số đó là ___",
+     "answer": "495",
+     "check": "555 - 100 + 40",
+     "explain": "Số ban đầu: hàng trăm 5 - 1 = 4, hàng chục 5 + 4 = 9, hàng đơn vị 5 → 495.",
+     "skill": "cau_tao_so",
+     "page": 45
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Từ bốn chữ số 0; 3; 6; 9, số lớn nhất có ba chữ số khác nhau và có chữ số hàng đơn vị là 3 là:",
+     "options": [
+      "963",
+      "993",
+      "960",
+      "903"
+     ],
+     "answer": "963",
+     "explain": "Hàng đơn vị 3, hàng trăm lớn nhất 9, hàng chục lớn nhất còn lại 6: 963.",
+     "skill": "lap_so",
+     "page": 46
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hiệu của số lớn nhất có ba chữ số khác nhau với số bé nhất có ba chữ số giống nhau là ___",
+     "answer": "876",
+     "check": "987 - 111",
+     "explain": "987 - 111 = 876.",
+     "skill": "tru_khong_nho",
+     "page": 46
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Số lớn là số lớn nhất có ba chữ số khác nhau có tổng các chữ số là 22; số bé là số nhỏ nhất có ba chữ số khác nhau có tổng các chữ số là 4. Hiệu hai số là ___",
+     "answer": "882",
+     "check": "985 - 103",
+     "explain": "Số lớn là 985, số bé là 103; 985 - 103 = 882.",
+     "skill": "tru_khong_nho",
+     "page": 46
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hiệu của số liền trước số 500 và số liền sau số 300 là ___",
+     "answer": "198",
+     "check": "499 - 301",
+     "explain": "Số liền trước 500 là 499, số liền sau 300 là 301; 499 - 301 = 198.",
+     "skill": "tru_khong_nho",
+     "page": 47
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm số có ba chữ số, biết chữ số hàng đơn vị gấp đôi chữ số hàng chục, chữ số hàng chục gấp đôi chữ số hàng trăm, và chữ số hàng đơn vị là số liền trước số 5. Số đó là ___",
+     "answer": "124",
+     "check": "100 + 20 + 4",
+     "explain": "Hàng đơn vị 4, hàng chục 4 : 2 = 2, hàng trăm 2 : 2 = 1 → 124.",
+     "skill": "cau_tao_so",
+     "page": 47
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Thùng thứ nhất có 156 l dầu, thùng thứ hai có 140 l dầu. Phải chuyển ___ l từ thùng thứ nhất sang thùng thứ hai để hai thùng bằng nhau.",
+     "answer": "8",
+     "check": "(156 - 140) : 2",
+     "explain": "Hai thùng chênh 16 l, chuyển một nửa: 16 : 2 = 8 (l).",
+     "skill": "suy_luan",
+     "page": 48
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tổng của số có ba chữ số giống nhau có chữ số hàng trăm là 6 và số nhỏ nhất có ba chữ số khác nhau là ___",
+     "answer": "768",
+     "check": "666 + 102",
+     "explain": "666 + 102 = 768.",
+     "skill": "cong_khong_nho",
+     "page": 47
+    }
+   ]
+  },
+  {
+   "week": 33,
+   "title": "Ôn tập về các số, các phép tính trong phạm vi 1000",
+   "questions": [
+    {
+     "d": 1,
+     "type": "number",
+     "q": "426 + 362 = ___",
+     "answer": "788",
+     "check": "426 + 362",
+     "explain": "6 + 2 = 8, 2 + 6 = 8, 4 + 3 = 7 → 788.",
+     "skill": "cong_khong_nho",
+     "page": 50
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "967 - 504 = ___",
+     "answer": "463",
+     "check": "967 - 504",
+     "explain": "7 - 4 = 3, 6 - 0 = 6, 9 - 5 = 4 → 463.",
+     "skill": "tru_khong_nho",
+     "page": 50
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "768 - 316 = ___",
+     "answer": "452",
+     "check": "768 - 316",
+     "explain": "8 - 6 = 2, 6 - 1 = 5, 7 - 3 = 4 → 452.",
+     "skill": "tru_khong_nho",
+     "page": 50
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "656 - 45 = ___",
+     "answer": "611",
+     "check": "656 - 45",
+     "explain": "6 - 5 = 1, 5 - 4 = 1, hàng trăm 6 → 611.",
+     "skill": "tru_khong_nho",
+     "page": 50
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "800 + 87 = ___",
+     "answer": "887",
+     "check": "800 + 87",
+     "explain": "8 trăm cộng 87 được 887.",
+     "skill": "cong_khong_nho",
+     "page": 50
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tính: 27 + 53 - 39 = ___",
+     "answer": "41",
+     "check": "27 + 53 - 39",
+     "explain": "27 + 53 = 80, 80 - 39 = 41.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 56
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "315 + 252 = ___",
+     "answer": "567",
+     "check": "315 + 252",
+     "explain": "5 + 2 = 7, 1 + 5 = 6, 3 + 2 = 5 → 567.",
+     "skill": "cong_khong_nho",
+     "page": 57
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "346 - 42 = ___",
+     "answer": "304",
+     "check": "346 - 42",
+     "explain": "6 - 2 = 4, 4 - 4 = 0, hàng trăm 3 → 304.",
+     "skill": "tru_khong_nho",
+     "page": 57
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "2 x 10 + 835 = ___",
+     "answer": "855",
+     "check": "2 x 10 + 835",
+     "explain": "2 x 10 = 20, 20 + 835 = 855.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 52
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "45 : 5 + 900 = ___",
+     "answer": "909",
+     "check": "45 : 5 + 900",
+     "explain": "45 : 5 = 9, 9 + 900 = 909.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 52
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tìm a, biết: a - 36 = 64. a = ___",
+     "answer": "100",
+     "check": "64 + 36",
+     "explain": "Số bị trừ = hiệu + số trừ: 64 + 36 = 100.",
+     "skill": "tim_thanh_phan",
+     "page": 52
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tìm a, biết: 99 + a = 999. a = ___",
+     "answer": "900",
+     "check": "999 - 99",
+     "explain": "a = 999 - 99 = 900.",
+     "skill": "tim_so_hang",
+     "page": 52
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Trong phép trừ a - 36 = 64, a được gọi là ___",
+     "answer": "số bị trừ",
+     "explain": "Trong phép trừ: số bị trừ - số trừ = hiệu; a là số bị trừ.",
+     "skill": "thanh_phan_phep_tinh",
+     "page": 52
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Phép tính nào có kết quả là 989?",
+     "options": [
+      "287 + 702",
+      "426 + 362",
+      "800 + 87",
+      "967 - 504"
+     ],
+     "answer": "287 + 702",
+     "explain": "287 + 702 = 989; các phép còn lại bằng 788, 887, 463.",
+     "skill": "cong_khong_nho",
+     "page": 50
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 2 x 10 + 835 ___ 45 : 5 + 900",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": "<",
+     "explain": "Bên trái bằng 855, bên phải bằng 909, mà 855 < 909.",
+     "skill": "so_sanh_so",
+     "page": 52
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm a, biết: a : 6 = 2 x 2. a = ___",
+     "answer": "24",
+     "check": "2 x 2 x 6",
+     "explain": "2 x 2 = 4; a = 4 x 6 = 24.",
+     "skill": "tim_thanh_phan",
+     "page": 52
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "204 + 182 + 313 = ___",
+     "answer": "699",
+     "check": "204 + 182 + 313",
+     "explain": "204 + 182 = 386, 386 + 313 = 699.",
+     "skill": "cong_khong_nho",
+     "page": 50
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "37 + 19 + 25 = ___",
+     "answer": "81",
+     "check": "37 + 19 + 25",
+     "explain": "37 + 19 = 56, 56 + 25 = 81.",
+     "skill": "cong_co_nho",
+     "page": 50
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "359 - 36 : 4 = ___",
+     "answer": "350",
+     "check": "359 - 36 : 4",
+     "explain": "Chia trước: 36 : 4 = 9, rồi 359 - 9 = 350.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 52
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "435 - 3 x 7 = ___",
+     "answer": "414",
+     "check": "435 - 3 x 7",
+     "explain": "3 x 7 = 21, 435 - 21 = 414.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 52
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "675 - 315 + 102 = ___",
+     "answer": "462",
+     "check": "675 - 315 + 102",
+     "explain": "675 - 315 = 360, 360 + 102 = 462.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 52
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm a, biết: 90 - a = 38. a = ___",
+     "answer": "52",
+     "check": "90 - 38",
+     "explain": "Số trừ = số bị trừ - hiệu: 90 - 38 = 52.",
+     "skill": "tim_thanh_phan",
+     "page": 52
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm a, biết: 5 x a = 74 - 39. a = ___",
+     "answer": "7",
+     "check": "(74 - 39) : 5",
+     "explain": "74 - 39 = 35; a = 35 : 5 = 7.",
+     "skill": "tim_thanh_phan",
+     "page": 52
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm a, biết: a : 9 = 31 - 26. a = ___",
+     "answer": "45",
+     "check": "(31 - 26) x 9",
+     "explain": "31 - 26 = 5; a = 5 x 9 = 45.",
+     "skill": "tim_thanh_phan",
+     "page": 52
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm y, biết: y : 3 = 16 : 4. y = ___",
+     "answer": "12",
+     "check": "16 : 4 x 3",
+     "explain": "16 : 4 = 4; y = 4 x 3 = 12.",
+     "skill": "tim_thanh_phan",
+     "page": 52
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Ngăn thứ nhất có 125 quyển sách và ít hơn ngăn thứ hai 20 quyển. Ngăn thứ hai có ___ quyển.",
+     "answer": "145",
+     "check": "125 + 20",
+     "explain": "Ngăn thứ hai nhiều hơn: 125 + 20 = 145 (quyển).",
+     "skill": "bai_toan_nhieu_hon",
+     "page": 51
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Mẹ cao 162 cm và cao hơn con 31 cm. Con cao ___ cm.",
+     "answer": "131",
+     "check": "162 - 31",
+     "explain": "162 - 31 = 131 (cm).",
+     "skill": "bai_toan_it_hon",
+     "page": 56
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "4 giờ x 4 - 8 giờ = ___ giờ",
+     "answer": "8",
+     "check": "4 x 4 - 8",
+     "explain": "4 x 4 = 16, 16 - 8 = 8 (giờ).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 56
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Chọn dấu thích hợp: 5 dm x 8 + 2 dm ___ 40 dm + 4 cm x 5",
+     "options": [
+      ">",
+      "<",
+      "="
+     ],
+     "answer": "=",
+     "explain": "Bên trái: 40 + 2 = 42 dm. Bên phải: 4 cm x 5 = 20 cm = 2 dm, 40 + 2 = 42 dm.",
+     "skill": "tinh_so_do_do_dai",
+     "page": 56
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Xếp 24 cái ghế thành các hàng, mỗi hàng 4 cái. Xếp được ___ hàng.",
+     "answer": "6",
+     "check": "24 : 4",
+     "explain": "24 : 4 = 6 (hàng).",
+     "skill": "bai_toan_chia",
+     "page": 56
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hình tứ giác có các cạnh dài 15 dm, 8 dm, 21 dm, 12 dm. Chu vi hình tứ giác là ___ dm.",
+     "answer": "56",
+     "check": "15 + 8 + 21 + 12",
+     "explain": "15 + 8 + 21 + 12 = 56 (dm).",
+     "skill": "chu_vi",
+     "page": 56
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Đường gấp khúc ABCD có AB = 25 cm, BC = 36 cm, CD = 39 cm. Đường gấp khúc dài ___ dm.",
+     "answer": "10",
+     "check": "(25 + 36 + 39) : 10",
+     "explain": "25 + 36 + 39 = 100 cm = 10 dm.",
+     "skill": "duong_gap_khuc",
+     "page": 56
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Mẹ chia đều bánh vào 6 hộp, mỗi hộp 5 chiếc. Nếu chia đều số bánh đó vào 3 hộp thì mỗi hộp có ___ chiếc.",
+     "answer": "10",
+     "check": "6 x 5 : 3",
+     "explain": "Có 6 x 5 = 30 chiếc; 30 : 3 = 10 chiếc.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 53
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Minh có 29 viên bi, cho Bình 17 viên. Minh chia đều số bi còn lại vào 4 túi, mỗi túi có ___ viên.",
+     "answer": "3",
+     "check": "(29 - 17) : 4",
+     "explain": "Còn 29 - 17 = 12 viên; 12 : 4 = 3 viên.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 53
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Bác Linh cưa khúc gỗ dài 32 dm thành 4 đoạn bằng nhau. Mỗi đoạn dài ___ dm.",
+     "answer": "8",
+     "check": "32 : 4",
+     "explain": "32 : 4 = 8 (dm).",
+     "skill": "bai_toan_chia",
+     "page": 57
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Bao ngô nặng 30 kg, bao gạo nặng hơn bao ngô 7 kg, bao lúa mì nhẹ hơn bao ngô 6 kg. Cả ba bao nặng ___ kg.",
+     "answer": "91",
+     "check": "30 + (30 + 7) + (30 - 6)",
+     "explain": "Gạo 37 kg, lúa mì 24 kg; cả ba: 30 + 37 + 24 = 91 (kg).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 51
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Kiên, Mạnh, Thành có 38 viên bi. Kiên và Mạnh có 29 viên, Kiên và Thành có 28 viên. Thành có ___ viên bi.",
+     "answer": "9",
+     "check": "38 - 29",
+     "explain": "Thành = cả ba - (Kiên + Mạnh) = 38 - 29 = 9 viên.",
+     "skill": "suy_luan",
+     "page": 51
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Kiên, Mạnh, Thành có 38 viên bi. Kiên và Mạnh có 29 viên, Kiên và Thành có 28 viên. Kiên có ___ viên bi.",
+     "answer": "19",
+     "check": "28 - (38 - 29)",
+     "explain": "Thành có 9 viên nên Kiên có 28 - 9 = 19 viên.",
+     "skill": "suy_luan",
+     "page": 51
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: 18 - y : 2 = 15. y = ___",
+     "answer": "6",
+     "check": "(18 - 15) x 2",
+     "explain": "y : 2 = 18 - 15 = 3; y = 3 x 2 = 6.",
+     "skill": "tim_thanh_phan",
+     "page": 52
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: 4 x y - 15 = 25. y = ___",
+     "answer": "10",
+     "check": "(25 + 15) : 4",
+     "explain": "4 x y = 40; y = 40 : 4 = 10.",
+     "skill": "tim_thanh_phan",
+     "page": 52
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm y, biết: 29 + y : 4 = 35. y = ___",
+     "answer": "24",
+     "check": "(35 - 29) x 4",
+     "explain": "y : 4 = 35 - 29 = 6; y = 6 x 4 = 24.",
+     "skill": "tim_thanh_phan",
+     "page": 52
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Bà cắm hoa vào 6 lọ, mỗi lọ 5 bông thì thừa 2 bông. Nếu cắm đều vào 4 lọ thì mỗi lọ có ___ bông.",
+     "answer": "8",
+     "check": "(6 x 5 + 2) : 4",
+     "explain": "Số hoa: 6 x 5 + 2 = 32 bông; 32 : 4 = 8 bông.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 53
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm a, biết: a x 2 + a + a + a = 45. a = ___",
+     "answer": "9",
+     "check": "45 : 5",
+     "explain": "a x 2 + a + a + a = a x 5 = 45, nên a = 9.",
+     "skill": "tim_thanh_phan",
+     "page": 54
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm a, biết: a + a + 2 + a + 4 + a + 6 = 52. a = ___",
+     "answer": "10",
+     "check": "(52 - 2 - 4 - 6) : 4",
+     "explain": "a x 4 + 12 = 52, a x 4 = 40, a = 10.",
+     "skill": "tim_thanh_phan",
+     "page": 54
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm a, biết: a + 10 - 9 + 8 - 7 + 6 - 5 + 4 - 3 + 2 - 1 = 15. a = ___",
+     "answer": "10",
+     "check": "15 - 5",
+     "explain": "10 - 9 + 8 - 7 + 6 - 5 + 4 - 3 + 2 - 1 = 5, nên a + 5 = 15, a = 10.",
+     "skill": "tim_thanh_phan",
+     "page": 54
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm a, biết: a x 2 x a = 8. a = ___",
+     "answer": "2",
+     "check": "8 : 2 : 2",
+     "explain": "a x a = 8 : 2 = 4, mà 2 x 2 = 4 nên a = 2.",
+     "skill": "tim_thanh_phan",
+     "page": 54
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hiệu của số chẵn lớn nhất có ba chữ số với số lẻ nhỏ nhất có hai chữ số khác nhau là ___",
+     "answer": "985",
+     "check": "998 - 13",
+     "explain": "Số chẵn lớn nhất có ba chữ số là 998; số lẻ nhỏ nhất có hai chữ số khác nhau là 13; 998 - 13 = 985.",
+     "skill": "tru_khong_nho",
+     "page": 54
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Tổng hai số hạng là 27, số hạng thứ nhất là số có hai chữ số và có chữ số hàng đơn vị là 9. Hai số đó là:",
+     "options": [
+      "9 và 18",
+      "29 và 2",
+      "17 và 10",
+      "19 và 8"
+     ],
+     "answer": "19 và 8",
+     "explain": "Số hạng thứ nhất chỉ có thể là 19 (29 > 27), số hạng thứ hai là 27 - 19 = 8.",
+     "skill": "suy_luan",
+     "page": 54
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Số hạng thứ nhất là 28, số hạng thứ hai lớn hơn số hạng thứ nhất nhưng bé hơn 30. Tổng hai số là ___",
+     "answer": "57",
+     "check": "28 + 29",
+     "explain": "Số hạng thứ hai là 29; tổng 28 + 29 = 57.",
+     "skill": "suy_luan",
+     "page": 55
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Nếu thêm 3 kg gạo vào bao thì vừa đủ chia đều vào 8 túi, mỗi túi 5 kg. Lúc đầu bao có ___ kg gạo.",
+     "answer": "37",
+     "check": "8 x 5 - 3",
+     "explain": "Sau khi thêm có 8 x 5 = 40 kg; lúc đầu 40 - 3 = 37 (kg).",
+     "skill": "tinh_nguoc",
+     "page": 55
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Có 6 gói bánh như nhau. Lấy ở mỗi gói ra 4 cái thì số bánh còn lại bằng số bánh của 2 gói nguyên. Mỗi gói có ___ cái bánh.",
+     "answer": "6",
+     "check": "6 x 4 : (6 - 2)",
+     "explain": "Lấy ra 6 x 4 = 24 cái, bằng số bánh của 6 - 2 = 4 gói; mỗi gói 24 : 4 = 6 cái.",
+     "skill": "suy_luan",
+     "page": 55
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm a, biết: a x 5 - 18 = 27. a = ___",
+     "answer": "9",
+     "check": "(27 + 18) : 5",
+     "explain": "a x 5 = 27 + 18 = 45; a = 9.",
+     "skill": "tim_thanh_phan",
+     "page": 56
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hai số có tổng bằng 72. Số thứ nhất có chữ số hàng đơn vị là 5, số thứ hai có chữ số hàng chục là 2. Số thứ nhất là ___",
+     "answer": "45",
+     "check": "72 - 27",
+     "explain": "Số thứ hai là 2_ và 5 + _ phải tận cùng là 2 nên số thứ hai là 27; số thứ nhất 72 - 27 = 45.",
+     "skill": "suy_luan",
+     "page": 56
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Lập được ___ số chẵn có hai chữ số khác nhau từ năm chữ số 0; 1; 2; 6; 7.",
+     "answer": "10",
+     "check": "4 + 3 + 3",
+     "explain": "Tận cùng 0: 4 số; tận cùng 2: 3 số (12, 62, 72); tận cùng 6: 3 số (16, 26, 76).",
+     "skill": "lap_so",
+     "page": 56
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm một số, biết số đó chia cho 3 rồi cộng với 67 thì được 72. Số đó là ___",
+     "answer": "15",
+     "check": "(72 - 67) x 3",
+     "explain": "Tính ngược: 72 - 67 = 5, 5 x 3 = 15.",
+     "skill": "tinh_nguoc",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "week": 34,
+   "title": "Ôn tập về đại lượng",
+   "questions": [
+    {
+     "d": 1,
+     "type": "number",
+     "q": "4 kg x 9 + 55 kg = ___ kg",
+     "answer": "91",
+     "check": "4 x 9 + 55",
+     "explain": "4 x 9 = 36, 36 + 55 = 91 (kg).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 59
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "4 cm x 7 + 231 cm = ___ cm",
+     "answer": "259",
+     "check": "4 x 7 + 231",
+     "explain": "4 x 7 = 28, 28 + 231 = 259 (cm).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 59
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "654 m - 5 m x 10 = ___ m",
+     "answer": "604",
+     "check": "654 - 5 x 10",
+     "explain": "5 x 10 = 50, 654 - 50 = 604 (m).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 59
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "35 l : 5 + 33 l = ___ l",
+     "answer": "40",
+     "check": "35 : 5 + 33",
+     "explain": "35 : 5 = 7, 7 + 33 = 40 (l).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 59
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "27 kg + 24 kg : 2 = ___ kg",
+     "answer": "39",
+     "check": "27 + 24 : 2",
+     "explain": "Chia trước: 24 : 2 = 12, rồi 27 + 12 = 39 (kg).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 59
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "100 cm - 53 cm + 241 cm = ___ cm",
+     "answer": "288",
+     "check": "100 - 53 + 241",
+     "explain": "100 - 53 = 47, 47 + 241 = 288 (cm).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 66
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "36 mm : 9 + 145 mm = ___ mm",
+     "answer": "149",
+     "check": "36 : 9 + 145",
+     "explain": "36 : 9 = 4, 4 + 145 = 149 (mm).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 66
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "4 m x 8 + 38 m = ___ m",
+     "answer": "70",
+     "check": "4 x 8 + 38",
+     "explain": "4 x 8 = 32, 32 + 38 = 70 (m).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 66
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Số bé nhất trong các số 904; 494; 409; 449 là:",
+     "options": [
+      "409",
+      "904",
+      "494",
+      "449"
+     ],
+     "answer": "409",
+     "explain": "Hàng trăm 4 bé hơn 9; so sánh 494, 409, 449 thì 409 có hàng chục 0 bé nhất.",
+     "skill": "so_sanh_so",
+     "page": 65
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tích của hai số là 45, thừa số thứ nhất là 5. Thừa số thứ hai là ___",
+     "answer": "9",
+     "check": "45 : 5",
+     "explain": "45 : 5 = 9.",
+     "skill": "tim_thua_so",
+     "page": 65
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "176 + 702 = ___",
+     "answer": "878",
+     "check": "176 + 702",
+     "explain": "6 + 2 = 8, 7 + 0 = 7, 1 + 7 = 8 → 878.",
+     "skill": "cong_khong_nho",
+     "page": 66
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "756 - 556 = ___",
+     "answer": "200",
+     "check": "756 - 556",
+     "explain": "6 - 6 = 0, 5 - 5 = 0, 7 - 5 = 2 → 200.",
+     "skill": "tru_khong_nho",
+     "page": 66
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Đơn vị nào dùng để đo khối lượng (cân nặng)?",
+     "options": [
+      "lít",
+      "ki-lô-gam",
+      "mét",
+      "giờ"
+     ],
+     "answer": "ki-lô-gam",
+     "explain": "Ki-lô-gam (kg) là đơn vị đo khối lượng.",
+     "skill": "don_vi_do",
+     "page": 58
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Lớp học có 30 học sinh, xếp mỗi hàng 3 bạn thì được ___ hàng.",
+     "answer": "10",
+     "check": "30 : 3",
+     "explain": "30 : 3 = 10 (hàng).",
+     "skill": "bai_toan_chia",
+     "page": 83
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Lít viết tắt là ___",
+     "answer": "l",
+     "explain": "Lít là đơn vị đo dung tích, viết tắt là l.",
+     "skill": "don_vi_do",
+     "page": 58
+    },
+    {
+     "d": 1,
+     "type": "text",
+     "q": "Đơn vị tiền Việt Nam là ___",
+     "answer": "đồng",
+     "accepted": [
+      "đ"
+     ],
+     "explain": "Tiền Việt Nam tính bằng đồng, viết tắt là đ.",
+     "skill": "don_vi_do",
+     "page": 58
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm y, biết: y : 4 = 3 x 1. y = ___",
+     "answer": "12",
+     "check": "3 x 1 x 4",
+     "explain": "3 x 1 = 3; y = 3 x 4 = 12.",
+     "skill": "tim_thanh_phan",
+     "page": 65
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "21 giờ - 20 giờ : 4 = ___ giờ",
+     "answer": "16",
+     "check": "21 - 20 : 4",
+     "explain": "20 : 4 = 5, 21 - 5 = 16 (giờ).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 59
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "2 m : 4 + 29 dm = ___ dm",
+     "answer": "34",
+     "check": "20 : 4 + 29",
+     "explain": "2 m = 20 dm; 20 : 4 = 5, 5 + 29 = 34 (dm).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 59
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Ngày thứ hai bác Sơn bán được 135 kg dưa hấu, ngày thứ ba bán ít hơn ngày thứ hai 25 kg. Ngày thứ ba bán được ___ kg.",
+     "answer": "110",
+     "check": "135 - 25",
+     "explain": "135 - 25 = 110 (kg).",
+     "skill": "bai_toan_it_hon",
+     "page": 59
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Bao muối thứ nhất nặng 12 kg, bao thứ hai nặng 18 kg. Chia đều muối của cả hai bao vào 5 túi, mỗi túi có ___ kg.",
+     "answer": "6",
+     "check": "(12 + 18) : 5",
+     "explain": "12 + 18 = 30 kg; 30 : 5 = 6 (kg).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 61
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "An có 12 chiếc kẹo, mẹ cho thêm 4 chiếc. An ăn hết số kẹo đó trong 4 ngày, mỗi ngày như nhau. Mỗi ngày An ăn ___ chiếc.",
+     "answer": "4",
+     "check": "(12 + 4) : 4",
+     "explain": "12 + 4 = 16 chiếc; 16 : 4 = 4 chiếc.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 61
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Trạm bơm bắt đầu bơm nước lúc 9 giờ sáng và bơm trong 6 giờ. Trạm bơm xong lúc:",
+     "options": [
+      "3 giờ sáng",
+      "2 giờ chiều",
+      "3 giờ chiều",
+      "4 giờ chiều"
+     ],
+     "answer": "3 giờ chiều",
+     "explain": "9 + 6 = 15 giờ, tức là 3 giờ chiều.",
+     "skill": "thoi_gian",
+     "page": 65
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Lớp 2A xếp 4 hàng: ba hàng đầu mỗi hàng 8 bạn, hàng thứ tư 9 bạn. Lớp 2A có ___ học sinh.",
+     "answer": "33",
+     "check": "3 x 8 + 9",
+     "explain": "3 x 8 = 24; 24 + 9 = 33 (học sinh).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 65
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Quỳnh có 16 cái kẹo, Tuyết có 8 cái. Quỳnh phải cho Tuyết ___ cái kẹo để hai bạn có số kẹo bằng nhau.",
+     "answer": "4",
+     "check": "(16 - 8) : 2",
+     "explain": "Hai bạn chênh 8 cái, Quỳnh cho một nửa: 8 : 2 = 4 cái.",
+     "skill": "suy_luan",
+     "page": 65
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Vườn hoa hình tam giác có mỗi cạnh dài 5 m. Làm hàng rào quanh vườn cần ___ m hàng rào.",
+     "answer": "15",
+     "check": "5 x 3",
+     "explain": "Chu vi tam giác: 5 x 3 = 15 (m).",
+     "skill": "chu_vi",
+     "page": 66
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Bác Mai có cuộn vải dài 25 m, mỗi bộ áo dài may hết 3 m. May xong 7 bộ thì còn thừa ___ m vải.",
+     "answer": "4",
+     "check": "25 - 3 x 7",
+     "explain": "7 bộ hết 3 x 7 = 21 m; còn 25 - 21 = 4 (m).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 60
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Tùng đi quãng đường 36 km mất 4 giờ, Bách mỗi giờ đi được 5 km (mỗi giờ đi như nhau). Ai đi nhanh hơn?",
+     "options": [
+      "Tùng",
+      "Bách",
+      "Hai bạn nhanh như nhau"
+     ],
+     "answer": "Tùng",
+     "explain": "Mỗi giờ Tùng đi 36 : 4 = 9 km, nhiều hơn 5 km của Bách.",
+     "skill": "bai_toan_chia",
+     "page": 60
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Thứ Hai tuần này là ngày 8 tháng 4. Thứ Ba tuần sau là ngày ___ tháng 4.",
+     "answer": "16",
+     "check": "8 + 7 + 1",
+     "explain": "Thứ Hai tuần sau là 8 + 7 = 15, thứ Ba là 16.",
+     "skill": "thoi_gian",
+     "page": 65
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Có 12 người qua sông, mỗi chuyến đò chở được 3 người (không kể người lái). Cần ít nhất ___ chuyến đò.",
+     "answer": "4",
+     "check": "12 : 3",
+     "explain": "12 : 3 = 4 (chuyến).",
+     "skill": "bai_toan_chia",
+     "page": 65
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Lớp học có 30 học sinh, xếp mỗi hàng 5 bạn thì được ___ hàng.",
+     "answer": "6",
+     "check": "30 : 5",
+     "explain": "30 : 5 = 6 (hàng).",
+     "skill": "bai_toan_chia",
+     "page": 83
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "11 mm - 1 cm 2 mm : 3 = ___ mm",
+     "answer": "7",
+     "check": "11 - 12 : 3",
+     "explain": "1 cm 2 mm = 12 mm; 12 : 3 = 4; 11 - 4 = 7 (mm).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 59
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "5 dm - 3 dm 5 cm : 5 = ___ cm",
+     "answer": "43",
+     "check": "50 - 35 : 5",
+     "explain": "5 dm = 50 cm, 3 dm 5 cm = 35 cm; 35 : 5 = 7; 50 - 7 = 43 (cm).",
+     "skill": "tinh_so_do_dai_luong",
+     "page": 59
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Bác Sơn bán dưa hấu: ngày đầu 154 kg, ngày thứ hai 135 kg, ngày thứ ba ít hơn ngày thứ hai 25 kg. Cả ba ngày bán được ___ kg.",
+     "answer": "399",
+     "check": "154 + 135 + (135 - 25)",
+     "explain": "Ngày thứ ba 110 kg; cả ba ngày: 154 + 135 + 110 = 399 (kg).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 59
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Thùng thứ nhất đựng 134 l sơn. Thùng thứ hai đựng nhiều hơn thùng thứ nhất 32 l và ít hơn thùng thứ ba 12 l. Thùng thứ ba đựng ___ l.",
+     "answer": "178",
+     "check": "134 + 32 + 12",
+     "explain": "Thùng hai: 134 + 32 = 166 l; thùng ba: 166 + 12 = 178 (l).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 60
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Sợi dây dài 2 m, cắt đi 5 dm, phần còn lại chia thành các đoạn dài 3 dm. Được ___ đoạn 3 dm.",
+     "answer": "5",
+     "check": "(20 - 5) : 3",
+     "explain": "2 m = 20 dm; còn 20 - 5 = 15 dm; 15 : 3 = 5 đoạn.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 61
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Đựng dầu vào các can 4 l thì được 8 can và thừa 3 l. Nếu đổ đều số dầu đó vào 5 can thì mỗi can có ___ l.",
+     "answer": "7",
+     "check": "(4 x 8 + 3) : 5",
+     "explain": "Số dầu: 4 x 8 + 3 = 35 l; 35 : 5 = 7 (l).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 62
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hai con ốc sên bò từ hai đầu sợi dây dài 3 m về phía nhau. Con thứ nhất bò 9 dm, con thứ hai bò 12 dm. Lúc đó chúng cách nhau ___ dm.",
+     "answer": "9",
+     "check": "30 - 9 - 12",
+     "explain": "3 m = 30 dm; 30 - 9 - 12 = 9 (dm).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 62
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Can thứ nhất có 4 l dầu, ít hơn can thứ hai 10 l. Chuyển dầu từ can thứ hai sang can thứ nhất cho hai can bằng nhau. Lúc đó mỗi can có ___ l.",
+     "answer": "9",
+     "check": "(4 + 4 + 10) : 2",
+     "explain": "Can hai có 14 l; cả hai 18 l; chia đều mỗi can 9 l.",
+     "skill": "suy_luan",
+     "page": 62
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hai ngăn có 36 quyển sách, số sách ngăn thứ nhất bằng 1/4 số sách cả hai ngăn. Ngăn thứ hai có ___ quyển.",
+     "answer": "27",
+     "check": "36 - 36 : 4",
+     "explain": "Ngăn thứ nhất: 36 : 4 = 9 quyển; ngăn thứ hai: 36 - 9 = 27 quyển.",
+     "skill": "bai_toan_phan_so",
+     "page": 63
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Đoạn đường AC dài 40 km, đoạn BC bằng 1/5 đoạn AC. Đi từ A tới C phải qua B. Đoạn AB dài ___ km.",
+     "answer": "32",
+     "check": "40 - 40 : 5",
+     "explain": "BC = 40 : 5 = 8 km; AB = 40 - 8 = 32 (km).",
+     "skill": "bai_toan_phan_so",
+     "page": 63
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "1/5 số tuổi của An bằng 1/4 số tuổi của Bình. An 20 tuổi. An hơn Bình ___ tuổi.",
+     "answer": "4",
+     "check": "20 - 20 : 5 x 4",
+     "explain": "1/5 tuổi An là 20 : 5 = 4, nên Bình 4 x 4 = 16 tuổi; An hơn Bình 20 - 16 = 4 tuổi.",
+     "skill": "bai_toan_phan_so",
+     "page": 63
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Bà chia táo cho 5 cháu, mỗi cháu 4 quả thì thiếu 3 quả. Bà đã hái ___ quả táo.",
+     "answer": "17",
+     "check": "5 x 4 - 3",
+     "explain": "Cần 5 x 4 = 20 quả mà thiếu 3 nên bà có 20 - 3 = 17 quả.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 64
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Bà có 17 quả táo. Muốn chia cho 5 cháu, mỗi cháu 5 quả thì bà cần hái thêm ___ quả.",
+     "answer": "8",
+     "check": "5 x 5 - 17",
+     "explain": "Cần 5 x 5 = 25 quả; 25 - 17 = 8 quả.",
+     "skill": "bai_toan_hai_buoc",
+     "page": 64
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Can to đựng 5 l nước mắm, can bé đựng 3 l. Có 66 l nước mắm, đổ đầy 10 can to. Cần ít nhất ___ can bé để đựng hết số còn lại.",
+     "answer": "6",
+     "check": "(66 - 10 x 5 + 2) : 3",
+     "explain": "Còn 66 - 50 = 16 l; 5 can bé đựng 15 l còn thừa 1 l nên cần 6 can bé.",
+     "skill": "suy_luan",
+     "page": 64
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Hạnh ở nhà ông bà đúng 1 tuần và 6 ngày, trong đó chỉ có một ngày Chủ nhật. Hạnh về quê vào thứ mấy?",
+     "options": [
+      "Chủ nhật",
+      "Thứ Bảy",
+      "Thứ Ba",
+      "Thứ Hai"
+     ],
+     "answer": "Thứ Hai",
+     "explain": "13 ngày liên tiếp chỉ có 1 Chủ nhật khi ngày đầu là thứ Hai (Chủ nhật rơi vào ngày thứ 7).",
+     "skill": "thoi_gian",
+     "page": 65
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Đường gấp khúc gồm ba đoạn: đoạn thứ nhất dài 47 dm, đoạn thứ hai dài hơn đoạn thứ nhất 6 dm và ngắn hơn đoạn thứ ba 7 dm. Đường gấp khúc dài ___ dm.",
+     "answer": "160",
+     "check": "47 + (47 + 6) + (47 + 6 + 7)",
+     "explain": "Đoạn hai 53 dm, đoạn ba 60 dm; tổng 47 + 53 + 60 = 160 (dm).",
+     "skill": "duong_gap_khuc",
+     "page": 66
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Ba năm trước, tổng số tuổi của hai chị em là 34 tuổi. Bốn năm sau, tổng số tuổi của hai chị em là ___ tuổi.",
+     "answer": "48",
+     "check": "34 + 3 + 3 + 4 + 4",
+     "explain": "Mỗi năm tổng tuổi hai chị em tăng 2: từ 3 năm trước đến 4 năm sau là 7 năm, tăng 14 tuổi: 34 + 14 = 48.",
+     "skill": "suy_luan_logic",
+     "page": 82
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "An nhiều tuổi hơn Hòa. Hòa ít tuổi hơn Mai nhưng nhiều tuổi hơn Hồng. Ai ít tuổi nhất?",
+     "options": [
+      "Hòa",
+      "Hồng",
+      "Mai",
+      "An"
+     ],
+     "answer": "Hồng",
+     "explain": "Hòa ít tuổi hơn An và Mai, còn Hồng ít tuổi hơn Hòa nên Hồng ít tuổi nhất.",
+     "skill": "suy_luan_logic",
+     "page": 82
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Bốn bạn Hòa, Bình, Hải, Tú có 2 điểm 10, 1 điểm 9, 1 điểm 7. Hòa cao điểm hơn Bình nhưng thấp hơn Hải. Hòa được mấy điểm?",
+     "options": [
+      "10 điểm",
+      "7 điểm",
+      "9 điểm"
+     ],
+     "answer": "9 điểm",
+     "explain": "Hòa phải có điểm nằm giữa Bình và Hải nên Hòa được 9, Bình 7, Hải 10.",
+     "skill": "suy_luan_logic",
+     "page": 84
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Hằng, Bình, An đội ba mũ khác màu: vàng, trắng, xanh. An không đội mũ vàng. Bình không đội mũ vàng, cũng không đội mũ trắng. Ai đội mũ trắng?",
+     "options": [
+      "Bình",
+      "An",
+      "Hằng"
+     ],
+     "answer": "An",
+     "explain": "Bình đội mũ xanh. An không đội mũ vàng nên An đội mũ trắng, Hằng đội mũ vàng.",
+     "skill": "suy_luan_logic",
+     "page": 84
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hộp có 5 bi xanh và 8 bi đỏ. Không nhìn, Hà lấy ra 8 viên. Chắc chắn trong đó có ít nhất ___ viên bi đỏ.",
+     "answer": "3",
+     "check": "8 - 5",
+     "explain": "Dù lấy hết 5 bi xanh thì 8 - 5 = 3 viên còn lại phải là bi đỏ.",
+     "skill": "suy_luan_logic",
+     "page": 84
+    }
+   ]
+  },
+  {
+   "week": 35,
+   "title": "Ôn tập về hình học",
+   "questions": [
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Đường gấp khúc gồm hai đoạn thẳng dài 17 cm và 34 cm. Đường gấp khúc dài ___ cm.",
+     "answer": "51",
+     "check": "17 + 34",
+     "explain": "17 + 34 = 51 (cm).",
+     "skill": "duong_gap_khuc",
+     "page": 68
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Đường gấp khúc ABC có AB = 12 cm, BC = 15 cm. Đường gấp khúc dài ___ cm.",
+     "answer": "27",
+     "check": "12 + 15",
+     "explain": "Độ dài đường gấp khúc bằng tổng các đoạn: 12 + 15 = 27 (cm).",
+     "skill": "duong_gap_khuc",
+     "page": 68
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tam giác ABC có AB = AC = 10 cm, BC = 16 cm. Chu vi tam giác ABC là ___ cm.",
+     "answer": "36",
+     "check": "10 + 10 + 16",
+     "explain": "10 + 10 + 16 = 36 (cm).",
+     "skill": "chu_vi",
+     "page": 68
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Số lớn nhất trong các số 908; 890; 898; 929 là:",
+     "options": [
+      "929",
+      "908",
+      "890",
+      "898"
+     ],
+     "answer": "929",
+     "explain": "929 và 908 cùng hàng trăm 9, hàng chục 2 > 0 nên 929 lớn nhất.",
+     "skill": "so_sanh_so",
+     "page": 74
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tính: 56 - 4 x 7 + 38 = ___",
+     "answer": "66",
+     "check": "56 - 4 x 7 + 38",
+     "explain": "4 x 7 = 28; 56 - 28 = 28; 28 + 38 = 66.",
+     "skill": "tinh_gia_tri_bieu_thuc",
+     "page": 74
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "An bắt đầu học đàn lúc 19 giờ và học trong 2 giờ. Buổi học kết thúc lúc ___ giờ.",
+     "answer": "21",
+     "check": "19 + 2",
+     "explain": "19 + 2 = 21 giờ (9 giờ tối).",
+     "skill": "thoi_gian",
+     "page": 74
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "405 + 312 = ___",
+     "answer": "717",
+     "check": "405 + 312",
+     "explain": "5 + 2 = 7, 0 + 1 = 1, 4 + 3 = 7 → 717.",
+     "skill": "cong_khong_nho",
+     "page": 75
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "674 - 242 = ___",
+     "answer": "432",
+     "check": "674 - 242",
+     "explain": "4 - 2 = 2, 7 - 4 = 3, 6 - 2 = 4 → 432.",
+     "skill": "tru_khong_nho",
+     "page": 75
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "436 - 25 = ___",
+     "answer": "411",
+     "check": "436 - 25",
+     "explain": "6 - 5 = 1, 3 - 2 = 1, hàng trăm 4 → 411.",
+     "skill": "tru_khong_nho",
+     "page": 75
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "5 dm = ___ cm",
+     "answer": "50",
+     "check": "5 x 10",
+     "explain": "1 dm = 10 cm nên 5 dm = 50 cm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 75
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "3 m = ___ cm",
+     "answer": "300",
+     "check": "3 x 100",
+     "explain": "1 m = 100 cm nên 3 m = 300 cm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 75
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "80 dm = ___ m",
+     "answer": "8",
+     "check": "80 : 10",
+     "explain": "10 dm = 1 m nên 80 dm = 8 m.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 75
+    },
+    {
+     "d": 1,
+     "type": "number",
+     "q": "Tìm a, biết: a + 12 = 115. a = ___",
+     "answer": "103",
+     "check": "115 - 12",
+     "explain": "a = 115 - 12 = 103.",
+     "skill": "tim_so_hang",
+     "page": 75
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "Hình tam giác có mấy cạnh?",
+     "options": [
+      "4 cạnh",
+      "3 cạnh",
+      "2 cạnh",
+      "5 cạnh"
+     ],
+     "answer": "3 cạnh",
+     "explain": "Hình tam giác có 3 cạnh và 3 đỉnh.",
+     "skill": "nhan_biet_hinh",
+     "page": 67
+    },
+    {
+     "d": 1,
+     "type": "mcq",
+     "q": "32 cm = ?",
+     "options": [
+      "32 dm",
+      "3 m 2 cm",
+      "3 dm 2 cm",
+      "3 dm 20 cm"
+     ],
+     "answer": "3 dm 2 cm",
+     "explain": "32 cm = 30 cm + 2 cm = 3 dm 2 cm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 75
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "45 dm = ?",
+     "options": [
+      "45 m",
+      "4 m 50 dm",
+      "40 m 5 dm",
+      "4 m 5 dm"
+     ],
+     "answer": "4 m 5 dm",
+     "explain": "45 dm = 40 dm + 5 dm = 4 m 5 dm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 75
+    },
+    {
+     "d": 2,
+     "type": "text",
+     "q": "Ngày 19 tháng 5 là thứ Tư thì ngày 26 tháng 5 cùng năm là thứ ___",
+     "answer": "Tư",
+     "accepted": [
+      "4",
+      "thứ Tư",
+      "thứ 4"
+     ],
+     "explain": "Sau đúng 7 ngày (một tuần) thì lại là thứ Tư.",
+     "skill": "thoi_gian",
+     "page": 74
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hình tứ giác có bốn cạnh bằng nhau và chu vi là 80 dm. Mỗi cạnh dài ___ dm.",
+     "answer": "20",
+     "check": "80 : 4",
+     "explain": "80 : 4 = 20 (dm).",
+     "skill": "chu_vi",
+     "page": 68
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hình tam giác có ba cạnh bằng nhau, chu vi là 3 dm. Mỗi cạnh dài ___ cm.",
+     "answer": "10",
+     "check": "30 : 3",
+     "explain": "3 dm = 30 cm; 30 : 3 = 10 (cm).",
+     "skill": "chu_vi",
+     "page": 71
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Hình tứ giác có bốn cạnh bằng nhau, chu vi là 1 dm 2 cm. Mỗi cạnh dài ___ cm.",
+     "answer": "3",
+     "check": "12 : 4",
+     "explain": "1 dm 2 cm = 12 cm; 12 : 4 = 3 (cm).",
+     "skill": "chu_vi",
+     "page": 71
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tứ giác ABCD có AB = 1 dm 8 cm, BC = 2 dm, CD = 24 cm, DA = 16 cm. Chu vi tứ giác là ___ cm.",
+     "answer": "78",
+     "check": "18 + 20 + 24 + 16",
+     "explain": "Đổi ra cm: 18 + 20 + 24 + 16 = 78 (cm).",
+     "skill": "chu_vi",
+     "page": 69
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Một tứ giác có tổng cạnh thứ nhất và cạnh thứ ba là 23 cm, tổng cạnh thứ hai và cạnh thứ tư là 27 cm. Chu vi tứ giác là ___ cm.",
+     "answer": "50",
+     "check": "23 + 27",
+     "explain": "Chu vi = tổng bốn cạnh = 23 + 27 = 50 (cm).",
+     "skill": "chu_vi",
+     "page": 70
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Một tam giác có chu vi 879 cm, cạnh thứ nhất dài 333 cm, cạnh thứ hai ngắn hơn cạnh thứ nhất 3 dm. Cạnh thứ hai dài ___ cm.",
+     "answer": "303",
+     "check": "333 - 30",
+     "explain": "3 dm = 30 cm; 333 - 30 = 303 (cm).",
+     "skill": "chu_vi",
+     "page": 69
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "2 m 40 cm = ___ dm",
+     "answer": "24",
+     "check": "(200 + 40) : 10",
+     "explain": "2 m 40 cm = 240 cm = 24 dm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 75
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "6 dm 1 cm = ___ mm",
+     "answer": "610",
+     "check": "61 x 10",
+     "explain": "6 dm 1 cm = 61 cm = 610 mm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 75
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "512 cm = 5 m ___ cm",
+     "answer": "12",
+     "check": "512 - 500",
+     "explain": "5 m = 500 cm; 512 - 500 = 12.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 75
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "603 mm = ___ cm 3 mm",
+     "answer": "60",
+     "check": "(603 - 3) : 10",
+     "explain": "600 mm = 60 cm nên 603 mm = 60 cm 3 mm.",
+     "skill": "doi_don_vi_do_dai",
+     "page": 75
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Tìm a, biết: a x 4 = 8 x 2. a = ___",
+     "answer": "4",
+     "check": "8 x 2 : 4",
+     "explain": "8 x 2 = 16; a = 16 : 4 = 4.",
+     "skill": "tim_thua_so",
+     "page": 75
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Bà chia cam vào 4 túi, mỗi túi 5 quả thì còn thừa 3 quả. Bà có ___ quả cam.",
+     "answer": "23",
+     "check": "4 x 5 + 3",
+     "explain": "4 x 5 = 20; 20 + 3 = 23 (quả).",
+     "skill": "bai_toan_hai_buoc",
+     "page": 74
+    },
+    {
+     "d": 2,
+     "type": "number",
+     "q": "Số lớn nhất có hai chữ số lớn hơn số Lan nghĩ 25 đơn vị. Lan nghĩ ra số ___",
+     "answer": "74",
+     "check": "99 - 25",
+     "explain": "Số lớn nhất có hai chữ số là 99; 99 - 25 = 74.",
+     "skill": "tim_thanh_phan",
+     "page": 74
+    },
+    {
+     "d": 2,
+     "type": "mcq",
+     "q": "Sinh nhật Bác Hồ (ngày 19 tháng 5) năm nay là thứ Tư. Ngày 21 tháng 5 năm nay là thứ mấy?",
+     "options": [
+      "Thứ Sáu",
+      "Thứ Năm",
+      "Thứ Bảy",
+      "Thứ Ba"
+     ],
+     "answer": "Thứ Sáu",
+     "explain": "21 tháng 5 sau 19 tháng 5 hai ngày: thứ Tư → thứ Năm → thứ Sáu.",
+     "skill": "thoi_gian",
+     "page": 74
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Một tam giác có chu vi 879 cm, cạnh thứ nhất dài 333 cm, cạnh thứ hai ngắn hơn cạnh thứ nhất 3 dm. Cạnh thứ ba dài ___ cm.",
+     "answer": "243",
+     "check": "879 - 333 - (333 - 30)",
+     "explain": "Cạnh thứ hai 303 cm; cạnh thứ ba: 879 - 333 - 303 = 243 (cm).",
+     "skill": "chu_vi",
+     "page": 69
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tam giác ABC có AB = 18 cm và dài hơn BC 6 cm, AC bằng 1/2 AB. Chu vi tam giác ABC là ___ cm.",
+     "answer": "39",
+     "check": "18 + (18 - 6) + 18 : 2",
+     "explain": "BC = 12 cm, AC = 9 cm; chu vi 18 + 12 + 9 = 39 (cm).",
+     "skill": "chu_vi",
+     "page": 69
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Đường gấp khúc ABCD dài 2 dm. AB = 7 cm và ngắn hơn CD 3 cm. Đoạn BC dài ___ cm.",
+     "answer": "3",
+     "check": "20 - 7 - (7 + 3)",
+     "explain": "2 dm = 20 cm; CD = 10 cm; BC = 20 - 7 - 10 = 3 (cm).",
+     "skill": "duong_gap_khuc",
+     "page": 70
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tứ giác ABCD có AB = 15 cm, AD = 8 cm và AD bằng 1/2 tổng hai cạnh BC và CD. Chu vi tứ giác là ___ cm.",
+     "answer": "39",
+     "check": "15 + 8 + 8 x 2",
+     "explain": "BC + CD = 8 x 2 = 16 cm; chu vi 15 + 8 + 16 = 39 (cm).",
+     "skill": "chu_vi",
+     "page": 70
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tứ giác MNPQ có MN + NP = 21 cm, PQ ngắn hơn MN + NP là 9 cm, chu vi là 4 dm. Cạnh QM dài ___ cm.",
+     "answer": "7",
+     "check": "40 - 21 - (21 - 9)",
+     "explain": "PQ = 12 cm; 4 dm = 40 cm; QM = 40 - 21 - 12 = 7 (cm).",
+     "skill": "chu_vi",
+     "page": 71
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tứ giác MNPQ có chu vi 42 cm, MN + NP + PQ = 34 cm, PQ + QM = 21 cm. Cạnh PQ dài ___ cm.",
+     "answer": "13",
+     "check": "34 + 21 - 42",
+     "explain": "QM = 42 - 34 = 8 cm; PQ = 21 - 8 = 13 (cm).",
+     "skill": "chu_vi",
+     "page": 72
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tam giác ABC có điểm D nằm trên cạnh BC, AD = 13 cm. Chu vi tam giác ABD là 33 cm, chu vi tam giác ADC là 35 cm. Chu vi tam giác ABC là ___ cm.",
+     "answer": "42",
+     "check": "33 + 35 - 13 - 13",
+     "explain": "Cộng hai chu vi thì AD bị tính 2 lần: 33 + 35 - 13 x 2 = 42 (cm).",
+     "skill": "chu_vi",
+     "page": 72
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tứ giác ABCD có đoạn AC = 10 cm chia nó thành tam giác ABC (chu vi 24 cm) và tam giác ACD (chu vi 32 cm). Chu vi tứ giác ABCD là ___ cm.",
+     "answer": "36",
+     "check": "24 + 32 - 10 - 10",
+     "explain": "Cộng hai chu vi rồi bớt AC hai lần: 24 + 32 - 20 = 36 (cm).",
+     "skill": "chu_vi",
+     "page": 72
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tam giác ABC có điểm H trên cạnh BC. Chu vi tam giác ABC là 32 cm, chu vi tam giác ABH và ACH đều là 24 cm. Đoạn AH dài ___ cm.",
+     "answer": "8",
+     "check": "(24 + 24 - 32) : 2",
+     "explain": "24 + 24 = 48 gồm chu vi ABC và 2 lần AH; AH = (48 - 32) : 2 = 8 (cm).",
+     "skill": "chu_vi",
+     "page": 73
+    },
+    {
+     "d": 3,
+     "type": "mcq",
+     "q": "Hình vuông ABCD cạnh 4 cm được chia thành 16 ô vuông cạnh 1 cm. So sánh chu vi hình vuông ABCD với tổng chu vi 4 ô vuông nhỏ:",
+     "options": [
+      "Chu vi ABCD lớn hơn",
+      "Chu vi ABCD bé hơn",
+      "Bằng nhau"
+     ],
+     "answer": "Bằng nhau",
+     "explain": "Chu vi ABCD: 4 x 4 = 16 cm; mỗi ô nhỏ có chu vi 4 cm, 4 ô: 16 cm.",
+     "skill": "chu_vi",
+     "page": 73
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tìm a, biết: 2 x a + 200 = 240. a = ___",
+     "answer": "20",
+     "check": "(240 - 200) : 2",
+     "explain": "2 x a = 40; a = 20.",
+     "skill": "tim_thanh_phan",
+     "page": 75
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Năm mẹ 40 tuổi thì con gái 15 tuổi. Năm nay mẹ 30 tuổi. Năm nay con gái ___ tuổi.",
+     "answer": "5",
+     "check": "30 - (40 - 15)",
+     "explain": "Mẹ hơn con 40 - 15 = 25 tuổi; năm nay con 30 - 25 = 5 tuổi.",
+     "skill": "suy_luan",
+     "page": 74
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Hiệu của 98 với số lớn nhất có hai chữ số mà tổng hai chữ số của nó là 11 là ___",
+     "answer": "6",
+     "check": "98 - 92",
+     "explain": "Số lớn nhất có hai chữ số, tổng hai chữ số bằng 11 là 92; 98 - 92 = 6.",
+     "skill": "suy_luan",
+     "page": 74
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "Tuấn cho em 12 quả bóng bay thì số bóng còn lại bằng 1/3 số bóng đã cho. Lúc đầu Tuấn có ___ quả bóng.",
+     "answer": "16",
+     "check": "12 + 12 : 3",
+     "explain": "Còn lại 12 : 3 = 4 quả; lúc đầu 12 + 4 = 16 quả.",
+     "skill": "bai_toan_phan_so",
+     "page": 74
+    },
+    {
+     "d": 3,
+     "type": "number",
+     "q": "1/3 số táo Linh hái bằng 1/2 số táo Tú hái. Linh hái được 15 quả. Tú hái được ___ quả.",
+     "answer": "10",
+     "check": "15 : 3 x 2",
+     "explain": "1/3 số táo của Linh là 5 quả, bằng 1/2 số táo của Tú, nên Tú hái 5 x 2 = 10 quả.",
+     "skill": "bai_toan_phan_so",
+     "page": 75
+    }
+   ]
+  }
+ ]
+}
