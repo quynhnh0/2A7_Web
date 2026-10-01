@@ -1,7 +1,8 @@
-import { getBackend, type Filter, type Row, type SelectOptions } from './backend';
+import { getBackend, type BackendError, type Filter, type Row, type SelectOptions } from './backend';
 import type {
-  AdminDashboard, AnswerResult, AppSettings, AttemptPayload, AttemptResult, AttemptView, ExerciseType, Leaderboard,
+  AdminDashboard, AdminSubjectStats, AnswerResult, AppSettings, AttemptPayload, AttemptResult, AttemptView, ExerciseType, Leaderboard,
   Lesson, LessonView, Period, PublicConfig, Question, QuestionView, StudentHome, StudentIdentity, StudentStats, Subject,
+  StatsPeriod, VerifyStudentResult,
 } from '../types';
 
 const rpc = async <T>(fn: string, args?: Row) => (await getBackend()).rpc<T>(fn, args);
@@ -10,11 +11,24 @@ const insert = async <T>(table: string, rows: Row[]) => (await getBackend()).ins
 const update = async <T>(table: string, patch: Row, filters: Filter[]) => (await getBackend()).update<T>(table, patch, filters);
 const remove = async (table: string, filters: Filter[]) => (await getBackend()).remove(table, filters);
 
+/** Database chưa chạy 0004 => tab "Tất cả môn" vẫn dùng được hàm xếp hạng cũ. */
+async function leaderboard(period: Period, subjectId: string | null, studentId: string | null) {
+  try {
+    return await rpc<Leaderboard>('get_subject_leaderboard', { p_period: period, p_subject_id: subjectId, p_student_id: studentId });
+  } catch (e) {
+    if (subjectId || (e as BackendError).code !== 'missing_function') throw e;
+    console.warn('[api] Chưa có get_subject_leaderboard (chưa chạy 0004_subject_stats.sql) — dùng get_leaderboard.');
+    return rpc<Leaderboard>('get_leaderboard', { p_period: period, p_student_id: studentId });
+  }
+}
+
 // ---------------- Học sinh
 export const studentApi = {
   getConfig: () => rpc<PublicConfig>('get_public_config'),
   listStudents: () => rpc<StudentIdentity[]>('list_students'),
   register: (fullName: string) => rpc<StudentIdentity>('register_student', { p_full_name: fullName }),
+  verifyBirthday: (studentId: string, day: number, month: number) =>
+    rpc<VerifyStudentResult>('verify_student', { p_student_id: studentId, p_day: day, p_month: month }),
   getHome: (studentId: string) => rpc<StudentHome>('get_student_home', { p_student_id: studentId }),
   startAttempt: (studentId: string, lessonId: string, type: ExerciseType, deviceToken: string) =>
     rpc<AttemptPayload>('start_attempt', { p_student_id: studentId, p_lesson_id: lessonId, p_exercise_type: type, p_device_token: deviceToken }),
@@ -22,8 +36,8 @@ export const studentApi = {
     rpc<AnswerResult>('submit_answer', { p_attempt_id: attemptId, p_question_id: questionId, p_answer: answer }),
   finishAttempt: (attemptId: string) => rpc<AttemptResult>('finish_attempt', { p_attempt_id: attemptId }),
   getResult: (attemptId: string) => rpc<AttemptResult | null>('get_attempt_result', { p_attempt_id: attemptId }),
-  getLeaderboard: (period: Period, studentId?: string | null) =>
-    rpc<Leaderboard>('get_leaderboard', { p_period: period, p_student_id: studentId ?? null }),
+  getLeaderboard: (period: Period, studentId?: string | null, subjectId?: string | null) =>
+    leaderboard(period, subjectId ?? null, studentId ?? null),
 };
 
 // ---------------- Admin
@@ -69,10 +83,12 @@ export const adminApi = {
   async listStudents() {
     return (await select<StudentStats>('v_student_stats', { order: [['is_active', false], ['display_name', true]] })).rows;
   },
-  insertStudents: (rows: Array<{ full_name: string; display_name?: string | null; note?: string | null }>) => insert<StudentStats>('students', rows),
+  insertStudents: (rows: Array<{ full_name: string; display_name?: string | null; note?: string | null; birth_date?: string | null }>) =>
+    insert<StudentStats>('students', rows),
   updateStudent: (id: string, patch: Partial<StudentStats>) => update<StudentStats>('students', patch as Row, [['id', 'eq', id]]),
   deleteStudent: (id: string) => remove('students', [['id', 'eq', id]]),
 
   listAttempts: (opts: SelectOptions) => select<AttemptView>('v_attempts', { count: true, ...opts }),
-  getLeaderboard: (period: Period) => rpc<Leaderboard>('get_leaderboard', { p_period: period, p_student_id: null }),
+  getLeaderboard: (period: Period, subjectId?: string | null) => leaderboard(period, subjectId ?? null, null),
+  subjectStats: (period: StatsPeriod) => rpc<AdminSubjectStats>('admin_subject_stats', { p_period: period }),
 };

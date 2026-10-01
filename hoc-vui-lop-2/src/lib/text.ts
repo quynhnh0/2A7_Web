@@ -21,6 +21,11 @@ export function titleCaseName(s: string): string {
     .join(' ');
 }
 
+/** Bạn khách (không thuộc lớp) đặt tên có dấu gạch, VD "Tiểu Nguyên - Khoai". Khớp với public.is_guest_name. */
+export function isGuestName(name: string | null | undefined): boolean {
+  return /[-–—]/.test(name ?? '');
+}
+
 export function initials(name: string): string {
   const parts = name.trim().split(/\s+/).filter(Boolean);
   if (parts.length === 0) return '?';
@@ -53,6 +58,37 @@ export function relativeTime(iso: string | null | undefined): string {
   if (diff < 86400) return `${Math.floor(diff / 3600)} giờ trước`;
   if (diff < 86400 * 30) return `${Math.floor(diff / 86400)} ngày trước`;
   return new Date(iso).toLocaleDateString('vi-VN');
+}
+
+function isoDate(y: number, m: number, d: number): string | null {
+  const t = new Date(Date.UTC(y, m - 1, d));
+  if (t.getUTCFullYear() !== y || t.getUTCMonth() !== m - 1 || t.getUTCDate() !== d) return null;
+  if (y < 1990 || y > new Date().getFullYear() + 1) return null;
+  return `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+}
+
+/**
+ * Đọc ngày sinh kiểu Việt Nam -> 'YYYY-MM-DD' (null nếu không hợp lệ).
+ * Nhận: 05/03/2019, 5-3-2019, 5.3.19, 2019-03-05, số ngày kiểu Excel (43529).
+ */
+export function parseBirthDate(input: string | null | undefined): string | null {
+  const s = (input ?? '').trim();
+  if (!s) return null;
+  let m = /^(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})/.exec(s);
+  if (m) return isoDate(+m[1], +m[2], +m[3]);
+  m = /^(\d{1,2})[-/.](\d{1,2})[-/.](\d{2}|\d{4})$/.exec(s);
+  if (m) return isoDate(m[3].length === 2 ? 2000 + +m[3] : +m[3], +m[2], +m[1]);
+  if (/^\d{5}$/.test(s)) {
+    const t = new Date(Date.UTC(1899, 11, 30) + Number(s) * 86400000);
+    return isoDate(t.getUTCFullYear(), t.getUTCMonth() + 1, t.getUTCDate());
+  }
+  return null;
+}
+
+/** '2019-03-05' -> '05/03/2019' */
+export function formatBirthDate(iso: string | null | undefined): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso ?? '');
+  return m ? `${m[3]}/${m[2]}/${m[1]}` : '';
 }
 
 /** Bài của ngân hàng riêng đặt tên "Archimes: …" => nhãn "Archimes" thay cho "Bài 100". */

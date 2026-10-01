@@ -2,8 +2,12 @@ import type { Backend } from './types';
 
 export * from './types';
 
-const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const key = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+// supabase-js tự nối /rest/v1, /auth/v1… nên chỉ giữ gốc https://<ref>.supabase.co
+const url = (import.meta.env.VITE_SUPABASE_URL as string | undefined)
+  ?.trim()
+  .replace(/\/(rest|auth)\/v1\/?$/i, '')
+  .replace(/\/+$/, '') || undefined;
+const key = (import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined)?.trim() || undefined;
 
 export const isDemoMode = !url || !key;
 

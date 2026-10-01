@@ -5,14 +5,20 @@ import { studentApi } from '../../lib/api';
 import { getStoredStudent } from '../../lib/studentSession';
 import { formatNumber } from '../../lib/text';
 import { useAsync } from '../../hooks/useAsync';
-import { PERIOD_LABEL, PeriodTabs, Podium, RankList } from '../../components/Leaderboard';
+import { PERIOD_LABEL, PeriodTabs, Podium, RankList, SubjectTabs } from '../../components/Leaderboard';
 import { Avatar, LoadingBlock, StudentError } from '../../components/ui';
 import type { Period } from '../../types';
 
 export default function LeaderboardPage() {
   const student = getStoredStudent();
   const [period, setPeriod] = useState<Period>('day');
-  const { data, error, loading, reload } = useAsync(() => studentApi.getLeaderboard(period, student?.id), [period, student?.id]);
+  const [subjectId, setSubjectId] = useState<string | null>(null);
+  const { data, error, loading, reload } = useAsync(
+    () => studentApi.getLeaderboard(period, student?.id, subjectId),
+    [period, student?.id, subjectId],
+  );
+  const subjectName = subjectId ? data?.subjects?.find((s) => s.id === subjectId)?.name : undefined;
+  const scope = subjectName ? `${PERIOD_LABEL[period]} • ${subjectName}` : PERIOD_LABEL[period];
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-6">
@@ -24,6 +30,8 @@ export default function LeaderboardPage() {
         <PeriodTabs value={period} onChange={setPeriod} />
       </div>
 
+      <SubjectTabs subjects={data?.subjects} value={subjectId} onChange={setSubjectId} />
+
       {loading && !data && <LoadingBlock label="Đang xếp hạng…" />}
       {!!error && <StudentError error={error} onRetry={reload} />}
 
@@ -32,11 +40,13 @@ export default function LeaderboardPage() {
       )}
 
       {data?.enabled && (
-        <>
+        <div className={`flex flex-col gap-6 transition-opacity ${loading ? 'opacity-60' : ''}`}>
           {data.rows.length === 0 ? (
             <div className="card p-10 text-center">
               <div className="text-6xl">🌟</div>
-              <p className="mt-3 font-display text-2xl font-bold text-slate-700">{PERIOD_LABEL[period]} chưa có ai ghi điểm.</p>
+              <p className="mt-3 font-display text-2xl font-bold text-slate-700">
+                {subjectName ? `Môn ${subjectName} ${PERIOD_LABEL[period].toLowerCase()} chưa có ai ghi điểm.` : `${PERIOD_LABEL[period]} chưa có ai ghi điểm.`}
+              </p>
               <Link to="/home" className="btn-kid btn-blue mt-5">Làm bài ngay để đứng đầu!</Link>
             </div>
           ) : (
@@ -62,7 +72,7 @@ export default function LeaderboardPage() {
             <section className="sticky bottom-20 flex items-center gap-3 rounded-3xl bg-blue-700 p-4 text-white shadow-xl md:bottom-4">
               <Avatar name={student.full_name} id={student.id} size="h-12 w-12 text-base" />
               <div className="min-w-0 flex-1">
-                <div className="text-xs font-bold tracking-wider text-blue-200 uppercase">Vị trí của bạn • {PERIOD_LABEL[period]}</div>
+                <div className="truncate text-xs font-bold tracking-wider text-blue-200 uppercase">Vị trí của bạn • {scope}</div>
                 <div className="truncate font-display text-lg font-bold">{student.full_name}</div>
               </div>
               <div className="text-right">
@@ -76,7 +86,7 @@ export default function LeaderboardPage() {
             <Lightbulb className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
             Luật chơi công bằng: mỗi bài chỉ tính điểm lần làm đầu tiên. Câu càng khó càng được nhiều điểm. Các lần làm lại giúp bạn luyện tập thêm!
           </p>
-        </>
+        </div>
       )}
     </div>
   );

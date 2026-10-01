@@ -3,13 +3,17 @@
 Web làm bài tập cho học sinh lớp 2, **chạy miễn phí 100%** (Cloudflare Pages + Supabase free).
 
 - Học sinh **không cần đăng nhập**: mở link → bấm chọn tên mình (hoặc gõ họ tên nếu là bạn mới) → làm bài.
+- **Xác nhận ngày sinh**: bạn nào được thầy cô nhập ngày sinh thì sau khi chọn tên phải bấm đúng **ngày + tháng sinh** mới vào được (tránh vào nhầm tên bạn khác). Ngày sinh không bao giờ gửi xuống trình duyệt; sai 5 lần thì khoá 5 phút. Bạn chưa có ngày sinh vào thẳng như cũ.
 - Mỗi bài có **Cơ bản** (nhiều câu dễ) và **Nâng cao** (nhiều câu khó).
 - 3 dạng câu hỏi: **trắc nghiệm**, **điền số** (bàn phím số to cho tablet/điện thoại), **điền chữ**.
-- **Bảng xếp hạng** theo ngày / tuần (thứ Hai – Chủ nhật) / tháng. Chỉ lần làm đầu tiên của mỗi bài được tính điểm, các lần sau là luyện tập → công bằng, không “cày điểm”.
+- **Bảng xếp hạng** theo ngày / tuần (thứ Hai – Chủ nhật) / tháng, xem **tất cả môn** hoặc **từng môn** (Toán, Tiếng Việt…). Chỉ lần làm đầu tiên của mỗi bài được tính điểm, các lần sau là luyện tập → công bằng, không “cày điểm”.
+- Admin có trang **Thống kê theo môn**: tỉ lệ đúng, số bạn đã học, lượt làm, thời gian trung bình của từng môn; bảng **từng bạn × từng môn** (lọc nhanh bạn cần chú ý, xuất CSV); câu sai nhiều nhất của mỗi môn.
+- **Bạn khách** (không thuộc lớp): đặt họ tên có dấu **“-”**, ví dụ `Tiểu Nguyên - Khoai`. Bạn khách học và được tính điểm bình thường, thấy mình trên bảng xếp hạng; các bạn trong lớp **không thấy** bạn khách (bảng xếp hạng, thứ hạng trên trang chủ đều bỏ bạn khách ra trước khi xếp hạng). Tên bạn khách không hiện sẵn trong danh sách chọn tên, bạn ấy gõ từ 3 chữ cái trở lên của tên mình thì tên mới hiện ra. Thầy cô vẫn thấy tất cả, có nhãn **Khách**.
 - Chấm điểm **trên máy chủ**, đáp án không bao giờ gửi xuống trình duyệt trước khi nộp.
 - **1 tài khoản admin** (thầy cô / phụ huynh) để: quản lý bài học & lịch mở bài theo tuần, ngân hàng câu hỏi, **nhập CSV/Excel**, **tự sinh câu hỏi** Toán & Tiếng Việt lớp 2, quản lý học sinh, xem kết quả, xuất CSV.
 - Có sẵn **ngân hàng mẫu 807 câu** (27 bài, Toán tuần 1–10, Tiếng Việt tuần 1–4) theo chương trình lớp 2.
 - Có sẵn **ngân hàng Archimes 2.545 câu** soạn theo bộ phiếu bài tập Archimedes School (Toán 2 và Tiếng Việt 2, quyển 1–4): **35 tuần × 2 môn = 70 bài**, mỗi bài 26–55 câu đủ 3 mức Dễ / Vừa / Nâng cao, có ghi trang sách nguồn.
+- Có sẵn 2 môn mới, mỗi môn **20 bài × 25 câu = 500 câu**, mỗi câu có lời giải thích: **🌱 Kỹ năng sống** (vệ sinh, ăn uống, an toàn giao thông – đuối nước – điện – lửa, người lạ, cảm xúc, bắt nạt, tự phục vụ, tiết kiệm, môi trường, an toàn trên mạng…) và **🔬 Khoa học** (cơ thể, giác quan, thực vật, động vật, vòng đời, nước – không khí – đất đá, thời tiết, Mặt Trời – Mặt Trăng, ánh sáng – âm thanh, vật liệu – nam châm…).
 
 ---
 
@@ -41,9 +45,10 @@ Khi **chưa cấu hình Supabase**, web tự chạy **chế độ demo**: một 
 ### Bước 2.1 — Tạo cơ sở dữ liệu Supabase (miễn phí)
 
 1. Đăng ký tại https://supabase.com → **New project**. Chọn region **Singapore** cho nhanh. Ghi nhớ mật khẩu database.
-2. Vào **SQL Editor** → **New query** → dán toàn bộ nội dung file [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql) → **Run**.
+2. Vào **SQL Editor** → **New query** → dán toàn bộ nội dung file [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql) → **Run**. Làm tiếp lần lượt với `0002_fix_dau_cau.sql`, `0003_student_birthday.sql`, `0004_subject_stats.sql`, `0005_guest_students.sql` (mọi file trong `supabase/migrations/`, theo thứ tự số).
 3. (Nên làm) Tạo query mới, dán file [`supabase/seed.sql`](supabase/seed.sql) → **Run** để có sẵn 807 câu hỏi mẫu. Chạy lại nhiều lần cũng không bị trùng.
    Làm tương tự với [`supabase/archimes.sql`](supabase/archimes.sql) để có **ngân hàng Archimes** (2.545 câu, tuần 1–35). File khá dài (~800 KB): nếu SQL Editor báo quá lớn, dùng cách nhập file CSV ở mục 3d.
+   Làm tương tự với [`supabase/ky_nang_khoa_hoc.sql`](supabase/ky_nang_khoa_hoc.sql) để có 2 môn **Kỹ năng sống** và **Khoa học** (1.000 câu, xem mục 3e).
 4. **Tắt đăng ký tự do** (chỉ admin mới có tài khoản): **Authentication → Sign In / Providers** → tắt **Allow new users to sign up**.
 5. **Tạo tài khoản admin**: **Authentication → Users → Add user → Create new user**, nhập email + mật khẩu, tick **Auto Confirm User**.
 6. **Cấp quyền admin** cho tài khoản vừa tạo: vào **SQL Editor**, chạy (thay email):
@@ -72,7 +77,7 @@ npm run dev
 **Cách A — kết nối GitHub (tự cập nhật mỗi lần sửa code):**
 
 1. Đưa thư mục dự án lên một repo GitHub.
-2. Vào https://dash.cloudflare.com → **Workers & Pages → Create → Pages → Connect to Git**, chọn repo.
+2. Vào https://dash.cloudflare.com → **Compute → Workers & Pages → Create application** → kéo xuống cuối trang, bấm dòng nhỏ **“Looking to deploy Pages? Get started”** (hoặc mở thẳng https://dash.cloudflare.com/?to=/:account/workers-and-pages/create/pages) → **Import an existing Git repository** → chọn repo. Không bấm *Connect GitHub* ở trang đầu (nút đó tạo Worker, không phải Pages).
 3. Cấu hình build:
    | Mục | Giá trị |
    |---|---|
@@ -160,6 +165,18 @@ Sửa hoặc thêm câu: sửa file nguồn `data/archimes/<quyển>.json` (toan
 
 > File `data/archimes.csv` có đáp án nên **không** đặt trong thư mục `public/` (không cho học sinh tải về).
 
+### e) Kỹ năng sống & Khoa học
+
+Hai môn soạn riêng cho học sinh lớp 2, mỗi môn 20 bài theo chủ đề (bài N mở ở tuần N), mỗi bài 25 câu: 10 Dễ, 8 Vừa, 7 Nâng cao (câu Nâng cao chủ yếu là tình huống “Em nên làm gì?” và câu “Điều nào KHÔNG đúng?”). Câu nào cũng có lời giải thích hiện ra sau khi trả lời.
+
+- Đưa lên Supabase: chạy `supabase/ky_nang_khoa_hoc.sql` trong SQL Editor (sau các file migration). File tự tạo 2 môn (màu vàng, tím), 40 bài và 1.000 câu; chạy lại không bị trùng.
+- Muốn mở tất cả bài ngay thay vì theo tuần: trang **Bài học & lịch mở** → đổi chế độ mở của bài.
+- Chế độ demo tự nạp sẵn 2 môn này.
+
+Sửa hoặc thêm câu: sửa `data/kien_thuc/*.json` (`kns_1…4` = Kỹ năng sống bài 1–20, `khoa_hoc_1…4` = Khoa học bài 1–20), rồi chạy `npm run kienthuc:build`. Lệnh này kiểm tra dữ liệu (đáp án trắc nghiệm khớp đúng 1 lựa chọn, không trùng câu, mỗi bài đủ câu từng mức, câu nào cũng có giải thích) rồi sinh lại `supabase/ky_nang_khoa_hoc.sql` và `data/ky_nang_khoa_hoc.csv`.
+
+> Nếu nhập bằng file `data/ky_nang_khoa_hoc.csv` qua trang **Nhập CSV / Excel**, hãy chạy trước câu lệnh tạo môn ở đầu file SQL (`insert into public.subjects …`), nếu không môn mới sẽ mang tên mã `ky_nang_song` / `khoa_hoc`.
+
 ---
 
 ## 4. Cách tính điểm & xếp hạng
@@ -205,13 +222,17 @@ hoc-vui-lop-2/
 │   ├── migrations/0001_init.sql   # Toàn bộ bảng, RLS, hàm chấm điểm & xếp hạng
 │   ├── seed.sql                   # Ngân hàng câu hỏi mẫu (sinh tự động)
 │   ├── archimes.sql               # Ngân hàng Archimes (sinh từ data/archimes/*.json)
+│   ├── ky_nang_khoa_hoc.sql       # Môn Kỹ năng sống + Khoa học (sinh từ data/kien_thuc/*.json)
 │   └── demo/                      # Chỉ dùng cho chế độ demo
 ├── data/
 │   ├── archimes/*.json            # Nguồn ngân hàng Archimes, mỗi file 1 quyển sách
-│   └── archimes.csv               # Ngân hàng Archimes dạng CSV để nhập qua trang quản trị
+│   ├── archimes.csv               # Ngân hàng Archimes dạng CSV để nhập qua trang quản trị
+│   ├── kien_thuc/*.json           # Nguồn Kỹ năng sống / Khoa học, mỗi file 5 bài
+│   └── ky_nang_khoa_hoc.csv       # Hai môn trên dạng CSV
 ├── scripts/
 │   ├── generate-seed.ts           # Sinh seed.sql + file CSV mẫu từ bộ sinh câu hỏi
 │   ├── build-archimes.ts          # Kiểm tra + sinh archimes.sql / archimes.csv
+│   ├── build-kien-thuc.ts         # Kiểm tra + sinh ky_nang_khoa_hoc.sql / .csv
 │   └── test-sql.mjs               # Kiểm thử SQL bằng PGlite (không cần cài Postgres)
 ├── src/
 │   ├── lib/backend/               # Supabase / Demo (PGlite) dùng chung 1 interface
@@ -226,9 +247,11 @@ hoc-vui-lop-2/
 |---|---|
 | `npm run dev` | Chạy máy chủ phát triển |
 | `npm run build` | Kiểm tra kiểu TypeScript + đóng gói vào `dist/` |
-| `npm run test:sql` | Chạy 16 nhóm kiểm thử cho SQL (chấm điểm, xếp hạng, quyền truy cập, ngân hàng Archimes…) |
+| `npm run test:sql` | Chạy 22 nhóm kiểm thử cho SQL (chấm điểm, xếp hạng, bạn khách, quyền truy cập, ngân hàng Archimes, Kỹ năng sống & Khoa học…) |
 | `npm run seed:generate` | Sinh lại `supabase/seed.sql`, dữ liệu demo và file CSV mẫu |
 | `npm run archimes:check` | Chỉ kiểm tra dữ liệu ngân hàng Archimes (thêm tên quyển để kiểm 1 file, VD `-- tv2`) |
 | `npm run archimes:build` | Kiểm tra + sinh lại `supabase/archimes.sql` và `data/archimes.csv` |
+| `npm run kienthuc:check` | Chỉ kiểm tra dữ liệu Kỹ năng sống / Khoa học (thêm tên file để kiểm 1 file, VD `-- kns_2`) |
+| `npm run kienthuc:build` | Kiểm tra + sinh lại `supabase/ky_nang_khoa_hoc.sql` và `data/ky_nang_khoa_hoc.csv` |
 
 Khi sửa file SQL: chạy `npm run test:sql`, rồi dán lại file vào SQL Editor của Supabase. File viết theo kiểu `create or replace` / `if not exists` nên chạy lại an toàn.

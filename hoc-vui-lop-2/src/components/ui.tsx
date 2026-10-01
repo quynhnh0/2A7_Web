@@ -21,6 +21,7 @@ const STUDENT_MESSAGES: Record<string, string> = {
   student_disabled: 'Tên này đang tạm khóa. Hãy nhờ cô giáo hoặc bố mẹ giúp nhé!',
   self_register_disabled: 'Chưa có tên bạn trong lớp. Hãy nhờ cô giáo hoặc bố mẹ thêm tên nhé!',
   invalid_name: 'Tên chưa đúng. Bạn gõ lại họ và tên nhé!',
+  student_exists: 'Tên này đã có trong lớp rồi. Bạn bấm vào tên của mình ở danh sách nhé!',
   lesson_not_available: 'Bài này chưa mở. Bạn chọn bài khác nhé!',
   no_questions: 'Bài này chưa có câu hỏi. Bạn chọn bài khác nhé!',
   attempt_not_found: 'Không tìm thấy bài làm này.',
@@ -110,6 +111,18 @@ export const SUBJECT_STYLES: Record<SubjectColor, { card: string; text: string; 
 
 export function subjectStyle(color: string | null | undefined) {
   return SUBJECT_STYLES[(color as SubjectColor) ?? 'blue'] ?? SUBJECT_STYLES.blue;
+}
+
+const SUBJECT_EMOJI: Record<string, string> = {
+  toan: '🔢',
+  tieng_viet: '📖',
+  ky_nang_song: '🌱',
+  khoa_hoc: '🔬',
+};
+
+/** Biểu tượng theo mã môn; môn tự thêm thì dùng biểu tượng theo màu. */
+export function subjectEmoji(code: string | null | undefined, color: string | null | undefined) {
+  return (code && SUBJECT_EMOJI[code]) || subjectStyle(color).emoji;
 }
 
 const AVATAR_COLORS = ['bg-blue-600', 'bg-amber-500', 'bg-emerald-600', 'bg-rose-500', 'bg-violet-600', 'bg-sky-500', 'bg-orange-500', 'bg-teal-600'];

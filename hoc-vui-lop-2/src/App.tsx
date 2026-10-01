@@ -20,6 +20,7 @@ const GeneratorPage = lazy(() => import('./pages/admin/GeneratorPage'));
 const StudentsPage = lazy(() => import('./pages/admin/StudentsPage'));
 const ResultsPage = lazy(() => import('./pages/admin/ResultsPage'));
 const AdminLeaderboardPage = lazy(() => import('./pages/admin/AdminLeaderboardPage'));
+const SubjectStatsPage = lazy(() => import('./pages/admin/SubjectStatsPage'));
 const SettingsPage = lazy(() => import('./pages/admin/SettingsPage'));
 
 function RootRedirect() {
@@ -91,6 +92,7 @@ export default function App() {
             <Route path="students" element={<StudentsPage />} />
             <Route path="results" element={<ResultsPage />} />
             <Route path="leaderboard" element={<AdminLeaderboardPage />} />
+            <Route path="subject-stats" element={<SubjectStatsPage />} />
             <Route path="settings" element={<SettingsPage />} />
           </Route>
           <Route path="*" element={<NotFound />} />

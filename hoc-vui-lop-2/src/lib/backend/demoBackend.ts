@@ -3,8 +3,12 @@
 import type { PGlite as PGliteType } from '@electric-sql/pglite';
 import stubsSql from '../../../supabase/demo/supabase_stubs.sql?raw';
 import migrationSql from '../../../supabase/migrations/0001_init.sql?raw';
+import birthdaySql from '../../../supabase/migrations/0003_student_birthday.sql?raw';
+import subjectStatsSql from '../../../supabase/migrations/0004_subject_stats.sql?raw';
+import guestSql from '../../../supabase/migrations/0005_guest_students.sql?raw';
 import seedSql from '../../../supabase/seed.sql?raw';
 import archimesSql from '../../../supabase/archimes.sql?raw';
+import kienThucSql from '../../../supabase/ky_nang_khoa_hoc.sql?raw';
 import demoDataSql from '../../../supabase/demo/demo_data.sql?raw';
 import { BackendError, toBackendError, type Backend, type Filter, type Row, type SelectOptions } from './types';
 
@@ -38,6 +42,8 @@ async function openDb(): Promise<PGliteType> {
       [types.INT8]: toNumber,
       [types.NUMERIC]: toNumber,
       [types.TIMESTAMPTZ]: (x: string) => new Date(x).toISOString(),
+      // Giữ dạng 'YYYY-MM-DD' như Supabase trả về, tránh lệch ngày do múi giờ.
+      [types.DATE]: (x: string) => x,
     },
   });
   await db.waitReady;
@@ -45,8 +51,12 @@ async function openDb(): Promise<PGliteType> {
   if (!ready.rows[0]?.t) {
     await db.exec(stubsSql);
     await db.exec(migrationSql);
+    await db.exec(birthdaySql);
+    await db.exec(subjectStatsSql);
+    await db.exec(guestSql);
     await db.exec(seedSql);
     await db.exec(archimesSql);
+    await db.exec(kienThucSql);
     await db.query(`insert into auth.users (id, email) values ($1, $2) on conflict do nothing`, [DEMO_UID, DEMO_EMAIL]);
     await db.query(`insert into public.admins (user_id) values ($1) on conflict do nothing`, [DEMO_UID]);
     await db.exec(demoDataSql);
@@ -54,6 +64,14 @@ async function openDb(): Promise<PGliteType> {
     // Bản demo tạo trước khi có ngân hàng Archimes: nạp bổ sung (file chạy lại không tạo trùng).
     const has = await db.query<{ n: number }>(`select count(*)::int as n from public.questions where generator_type = 'archimes'`);
     if (!has.rows[0]?.n) await db.exec(archimesSql);
+    const col = await db.query(`select 1 from information_schema.columns where table_schema = 'public' and table_name = 'students' and column_name = 'birth_date'`);
+    if (col.rows.length === 0) await db.exec(birthdaySql);
+    const fn = await db.query<{ t: string | null }>(`select to_regprocedure('public.admin_subject_stats(text)')::text as t`);
+    if (!fn.rows[0]?.t) await db.exec(subjectStatsSql);
+    const guestFn = await db.query<{ t: string | null }>(`select to_regprocedure('public.leaderboard_rows_for(text,uuid,uuid,boolean)')::text as t`);
+    if (!guestFn.rows[0]?.t) await db.exec(guestSql);
+    const kt = await db.query(`select 1 from public.subjects where code = 'ky_nang_song'`);
+    if (kt.rows.length === 0) await db.exec(kienThucSql);
   }
   if (localStorage.getItem(SESSION_KEY)) {
     await db.query(`select set_config('demo.uid', $1, false)`, [DEMO_UID]);

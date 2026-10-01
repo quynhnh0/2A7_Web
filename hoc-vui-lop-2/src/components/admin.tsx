@@ -13,6 +13,14 @@ export function PageHeader({ title, description, actions }: { title: string; des
   );
 }
 
+export function GuestBadge() {
+  return (
+    <span className="rounded bg-violet-100 px-1.5 py-0.5 text-xs font-semibold text-violet-700" title="Không thuộc lớp (tên có dấu “-”): các bạn trong lớp không thấy bạn này trên bảng xếp hạng">
+      Khách
+    </span>
+  );
+}
+
 export function StatCard({ label, value, hint, icon, tone = 'blue' }: {
   label: string; value: ReactNode; hint?: ReactNode; icon?: ReactNode; tone?: 'blue' | 'green' | 'amber' | 'rose';
 }) {

@@ -30,10 +30,11 @@ export async function readSpreadsheet(file: File): Promise<SheetRow[]> {
   const name = file.name.toLowerCase();
   if (name.endsWith('.xlsx') || name.endsWith('.xls') || name.endsWith('.ods')) {
     const XLSX = await import('xlsx');
-    const wb = XLSX.read(await file.arrayBuffer(), { type: 'array' });
+    // Ô ngày mặc định hiển thị kiểu Mỹ m/d/yy: ép về ngày/tháng/năm để không đọc nhầm ngày sinh.
+    const wb = XLSX.read(await file.arrayBuffer(), { type: 'array', cellDates: true, dateNF: 'dd/mm/yyyy' });
     const sheet = wb.Sheets[wb.SheetNames[0]];
     if (!sheet) return [];
-    const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, { defval: '', raw: false });
+    const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, { defval: '', raw: false, dateNF: 'dd/mm/yyyy' });
     return rows.map((r) => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, String(v ?? '')])));
   }
   const text = await file.text();
