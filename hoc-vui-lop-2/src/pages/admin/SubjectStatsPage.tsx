@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 import { ArrowDown, ArrowUp, Download, Trophy } from 'lucide-react';
-import { EmptyState, GuestBadge, PageHeader, pct } from '../../components/admin';
+import { EmptyState, PageHeader, pct } from '../../components/admin';
 import { AdminError, Avatar, LoadingBlock, subjectEmoji, subjectStyle } from '../../components/ui';
 import { useAsync } from '../../hooks/useAsync';
 import { adminApi } from '../../lib/api';
 import { downloadText, toCsv } from '../../lib/csv';
-import { formatDuration, formatNumber, isGuestName } from '../../lib/text';
+import { formatDuration, formatNumber } from '../../lib/text';
 import type { AdminSubjectStats, StatsPeriod, StudentSubjectCell, SubjectStat } from '../../types';
 
 const PERIODS: Array<[StatsPeriod, string]> = [['day', 'Hôm nay'], ['week', 'Tuần này'], ['month', 'Tháng này'], ['all', 'Từ trước tới nay']];
@@ -151,7 +151,6 @@ export default function SubjectStatsPage() {
                           <div className="flex items-center gap-2">
                             <Avatar name={s.full_name} id={s.student_id} size="h-7 w-7 text-[10px]" />
                             <span className="font-medium whitespace-nowrap text-slate-800" title={s.full_name}>{s.display_name}</span>
-                            {isGuestName(s.full_name) && <GuestBadge />}
                           </div>
                         </td>
                         {subjects.map((sj) => <Cell key={sj.id} cell={s.by_subject[sj.id]} />)}

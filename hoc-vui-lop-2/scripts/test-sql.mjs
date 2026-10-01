@@ -13,8 +13,6 @@ await db.exec(read('supabase/migrations/0001_init.sql'));
 await db.exec(read('supabase/migrations/0003_student_birthday.sql'));
 await db.exec(read('supabase/migrations/0004_subject_stats.sql'));
 await db.exec(read('supabase/migrations/0004_subject_stats.sql'));
-await db.exec(read('supabase/migrations/0005_guest_students.sql'));
-await db.exec(read('supabase/migrations/0005_guest_students.sql'));
 
 const rpc = async (fn, args = {}) => {
   const keys = Object.keys(args);
@@ -326,57 +324,6 @@ assert.equal(ssDay.students.find((x) => x.student_id === s2.id).by_subject[subj.
 await expectError(rpc('admin_subject_stats', { p_period: 'year' }), 'invalid_period');
 ok('thống kê theo môn cho admin (môn, học sinh × môn, lọc thời gian)');
 
-// 8c. Bạn khách (0005): tên có dấu "-" => chỉ chính bạn đó (và admin) thấy trên bảng xếp hạng
-{
-  assert.equal((await one(`select public.is_guest_name('Tiểu Nguyên - Khoai') a, public.is_guest_name('Nguyễn Minh Anh') b`)).a, true);
-  const guest = await rpc('register_student', { p_full_name: 'Tiểu Nguyên - Khoai' });
-  const gAtt = await rpc('start_attempt', { p_student_id: guest.id, p_lesson_id: tvLesson.id, p_exercise_type: 'basic' });
-  for (const q of gAtt.questions) {
-    await rpc('submit_answer', { p_attempt_id: gAtt.attempt_id, p_question_id: q.id, p_answer: await answerFor(q) });
-  }
-  const gRes = await rpc('finish_attempt', { p_attempt_id: gAtt.attempt_id });
-  assert.equal(gRes.is_ranked, true);
-  const ids = (lb) => lb.rows.map((r) => r.student_id);
-
-  const asAdmin = await rpc('get_subject_leaderboard', { p_period: 'day' });
-  assert.ok(ids(asAdmin).includes(guest.id), 'admin thấy bạn khách');
-  assert.equal(asAdmin.rows.find((r) => r.student_id === guest.id).is_guest, true);
-  const adminViaStudentPage = await rpc('get_leaderboard', { p_period: 'day', p_student_id: s1.id });
-  assert.ok(!ids(adminViaStudentPage).includes(guest.id), 'trang học sinh (có p_student_id) vẫn ẩn bạn khách dù máy đang đăng nhập admin');
-
-  await db.query(`select set_config('demo.uid', '', false)`);
-  for (const fn of ['get_leaderboard', 'get_subject_leaderboard']) {
-    const classView = await rpc(fn, { p_period: 'day', p_student_id: s1.id });
-    assert.ok(!ids(classView).includes(guest.id), `${fn}: bạn trong lớp không thấy bạn khách`);
-    assert.deepEqual(classView.rows.map((r) => r.rank), classView.rows.map((_, i) => i + 1), 'hạng của lớp liền mạch, không chừa chỗ cho bạn khách');
-    const anonView = await rpc(fn, { p_period: 'day' });
-    assert.ok(!ids(anonView).includes(guest.id), `${fn}: khách vãng lai không thấy bạn khách`);
-    const guestView = await rpc(fn, { p_period: 'day', p_student_id: guest.id });
-    assert.ok(ids(guestView).includes(guest.id), `${fn}: bạn khách thấy chính mình`);
-    assert.equal(guestView.me.score, gRes.score);
-    assert.equal(guestView.rows.filter((r) => r.is_guest).length, 1, 'bạn khách không thấy bạn khách khác');
-  }
-  const other = await rpc('register_student', { p_full_name: 'Bạn Khác – Lớp Bên' });
-  const oAtt = await rpc('start_attempt', { p_student_id: other.id, p_lesson_id: tvLesson.id, p_exercise_type: 'basic' });
-  for (const q of oAtt.questions) await rpc('submit_answer', { p_attempt_id: oAtt.attempt_id, p_question_id: q.id, p_answer: await answerFor(q) });
-  await rpc('finish_attempt', { p_attempt_id: oAtt.attempt_id });
-  const g2 = await rpc('get_subject_leaderboard', { p_period: 'day', p_subject_id: tv.id, p_student_id: guest.id });
-  assert.ok(!ids(g2).includes(other.id), 'bạn khách này không thấy bạn khách kia');
-
-  const tvClass = await rpc('get_subject_leaderboard', { p_period: 'day', p_subject_id: tv.id, p_student_id: s2.id });
-  assert.equal(tvClass.me.rank, 1, 'bạn khách điểm bằng/cao hơn cũng không đẩy hạng bạn trong lớp xuống');
-  const homeS2 = await rpc('get_student_home', { p_student_id: s2.id });
-  const homeG = await rpc('get_student_home', { p_student_id: guest.id });
-  assert.equal(homeG.points.day, gRes.score, 'trang chủ bạn khách có điểm');
-  assert.ok(homeG.ranks.day >= 1, 'trang chủ bạn khách có hạng');
-  const classDay = await rpc('get_leaderboard', { p_period: 'day', p_student_id: s2.id });
-  assert.equal(homeS2.ranks.day, classDay.me.rank, 'hạng trên trang chủ khớp bảng xếp hạng của lớp');
-
-  await db.query(`select set_config('demo.uid', $1, false)`, [uid]);
-  await db.query(`update students set is_active = false where id = any($1)`, [[guest.id, other.id]]);
-}
-ok('bạn khách (tên có dấu "-"): chỉ chính bạn đó và admin thấy trên bảng xếp hạng');
-
 // 9. Quyền của anon (kiểm tra GRANT/RLS)
 const grants = await db.query(`
   select has_table_privilege('anon', 'public.questions', 'select') as q,
@@ -386,11 +333,8 @@ const grants = await db.query(`
          has_function_privilege('anon', 'public.leaderboard_rows_by(text,uuid)', 'execute') as lrb,
          has_function_privilege('anon', 'public.get_subject_leaderboard(text,uuid,uuid)', 'execute') as gsl,
          has_function_privilege('anon', 'public.admin_subject_stats(text)', 'execute') as ass,
-         has_function_privilege('anon', 'public.leaderboard_rows_for(text,uuid,uuid,boolean)', 'execute') as lrf,
-         has_function_privilege('anon', 'public.get_leaderboard(text,uuid)', 'execute') as gl,
-         has_function_privilege('anon', 'public.get_student_home(uuid)', 'execute') as gsh,
          (select relrowsecurity from pg_class where oid = 'public.questions'::regclass) as rls`);
-assert.deepEqual(grants.rows[0], { q: false, sa: true, ad: false, lr: false, lrb: false, gsl: true, ass: false, lrf: false, gl: true, gsh: true, rls: true });
+assert.deepEqual(grants.rows[0], { q: false, sa: true, ad: false, lr: false, lrb: false, gsl: true, ass: false, rls: true });
 ok('anon không đọc được bảng câu hỏi, chỉ gọi được API học sinh');
 
 if (existsSync(new URL('supabase/seed.sql', root))) {
@@ -399,7 +343,6 @@ if (existsSync(new URL('supabase/seed.sql', root))) {
   await fresh.exec(read('supabase/migrations/0001_init.sql'));
   await fresh.exec(read('supabase/migrations/0003_student_birthday.sql'));
   await fresh.exec(read('supabase/migrations/0004_subject_stats.sql'));
-  await fresh.exec(read('supabase/migrations/0005_guest_students.sql'));
   await fresh.exec(read('supabase/seed.sql'));
   const c = (await fresh.query(`select (select count(*) from lessons) l, (select count(*) from questions) q, (select count(*) from students) s`)).rows[0];
   console.log(`  ✓ seed.sql chạy được: ${c.l} bài, ${c.q} câu hỏi, ${c.s} học sinh`);

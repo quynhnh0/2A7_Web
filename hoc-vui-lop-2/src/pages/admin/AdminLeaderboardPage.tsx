@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { Download, PieChart } from 'lucide-react';
-import { EmptyState, GuestBadge, PageHeader, pct } from '../../components/admin';
+import { EmptyState, PageHeader, pct } from '../../components/admin';
 import { PERIOD_LABEL } from '../../components/Leaderboard';
 import { AdminError, Avatar, LoadingBlock } from '../../components/ui';
 import { useAsync } from '../../hooks/useAsync';
@@ -42,8 +42,7 @@ export default function AdminLeaderboardPage() {
     <div className="space-y-5">
       <PageHeader
         title={subject ? `Bảng xếp hạng môn ${subject.name}` : 'Bảng xếp hạng'}
-        description={<>Tính theo điểm các bài làm lần đầu{subject ? ` của môn ${subject.name}` : ' (cộng tất cả các môn)'}. {range && <b>{range}</b>}
-          {data?.rows.some((r) => r.is_guest) && <> Bạn có nhãn <GuestBadge /> chỉ thấy chính mình trên bảng xếp hạng; các bạn trong lớp không thấy bạn ấy.</>}</>}
+        description={<>Tính theo điểm các bài làm lần đầu{subject ? ` của môn ${subject.name}` : ' (cộng tất cả các môn)'}. {range && <b>{range}</b>}</>}
         actions={<>
           <Link to="/admin/subject-stats" className="btn btn-secondary"><PieChart className="h-4 w-4" /> Thống kê theo môn</Link>
           <button type="button" className="btn btn-secondary" onClick={exportCsv} disabled={!data?.rows.length}><Download className="h-4 w-4" /> Xuất CSV</button>
@@ -84,7 +83,6 @@ export default function AdminLeaderboardPage() {
                     <div className="flex items-center gap-3">
                       <Avatar name={r.full_name} id={r.student_id} size="h-8 w-8 text-xs" />
                       <span className="font-medium text-slate-800">{r.full_name}</span>
-                      {r.is_guest && <GuestBadge />}
                     </div>
                   </td>
                   <td className="td font-bold text-blue-700">{r.score}</td>

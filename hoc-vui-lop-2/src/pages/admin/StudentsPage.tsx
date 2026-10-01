@@ -1,11 +1,11 @@
 import { useMemo, useRef, useState, type FormEvent } from 'react';
 import { Download, History, Pencil, Search, Trash2, Upload, UserPlus } from 'lucide-react';
-import { EmptyState, GuestBadge, PageHeader, pct, Toggle } from '../../components/admin';
+import { EmptyState, PageHeader, pct, Toggle } from '../../components/admin';
 import { AdminError, Avatar, LoadingBlock, Modal, Spinner } from '../../components/ui';
 import { useAsync } from '../../hooks/useAsync';
 import { adminApi } from '../../lib/api';
 import { downloadText, readSpreadsheet, toCsv } from '../../lib/csv';
-import { foldVietnamese, formatBirthDate, formatDateTime, isGuestName, parseBirthDate, relativeTime, titleCaseName } from '../../lib/text';
+import { foldVietnamese, formatBirthDate, formatDateTime, parseBirthDate, relativeTime, titleCaseName } from '../../lib/text';
 import type { StudentStats } from '../../types';
 
 const NAME_COLUMNS = ['ho ten', 'ho va ten', 'full name', 'name', 'ten', 'hoc sinh'];
@@ -191,7 +191,7 @@ export default function StudentsPage() {
                       <div className="flex items-center gap-3">
                         <Avatar name={s.full_name} id={s.id} size="h-9 w-9 text-xs" />
                         <div>
-                          <p className="font-medium text-slate-800">{s.full_name} {isGuestName(s.full_name) && <GuestBadge />}</p>
+                          <p className="font-medium text-slate-800">{s.full_name}</p>
                           <p className="text-xs text-slate-500">
                             Hiển thị: {s.display_name}
                             {' · '}{s.birth_date ? <>🎂 {formatBirthDate(s.birth_date)}</> : <span className="text-amber-600">chưa có ngày sinh</span>}

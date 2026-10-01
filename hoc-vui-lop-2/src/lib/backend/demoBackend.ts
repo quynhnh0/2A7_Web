@@ -5,7 +5,6 @@ import stubsSql from '../../../supabase/demo/supabase_stubs.sql?raw';
 import migrationSql from '../../../supabase/migrations/0001_init.sql?raw';
 import birthdaySql from '../../../supabase/migrations/0003_student_birthday.sql?raw';
 import subjectStatsSql from '../../../supabase/migrations/0004_subject_stats.sql?raw';
-import guestSql from '../../../supabase/migrations/0005_guest_students.sql?raw';
 import seedSql from '../../../supabase/seed.sql?raw';
 import archimesSql from '../../../supabase/archimes.sql?raw';
 import kienThucSql from '../../../supabase/ky_nang_khoa_hoc.sql?raw';
@@ -53,7 +52,6 @@ async function openDb(): Promise<PGliteType> {
     await db.exec(migrationSql);
     await db.exec(birthdaySql);
     await db.exec(subjectStatsSql);
-    await db.exec(guestSql);
     await db.exec(seedSql);
     await db.exec(archimesSql);
     await db.exec(kienThucSql);
@@ -68,8 +66,6 @@ async function openDb(): Promise<PGliteType> {
     if (col.rows.length === 0) await db.exec(birthdaySql);
     const fn = await db.query<{ t: string | null }>(`select to_regprocedure('public.admin_subject_stats(text)')::text as t`);
     if (!fn.rows[0]?.t) await db.exec(subjectStatsSql);
-    const guestFn = await db.query<{ t: string | null }>(`select to_regprocedure('public.leaderboard_rows_for(text,uuid,uuid,boolean)')::text as t`);
-    if (!guestFn.rows[0]?.t) await db.exec(guestSql);
     const kt = await db.query(`select 1 from public.subjects where code = 'ky_nang_song'`);
     if (kt.rows.length === 0) await db.exec(kienThucSql);
   }

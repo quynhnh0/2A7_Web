@@ -63,10 +63,9 @@ npm install
    - `0002_fix_dau_cau.sql`: sửa lỗi bài “Chọn dấu câu” chọn đúng vẫn bị chấm sai, và chấm lại các lượt đã làm (cài mới chạy cũng không sao).
    - `0003_student_birthday.sql`: **xác nhận ngày sinh** khi bé chọn tên (bắt buộc từ phiên bản này, web mới cần file này mới chạy được).
    - `0004_subject_stats.sql`: **bảng xếp hạng theo từng môn** và trang admin **Thống kê theo môn**.
-   - `0005_guest_students.sql`: **bạn khách** — học sinh có dấu “-” trong họ tên chỉ thấy chính mình trên bảng xếp hạng, các bạn trong lớp không thấy bạn ấy.
 
-   Các file đều chạy lại nhiều lần an toàn. Sau này có file `0006_…` mới thì chỉ cần chạy thêm file đó.
-   Nếu lỡ chạy lại `0001_init.sql` thì chạy lại luôn các file số lớn hơn (0003, 0004, 0005…) để cấp lại quyền và khôi phục các hàm mới.
+   Các file đều chạy lại nhiều lần an toàn. Sau này có file `0005_…` mới thì chỉ cần chạy thêm file đó.
+   Nếu lỡ chạy lại `0001_init.sql` thì chạy lại luôn các file số lớn hơn (0003, 0004…) để cấp lại quyền cho hàm mới.
 
 > Nếu Supabase hỏi xác nhận vì câu lệnh có `drop`/`revoke`… → bấm **Run this query**. File được viết để chạy lại nhiều lần vẫn an toàn.
 

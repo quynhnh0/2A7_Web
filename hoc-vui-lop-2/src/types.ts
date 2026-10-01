@@ -137,6 +137,13 @@ export interface LeaderboardSubject {
   color: SubjectColor;
 }
 
+export interface LeaderboardSubject {
+  id: string;
+  code: string;
+  name: string;
+  color: SubjectColor;
+}
+
 export interface Leaderboard {
   enabled: boolean;
   period: Period;
