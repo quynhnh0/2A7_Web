@@ -59,6 +59,14 @@ npm install
    **chọn tất cả** (Cmd/Ctrl + A), **copy**, rồi **dán** vào SQL Editor.
 3. Bấm **Run** (hoặc Cmd/Ctrl + Enter). Thấy dòng **Success. No rows returned** là xong.
 
+4. Làm tương tự, lần lượt với các file còn lại trong `supabase/migrations/` **theo thứ tự số**:
+   - `0002_fix_dau_cau.sql`: sửa lỗi bài “Chọn dấu câu” chọn đúng vẫn bị chấm sai, và chấm lại các lượt đã làm (cài mới chạy cũng không sao).
+   - `0003_student_birthday.sql`: **xác nhận ngày sinh** khi bé chọn tên (bắt buộc từ phiên bản này, web mới cần file này mới chạy được).
+   - `0004_subject_stats.sql`: **bảng xếp hạng theo từng môn** và trang admin **Thống kê theo môn**.
+
+   Các file đều chạy lại nhiều lần an toàn. Sau này có file `0005_…` mới thì chỉ cần chạy thêm file đó.
+   Nếu lỡ chạy lại `0001_init.sql` thì chạy lại luôn các file số lớn hơn (0003, 0004…) để cấp lại quyền cho hàm mới.
+
 > Nếu Supabase hỏi xác nhận vì câu lệnh có `drop`/`revoke`… → bấm **Run this query**. File được viết để chạy lại nhiều lần vẫn an toàn.
 
 ### 1.3. Nạp ngân hàng câu hỏi (nên làm)
@@ -69,8 +77,9 @@ Làm giống bước 1.2, **mỗi file một query mới**, theo đúng thứ t�
 |---|---|---|
 | 1 | `supabase/seed.sql` | 807 câu mẫu (Toán tuần 1–10, Tiếng Việt tuần 1–4) |
 | 2 | `supabase/archimes.sql` | **Ngân hàng Archimes** 2.545 câu, 70 bài (Toán + Tiếng Việt, tuần 1–35) |
+| 3 | `supabase/ky_nang_khoa_hoc.sql` | 2 môn mới **Kỹ năng sống** và **Khoa học**: mỗi môn 20 bài × 25 câu = 500 câu (bài N mở ở tuần N) |
 
-Cả 2 file đều chạy lại được nhiều lần mà không tạo câu trùng.
+Cả 3 file đều chạy lại được nhiều lần mà không tạo câu trùng.
 
 > `archimes.sql` khá dài (~800 KB). Nếu SQL Editor báo lỗi vì file quá lớn hoặc bị treo, **bỏ qua** và nạp bằng file CSV sau khi web đã lên mạng (xem [mục 4.3](#43-nạp-ngân-hàng-archimes-bằng-csv-nếu-bước-13-lỗi)).
 
@@ -103,7 +112,7 @@ Bấm nút **Connect** ở đầu trang project, hoặc vào **Project Settings 
 
 | Cần lấy | Trông như thế nào |
 |---|---|
-| **Project URL** | `https://abcdefghijkl.supabase.co` |
+| **Project URL** | `https://abcdefghijkl.supabase.co` (chỉ đến `.supabase.co`, **không** kèm `/rest/v1/` hay dấu `/` ở cuối) |
 | **Publishable key** | `sb_publishable_xxxxxxxxxxxx` (project cũ có thể là **anon public key**, chuỗi dài bắt đầu bằng `eyJ…`; dùng loại nào cũng được) |
 
 > ⚠️ **TUYỆT ĐỐI KHÔNG** dùng **Secret key** (`sb_secret_…`) hay **service_role key**. Key này có toàn quyền, nếu đưa lên web thì ai cũng xem/sửa/xoá được dữ liệu.
@@ -166,11 +175,21 @@ Chọn **một** trong 3 cách:
 | **B. Kết nối GitHub** | ⭐⭐ | Muốn sửa code xong là web **tự cập nhật**. |
 | **C. Lệnh `wrangler`** | ⭐⭐ | Quen dùng Terminal, muốn cập nhật bằng 1 lệnh. |
 
+> 🔎 **Không thấy chữ “Pages”?** Cloudflare đã giấu mục này. Nút xanh **Create application** giờ mặc định mở trang tạo **Worker** (tiêu đề kiểu *“Ship something new”*, có nút *Connect GitHub* / *Import a repository*). **Đừng bấm các nút đó**, vì chúng tạo Worker chứ không phải Pages.
+>
+> Cách vào đúng trang tạo Pages:
+> - Kéo xuống **cuối** trang đó, tìm dòng chữ nhỏ **“Looking to deploy Pages? Get started”** → bấm **Get started**; hoặc
+> - Đăng nhập Cloudflare rồi mở thẳng link: https://dash.cloudflare.com/?to=/:account/workers-and-pages/create/pages
+>
+> Trang đúng có 2 lựa chọn: **Import an existing Git repository** (Cách B) và **Drag and drop your files** (Cách A).
+>
+> Menu **Workers & Pages** nằm ở cột trái, thường trong nhóm **Build → Compute**. Không thấy thì gõ “Workers” vào ô tìm kiếm trên cùng của dashboard.
+
 ### Cách A — Kéo thả (khuyên dùng cho lần đầu)
 
 1. Đã làm xong **mục 2** (có thư mục `dist/`, build **sau khi** đã điền `.env.local`).
-2. Vào https://dash.cloudflare.com → menu trái **Workers & Pages** (hoặc **Compute → Workers & Pages**).
-3. **Create application** (hoặc **Create**) → chọn tab/mục **Pages** → **Upload assets** / **Drag and drop your files** → **Get started**.
+2. Vào https://dash.cloudflare.com → menu trái **Compute → Workers & Pages** → **Create application**.
+3. Kéo xuống cuối trang → **Looking to deploy Pages? Get started** (hoặc mở thẳng link ở khung 🔎 phía trên) → cạnh **Drag and drop your files** bấm **Get started**.
 4. **Project name**: `hoc-vui-lop-2` (tên này thành link `https://hoc-vui-lop-2.pages.dev`; nếu bị trùng, Cloudflare tự thêm vài ký tự) → **Create project**.
 5. **Kéo thả thư mục `dist`** (cả thư mục) vào khung upload → đợi upload xong → **Deploy site**.
 6. Đợi khoảng 1 phút → bấm link `https://hoc-vui-lop-2.pages.dev` để mở web. 🎉
@@ -204,9 +223,12 @@ Chọn **một** trong 3 cách:
 
 **B2. Tạo project trên Cloudflare**
 
-1. https://dash.cloudflare.com → **Workers & Pages** → **Create application** → **Pages** → **Connect to Git** (hoặc **Import an existing Git repository**).
-2. Đăng nhập GitHub, cho phép Cloudflare truy cập repo `hoc-vui-lop-2` → **Begin setup**.
-3. Cấu hình build:
+1. https://dash.cloudflare.com → menu trái **Compute → Workers & Pages** → **Create application** → kéo xuống cuối trang → **Looking to deploy Pages? Get started** (hoặc mở thẳng https://dash.cloudflare.com/?to=/:account/workers-and-pages/create/pages).
+   ⚠️ Không bấm nút *Connect GitHub* ở trang đầu tiên, vì nút đó tạo **Worker**, không phải Pages.
+2. Cạnh **Import an existing Git repository** bấm **Get started** → tab **GitHub** → **Connect GitHub** (hoặc **+ Add account**).
+3. Cửa sổ GitHub mở ra → chọn tài khoản của bạn → **Only select repositories** → chọn `hoc-vui-lop-2` → **Install & Authorize**.
+4. Quay lại Cloudflare (không thấy repo thì tải lại trang) → chọn repo `hoc-vui-lop-2` → **Begin setup**.
+5. Cấu hình build:
 
    | Mục | Giá trị |
    |---|---|
@@ -217,7 +239,7 @@ Chọn **một** trong 3 cách:
    | Build output directory | `dist` |
    | Root directory | để trống (vì repo chính là thư mục `hoc-vui-lop-2`) |
 
-4. Mở **Environment variables (advanced)** → thêm 3 biến:
+6. Mở **Environment variables (advanced)** → thêm 3 biến:
 
    | Variable name | Value |
    |---|---|
@@ -225,7 +247,7 @@ Chọn **một** trong 3 cách:
    | `VITE_SUPABASE_ANON_KEY` | `sb_publishable_xxxxxxxxxxxx` |
    | `NODE_VERSION` | `22` |
 
-5. **Save and Deploy** → đợi 2–3 phút → có link `https://hoc-vui-lop-2.pages.dev`.
+7. **Save and Deploy** → đợi 2–3 phút → có link `https://hoc-vui-lop-2.pages.dev`.
 
 **Cập nhật lần sau:** sửa code → `git add . && git commit -m "cap nhat" && git push` → Cloudflare tự build lại sau vài phút.
 
@@ -252,12 +274,13 @@ Cập nhật lần sau chỉ cần: `npm run build && npx wrangler pages deploy 
 - [ ] Mở `https://<tên-web>.pages.dev/admin` → đăng nhập bằng tài khoản admin → vào được **Tổng quan**.
 - [ ] Tải lại trang (F5) khi đang ở `/admin` hoặc `/home` → **không** bị lỗi 404.
 - [ ] **Ngân hàng câu hỏi** → lọc **Ngân hàng: Archimes** → thấy khoảng 2.545 câu (nếu đã nạp).
+- [ ] Trang chủ học sinh có nút lọc **🌱 Kỹ năng sống** và **🔬 Khoa học** (nếu đã nạp `ky_nang_khoa_hoc.sql`).
 - [ ] Mở web trên **điện thoại**, thử làm 1 bài.
 
 ### 4.2. Thiết lập lớp học
 
 1. **Học sinh** → **Thêm học sinh** → dán danh sách lớp (mỗi dòng một họ tên) → **Lưu**. Hoặc **Nhập danh sách** từ file Excel.
-2. **Tổng quan** → chỉnh **Tuần học hiện tại** cho đúng tuần của lớp (bài Archimes và bài mẫu mở theo tuần).
+2. **Tổng quan** → chỉnh **Tuần học hiện tại** cho đúng tuần của lớp (bài Archimes, bài mẫu, Kỹ năng sống và Khoa học đều mở theo tuần).
 3. **Cài đặt**:
    - Sửa **tên lớp**, **năm học**.
    - Khi đã nhập đủ danh sách lớp, nên **tắt “Cho phép học sinh tự thêm tên”**.

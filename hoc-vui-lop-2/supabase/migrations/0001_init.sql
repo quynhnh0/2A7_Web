@@ -159,11 +159,12 @@ returns text language sql immutable as $$
 $$;
 
 -- Chuẩn hóa câu trả lời chữ: bỏ khoảng trắng thừa, chữ thường, bỏ dấu câu cuối.
+-- Đáp án chỉ gồm dấu câu (bài "Chọn dấu câu": . ? !) thì giữ nguyên, không thì thành rỗng.
 create or replace function public.normalize_answer(p text)
 returns text language sql immutable as $$
-  select regexp_replace(
-           public.vn_lower(regexp_replace(btrim(normalize(coalesce(p, ''), NFC)), '\s+', ' ', 'g')),
-           '[\.\!\?,;:]+$', '')
+  select case when s ~ '^[\.\!\?,;:…]+$' then s
+              else regexp_replace(s, '[\.\!\?,;:]+$', '') end
+    from (select public.vn_lower(regexp_replace(btrim(normalize(coalesce(p, ''), NFC)), '\s+', ' ', 'g')) as s) t
 $$;
 
 -- Số lớp 2 không có phần thập phân; "1.000", "1 000" đều hiểu là 1000.

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
-import { Activity, BookOpen, CalendarDays, CheckCircle2, ChevronLeft, ChevronRight, Target, Users } from 'lucide-react';
+import { Activity, BookOpen, CalendarDays, CheckCircle2, ChevronLeft, ChevronRight, PieChart, Target, Users } from 'lucide-react';
 import { EmptyState, PageHeader, pct, StatCard } from '../../components/admin';
 import { AdminError, LoadingBlock, Spinner } from '../../components/ui';
 import { useAsync } from '../../hooks/useAsync';
@@ -36,7 +36,10 @@ export default function DashboardPage() {
       <PageHeader
         title="Tổng quan lớp học"
         description="Tình hình học tập hôm nay và tuần này."
-        actions={<Link to="/admin/generator" className="btn btn-primary">Sinh thêm câu hỏi</Link>}
+        actions={<>
+          <Link to="/admin/subject-stats" className="btn btn-secondary"><PieChart className="h-4 w-4" /> Thống kê theo môn</Link>
+          <Link to="/admin/generator" className="btn btn-primary">Sinh thêm câu hỏi</Link>
+        </>}
       />
 
       <div className="panel flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">

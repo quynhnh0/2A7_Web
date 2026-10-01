@@ -43,12 +43,14 @@ export class BackendError extends Error {
 const KNOWN_CODES = [
   'student_not_found', 'student_disabled', 'self_register_disabled', 'invalid_name', 'lesson_not_available',
   'no_questions', 'attempt_not_found', 'attempt_completed', 'question_not_in_attempt', 'invalid_period',
-  'invalid_exercise_type', 'not_admin',
+  'invalid_exercise_type', 'not_admin', 'student_exists', 'subject_not_found',
 ];
 
 export function toBackendError(err: unknown): BackendError {
   if (err instanceof BackendError) return err;
   const message = err instanceof Error ? err.message : typeof err === 'object' && err && 'message' in err ? String((err as { message: unknown }).message) : String(err);
-  const code = KNOWN_CODES.find((c) => message.includes(c)) ?? (/duplicate key|unique/i.test(message) ? 'duplicate' : 'unknown');
+  const code = KNOWN_CODES.find((c) => message.includes(c))
+    ?? (/duplicate key|unique/i.test(message) ? 'duplicate'
+      : /could not find the function|function .+ does not exist/i.test(message) ? 'missing_function' : 'unknown');
   return new BackendError(code, message);
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, Navigate, NavLink, Outlet, useLocation, useNavigate } from 'react-router';
 import {
-  BarChart3, BookOpen, ExternalLink, LayoutDashboard, ListChecks, LogOut, Menu, Settings, Trophy, Upload, Users, Wand2, X,
+  BarChart3, BookOpen, ExternalLink, LayoutDashboard, ListChecks, LogOut, Menu, PieChart, Settings, Trophy, Upload, Users, Wand2, X,
 } from 'lucide-react';
 import { AdminError, LoadingBlock } from '../../components/ui';
 import { useAsync } from '../../hooks/useAsync';
@@ -15,6 +15,7 @@ const NAV = [
   { to: '/admin/generator', label: 'Sinh câu hỏi tự động', icon: Wand2 },
   { to: '/admin/students', label: 'Học sinh', icon: Users },
   { to: '/admin/results', label: 'Kết quả làm bài', icon: BarChart3 },
+  { to: '/admin/subject-stats', label: 'Thống kê theo môn', icon: PieChart },
   { to: '/admin/leaderboard', label: 'Bảng xếp hạng', icon: Trophy },
   { to: '/admin/settings', label: 'Cài đặt', icon: Settings },
 ];

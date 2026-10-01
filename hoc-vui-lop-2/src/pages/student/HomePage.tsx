@@ -5,7 +5,7 @@ import { studentApi } from '../../lib/api';
 import { clearStudent, getStoredStudent, storeStudent } from '../../lib/studentSession';
 import { formatNumber, lessonLabel } from '../../lib/text';
 import { useAsync } from '../../hooks/useAsync';
-import { Avatar, LoadingBlock, StudentError, subjectStyle } from '../../components/ui';
+import { Avatar, LoadingBlock, StudentError, subjectEmoji, subjectStyle } from '../../components/ui';
 import type { BackendError } from '../../lib/backend';
 import type { HomeLesson, StudentHome } from '../../types';
 
@@ -45,7 +45,7 @@ function LessonCard({ lesson }: { lesson: HomeLesson }) {
   return (
     <div className={`flex flex-col gap-3 rounded-3xl p-5 ring-2 ${st.card}`}>
       <div className="flex items-start justify-between gap-2">
-        <span className={`chip ${st.chip}`}>{st.emoji} {lesson.subject_name}</span>
+        <span className={`chip ${st.chip}`}>{subjectEmoji(lesson.subject_code, lesson.subject_color)} {lesson.subject_name}</span>
         {done ? (
           <span className="chip bg-emerald-100 text-emerald-800">✓ Đã làm</span>
         ) : (
@@ -236,7 +236,7 @@ export default function HomePage() {
                 {[['all', 'Tất cả'], ...subjects].map(([code, name]) => (
                   <button key={code} type="button" onClick={() => setSubject(code)}
                     className={`min-h-11 rounded-full px-5 font-bold transition ${subject === code ? 'bg-blue-600 text-white' : 'bg-white text-slate-600 ring-2 ring-slate-200'}`}>
-                    {name}
+                    {code === 'all' ? '🌈' : subjectEmoji(code, home.lessons.find((l) => l.subject_code === code)?.subject_color)} {name}
                   </button>
                 ))}
               </div>

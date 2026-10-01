@@ -1,9 +1,41 @@
 import { Crown, Star } from 'lucide-react';
-import type { LeaderboardRow, Period } from '../types';
+import type { LeaderboardRow, LeaderboardSubject, Period } from '../types';
 import { formatNumber } from '../lib/text';
-import { Avatar } from './ui';
+import { Avatar, subjectEmoji, subjectStyle } from './ui';
 
 export const PERIOD_LABEL: Record<Period, string> = { day: 'Hôm nay', week: 'Tuần này', month: 'Tháng này' };
+
+/** Tab chọn môn; value = null nghĩa là cộng điểm tất cả các môn. Ẩn khi lớp chỉ có 1 môn. */
+export function SubjectTabs({ subjects, value, onChange }: {
+  subjects: LeaderboardSubject[] | undefined;
+  value: string | null;
+  onChange: (id: string | null) => void;
+}) {
+  if (!subjects || subjects.length < 2) return null;
+  const items: Array<{ id: string | null; label: string; emoji: string; active: string }> = [
+    { id: null, label: 'Tất cả môn', emoji: '🌈', active: 'bg-blue-600 text-white shadow' },
+    ...subjects.map((s) => {
+      const st = subjectStyle(s.color);
+      return { id: s.id, label: s.name, emoji: subjectEmoji(s.code, s.color), active: `${st.chip} shadow ring-2 ring-current` };
+    }),
+  ];
+  return (
+    <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1" role="tablist" aria-label="Chọn môn học">
+      {items.map((it) => (
+        <button
+          key={it.id ?? 'all'}
+          type="button"
+          role="tab"
+          aria-selected={value === it.id}
+          onClick={() => onChange(it.id)}
+          className={`flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-4 text-sm font-bold whitespace-nowrap transition ${value === it.id ? it.active : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50'}`}
+        >
+          <span aria-hidden>{it.emoji}</span> {it.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export function PeriodTabs({ value, onChange }: { value: Period; onChange: (p: Period) => void }) {
   return (

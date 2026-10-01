@@ -7,6 +7,7 @@ import { foldVietnamese, titleCaseName } from '../../lib/text';
 import { useAsync } from '../../hooks/useAsync';
 import { Avatar, LoadingBlock, StudentError, studentMessage } from '../../components/ui';
 import { Logo } from '../../components/StudentLayout';
+import { BirthdayCheck } from '../../components/BirthdayCheck';
 import type { StudentIdentity } from '../../types';
 
 export default function SelectStudentPage() {
@@ -71,7 +72,11 @@ export default function SelectStudentPage() {
           </div>
         </div>
 
-        {pending && (
+        {pending?.needs_birthday && (
+          <BirthdayCheck key={pending.id} student={pending} onVerified={confirm} onCancel={() => setPending(null)} />
+        )}
+
+        {pending && !pending.needs_birthday && (
           <div className="card flex flex-col items-center gap-4 p-6 text-center ring-2 ring-blue-300 animate-pop">
             <Avatar name={pending.full_name} id={pending.id} size="h-20 w-20 text-2xl" />
             <p className="font-display text-2xl font-bold text-slate-800">Bạn là <span className="text-blue-700">{pending.full_name}</span> phải không?</p>

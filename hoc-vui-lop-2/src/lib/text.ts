@@ -55,6 +55,37 @@ export function relativeTime(iso: string | null | undefined): string {
   return new Date(iso).toLocaleDateString('vi-VN');
 }
 
+function isoDate(y: number, m: number, d: number): string | null {
+  const t = new Date(Date.UTC(y, m - 1, d));
+  if (t.getUTCFullYear() !== y || t.getUTCMonth() !== m - 1 || t.getUTCDate() !== d) return null;
+  if (y < 1990 || y > new Date().getFullYear() + 1) return null;
+  return `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+}
+
+/**
+ * Đọc ngày sinh kiểu Việt Nam -> 'YYYY-MM-DD' (null nếu không hợp lệ).
+ * Nhận: 05/03/2019, 5-3-2019, 5.3.19, 2019-03-05, số ngày kiểu Excel (43529).
+ */
+export function parseBirthDate(input: string | null | undefined): string | null {
+  const s = (input ?? '').trim();
+  if (!s) return null;
+  let m = /^(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})/.exec(s);
+  if (m) return isoDate(+m[1], +m[2], +m[3]);
+  m = /^(\d{1,2})[-/.](\d{1,2})[-/.](\d{2}|\d{4})$/.exec(s);
+  if (m) return isoDate(m[3].length === 2 ? 2000 + +m[3] : +m[3], +m[2], +m[1]);
+  if (/^\d{5}$/.test(s)) {
+    const t = new Date(Date.UTC(1899, 11, 30) + Number(s) * 86400000);
+    return isoDate(t.getUTCFullYear(), t.getUTCMonth() + 1, t.getUTCDate());
+  }
+  return null;
+}
+
+/** '2019-03-05' -> '05/03/2019' */
+export function formatBirthDate(iso: string | null | undefined): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso ?? '');
+  return m ? `${m[3]}/${m[2]}/${m[1]}` : '';
+}
+
 /** Bài của ngân hàng riêng đặt tên "Archimes: …" => nhãn "Archimes" thay cho "Bài 100". */
 export function lessonLabel(lesson: { lesson_order: number; name: string }): { tag: string; title: string } {
   const m = /^\s*(Archimes)\s*:\s*/i.exec(lesson.name);

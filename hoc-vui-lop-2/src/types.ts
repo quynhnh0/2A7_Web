@@ -16,6 +16,15 @@ export interface StudentIdentity {
   id: string;
   full_name: string;
   display_name: string;
+  /** Có ngày sinh trong hệ thống => phải nhập đúng ngày/tháng sinh mới vào được. */
+  needs_birthday?: boolean;
+}
+
+export interface VerifyStudentResult {
+  ok: boolean;
+  student?: StudentIdentity;
+  remaining?: number;
+  locked_seconds?: number;
 }
 
 export interface HomeLesson {
@@ -120,9 +129,19 @@ export interface LeaderboardRow {
   rank: number;
 }
 
+export interface LeaderboardSubject {
+  id: string;
+  code: string;
+  name: string;
+  color: SubjectColor;
+}
+
 export interface Leaderboard {
   enabled: boolean;
   period: Period;
+  /** null = tất cả các môn */
+  subject_id?: string | null;
+  subjects?: LeaderboardSubject[];
   start?: string;
   end?: string;
   rows: LeaderboardRow[];
@@ -223,6 +242,10 @@ export interface StudentStats {
   display_name: string;
   is_active: boolean;
   note: string | null;
+  /** 'YYYY-MM-DD' */
+  birth_date: string | null;
+  verify_fails: number;
+  verify_locked_until: string | null;
   created_at: string;
   attempts_completed: number;
   total_score: number;
@@ -262,4 +285,34 @@ export interface AdminDashboard {
   hardest: Array<{ question_id: string; text: string; lesson_name: string; week_number: number; answered: number; wrong: number; wrong_rate: number }>;
   inactive_today: Array<{ id: string; display_name: string; full_name: string }>;
   recent: Array<{ id: string; student: string; lesson: string; exercise_type: ExerciseType; score: number; correct_count: number; total_questions: number; is_ranked: boolean; completed_at: string }>;
+}
+
+export type StatsPeriod = Period | 'all';
+
+export interface SubjectStat extends LeaderboardSubject {
+  sort_order: number;
+  lesson_count: number;
+  published_count: number;
+  question_count: number;
+  attempts_completed: number;
+  active_students: number;
+  ranked_score: number;
+  accuracy: number | null;
+  avg_duration: number | null;
+}
+
+export interface StudentSubjectCell {
+  attempts: number;
+  score: number;
+  accuracy: number | null;
+}
+
+export interface AdminSubjectStats {
+  period: StatsPeriod;
+  start: string | null;
+  end: string | null;
+  total_students: number;
+  subjects: SubjectStat[];
+  students: Array<{ student_id: string; full_name: string; display_name: string; by_subject: Record<string, StudentSubjectCell> }>;
+  hardest: Array<{ subject_id: string; question_id: string; text: string; lesson_name: string; week_number: number; answered: number; wrong: number; wrong_rate: number }>;
 }

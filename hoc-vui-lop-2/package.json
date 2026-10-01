@@ -12,7 +12,9 @@
     "test:sql": "node scripts/test-sql.mjs",
     "seed:generate": "node scripts/generate-seed.ts",
     "archimes:build": "node scripts/build-archimes.ts",
-    "archimes:check": "node scripts/build-archimes.ts --check"
+    "archimes:check": "node scripts/build-archimes.ts --check",
+    "kienthuc:build": "node scripts/build-kien-thuc.ts",
+    "kienthuc:check": "node scripts/build-kien-thuc.ts --check"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.8",
