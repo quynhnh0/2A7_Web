@@ -8,6 +8,7 @@ import subjectStatsSql from '../../../supabase/migrations/0004_subject_stats.sql
 import guestSql from '../../../supabase/migrations/0005_guest_students.sql?raw';
 import rulesSql from '../../../supabase/migrations/0006_learning_rules.sql?raw';
 import guestSeesAllSql from '../../../supabase/migrations/0007_guest_sees_all.sql?raw';
+import weeklyLimitSql from '../../../supabase/migrations/0008_weekly_limit.sql?raw';
 import seedSql from '../../../supabase/seed.sql?raw';
 import archimesSql from '../../../supabase/archimes.sql?raw';
 import kienThucSql from '../../../supabase/ky_nang_khoa_hoc.sql?raw';
@@ -58,6 +59,7 @@ async function openDb(): Promise<PGliteType> {
     await db.exec(guestSql);
     await db.exec(rulesSql);
     await db.exec(guestSeesAllSql);
+    await db.exec(weeklyLimitSql);
     await db.exec(seedSql);
     await db.exec(archimesSql);
     await db.exec(kienThucSql);
@@ -78,11 +80,17 @@ async function openDb(): Promise<PGliteType> {
     const rules = await db.query<{ ok: boolean }>(
       `select exists (select 1 from pg_proc where proname = 'student_rewards' and prosrc like '%medal_eligible%') as ok`,
     );
-    if (!rules.rows[0]?.ok) await db.exec(rulesSql);
+    const rerunRules = !rules.rows[0]?.ok;
+    if (rerunRules) await db.exec(rulesSql);
     const seesAll = await db.query<{ ok: boolean }>(
       `select exists (select 1 from pg_proc where proname = 'leaderboard_rows_for' and prosrc like '%see_all%') as ok`,
     );
     if (!seesAll.rows[0]?.ok) await db.exec(guestSeesAllSql);
+    // 0006 định nghĩa lại start_attempt / get_student_home nên chạy 0006 xong phải chạy lại 0008.
+    const weekly = await db.query<{ ok: boolean }>(
+      `select exists (select 1 from pg_proc where proname = 'start_attempt' and prosrc like '%weekly_limit_reached%') as ok`,
+    );
+    if (rerunRules || !weekly.rows[0]?.ok) await db.exec(weeklyLimitSql);
     const kt = await db.query(`select 1 from public.subjects where code = 'ky_nang_song'`);
     if (kt.rows.length === 0) await db.exec(kienThucSql);
   }

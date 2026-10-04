@@ -11,12 +11,13 @@ import type { AppSettings, RetakeMode, WeekSchedule } from '../../types';
 type NumKey =
   | 'current_week' | 'basic_easy' | 'basic_normal' | 'basic_advanced' | 'adv_easy' | 'adv_normal' | 'adv_advanced'
   | 'points_easy' | 'points_normal' | 'points_advanced' | 'adv_points_easy' | 'adv_points_normal' | 'adv_points_advanced'
-  | 'wrong_penalty' | 'daily_max_lessons' | 'stars_per_diamond' | 'medal_gold_pct' | 'medal_silver_pct' | 'medal_bronze_pct'
+  | 'wrong_penalty' | 'daily_max_lessons' | 'weekly_max_lessons' | 'stars_per_diamond' | 'medal_gold_pct' | 'medal_silver_pct' | 'medal_bronze_pct'
   | 'adapt_min_answers' | 'adapt_up_pct' | 'adapt_down_pct';
 
 const LIMITS: Partial<Record<NumKey, [number, number]>> = {
   current_week: [1, 60],
   wrong_penalty: [0, 100],
+  weekly_max_lessons: [0, 300],
   stars_per_diamond: [1, 100000],
   medal_gold_pct: [0, 100],
   medal_silver_pct: [0, 100],
@@ -48,6 +49,7 @@ export default function SettingsPage() {
 
   // Database chưa chạy 0006 thì chưa có các cột mới => chỉ hiện/lưu cài đặt cũ.
   const hasRules = data != null && 'wrong_penalty' in data;
+  const hasWeekly = data != null && 'weekly_max_lessons' in data;
   const studentLink = `${location.origin}/`;
   const setNum = (k: NumKey, v: string) => {
     const [min, max] = limitOf(k);
@@ -110,6 +112,7 @@ export default function SettingsPage() {
           adapt_down_pct: form.adapt_down_pct,
         } satisfies Partial<AppSettings>);
       }
+      if (hasWeekly) patch.weekly_max_lessons = form.weekly_max_lessons;
       await adminApi.updateSettings(patch);
       setSaved(true);
       reload();
@@ -277,13 +280,15 @@ export default function SettingsPage() {
         <>
           <section className="panel space-y-4 p-5">
             <div>
-              <h2 className="font-semibold text-slate-900">Lượng bài mỗi ngày</h2>
-              <p className="text-sm text-slate-500">Vừa đủ, không quá tải. Tính mọi lần bắt đầu đề (cả làm lại); làm tiếp bài đang dở thì không tính thêm. Mỗi môn có thể đặt riêng.</p>
+              <h2 className="font-semibold text-slate-900">Lượng bài mỗi ngày / mỗi tuần</h2>
+              <p className="text-sm text-slate-500">Vừa đủ, không quá tải. Tính mọi lần bắt đầu đề (cả làm lại); làm tiếp bài đang dở thì không tính thêm. Tuần tính từ thứ Hai đến Chủ nhật. Mỗi môn có thể đặt riêng.</p>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
               {numInput('daily_max_lessons', 'Mỗi môn tối đa', 'đề / ngày')}
+              {hasWeekly && numInput('weekly_max_lessons', 'Mỗi môn tối đa', 'đề / tuần')}
             </div>
-            <p className="text-xs text-slate-500">Đặt 0 = không giới hạn.</p>
+            <p className="text-xs text-slate-500">Đặt 0 = không giới hạn. Đặt cả hai thì chạm mức nào trước sẽ dừng ở mức đó.</p>
+            {!hasWeekly && <p className="text-xs text-amber-700">Chạy <code>0008_weekly_limit.sql</code> để có giới hạn mỗi tuần.</p>}
           </section>
 
           <section className="panel space-y-4 p-5">

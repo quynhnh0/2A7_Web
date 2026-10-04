@@ -39,19 +39,35 @@ function Stars({ correct }: { correct: string | null }) {
 }
 
 /** null = được làm; còn lại là lý do khoá nút bắt đầu đề mới. */
-type LockReason = null | 'closed' | 'limit';
+type LockReason = null | 'closed' | 'limit' | 'week_limit';
+
+const LOCK_LABEL: Record<Exclude<LockReason, null>, string> = {
+  closed: 'Chưa đến giờ',
+  limit: 'Mai làm tiếp',
+  week_limit: 'Tuần sau làm tiếp',
+};
 
 function lockFor(home: StudentHome, subjectCode: string): LockReason {
   if (home.schedule && !home.schedule.open) return 'closed';
   const q = home.daily?.[subjectCode];
+  if (q?.week_max && (q.week_used ?? 0) >= q.week_max) return 'week_limit';
   if (q && q.max > 0 && q.used >= q.max) return 'limit';
   return null;
+}
+
+function quotaText(q: DailyQuota, subjectName: string): string | null {
+  const parts: string[] = [];
+  if (q.max > 0) parts.push(`Hôm nay còn ${q.max - q.used}/${q.max}`);
+  if (q.week_max) parts.push(`tuần này còn ${q.week_max - (q.week_used ?? 0)}/${q.week_max}`);
+  if (parts.length === 0) return null;
+  const text = `${parts.join(', ')} đề ${subjectName}`;
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 function LockedButton({ reason, className = '' }: { reason: Exclude<LockReason, null>; className?: string }) {
   return (
     <span className={`btn-kid btn-soft min-h-12 flex-1 cursor-not-allowed px-3 text-base opacity-70 ${className}`} aria-disabled>
-      <Lock className="h-5 w-5" /> {reason === 'closed' ? 'Chưa đến giờ' : 'Mai làm tiếp'}
+      <Lock className="h-5 w-5" /> {LOCK_LABEL[reason]}
     </span>
   );
 }
@@ -60,6 +76,7 @@ function LessonCard({ lesson, lock, quota }: { lesson: HomeLesson; lock: LockRea
   const st = subjectStyle(lesson.subject_color);
   const done = isDone(lesson);
   const label = lessonLabel(lesson);
+  const quotaLine = quota && !lock ? quotaText(quota, lesson.subject_name) : null;
   return (
     <div className={`flex flex-col gap-3 rounded-3xl p-5 ring-2 ${st.card}`}>
       <div className="flex items-start justify-between gap-2">
@@ -80,9 +97,7 @@ function LessonCard({ lesson, lock, quota }: { lesson: HomeLesson; lock: LockRea
           {lesson.basic_ranked_score !== null && <span className="text-amber-600">• {lesson.basic_ranked_score} điểm</span>}
         </div>
       )}
-      {quota && quota.max > 0 && !lock && (
-        <p className="text-xs font-semibold text-slate-500">Hôm nay còn {quota.max - quota.used}/{quota.max} đề {lesson.subject_name}</p>
-      )}
+      {quotaLine && <p className="text-xs font-semibold text-slate-500">{quotaLine}</p>}
       <div className="mt-auto flex gap-2">
         {lock ? (
           <LockedButton reason={lock} />

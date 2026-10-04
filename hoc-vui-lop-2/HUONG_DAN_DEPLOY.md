@@ -66,12 +66,13 @@ npm install
    - `0005_guest_students.sql`: **bạn khách** — học sinh có dấu “-” trong họ tên; các bạn trong lớp không thấy bạn ấy trên bảng xếp hạng.
    - `0006_learning_rules.sql`: **luật học tập mới** — điểm 1/2/3 (nâng cao 1/3/4), câu sai trừ 1 điểm, bài làm lại chỉ cộng sao, sao & kim cương, huy chương tuần (bạn khách không tham gia), tối đa 3 đề/môn/ngày, giờ làm bài, cài đặt riêng từng môn, gợi ý độ khó. Tất cả chỉnh được trong trang **Cài đặt** của admin.
    - `0007_guest_sees_all.sql`: **bạn khách thấy bảng xếp hạng của tất cả mọi người** (cả lớp và các bạn khách khác); các bạn trong lớp vẫn chỉ thấy các bạn trong lớp.
+   - `0008_weekly_limit.sql`: **giới hạn số đề mỗi môn mỗi tuần** (thứ Hai → Chủ nhật). Mặc định 0 = không giới hạn; chỉnh ở **Cài đặt → Lượng bài mỗi ngày / mỗi tuần** hoặc riêng từng môn ở **Bài học → Cài đặt môn**.
 
    > ⚠️ **Lần đầu chạy `0006`, điểm cũ được tính lại theo thang mới** (VD 1 bài trước đây 120 điểm nay còn khoảng 13 điểm) để bảng xếp hạng không bị lẫn 2 thang điểm. Việc tính lại chỉ làm **đúng 1 lần**: chạy lại `0006` sau đó không đụng tới điểm và không ghi đè điểm thầy cô đã sửa trong Cài đặt.
    > Nên **Xuất CSV** trang Kết quả trước khi chạy nếu muốn giữ bản điểm cũ.
 
-   Các file đều chạy lại nhiều lần an toàn. File tiếp theo (nếu có) sẽ là `0008_…`, chỉ cần chạy thêm file đó.
-   Nếu lỡ chạy lại `0001_init.sql` thì chạy lại luôn các file `0003` → `0007` để cấp lại quyền và khôi phục các hàm mới.
+   Các file đều chạy lại nhiều lần an toàn. File tiếp theo (nếu có) sẽ là `0009_…`, chỉ cần chạy thêm file đó.
+   Nếu lỡ chạy lại `0001_init.sql` thì chạy lại luôn các file `0003` → `0008` để cấp lại quyền và khôi phục các hàm mới. Lỡ chạy lại `0006` thì chạy lại `0008`.
    **Không chạy lại `0002_fix_dau_cau.sql` sau khi đã có `0006`**: file 0002 tính điểm theo cách cũ (không trừ câu sai) nên sẽ làm lệch điểm các lượt có câu dấu câu.
 
 > Nếu Supabase hỏi xác nhận vì câu lệnh có `drop`/`revoke`… → bấm **Run this query**. File được viết để chạy lại nhiều lần vẫn an toàn.
@@ -370,7 +371,7 @@ Gói Free không có sao lưu tự động dài ngày. Nên định kỳ (ví d�
 | Tải lại trang `/admin` bị **404** | Thiếu file `_redirects` | Kéo thả **cả thư mục `dist`** (trong đó có file `_redirects`), không kéo từng file lẻ. |
 | Cloudflare **build lỗi** (cách B) | Sai thư mục gốc hoặc phiên bản Node | Kiểm tra **Root directory** (để trống nếu repo là thư mục `hoc-vui-lop-2`), **Build output** = `dist`, biến `NODE_VERSION` = `22`. Xem chi tiết trong log build. |
 | Học sinh **không thấy bài** | Bài chưa công bố, hoặc tuần hiện tại chưa tới | Admin → **Tổng quan**: chỉnh **Tuần học hiện tại**. **Bài học & lịch mở**: bật công bố. |
-| Nút làm bài hiện **“Chưa đến giờ”** / **“Mai làm tiếp”** | Ngoài giờ làm bài, hoặc đã làm đủ số đề của môn hôm nay | Admin → **Cài đặt** → **Giờ làm bài** / **Lượng bài mỗi ngày** (tắt hoặc nới ra). Môn có cài đặt riêng: **Bài học → Cài đặt môn**. |
+| Nút làm bài hiện **“Chưa đến giờ”** / **“Mai làm tiếp”** / **“Tuần sau làm tiếp”** | Ngoài giờ làm bài, hoặc đã làm đủ số đề của môn hôm nay / tuần này | Admin → **Cài đặt** → **Giờ làm bài** / **Lượng bài mỗi ngày / mỗi tuần** (tắt hoặc nới ra). Môn có cài đặt riêng: **Bài học → Cài đặt môn**. |
 | Admin báo **“Database chưa chạy 0006”**, không thấy các mục điểm/sao/giờ làm bài trong Cài đặt | Chưa chạy `0006_learning_rules.sql` | Chạy file đó trong SQL Editor (bước 1.2), tải lại trang. |
 | Web báo lỗi kết nối, tất cả đều không chạy | Supabase bị tạm dừng do lâu không dùng | Supabase dashboard → **Restore project** (xem mục 6). |
 | SQL Editor báo lỗi khi chạy `archimes.sql` | File lớn | Dùng cách nạp CSV ở mục 4.3. |

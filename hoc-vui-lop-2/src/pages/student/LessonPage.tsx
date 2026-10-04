@@ -104,7 +104,7 @@ export default function LessonPage() {
   if (!student) return <Navigate to="/select-student" replace />;
   if (loading && !attempt) return <LoadingBlock label="Đang lấy câu hỏi…" />;
   const errCode = (error as BackendError | null)?.code;
-  if (errCode === 'closed_hours' || errCode === 'daily_limit_reached') {
+  if (errCode === 'closed_hours' || errCode === 'daily_limit_reached' || errCode === 'weekly_limit_reached') {
     return (
       <div className="flex flex-col items-center gap-4">
         <StudentError error={error} />

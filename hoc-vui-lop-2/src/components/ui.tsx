@@ -27,6 +27,7 @@ const STUDENT_MESSAGES: Record<string, string> = {
   attempt_not_found: 'Không tìm thấy bài làm này.',
   closed_hours: 'Bây giờ chưa phải giờ làm bài. Bạn nghỉ ngơi, quay lại vào giờ học nhé! 🌙',
   daily_limit_reached: 'Hôm nay bạn đã làm đủ số đề của môn này rồi. Giỏi lắm! Mai làm tiếp nhé! 🌟',
+  weekly_limit_reached: 'Tuần này bạn đã làm đủ số đề của môn này rồi. Giỏi lắm! Tuần sau làm tiếp nhé! 🌟',
 };
 
 export function studentMessage(err: unknown): string {

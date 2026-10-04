@@ -561,7 +561,6 @@ begin
      and public.daily_used(p_student_id, v_lesson.subject_id) >= v_eff.daily_max_lessons then
     raise exception 'daily_limit_reached';
   end if;
-
   if p_exercise_type = 'basic' then
     v_n1 := v_eff.basic_easy; v_n2 := v_eff.basic_normal; v_n3 := v_eff.basic_advanced;
   else

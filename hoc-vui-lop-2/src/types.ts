@@ -52,6 +52,9 @@ export interface DailyQuota {
   used: number;
   /** 0 = không giới hạn */
   max: number;
+  /** Số đề đã bắt đầu tuần này (thứ Hai → Chủ nhật) và giới hạn tuần (0 = không giới hạn). */
+  week_used?: number;
+  week_max?: number;
   basic_count: number;
   advanced_count: number;
 }
@@ -235,6 +238,7 @@ export interface AppSettings {
   score_floor_zero: boolean;
   retake_mode: RetakeMode;
   daily_max_lessons: number;
+  weekly_max_lessons: number;
   stars_per_diamond: number;
   medal_gold_pct: number;
   medal_silver_pct: number;
@@ -251,6 +255,8 @@ export interface AppSettings {
 export interface SubjectSettings {
   subject_id: string;
   daily_max_lessons: number | null;
+  /** Không có khi database chưa chạy 0008 (giới hạn tuần). */
+  weekly_max_lessons?: number | null;
   basic_easy: number | null;
   basic_normal: number | null;
   basic_advanced: number | null;

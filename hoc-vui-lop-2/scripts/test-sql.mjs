@@ -19,6 +19,8 @@ await db.exec(read('supabase/migrations/0006_learning_rules.sql'));
 await db.exec(read('supabase/migrations/0006_learning_rules.sql'));
 await db.exec(read('supabase/migrations/0007_guest_sees_all.sql'));
 await db.exec(read('supabase/migrations/0007_guest_sees_all.sql'));
+await db.exec(read('supabase/migrations/0008_weekly_limit.sql'));
+await db.exec(read('supabase/migrations/0008_weekly_limit.sql'));
 // Giờ làm bài và giới hạn mỗi ngày được kiểm riêng ở nhóm 8d.
 await db.query(`update app_settings set schedule_enabled = false, daily_max_lessons = 0 where id = 1`);
 
@@ -404,7 +406,7 @@ ok('thống kê theo môn cho admin (môn, học sinh × môn, lọc thời gian
 }
 ok('bạn khách (tên có dấu "-"): thấy bảng xếp hạng của tất cả; bạn trong lớp chỉ thấy bạn trong lớp');
 
-// 8d. Luật học tập (0006): làm lại kiểu "cặp", điểm không âm, sao/kim cương, giới hạn mỗi ngày, cài đặt môn, giờ làm bài, huy chương
+// 8d. Luật học tập (0006): làm lại kiểu "cặp", điểm không âm, sao/kim cương, giới hạn mỗi ngày/tuần, cài đặt môn, giờ làm bài, huy chương
 {
   const answerAll = async (a, wrongIdx = []) => {
     for (const [i, q] of a.questions.entries()) {
@@ -468,6 +470,25 @@ ok('bạn khách (tên có dấu "-"): thấy bảng xếp hạng của tất c�
   await db.query(`update attempts set score = 0 where id = $1`, [ov.attempt_id]);
   await db.query(`delete from subject_settings where subject_id = $1`, [subj.id]);
   await db.query(`update app_settings set daily_max_lessons = 0 where id = 1`);
+
+  // Giới hạn số đề mỗi tuần (thứ Hai → Chủ nhật): chung + riêng của môn
+  h = await rpc('get_student_home', { p_student_id: s1.id });
+  const wUsed = h.daily.toan.week_used;
+  assert.ok(wUsed > 0 && wUsed >= h.daily.toan.used, 'số đề trong tuần ≥ số đề hôm nay');
+  assert.equal(h.daily.toan.week_max, 0, 'mặc định không giới hạn tuần');
+  await db.query(`update app_settings set weekly_max_lessons = $1 where id = 1`, [wUsed]);
+  await expectError(rpc('start_attempt', { p_student_id: s1.id, p_lesson_id: l3.id, p_exercise_type: 'basic' }), 'weekly_limit_reached');
+  h = await rpc('get_student_home', { p_student_id: s1.id });
+  assert.deepEqual([h.daily.toan.week_used, h.daily.toan.week_max, h.daily.tieng_viet.week_max], [wUsed, wUsed, wUsed]);
+  await db.query(`insert into subject_settings (subject_id, weekly_max_lessons) values ($1, $2)`, [subj.id, wUsed + 1]);
+  h = await rpc('get_student_home', { p_student_id: s1.id });
+  assert.deepEqual([h.daily.toan.week_max, h.daily.tieng_viet.week_max], [wUsed + 1, wUsed], 'giới hạn tuần riêng của môn');
+  const wk = await rpc('start_attempt', { p_student_id: s1.id, p_lesson_id: l3.id, p_exercise_type: 'basic' });
+  await answerAll(wk);
+  await db.query(`update attempts set score = 0 where id = $1`, [wk.attempt_id]);
+  await expectError(rpc('start_attempt', { p_student_id: s1.id, p_lesson_id: l3.id, p_exercise_type: 'basic' }), 'weekly_limit_reached');
+  await db.query(`delete from subject_settings where subject_id = $1`, [subj.id]);
+  await db.query(`update app_settings set weekly_max_lessons = 0 where id = 1`);
 
   // Giờ làm bài: đóng thì không bắt đầu đề mới được, đề đang làm dở vẫn tiếp tục
   const open = await rpc('start_attempt', { p_student_id: s2.id, p_lesson_id: tvLesson.id, p_exercise_type: 'basic' });
@@ -543,7 +564,7 @@ ok('bạn khách (tên có dấu "-"): thấy bảng xếp hạng của tất c�
   await expectError(rpc('admin_set_week_class', { p_week_start: prevWeek, p_class_week: 2 }), 'not_admin');
   await db.query(`select set_config('demo.uid', $1, false)`, [uid]);
 }
-ok('luật 0006: làm lại kiểu cặp, điểm không âm, sao/kim cương, giới hạn mỗi ngày, cài đặt môn, giờ làm bài, huy chương tuần');
+ok('luật 0006: làm lại kiểu cặp, điểm không âm, sao/kim cương, giới hạn mỗi ngày/tuần, cài đặt môn, giờ làm bài, huy chương tuần');
 
 // 9. Quyền của anon (kiểm tra GRANT/RLS)
 const grants = await db.query(`
@@ -563,6 +584,7 @@ const grants = await db.query(`
          has_function_privilege('anon', 'public.rescore_attempt(uuid)', 'execute') as rsc,
          has_function_privilege('anon', 'public.effective_settings(uuid)', 'execute') as es,
          has_function_privilege('anon', 'public.student_rewards(uuid)', 'execute') as srw,
+         has_function_privilege('anon', 'public.weekly_used(uuid,uuid)', 'execute') as wu,
          has_function_privilege('anon', 'public.weekly_medals(date,uuid)', 'execute') as wm,
          has_function_privilege('anon', 'public.admin_weekly_medals(date)', 'execute') as awm,
          has_function_privilege('anon', 'public.admin_set_week_class(date,int)', 'execute') as asw,
@@ -573,7 +595,7 @@ const grants = await db.query(`
          (select relrowsecurity from pg_class where oid = 'public.questions'::regclass) as rls`);
 assert.deepEqual(grants.rows[0], {
   q: false, sa: true, ad: false, lr: false, lrb: false, gsl: true, ass: false, lrf: false, gl: true, gsh: true,
-  st: true, fa: true, gar: true, rsc: false, es: false, srw: false, wm: false, awm: false, asw: false, awm_auth: true,
+  st: true, fa: true, gar: true, rsc: false, es: false, srw: false, wu: false, wm: false, awm: false, asw: false, awm_auth: true,
   ss: false, wl: false, ss_rls: true, rls: true,
 });
 ok('anon không đọc được bảng câu hỏi, chỉ gọi được API học sinh');
@@ -587,6 +609,7 @@ if (existsSync(new URL('supabase/seed.sql', root))) {
   await fresh.exec(read('supabase/migrations/0005_guest_students.sql'));
   await fresh.exec(read('supabase/migrations/0006_learning_rules.sql'));
   await fresh.exec(read('supabase/migrations/0007_guest_sees_all.sql'));
+  await fresh.exec(read('supabase/migrations/0008_weekly_limit.sql'));
   await fresh.exec(read('supabase/seed.sql'));
   const c = (await fresh.query(`select (select count(*) from lessons) l, (select count(*) from questions) q, (select count(*) from students) s`)).rows[0];
   console.log(`  ✓ seed.sql chạy được: ${c.l} bài, ${c.q} câu hỏi, ${c.s} học sinh`);

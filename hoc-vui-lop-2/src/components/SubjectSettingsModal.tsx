@@ -17,7 +17,7 @@ const EMPTY: Omit<SubjectSettings, 'subject_id'> = {
   wrong_penalty: null, retake_mode: null,
 };
 
-const maxOf = (k: OverrideKey) => (k.includes('points') ? 1000 : k === 'wrong_penalty' ? 100 : 50);
+const maxOf = (k: OverrideKey) => (k.includes('points') ? 1000 : k === 'weekly_max_lessons' ? 300 : k === 'wrong_penalty' ? 100 : 50);
 
 /** Cài đặt riêng của 1 môn: ô để trống = theo cài đặt chung (hiện mờ trong ô). */
 export function SubjectSettingsModal({ subject, onClose }: { subject: Subject | null; onClose: () => void }) {
@@ -91,8 +91,9 @@ export function SubjectSettingsModal({ subject, onClose }: { subject: Subject | 
       {form && global && (
         <div className="space-y-5">
           <p className="text-sm text-slate-500">Để trống ô nào thì môn này dùng cài đặt chung (số mờ trong ô). Mỗi môn có đặc thù khác nhau, VD môn Tiếng Việt đề ngắn hơn, môn Toán trừ điểm nặng hơn.</p>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2">
             {num('daily_max_lessons', 'Tối đa đề / ngày (0 = không giới hạn)')}
+            {'weekly_max_lessons' in global && num('weekly_max_lessons', 'Tối đa đề / tuần (0 = không giới hạn)')}
             {num('wrong_penalty', 'Mỗi câu sai trừ (điểm)')}
             <div>
               <label className="label" htmlFor="ss-retake">Bài làm lại</label>
