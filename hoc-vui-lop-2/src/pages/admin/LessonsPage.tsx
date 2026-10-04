@@ -1,7 +1,8 @@
 import { useMemo, useState, type FormEvent } from 'react';
 import { Link } from 'react-router';
-import { Eye, EyeOff, ListChecks, Pencil, Plus, Tags, Trash2 } from 'lucide-react';
+import { Eye, EyeOff, ListChecks, Pencil, Plus, Settings2, Tags, Trash2 } from 'lucide-react';
 import { EmptyState, isoToLocalInput, localInputToIso, PageHeader, pct, Toggle } from '../../components/admin';
+import { SubjectSettingsModal } from '../../components/SubjectSettingsModal';
 import { AdminError, LoadingBlock, Modal, Spinner, subjectStyle } from '../../components/ui';
 import { useAsync } from '../../hooks/useAsync';
 import { adminApi } from '../../lib/api';
@@ -32,6 +33,7 @@ export default function LessonsPage() {
   const [subjectFilter, setSubjectFilter] = useState<string>('all');
   const [editing, setEditing] = useState<Partial<Lesson> | null>(null);
   const [subjectsOpen, setSubjectsOpen] = useState(false);
+  const [settingsFor, setSettingsFor] = useState<Subject | null>(null);
   const [busy, setBusy] = useState(false);
   const [actionError, setActionError] = useState<unknown>(null);
 
@@ -103,6 +105,14 @@ export default function LessonsPage() {
         {data.subjects.map((s) => (
           <button key={s.id} type="button" className={`btn btn-sm ${subjectFilter === s.id ? 'btn-primary' : 'btn-secondary'}`} onClick={() => setSubjectFilter(s.id)}>{s.name}</button>
         ))}
+        {subjectFilter !== 'all' && (() => {
+          const s = data.subjects.find((x) => x.id === subjectFilter);
+          return s ? (
+            <button type="button" className="btn btn-sm btn-ghost" onClick={() => setSettingsFor(s)}>
+              <Settings2 className="h-4 w-4" /> Cài đặt môn {s.name}
+            </button>
+          ) : null;
+        })()}
       </div>
 
       {actionError !== null && <AdminError error={actionError} />}
@@ -169,7 +179,9 @@ export default function LessonsPage() {
           }}
         />
       )}
-      <SubjectsModal open={subjectsOpen} subjects={data.subjects} onClose={() => setSubjectsOpen(false)} onChanged={reload} />
+      <SubjectsModal open={subjectsOpen} subjects={data.subjects} onClose={() => setSubjectsOpen(false)} onChanged={reload}
+        onSettings={(s) => { setSubjectsOpen(false); setSettingsFor(s); }} />
+      <SubjectSettingsModal subject={settingsFor} onClose={() => setSettingsFor(null)} />
     </div>
   );
 }
@@ -285,7 +297,9 @@ function LessonForm({ lesson, subjects, onClose, onSaved }: {
 
 const COLORS: Array<[SubjectColor, string]> = [['blue', 'Xanh dương'], ['green', 'Xanh lá'], ['amber', 'Vàng'], ['rose', 'Hồng'], ['purple', 'Tím']];
 
-function SubjectsModal({ open, subjects, onClose, onChanged }: { open: boolean; subjects: Subject[]; onClose: () => void; onChanged: () => void }) {
+function SubjectsModal({ open, subjects, onClose, onChanged, onSettings }: {
+  open: boolean; subjects: Subject[]; onClose: () => void; onChanged: () => void; onSettings: (s: Subject) => void;
+}) {
   const [draft, setDraft] = useState({ code: '', name: '', color: 'blue' as SubjectColor });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<unknown>(null);
@@ -323,6 +337,9 @@ function SubjectsModal({ open, subjects, onClose, onChanged }: { open: boolean; 
               {COLORS.map(([c, label]) => <option key={c} value={c}>{label}</option>)}
             </select>
             <code className="hidden text-xs text-slate-400 sm:inline">{s.code}</code>
+            <button type="button" className="btn btn-ghost btn-icon" aria-label={`Cài đặt riêng môn ${s.name}`} title="Cài đặt riêng của môn" onClick={() => onSettings(s)}>
+              <Settings2 className="h-4 w-4" />
+            </button>
             <button
               type="button"
               className="btn btn-ghost btn-icon text-rose-600"

@@ -13,6 +13,14 @@ await db.exec(read('supabase/migrations/0001_init.sql'));
 await db.exec(read('supabase/migrations/0003_student_birthday.sql'));
 await db.exec(read('supabase/migrations/0004_subject_stats.sql'));
 await db.exec(read('supabase/migrations/0004_subject_stats.sql'));
+await db.exec(read('supabase/migrations/0005_guest_students.sql'));
+await db.exec(read('supabase/migrations/0005_guest_students.sql'));
+await db.exec(read('supabase/migrations/0006_learning_rules.sql'));
+await db.exec(read('supabase/migrations/0006_learning_rules.sql'));
+await db.exec(read('supabase/migrations/0007_guest_sees_all.sql'));
+await db.exec(read('supabase/migrations/0007_guest_sees_all.sql'));
+// Giờ làm bài và giới hạn mỗi ngày được kiểm riêng ở nhóm 8d.
+await db.query(`update app_settings set schedule_enabled = false, daily_max_lessons = 0 where id = 1`);
 
 const rpc = async (fn, args = {}) => {
   const keys = Object.keys(args);
@@ -155,6 +163,9 @@ const answerFor = async (q) => {
   const row = await one(`select correct_answer from questions where id = $1`, [q.id]);
   return row.correct_answer;
 };
+assert.equal(att.scoring.mode, 'ranked');
+assert.equal(att.scoring.wrong_penalty, 1);
+assert.deepEqual(att.questions.map((q) => q.points), att.questions.map((q) => q.difficulty), 'bài cơ bản: dễ 1, vừa 2, khó 3 điểm');
 let expectedScore = 0;
 for (const [i, q] of att.questions.entries()) {
   let ans = await answerFor(q);
@@ -164,6 +175,8 @@ for (const [i, q] of att.questions.entries()) {
   const r = await rpc('submit_answer', { p_attempt_id: att.attempt_id, p_question_id: q.id, p_answer: ans });
   if (i === 1) {
     assert.equal(r.is_correct, false);
+    assert.equal(r.score_awarded, -1, 'sai trừ 1 điểm');
+    expectedScore -= 1;
   } else {
     assert.equal(r.is_correct, true, `câu ${i} (${q.type}) phải đúng`);
     expectedScore += q.points;
@@ -182,6 +195,9 @@ assert.equal(res.wrong_count, 1);
 assert.equal(res.score, expectedScore);
 assert.equal(res.review.length, 10);
 assert.equal(res.is_ranked, true);
+assert.equal(res.max_score, 15);
+assert.equal(res.points_lost, 1);
+assert.equal(res.points_gained, expectedScore + 1);
 await expectError(rpc('submit_answer', { p_attempt_id: att.attempt_id, p_question_id: att.questions[1].id, p_answer: '1' }), 'attempt_completed');
 ok(`hoàn thành bài: 9/10 đúng, ${expectedScore} điểm`);
 
@@ -189,13 +205,18 @@ ok(`hoàn thành bài: 9/10 đúng, ${expectedScore} điểm`);
 const att2 = await rpc('start_attempt', { p_student_id: s1.id, p_lesson_id: lesson.id, p_exercise_type: 'basic' });
 assert.notEqual(att2.attempt_id, att.attempt_id);
 assert.equal(att2.is_ranked, false);
+assert.equal(att2.scoring.mode, 'per_correct');
+assert.ok(att2.questions.every((q) => q.points === 1));
 for (const q of att2.questions) {
-  await rpc('submit_answer', { p_attempt_id: att2.attempt_id, p_question_id: q.id, p_answer: await answerFor(q) });
+  const r = await rpc('submit_answer', { p_attempt_id: att2.attempt_id, p_question_id: q.id, p_answer: await answerFor(q) });
+  assert.equal(r.score_awarded, 1, 'làm lại: mỗi câu đúng 1 sao');
 }
 const res2 = await rpc('finish_attempt', { p_attempt_id: att2.attempt_id });
 assert.equal(res2.correct_count, 10);
 assert.equal(res2.is_ranked, false);
-ok('lượt làm lại chỉ để luyện tập, không cộng điểm xếp hạng');
+assert.equal(res2.score, 10);
+assert.equal(res2.max_score, 10);
+ok('lượt làm lại không cộng điểm xếp hạng, mỗi câu đúng được 1 sao');
 
 // Hai lượt "xếp hạng" chạy song song: chỉ lượt hoàn thành đầu tiên được tính
 const a3 = await rpc('start_attempt', { p_student_id: s2.id, p_lesson_id: lesson.id, p_exercise_type: 'advanced' });
@@ -324,6 +345,206 @@ assert.equal(ssDay.students.find((x) => x.student_id === s2.id).by_subject[subj.
 await expectError(rpc('admin_subject_stats', { p_period: 'year' }), 'invalid_period');
 ok('thống kê theo môn cho admin (môn, học sinh × môn, lọc thời gian)');
 
+// 8c. Bạn khách (0005, 0007): tên có dấu "-" => bạn trong lớp không thấy bạn khách; bạn khách (và admin) thấy tất cả
+{
+  assert.equal((await one(`select public.is_guest_name('Tiểu Nguyên - Khoai') a, public.is_guest_name('Nguyễn Minh Anh') b`)).a, true);
+  const guest = await rpc('register_student', { p_full_name: 'Tiểu Nguyên - Khoai' });
+  const gAtt = await rpc('start_attempt', { p_student_id: guest.id, p_lesson_id: tvLesson.id, p_exercise_type: 'basic' });
+  for (const q of gAtt.questions) {
+    await rpc('submit_answer', { p_attempt_id: gAtt.attempt_id, p_question_id: q.id, p_answer: await answerFor(q) });
+  }
+  const gRes = await rpc('finish_attempt', { p_attempt_id: gAtt.attempt_id });
+  assert.equal(gRes.is_ranked, true);
+  const ids = (lb) => lb.rows.map((r) => r.student_id);
+
+  const asAdmin = await rpc('get_subject_leaderboard', { p_period: 'day' });
+  assert.ok(ids(asAdmin).includes(guest.id), 'admin thấy bạn khách');
+  assert.equal(asAdmin.rows.find((r) => r.student_id === guest.id).is_guest, true);
+  const adminViaStudentPage = await rpc('get_leaderboard', { p_period: 'day', p_student_id: s1.id });
+  assert.ok(!ids(adminViaStudentPage).includes(guest.id), 'trang học sinh (có p_student_id) vẫn ẩn bạn khách dù máy đang đăng nhập admin');
+
+  await db.query(`select set_config('demo.uid', '', false)`);
+  for (const fn of ['get_leaderboard', 'get_subject_leaderboard']) {
+    const classView = await rpc(fn, { p_period: 'day', p_student_id: s1.id });
+    assert.ok(!ids(classView).includes(guest.id), `${fn}: bạn trong lớp không thấy bạn khách`);
+    assert.deepEqual(classView.rows.map((r) => r.rank), classView.rows.map((_, i) => i + 1), 'hạng của lớp liền mạch, không chừa chỗ cho bạn khách');
+    const anonView = await rpc(fn, { p_period: 'day' });
+    assert.ok(!ids(anonView).includes(guest.id), `${fn}: khách vãng lai không thấy bạn khách`);
+    const guestView = await rpc(fn, { p_period: 'day', p_student_id: guest.id });
+    assert.ok(ids(guestView).includes(guest.id), `${fn}: bạn khách thấy chính mình`);
+    assert.equal(guestView.me.score, gRes.score);
+    for (const id of ids(classView)) assert.ok(ids(guestView).includes(id), `${fn}: bạn khách thấy cả các bạn trong lớp`);
+    assert.equal(guestView.rows.length, classView.rows.length + 1);
+  }
+  const other = await rpc('register_student', { p_full_name: 'Bạn Khác – Lớp Bên' });
+  const oAtt = await rpc('start_attempt', { p_student_id: other.id, p_lesson_id: tvLesson.id, p_exercise_type: 'basic' });
+  for (const q of oAtt.questions) await rpc('submit_answer', { p_attempt_id: oAtt.attempt_id, p_question_id: q.id, p_answer: await answerFor(q) });
+  await rpc('finish_attempt', { p_attempt_id: oAtt.attempt_id });
+  const g2 = await rpc('get_subject_leaderboard', { p_period: 'day', p_subject_id: tv.id, p_student_id: guest.id });
+  assert.ok(ids(g2).includes(other.id), 'bạn khách thấy cả bạn khách khác (thấy tất cả mọi người)');
+  const o2 = await rpc('get_subject_leaderboard', { p_period: 'day', p_subject_id: tv.id, p_student_id: other.id });
+  assert.deepEqual(ids(o2), ids(g2), 'mọi bạn khách thấy cùng một bảng đầy đủ');
+  const s2Tv = await rpc('get_subject_leaderboard', { p_period: 'day', p_subject_id: tv.id, p_student_id: s2.id });
+  assert.ok(!ids(s2Tv).includes(guest.id) && !ids(s2Tv).includes(other.id), 'bạn trong lớp vẫn không thấy bạn khách nào');
+  assert.ok(g2.rows.length > s2Tv.rows.length);
+
+  const tvClass = await rpc('get_subject_leaderboard', { p_period: 'day', p_subject_id: tv.id, p_student_id: s2.id });
+  assert.equal(tvClass.me.rank, 1, 'bạn khách điểm bằng/cao hơn cũng không đẩy hạng bạn trong lớp xuống');
+  const homeS2 = await rpc('get_student_home', { p_student_id: s2.id });
+  const homeG = await rpc('get_student_home', { p_student_id: guest.id });
+  assert.equal(homeG.points.day, gRes.score, 'trang chủ bạn khách có điểm');
+  assert.ok(homeG.ranks.day >= 1, 'trang chủ bạn khách có hạng');
+  const guestDay = await rpc('get_leaderboard', { p_period: 'day', p_student_id: guest.id });
+  assert.equal(homeG.ranks.day, guestDay.me.rank, 'hạng trên trang chủ bạn khách khớp bảng đầy đủ bạn ấy thấy');
+  const classDay = await rpc('get_leaderboard', { p_period: 'day', p_student_id: s2.id });
+  assert.equal(homeS2.ranks.day, classDay.me.rank, 'hạng trên trang chủ khớp bảng xếp hạng của lớp');
+
+  await db.query(`select set_config('demo.uid', $1, false)`, [uid]);
+  await db.query(`update students set is_active = false where id = any($1)`, [[guest.id, other.id]]);
+}
+ok('bạn khách (tên có dấu "-"): thấy bảng xếp hạng của tất cả; bạn trong lớp chỉ thấy bạn trong lớp');
+
+// 8d. Luật học tập (0006): làm lại kiểu "cặp", điểm không âm, sao/kim cương, giới hạn mỗi ngày, cài đặt môn, giờ làm bài, huy chương
+{
+  const answerAll = async (a, wrongIdx = []) => {
+    for (const [i, q] of a.questions.entries()) {
+      const ans = wrongIdx.includes(i) ? 'sai-roi' : await answerFor(q);
+      await rpc('submit_answer', { p_attempt_id: a.attempt_id, p_question_id: q.id, p_answer: ans });
+    }
+    return rpc('finish_attempt', { p_attempt_id: a.attempt_id });
+  };
+  const weekBefore = (await rpc('get_leaderboard', { p_period: 'week', p_student_id: s1.id })).me.score;
+
+  // Làm lại kiểu "cặp": 7 đúng / 3 sai => 3 - 1 = 2 sao, không đổi bảng xếp hạng
+  await db.query(`update app_settings set retake_mode = 'pair' where id = 1`);
+  const pr = await rpc('start_attempt', { p_student_id: s1.id, p_lesson_id: lesson.id, p_exercise_type: 'basic' });
+  assert.equal(pr.scoring.mode, 'pair');
+  assert.ok(pr.questions.every((q) => q.points === null));
+  const prRes = await answerAll(pr, [0, 1, 2]);
+  assert.equal(prRes.score, 2);
+  assert.equal(prRes.points_gained, 3);
+  assert.equal(prRes.points_lost, 1);
+  assert.equal((await rpc('get_leaderboard', { p_period: 'week', p_student_id: s1.id })).me.score, weekBefore, 'làm lại không đổi BXH');
+  await db.query(`update app_settings set retake_mode = 'per_correct' where id = 1`);
+
+  // Bài lần đầu sai hết: điểm không âm (tuỳ chọn tắt thì được âm)
+  const l3 = await one(`insert into lessons (subject_id, week_number, lesson_order, name, is_published) values ($1, 1, 3, 'Luyện thêm', true) returning id`, [subj.id]);
+  for (let i = 0; i < 10; i++) await db.query(qIns, [l3.id, 1, 'number', `${i} + 2 = ?`, null, null, null, null, String(i + 2), null]);
+  const z = await rpc('start_attempt', { p_student_id: s2.id, p_lesson_id: l3.id, p_exercise_type: 'basic' });
+  const zRes = await answerAll(z, [...Array(10).keys()]);
+  assert.equal(zRes.is_ranked, true);
+  assert.equal(zRes.score, 0, 'sai hết vẫn 0 điểm, không âm');
+  assert.equal(zRes.points_lost, 10);
+  await db.query(`update app_settings set score_floor_zero = false where id = 1`);
+  assert.equal((await one(`select public.rescore_attempt($1) v`, [z.attempt_id])).v, -10);
+  await db.query(`update app_settings set score_floor_zero = true where id = 1`);
+  assert.equal((await one(`select public.rescore_attempt($1) v`, [z.attempt_id])).v, 0);
+
+  // Sao / kim cương: 1 điểm = 1 sao, cộng cả lần làm lại
+  const totalStars = Number((await one(`select sum(score) v from attempts where student_id = $1 and completed_at is not null`, [s1.id])).v);
+  assert.equal(totalStars, expectedScore + 10 + 2);
+  await db.query(`update app_settings set stars_per_diamond = 5 where id = 1`);
+  let rw = await rpc('student_rewards', { p_student_id: s1.id });
+  assert.equal(rw.stars_total, totalStars);
+  assert.equal(rw.diamonds, Math.floor(totalStars / 5));
+  assert.equal(rw.stars, totalStars % 5);
+  await db.query(`update app_settings set stars_per_diamond = 100 where id = 1`);
+
+  // Giới hạn số đề mỗi ngày (tính cả làm lại) + cài đặt riêng của môn
+  await db.query(`update app_settings set daily_max_lessons = 3 where id = 1`);
+  await expectError(rpc('start_attempt', { p_student_id: s1.id, p_lesson_id: l3.id, p_exercise_type: 'basic' }), 'daily_limit_reached');
+  let h = await rpc('get_student_home', { p_student_id: s1.id });
+  assert.deepEqual([h.daily.toan.used, h.daily.toan.max], [3, 3]);
+  assert.equal(h.daily.tieng_viet.used, 0);
+  await db.query(`insert into subject_settings (subject_id, daily_max_lessons, basic_easy, basic_normal, basic_advanced, points_easy)
+                  values ($1, 5, 2, 0, 0, 5)`, [subj.id]);
+  h = await rpc('get_student_home', { p_student_id: s1.id });
+  assert.deepEqual([h.daily.toan.max, h.daily.toan.basic_count, h.daily.tieng_viet.max], [5, 2, 3], 'môn Toán có cài đặt riêng, môn khác theo cài đặt chung');
+  const ov = await rpc('start_attempt', { p_student_id: s1.id, p_lesson_id: l3.id, p_exercise_type: 'basic' });
+  assert.equal(ov.questions.length, 2, 'số câu theo cài đặt môn');
+  assert.ok(ov.questions.every((q) => q.points === 5), 'điểm theo cài đặt môn');
+  const ovRes = await answerAll(ov);
+  assert.equal(ovRes.score, 10);
+  await db.query(`update attempts set score = 0 where id = $1`, [ov.attempt_id]);
+  await db.query(`delete from subject_settings where subject_id = $1`, [subj.id]);
+  await db.query(`update app_settings set daily_max_lessons = 0 where id = 1`);
+
+  // Giờ làm bài: đóng thì không bắt đầu đề mới được, đề đang làm dở vẫn tiếp tục
+  const open = await rpc('start_attempt', { p_student_id: s2.id, p_lesson_id: tvLesson.id, p_exercise_type: 'basic' });
+  await db.query(`update app_settings set schedule_enabled = true, schedule = '{}' where id = 1`);
+  let sch = await rpc('schedule_status');
+  assert.deepEqual([sch.enabled, sch.open, sch.next_open_at], [true, false, null]);
+  await expectError(rpc('start_attempt', { p_student_id: s1.id, p_lesson_id: tvLesson.id, p_exercise_type: 'basic' }), 'closed_hours');
+  const resumed = await rpc('start_attempt', { p_student_id: s2.id, p_lesson_id: tvLesson.id, p_exercise_type: 'basic' });
+  assert.equal(resumed.attempt_id, open.attempt_id, 'hết giờ vẫn làm tiếp bài dở');
+  const allDay = Object.fromEntries([1, 2, 3, 4, 5, 6, 7].map((d) => [String(d), ['00:00', '24:00']]));
+  const todayDow = Number((await one(`select extract(isodow from now() at time zone 'Asia/Ho_Chi_Minh')::int d`)).d);
+  delete allDay[String(todayDow)];
+  await db.query(`update app_settings set schedule = $1 where id = 1`, [JSON.stringify(allDay)]);
+  sch = await rpc('schedule_status');
+  const tomorrow = (await one(`select (((now() at time zone 'Asia/Ho_Chi_Minh')::date + 1)::timestamp at time zone 'Asia/Ho_Chi_Minh') t`)).t;
+  assert.equal(sch.open, false);
+  assert.equal(new Date(sch.next_open_at).getTime(), new Date(tomorrow).getTime(), 'mở lại lúc 0:00 hôm sau');
+  allDay[String(todayDow)] = ['00:00', '24:00'];
+  await db.query(`update app_settings set schedule = $1 where id = 1`, [JSON.stringify(allDay)]);
+  sch = await rpc('schedule_status');
+  assert.equal(sch.open, true);
+  assert.ok(new Date(sch.closes_at) > new Date(Date.now() + 6 * 86400e3), 'các ngày mở cả ngày nối liền nhau');
+  await db.query(`update app_settings set schedule_enabled = false where id = 1`);
+  await rpc('finish_attempt', { p_attempt_id: open.attempt_id });
+
+  // Huy chương tuần: điểm lần đầu đề tuần 1 (cơ bản) / điểm tối đa của tất cả đề tuần 1
+  // Toán Ôn tập 6/3/1 câu => 6 + 6 + 3 = 15; Chính tả 10 câu dễ => 10; Luyện thêm 10 câu dễ => 10
+  const medalOf = async (sid) => (await db.query(`select * from public.weekly_medals(public.week_start_of(now()), $1)`, [sid])).rows[0];
+  let m1 = await medalOf(s1.id);
+  assert.equal(Number(m1.max_score), 35);
+  assert.equal(Number(m1.score), expectedScore);
+  assert.equal(Number(m1.pct), Math.round((1000 * expectedScore) / 35) / 10);
+  assert.equal(m1.medal, 'encourage');
+  await db.query(`update app_settings set medal_bronze_pct = 30 where id = 1`);
+  assert.equal((await medalOf(s1.id)).medal, 'bronze');
+  await db.query(`update app_settings set medal_bronze_pct = 60 where id = 1`);
+  rw = await rpc('student_rewards', { p_student_id: s1.id });
+  assert.equal(rw.this_week.medal, 'encourage');
+  assert.equal(rw.last_week, null);
+  const s3 = await rpc('register_student', { p_full_name: 'Phạm Bảo Châu' });
+  const rw3 = await rpc('student_rewards', { p_student_id: s3.id });
+  assert.deepEqual([rw3.this_week.score, rw3.this_week.max_score, rw3.this_week.medal], [0, 35, null], 'chưa làm bài vẫn thấy tiến độ 0%');
+  assert.equal(rw3.medal_eligible, true);
+
+  // Bạn khách (tên có dấu "-") không xét huy chương nhưng vẫn có sao
+  const s1Name = (await one(`select full_name from students where id = $1`, [s1.id])).full_name;
+  await db.query(`update students set full_name = full_name || ' - Khách' where id = $1`, [s1.id]);
+  assert.equal(await medalOf(s1.id), undefined, 'bạn khách không có huy chương');
+  const rwGuest = await rpc('student_rewards', { p_student_id: s1.id });
+  assert.deepEqual([rwGuest.medal_eligible, rwGuest.this_week, rwGuest.last_week], [false, null, null]);
+  assert.equal(rwGuest.stars_total, totalStars, 'bạn khách vẫn có sao');
+  assert.ok(!(await rpc('admin_weekly_medals')).rows.some((r) => r.student_id === s1.id), 'admin không thấy bạn khách trong bảng huy chương');
+  await db.query(`update students set full_name = $2 where id = $1`, [s1.id, s1Name]);
+
+  // Tuần trước: admin đặt tuần học cho tuần lịch, bài làm tuần trước được tính huy chương tuần trước
+  await expectError(rpc('admin_set_week_class', { p_week_start: '2026-01-05', p_class_week: 99 }), 'invalid_week');
+  const prevWeek = (await one(`select (public.week_start_of(now()) - 7)::text d`)).d;
+  await rpc('admin_set_week_class', { p_week_start: prevWeek, p_class_week: 1 });
+  await db.query(`update attempts set completed_at = completed_at - interval '7 days' where id = $1`, [att.attempt_id]);
+  rw = await rpc('student_rewards', { p_student_id: s1.id });
+  assert.equal(rw.last_week.medal, 'encourage');
+  assert.deepEqual(rw.medal_counts, { encourage: 1 });
+  const adm = await rpc('admin_weekly_medals', { p_week_start: prevWeek });
+  assert.equal(adm.class_week, 1);
+  assert.equal(adm.is_current, false);
+  assert.deepEqual(adm.rows.map((r) => r.student_id), [s1.id]);
+  assert.ok(adm.weeks.length >= 2);
+  await db.query(`update attempts set completed_at = completed_at + interval '7 days' where id = $1`, [att.attempt_id]);
+  await db.query(`update students set is_active = false where id = $1`, [s3.id]);
+
+  await db.query(`select set_config('demo.uid', '', false)`);
+  await expectError(rpc('admin_weekly_medals'), 'not_admin');
+  await expectError(rpc('admin_set_week_class', { p_week_start: prevWeek, p_class_week: 2 }), 'not_admin');
+  await db.query(`select set_config('demo.uid', $1, false)`, [uid]);
+}
+ok('luật 0006: làm lại kiểu cặp, điểm không âm, sao/kim cương, giới hạn mỗi ngày, cài đặt môn, giờ làm bài, huy chương tuần');
+
 // 9. Quyền của anon (kiểm tra GRANT/RLS)
 const grants = await db.query(`
   select has_table_privilege('anon', 'public.questions', 'select') as q,
@@ -333,8 +554,28 @@ const grants = await db.query(`
          has_function_privilege('anon', 'public.leaderboard_rows_by(text,uuid)', 'execute') as lrb,
          has_function_privilege('anon', 'public.get_subject_leaderboard(text,uuid,uuid)', 'execute') as gsl,
          has_function_privilege('anon', 'public.admin_subject_stats(text)', 'execute') as ass,
+         has_function_privilege('anon', 'public.leaderboard_rows_for(text,uuid,uuid,boolean)', 'execute') as lrf,
+         has_function_privilege('anon', 'public.get_leaderboard(text,uuid)', 'execute') as gl,
+         has_function_privilege('anon', 'public.get_student_home(uuid)', 'execute') as gsh,
+         has_function_privilege('anon', 'public.start_attempt(uuid,uuid,text,text)', 'execute') as st,
+         has_function_privilege('anon', 'public.finish_attempt(uuid)', 'execute') as fa,
+         has_function_privilege('anon', 'public.get_attempt_result(uuid)', 'execute') as gar,
+         has_function_privilege('anon', 'public.rescore_attempt(uuid)', 'execute') as rsc,
+         has_function_privilege('anon', 'public.effective_settings(uuid)', 'execute') as es,
+         has_function_privilege('anon', 'public.student_rewards(uuid)', 'execute') as srw,
+         has_function_privilege('anon', 'public.weekly_medals(date,uuid)', 'execute') as wm,
+         has_function_privilege('anon', 'public.admin_weekly_medals(date)', 'execute') as awm,
+         has_function_privilege('anon', 'public.admin_set_week_class(date,int)', 'execute') as asw,
+         has_function_privilege('authenticated', 'public.admin_weekly_medals(date)', 'execute') as awm_auth,
+         has_table_privilege('anon', 'public.subject_settings', 'select') as ss,
+         has_table_privilege('anon', 'public.week_log', 'select') as wl,
+         (select relrowsecurity from pg_class where oid = 'public.subject_settings'::regclass) as ss_rls,
          (select relrowsecurity from pg_class where oid = 'public.questions'::regclass) as rls`);
-assert.deepEqual(grants.rows[0], { q: false, sa: true, ad: false, lr: false, lrb: false, gsl: true, ass: false, rls: true });
+assert.deepEqual(grants.rows[0], {
+  q: false, sa: true, ad: false, lr: false, lrb: false, gsl: true, ass: false, lrf: false, gl: true, gsh: true,
+  st: true, fa: true, gar: true, rsc: false, es: false, srw: false, wm: false, awm: false, asw: false, awm_auth: true,
+  ss: false, wl: false, ss_rls: true, rls: true,
+});
 ok('anon không đọc được bảng câu hỏi, chỉ gọi được API học sinh');
 
 if (existsSync(new URL('supabase/seed.sql', root))) {
@@ -343,6 +584,9 @@ if (existsSync(new URL('supabase/seed.sql', root))) {
   await fresh.exec(read('supabase/migrations/0001_init.sql'));
   await fresh.exec(read('supabase/migrations/0003_student_birthday.sql'));
   await fresh.exec(read('supabase/migrations/0004_subject_stats.sql'));
+  await fresh.exec(read('supabase/migrations/0005_guest_students.sql'));
+  await fresh.exec(read('supabase/migrations/0006_learning_rules.sql'));
+  await fresh.exec(read('supabase/migrations/0007_guest_sees_all.sql'));
   await fresh.exec(read('supabase/seed.sql'));
   const c = (await fresh.query(`select (select count(*) from lessons) l, (select count(*) from questions) q, (select count(*) from students) s`)).rows[0];
   console.log(`  ✓ seed.sql chạy được: ${c.l} bài, ${c.q} câu hỏi, ${c.s} học sinh`);
@@ -444,5 +688,55 @@ if (existsSync(new URL('supabase/seed.sql', root))) {
     passed++;
   }
 }
+
+// 10. Nâng cấp DB đang chạy lên 0006: đổi thang điểm 10/15/25 → 1/2/3 và tính lại điểm cũ đúng 1 lần
+{
+  const up = new PGlite();
+  await up.exec(read('supabase/demo/supabase_stubs.sql'));
+  for (const f of ['0001_init', '0003_student_birthday', '0004_subject_stats', '0005_guest_students']) {
+    await up.exec(read(`supabase/migrations/${f}.sql`));
+  }
+  const q1 = async (sql, params) => (await up.query(sql, params)).rows[0];
+  const call = async (fn, args) => {
+    const keys = Object.keys(args);
+    return (await q1(`select public.${fn}(${keys.map((k, i) => `${k} => $${i + 1}`).join(', ')}) as r`, keys.map((k) => args[k]))).r;
+  };
+  const sj = await q1(`insert into subjects (code, name) values ('toan', 'Toán') returning id`);
+  const ls = await q1(`insert into lessons (subject_id, week_number, lesson_order, name, is_published) values ($1, 1, 1, 'Bài 1', true) returning id`, [sj.id]);
+  for (const [d, n] of [[1, 6], [2, 3], [3, 1]]) {
+    for (let i = 0; i < n; i++) {
+      await up.query(`insert into questions (lesson_id, difficulty, question_type, question_text, correct_answer) values ($1, $2, 'number', $3, $4)`,
+        [ls.id, d, `${d}-${i}`, String(d * 10 + i)]);
+    }
+  }
+  const st = await call('register_student', { p_full_name: 'Đỗ Đăng Khoa' });
+  const runAttempt = async (wrongFirst) => {
+    const a = await call('start_attempt', { p_student_id: st.id, p_lesson_id: ls.id, p_exercise_type: 'basic' });
+    for (const [i, q] of a.questions.entries()) {
+      const c = (await q1(`select correct_answer from questions where id = $1`, [q.id])).correct_answer;
+      await call('submit_answer', { p_attempt_id: a.attempt_id, p_question_id: q.id, p_answer: wrongFirst && i === 0 ? 'x' : c });
+    }
+    return call('finish_attempt', { p_attempt_id: a.attempt_id });
+  };
+  const old1 = await runAttempt(true);
+  const old2 = await runAttempt(false);
+  assert.equal(old1.score, 5 * 10 + 3 * 15 + 25, 'trước 0006: thang 10/15/25, sai không trừ');
+  assert.equal(old2.score, 6 * 10 + 3 * 15 + 25);
+
+  const m6 = read('supabase/migrations/0006_learning_rules.sql');
+  await up.exec(m6);
+  const scoreOf = async (id) => (await q1(`select score from attempts where id = $1`, [id])).score;
+  assert.equal(await scoreOf(old1.attempt_id), 5 + 6 + 3 - 1, 'lượt đầu tính lại: đúng 1/2/3, sai trừ 1');
+  assert.equal(await scoreOf(old2.attempt_id), 10, 'lượt làm lại tính lại: mỗi câu đúng 1 sao');
+  const set1 = await q1(`select points_easy, points_normal, points_advanced, rules_version from app_settings`);
+  assert.deepEqual(set1, { points_easy: 1, points_normal: 2, points_advanced: 3, rules_version: 6 });
+
+  await up.query(`update app_settings set points_easy = 2 where id = 1`);
+  await up.exec(m6);
+  assert.equal((await q1(`select points_easy from app_settings`)).points_easy, 2, 'chạy lại 0006 không ghi đè cài đặt admin đã sửa');
+  assert.equal(await scoreOf(old1.attempt_id), 13, 'chạy lại 0006 không tính lại điểm lần nữa');
+  await up.close();
+}
+ok('nâng cấp lên 0006: đổi thang điểm và tính lại điểm cũ đúng 1 lần');
 
 console.log(`\nTất cả ${passed} nhóm kiểm thử đều ĐẠT.`);

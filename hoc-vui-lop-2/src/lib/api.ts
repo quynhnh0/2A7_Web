@@ -1,8 +1,8 @@
 import { getBackend, type BackendError, type Filter, type Row, type SelectOptions } from './backend';
 import type {
-  AdminDashboard, AdminSubjectStats, AnswerResult, AppSettings, AttemptPayload, AttemptResult, AttemptView, ExerciseType, Leaderboard,
-  Lesson, LessonView, Period, PublicConfig, Question, QuestionView, StudentHome, StudentIdentity, StudentStats, Subject,
-  StatsPeriod, VerifyStudentResult,
+  AdminDashboard, AdminSubjectStats, AdminWeeklyMedals, AnswerResult, AppSettings, AttemptPayload, AttemptResult, AttemptView,
+  ExerciseType, Leaderboard, Lesson, LessonView, Period, PublicConfig, Question, QuestionView, StudentHome, StudentIdentity,
+  StudentActivity, StudentStats, Subject, SubjectSettings, StatsPeriod, VerifyStudentResult,
 } from '../types';
 
 const rpc = async <T>(fn: string, args?: Row) => (await getBackend()).rpc<T>(fn, args);
@@ -88,7 +88,61 @@ export const adminApi = {
   updateStudent: (id: string, patch: Partial<StudentStats>) => update<StudentStats>('students', patch as Row, [['id', 'eq', id]]),
   deleteStudent: (id: string) => remove('students', [['id', 'eq', id]]),
 
+  /** Số liệu từng học sinh với các lượt bắt đầu trong [from, to). Đọc theo trang vì Supabase trả tối đa 1000 dòng/lần. */
+  async studentActivity(fromIso: string, toIso: string): Promise<Map<string, StudentActivity>> {
+    type AttemptRow = { student_id: string; score: number; correct_count: number; total_questions: number; is_ranked: boolean; started_at: string; completed_at: string | null };
+    const acc = new Map<string, { done: number; score: number; correct: number; total: number; last: number }>();
+    const PAGE = 1000;
+    for (let offset = 0; ; offset += PAGE) {
+      const { rows } = await select<AttemptRow>('attempts', {
+        columns: 'student_id,score,correct_count,total_questions,is_ranked,started_at,completed_at',
+        filters: [['started_at', 'gte', fromIso], ['started_at', 'lt', toIso]],
+        order: [['started_at', true], ['id', true]],
+        limit: PAGE,
+        offset,
+      });
+      for (const r of rows) {
+        const started = new Date(r.started_at).getTime();
+        let a = acc.get(r.student_id);
+        if (!a) acc.set(r.student_id, (a = { done: 0, score: 0, correct: 0, total: 0, last: started }));
+        if (started > a.last) a.last = started;
+        if (!r.completed_at) continue;
+        a.done += 1;
+        a.correct += r.correct_count;
+        a.total += r.total_questions;
+        if (r.is_ranked) a.score += r.score;
+      }
+      if (rows.length < PAGE) break;
+    }
+    const out = new Map<string, StudentActivity>();
+    for (const [id, a] of acc) {
+      out.set(id, {
+        attempts_completed: a.done,
+        total_score: a.score,
+        accuracy: a.total > 0 ? Math.round((100 * a.correct) / a.total) : null,
+        last_active_at: new Date(a.last).toISOString(),
+      });
+    }
+    return out;
+  },
   listAttempts: (opts: SelectOptions) => select<AttemptView>('v_attempts', { count: true, ...opts }),
   getLeaderboard: (period: Period, subjectId?: string | null) => leaderboard(period, subjectId ?? null, null),
   subjectStats: (period: StatsPeriod) => rpc<AdminSubjectStats>('admin_subject_stats', { p_period: period }),
+
+  async listSubjectSettings() {
+    return (await select<SubjectSettings>('subject_settings')).rows;
+  },
+  /** Ô nào cũng để trống => xoá dòng cài đặt riêng (môn quay về theo cài đặt chung). */
+  async saveSubjectSettings(s: SubjectSettings) {
+    const { subject_id, ...patch } = s;
+    if (Object.values(patch).every((v) => v === null)) {
+      await remove('subject_settings', [['subject_id', 'eq', subject_id]]);
+      return;
+    }
+    const updated = await update<SubjectSettings>('subject_settings', patch as Row, [['subject_id', 'eq', subject_id]]);
+    if (updated.length === 0) await insert<SubjectSettings>('subject_settings', [s as unknown as Row]);
+  },
+  weeklyMedals: (weekStart?: string | null) => rpc<AdminWeeklyMedals>('admin_weekly_medals', { p_week_start: weekStart ?? null }),
+  setWeekClass: (weekStart: string, classWeek: number) =>
+    rpc<null>('admin_set_week_class', { p_week_start: weekStart, p_class_week: classWeek }),
 };

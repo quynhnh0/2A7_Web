@@ -1,3 +1,5 @@
+import type { MedalKind, RetakeMode } from '../types';
+
 /** Bỏ dấu tiếng Việt, chữ thường — dùng để tìm tên không phân biệt dấu. */
 export function foldVietnamese(s: string): string {
   return s
@@ -96,6 +98,37 @@ export function lessonLabel(lesson: { lesson_order: number; name: string }): { t
   const m = /^\s*(Archimes)\s*:\s*/i.exec(lesson.name);
   return m ? { tag: 'Archimes', title: lesson.name.slice(m[0].length) } : { tag: `Bài ${lesson.lesson_order}`, title: lesson.name };
 }
+
+const CLASS_TZ = 'Asia/Ho_Chi_Minh';
+const dayKey = (d: Date) => d.toLocaleDateString('en-CA', { timeZone: CLASS_TZ });
+
+/** Giờ mở/đóng theo giờ Việt Nam: "17:00 hôm nay", "0:00 ngày mai", "17:00 thứ Hai". */
+export function formatOpenTime(iso: string | null | undefined): string {
+  if (!iso) return '';
+  const d = new Date(iso);
+  const time = d.toLocaleTimeString('vi-VN', { hour: 'numeric', minute: '2-digit', timeZone: CLASS_TZ });
+  const today = new Date();
+  const tomorrow = new Date(today.getTime() + 86400e3);
+  if (dayKey(d) === dayKey(today)) return `${time} hôm nay`;
+  if (dayKey(d) === dayKey(tomorrow)) return `${time} ngày mai`;
+  return `${time} ${d.toLocaleDateString('vi-VN', { weekday: 'long', timeZone: CLASS_TZ })}`;
+}
+
+export const WEEKDAY_LABEL: Record<string, string> = {
+  '1': 'Thứ Hai', '2': 'Thứ Ba', '3': 'Thứ Tư', '4': 'Thứ Năm', '5': 'Thứ Sáu', '6': 'Thứ Bảy', '7': 'Chủ nhật',
+};
+
+export const RETAKE_LABEL: Record<RetakeMode, string> = {
+  per_correct: 'Mỗi câu đúng được 1 sao',
+  pair: 'Cứ 2 câu đúng được 1 sao, 2 câu sai bị trừ 1 sao',
+};
+
+export const MEDAL_INFO: Record<MedalKind, { label: string; emoji: string; className: string }> = {
+  gold: { label: 'Huy chương Vàng', emoji: '🥇', className: 'bg-amber-100 text-amber-800' },
+  silver: { label: 'Huy chương Bạc', emoji: '🥈', className: 'bg-slate-200 text-slate-700' },
+  bronze: { label: 'Huy chương Đồng', emoji: '🥉', className: 'bg-orange-100 text-orange-800' },
+  encourage: { label: 'Khuyến khích', emoji: '🎗️', className: 'bg-sky-100 text-sky-800' },
+};
 
 export const DIFFICULTY_LABEL: Record<number, string> = { 1: 'Dễ', 2: 'Vừa', 3: 'Nâng cao' };
 export const TYPE_LABEL: Record<string, string> = { multiple_choice: 'Trắc nghiệm', number: 'Điền số', text: 'Điền chữ' };

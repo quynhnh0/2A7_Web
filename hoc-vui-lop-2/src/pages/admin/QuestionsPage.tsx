@@ -8,6 +8,7 @@ import { useAsync } from '../../hooks/useAsync';
 import { adminApi } from '../../lib/api';
 import type { Filter } from '../../lib/backend';
 import { downloadText, toCsv } from '../../lib/csv';
+import { DIFFICULTY_LABEL } from '../../lib/text';
 import type { LessonView, Question, QuestionType, QuestionView } from '../../types';
 
 const PAGE_SIZE = 30;
@@ -18,6 +19,24 @@ const BANKS: Record<string, { label: string; filter: Filter }> = {
   import: { label: 'Nhập từ file', filter: ['generator_type', 'eq', 'import'] },
   manual: { label: 'Tự thêm tay', filter: ['generator_type', 'is', null] },
 };
+
+type Adapt = 'up' | 'down' | 'check';
+interface AdaptRule { min: number; up: number; down: number }
+
+const ADAPT_INFO: Record<Adapt, { label: string; cls: string; hint: string }> = {
+  up: { label: 'Nên tăng độ khó', cls: 'bg-blue-100 text-blue-800', hint: 'Hầu hết các bạn làm đúng' },
+  down: { label: 'Nên giảm độ khó', cls: 'bg-amber-100 text-amber-800', hint: 'Nhiều bạn làm sai' },
+  check: { label: 'Kiểm tra lại câu', cls: 'bg-rose-100 text-rose-800', hint: 'Câu dễ mà nhiều bạn sai: có thể đề khó hiểu hoặc đáp án nhập nhầm' },
+};
+
+/** Gợi ý chỉnh độ khó theo tỉ lệ làm đúng; cần đủ số lượt trả lời mới gợi ý. */
+function adaptOf(q: Pick<QuestionView, 'answered_count' | 'correct_count' | 'difficulty'>, r: AdaptRule): Adapt | null {
+  if (q.answered_count < Math.max(1, r.min)) return null;
+  const rate = (100 * q.correct_count) / q.answered_count;
+  if (rate >= r.up && q.difficulty < 3) return 'up';
+  if (rate < r.down) return q.difficulty > 1 ? 'down' : 'check';
+  return null;
+}
 
 function optionsOf(q: Pick<Question, 'option_a' | 'option_b' | 'option_c' | 'option_d'>): string[] {
   return [q.option_a, q.option_b, q.option_c, q.option_d].filter((o): o is string => !!o);
@@ -38,6 +57,7 @@ export default function QuestionsPage() {
   const type = params.get('type') ?? '';
   const active = params.get('active') ?? '';
   const bank = params.get('bank') ?? '';
+  const adapt = (params.get('adapt') ?? '') as Adapt | '';
   const q = params.get('q') ?? '';
   const page = Number(params.get('page') ?? 0) || 0;
 
@@ -49,6 +69,9 @@ export default function QuestionsPage() {
 
   const lessonsState = useAsync(() => adminApi.listLessons(), []);
   const lessons = lessonsState.data ?? [];
+  const settingsState = useAsync(() => adminApi.getSettings(), []);
+  const s = settingsState.data;
+  const rule: AdaptRule = { min: s?.adapt_min_answers ?? 10, up: s?.adapt_up_pct ?? 90, down: s?.adapt_down_pct ?? 40 };
   const subjects = useMemo(() => {
     const m = new Map<string, string>();
     for (const l of lessons) m.set(l.subject_id, l.subject_name);
@@ -68,12 +91,15 @@ export default function QuestionsPage() {
   }, [lessonId, subjectId, difficulty, type, active, bank, q]);
 
   const order: Array<[string, boolean]> = [['week_number', true], ['lesson_order', true], ['difficulty', true], ['created_at', true]];
-  const { data, error, loading, reload } = useAsync(
-    () => adminApi.listQuestions({ filters, order, limit: PAGE_SIZE, offset: page * PAGE_SIZE }),
-    [JSON.stringify(filters), page],
-  );
+  const { data, error, loading, reload } = useAsync(async () => {
+    if (!adapt) return adminApi.listQuestions({ filters, order, limit: PAGE_SIZE, offset: page * PAGE_SIZE });
+    // Tỉ lệ đúng không lọc được trên server: lấy các câu đủ lượt trả lời rồi lọc và chia trang tại máy.
+    const all = await adminApi.listQuestions({ filters: [...filters, ['answered_count', 'gte', Math.max(1, rule.min)]], order, limit: 10000 });
+    const matched = all.rows.filter((r) => adaptOf(r, rule) === adapt);
+    return { rows: matched.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE), count: matched.length };
+  }, [JSON.stringify(filters), page, adapt, rule.min, rule.up, rule.down]);
 
-  useEffect(() => setSelected(new Set()), [JSON.stringify(filters), page]);
+  useEffect(() => setSelected(new Set()), [JSON.stringify(filters), page, adapt]);
   useEffect(() => setSearchText(q), [q]);
 
   const setParam = (key: string, value: string) => {
@@ -103,6 +129,14 @@ export default function QuestionsPage() {
   const total = data?.count ?? 0;
   const allChecked = rows.length > 0 && rows.every((r) => selected.has(r.id));
   const selectedIds = [...selected];
+
+  const shiftDifficulty = (qs: QuestionView[], delta: 1 | -1) => run(async () => {
+    for (const d of [1, 2, 3] as const) {
+      const ids = qs.filter((x) => x.difficulty === d && d + delta >= 1 && d + delta <= 3).map((x) => x.id);
+      if (ids.length) await adminApi.updateQuestions(ids, { difficulty: (d + delta) as 1 | 2 | 3 });
+    }
+  });
+  const selectedRows = rows.filter((r) => selected.has(r.id));
 
   const exportCsv = () => run(async () => {
     const all = await adminApi.listQuestions({ filters, order, limit: 10000 });
@@ -182,6 +216,13 @@ export default function QuestionsPage() {
             <option value="0">Đã tắt</option>
           </select>
         </div>
+        <select className="input" value={adapt} onChange={(e) => setParam('adapt', e.target.value)} aria-label="Lọc theo gợi ý độ khó">
+          <option value="">Mọi gợi ý độ khó</option>
+          {(Object.keys(ADAPT_INFO) as Adapt[]).map((k) => <option key={k} value={k}>{ADAPT_INFO[k].label}</option>)}
+        </select>
+        <p className="self-center text-xs text-slate-500 sm:col-span-1 lg:col-span-3">
+          Gợi ý khi câu có từ {rule.min} lượt trả lời: đúng từ {rule.up}% trở lên → nên tăng; đúng dưới {rule.down}% → nên giảm (câu Dễ thì nên kiểm tra lại đề/đáp án). Đổi ngưỡng ở <Link to="/admin/settings" className="font-semibold text-blue-700 hover:underline">Cài đặt</Link>.
+        </p>
       </div>
 
       {selected.size > 0 && (
@@ -189,6 +230,8 @@ export default function QuestionsPage() {
           <span className="font-semibold">Đã chọn {selected.size} câu</span>
           <button type="button" className="btn btn-secondary btn-sm" disabled={busy} onClick={() => run(() => adminApi.updateQuestions(selectedIds, { is_active: true }))}>Bật</button>
           <button type="button" className="btn btn-secondary btn-sm" disabled={busy} onClick={() => run(() => adminApi.updateQuestions(selectedIds, { is_active: false }))}>Tắt</button>
+          <button type="button" className="btn btn-secondary btn-sm" disabled={busy} onClick={() => shiftDifficulty(selectedRows, 1)}>Tăng độ khó</button>
+          <button type="button" className="btn btn-secondary btn-sm" disabled={busy} onClick={() => shiftDifficulty(selectedRows, -1)}>Giảm độ khó</button>
           <button
             type="button"
             className="btn btn-danger btn-sm"
@@ -235,8 +278,10 @@ export default function QuestionsPage() {
                   <QuestionRow
                     key={r.id}
                     q={r}
+                    adapt={adaptOf(r, rule)}
                     checked={selected.has(r.id)}
                     busy={busy}
+                    onShift={(d) => shiftDifficulty([r], d)}
                     onCheck={(v) => setSelected((s) => {
                       const n = new Set(s);
                       if (v) n.add(r.id);
@@ -271,9 +316,9 @@ export default function QuestionsPage() {
   );
 }
 
-function QuestionRow({ q, checked, busy, onCheck, onToggle, onEdit, onDelete }: {
-  q: QuestionView; checked: boolean; busy: boolean;
-  onCheck: (v: boolean) => void; onToggle: (v: boolean) => void; onEdit: () => void; onDelete: () => void;
+function QuestionRow({ q, adapt, checked, busy, onCheck, onShift, onToggle, onEdit, onDelete }: {
+  q: QuestionView; adapt: Adapt | null; checked: boolean; busy: boolean;
+  onCheck: (v: boolean) => void; onShift: (delta: 1 | -1) => void; onToggle: (v: boolean) => void; onEdit: () => void; onDelete: () => void;
 }) {
   const opts = optionsOf(q);
   const source = sourceLabel(q);
@@ -308,6 +353,16 @@ function QuestionRow({ q, checked, busy, onCheck, onToggle, onEdit, onDelete }: 
       </td>
       <td className="td whitespace-nowrap text-xs">
         {q.answered_count > 0 ? <>{pct((100 * q.correct_count) / q.answered_count)}<br /><span className="text-slate-400">{q.answered_count} lượt</span></> : <span className="text-slate-400">—</span>}
+        {adapt && (
+          <div className="mt-1 flex flex-col items-start gap-1">
+            <span className={`chip ${ADAPT_INFO[adapt].cls}`} title={ADAPT_INFO[adapt].hint}>{ADAPT_INFO[adapt].label}</span>
+            {adapt !== 'check' && (
+              <button type="button" className="btn btn-secondary btn-sm" disabled={busy} onClick={() => onShift(adapt === 'up' ? 1 : -1)}>
+                {adapt === 'up' ? '↑' : '↓'} {DIFFICULTY_LABEL[q.difficulty + (adapt === 'up' ? 1 : -1)]}
+              </button>
+            )}
+          </div>
+        )}
       </td>
       <td className="td"><Toggle checked={q.is_active} disabled={busy} onChange={onToggle} label={q.is_active ? 'Đang dùng' : 'Đã tắt'} /></td>
       <td className="td whitespace-nowrap">

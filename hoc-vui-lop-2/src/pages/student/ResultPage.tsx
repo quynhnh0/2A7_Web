@@ -9,9 +9,9 @@ import { LoadingBlock, StudentError } from '../../components/ui';
 import type { AttemptResult } from '../../types';
 
 function headline(ratio: number) {
-  if (ratio >= 0.9) return { title: 'HOÀN THÀNH XUẤT SẮC!', emoji: '🏆', medal: 'Huy chương Vàng', color: 'text-amber-600' };
-  if (ratio >= 0.7) return { title: 'GIỎI LẮM!', emoji: '🥈', medal: 'Huy chương Bạc', color: 'text-blue-700' };
-  if (ratio >= 0.5) return { title: 'CỐ LÊN NÀO!', emoji: '🥉', medal: 'Huy chương Đồng', color: 'text-orange-600' };
+  if (ratio >= 0.9) return { title: 'HOÀN THÀNH XUẤT SẮC!', emoji: '🏆', medal: 'Siêu sao học tập', color: 'text-amber-600' };
+  if (ratio >= 0.7) return { title: 'GIỎI LẮM!', emoji: '🌟', medal: 'Ngôi sao chăm chỉ', color: 'text-blue-700' };
+  if (ratio >= 0.5) return { title: 'CỐ LÊN NÀO!', emoji: '💪', medal: 'Đang tiến bộ', color: 'text-orange-600' };
   return { title: 'CÙNG ÔN LẠI NHÉ!', emoji: '🌱', medal: 'Hạt giống chăm chỉ', color: 'text-emerald-700' };
 }
 
@@ -56,6 +56,9 @@ export default function ResultPage() {
   const h = headline(ratio);
   const stars = ratio >= 0.9 ? 3 : ratio >= 0.6 ? 2 : ratio > 0 ? 1 : 0;
   const wrong = data.review.filter((r) => !r.is_correct);
+  const unit = data.is_ranked ? 'điểm' : 'sao';
+  const gained = data.points_gained ?? data.score;
+  const lost = data.points_lost ?? 0;
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-6">
@@ -82,7 +85,7 @@ export default function ResultPage() {
           <div className="rounded-2xl bg-amber-50 p-3 ring-1 ring-amber-200">
             <Star className="mx-auto h-6 w-6 text-amber-500" fill="currentColor" />
             <div className="mt-1 font-display text-3xl font-bold text-amber-600">+{data.score}</div>
-            <div className="text-xs font-semibold text-slate-500">điểm</div>
+            <div className="text-xs font-semibold text-slate-500">{unit}</div>
           </div>
           <div className="rounded-2xl bg-blue-50 p-3 ring-1 ring-blue-200">
             <Clock className="mx-auto h-6 w-6 text-blue-600" />
@@ -91,11 +94,18 @@ export default function ResultPage() {
           </div>
         </div>
 
+        {lost > 0 && (
+          <p className="mt-4 text-sm font-semibold text-slate-600">
+            Câu đúng <span className="text-emerald-700">+{gained}</span> · Câu sai <span className="text-rose-600">−{lost}</span>
+            {data.score === 0 && gained < lost && ' (điểm thấp nhất là 0)'}
+          </p>
+        )}
+
         <p className={`mt-5 flex items-center justify-center gap-2 rounded-2xl px-4 py-2 text-sm font-semibold ${data.is_ranked ? 'bg-amber-50 text-amber-800' : 'bg-sky-50 text-sky-800'}`}>
           <Info className="h-4 w-4 shrink-0" />
           {data.is_ranked
-            ? 'Điểm lần này đã được cộng vào bảng xếp hạng!'
-            : 'Lần làm lại để luyện tập — không cộng vào bảng xếp hạng.'}
+            ? `Điểm lần này đã được cộng vào bảng xếp hạng và kho sao (${data.score} sao)!`
+            : `Lần làm lại để luyện tập: không cộng bảng xếp hạng, được cộng ${data.score} sao vào kho báu.`}
         </p>
 
         <div className="mt-6 grid gap-3 sm:grid-cols-2">

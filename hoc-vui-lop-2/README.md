@@ -8,7 +8,12 @@ Web làm bài tập cho học sinh lớp 2, **chạy miễn phí 100%** (Cloudfl
 - 3 dạng câu hỏi: **trắc nghiệm**, **điền số** (bàn phím số to cho tablet/điện thoại), **điền chữ**.
 - **Bảng xếp hạng** theo ngày / tuần (thứ Hai – Chủ nhật) / tháng, xem **tất cả môn** hoặc **từng môn** (Toán, Tiếng Việt…). Chỉ lần làm đầu tiên của mỗi bài được tính điểm, các lần sau là luyện tập → công bằng, không “cày điểm”.
 - Admin có trang **Thống kê theo môn**: tỉ lệ đúng, số bạn đã học, lượt làm, thời gian trung bình của từng môn; bảng **từng bạn × từng môn** (lọc nhanh bạn cần chú ý, xuất CSV); câu sai nhiều nhất của mỗi môn.
+- **Bạn khách** (không thuộc lớp): đặt họ tên có dấu **“-”**, ví dụ `Tiểu Nguyên - Khoai`. Bạn khách học và được tính điểm bình thường, **thấy bảng xếp hạng của tất cả mọi người** (cả lớp lẫn các bạn khách khác, hạng tính trên toàn bộ); các bạn trong lớp **chỉ thấy các bạn trong lớp** (bảng xếp hạng, thứ hạng trên trang chủ đều bỏ bạn khách ra trước khi xếp hạng). Bạn khách không tham gia huy chương tuần nhưng vẫn nhận sao và kim cương. Tên bạn khách không hiện sẵn trong danh sách chọn tên, bạn ấy gõ từ 3 chữ cái trở lên của tên mình thì tên mới hiện ra. Thầy cô vẫn thấy tất cả, có nhãn **Khách**.
 - Chấm điểm **trên máy chủ**, đáp án không bao giờ gửi xuống trình duyệt trước khi nộp.
+- **Điểm chênh lệch nhỏ**: cơ bản dễ/vừa/khó 1/2/3 điểm, nâng cao 1/3/4; **câu sai trừ 1 điểm**, điểm mỗi đề không âm. Bài làm lại không tính xếp hạng, chỉ cộng **sao** (mỗi câu đúng 1 sao, hoặc kiểu “2 đúng +1, 2 sai −1”).
+- **Kho báu**: 1 điểm = 1 sao, **100 sao = 1 kim cương 💎**. **Huy chương tuần** Vàng / Bạc / Đồng / Khuyến khích theo % điểm so với điểm tối đa các bài đã mở trong tuần.
+- **Vừa đủ, không quá tải**: mỗi môn tối đa 3 đề/ngày; **giờ làm bài** T2–T6 17:00–22:30, T7 cả ngày, CN đến 22:00 (ngoài giờ vẫn xem điểm, đề đang dở vẫn nộp được).
+- Mọi con số trên đều **sửa được trong Cài đặt**, từng môn có thể đặt riêng (số câu, điểm, trừ điểm, số đề/ngày). Trang Câu hỏi **gợi ý tăng/giảm độ khó** theo tỉ lệ làm đúng.
 - **1 tài khoản admin** (thầy cô / phụ huynh) để: quản lý bài học & lịch mở bài theo tuần, ngân hàng câu hỏi, **nhập CSV/Excel**, **tự sinh câu hỏi** Toán & Tiếng Việt lớp 2, quản lý học sinh, xem kết quả, xuất CSV.
 - Có sẵn **ngân hàng mẫu 807 câu** (27 bài, Toán tuần 1–10, Tiếng Việt tuần 1–4) theo chương trình lớp 2.
 - Có sẵn **ngân hàng Archimes 2.545 câu** soạn theo bộ phiếu bài tập Archimedes School (Toán 2 và Tiếng Việt 2, quyển 1–4): **35 tuần × 2 môn = 70 bài**, mỗi bài 26–55 câu đủ 3 mức Dễ / Vừa / Nâng cao, có ghi trang sách nguồn.
@@ -44,7 +49,7 @@ Khi **chưa cấu hình Supabase**, web tự chạy **chế độ demo**: một 
 ### Bước 2.1 — Tạo cơ sở dữ liệu Supabase (miễn phí)
 
 1. Đăng ký tại https://supabase.com → **New project**. Chọn region **Singapore** cho nhanh. Ghi nhớ mật khẩu database.
-2. Vào **SQL Editor** → **New query** → dán toàn bộ nội dung file [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql) → **Run**. Làm tiếp lần lượt với `0002_fix_dau_cau.sql`, `0003_student_birthday.sql`, `0004_subject_stats.sql` (mọi file trong `supabase/migrations/`, theo thứ tự số).
+2. Vào **SQL Editor** → **New query** → dán toàn bộ nội dung file [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql) → **Run**. Làm tiếp lần lượt với `0002_fix_dau_cau.sql`, `0003_student_birthday.sql`, `0004_subject_stats.sql`, `0005_guest_students.sql`, `0006_learning_rules.sql`, `0007_guest_sees_all.sql` (mọi file trong `supabase/migrations/`, theo thứ tự số).
 3. (Nên làm) Tạo query mới, dán file [`supabase/seed.sql`](supabase/seed.sql) → **Run** để có sẵn 807 câu hỏi mẫu. Chạy lại nhiều lần cũng không bị trùng.
    Làm tương tự với [`supabase/archimes.sql`](supabase/archimes.sql) để có **ngân hàng Archimes** (2.545 câu, tuần 1–35). File khá dài (~800 KB): nếu SQL Editor báo quá lớn, dùng cách nhập file CSV ở mục 3d.
    Làm tương tự với [`supabase/ky_nang_khoa_hoc.sql`](supabase/ky_nang_khoa_hoc.sql) để có 2 môn **Kỹ năng sống** và **Khoa học** (1.000 câu, xem mục 3e).
@@ -183,10 +188,14 @@ Sửa hoặc thêm câu: sửa `data/kien_thuc/*.json` (`kns_1…4` = Kỹ năng
 - Mỗi lượt làm lấy ngẫu nhiên câu hỏi theo tỉ lệ (sửa được trong **Cài đặt**), ưu tiên câu bạn đó **chưa gặp**:
   - Cơ bản: 6 dễ + 3 vừa + 1 khó.
   - Nâng cao: 2 dễ + 3 vừa + 5 khó.
-- Điểm mỗi câu đúng: dễ 10, vừa 15, khó 25 (sửa được; từng câu có thể đặt điểm riêng).
-- **Chỉ lần làm đầu tiên** của mỗi (bài, loại cơ bản/nâng cao) được cộng vào bảng xếp hạng. Làm lại thoải mái để luyện tập.
+- Điểm mỗi câu đúng (lần làm đầu): cơ bản dễ 1, vừa 2, khó 3; nâng cao dễ 1, vừa 3, khó 4. Mỗi câu sai trừ 1 điểm, điểm cả đề thấp nhất là 0 (sửa được; từng câu có thể đặt điểm riêng).
+- **Chỉ lần làm đầu tiên** của mỗi (bài, loại cơ bản/nâng cao) được cộng vào bảng xếp hạng. Làm lại thoải mái để luyện tập, mỗi câu đúng được 1 sao (hoặc kiểu cặp: cứ 2 câu đúng +1 sao, 2 câu sai −1 sao).
+- **Sao & kim cương**: tổng sao = điểm các lần đầu + sao các lần làm lại; đủ 100 sao đổi 1 kim cương.
+- **Huy chương tuần** (thứ Hai – Chủ nhật): lấy tổng điểm bài cơ bản làm lần đầu trong tuần chia cho điểm tối đa của **tất cả** bài đã mở của tuần học đó (bài chưa làm tính 0). Trên 80% Vàng, trên 70% Bạc, trên 60% Đồng, còn lại Khuyến khích; chỉ xét bạn có làm ít nhất 1 bài trong tuần. Admin xem ở **Bảng xếp hạng → Huy chương tuần**, sửa được tuần học tương ứng nếu lỡ đổi tuần sớm.
+- **Mỗi môn tối đa 3 đề/ngày** (tính cả làm lại; làm tiếp bài dở không tính). **Giờ làm bài**: T2–T6 17:00–22:30, T7 cả ngày, CN 0:00–22:00; ngoài giờ không bắt đầu đề mới được nhưng đề đang dở vẫn làm tiếp và nộp được.
 - Đang làm dở mà thoát ra: mở lại trong 3 giờ sẽ làm tiếp đúng chỗ cũ.
 - Thời gian tính theo giờ Việt Nam; tuần tính từ thứ Hai đến Chủ nhật.
+- Mọi con số ở mục này sửa được trong **Cài đặt**; từng môn đặt riêng ở **Bài học → Cài đặt môn** (ô để trống = theo cài đặt chung).
 
 ---
 
@@ -246,7 +255,7 @@ hoc-vui-lop-2/
 |---|---|
 | `npm run dev` | Chạy máy chủ phát triển |
 | `npm run build` | Kiểm tra kiểu TypeScript + đóng gói vào `dist/` |
-| `npm run test:sql` | Chạy 21 nhóm kiểm thử cho SQL (chấm điểm, xếp hạng, quyền truy cập, ngân hàng Archimes, Kỹ năng sống & Khoa học…) |
+| `npm run test:sql` | Chạy 24 nhóm kiểm thử cho SQL (chấm điểm, trừ điểm, sao/kim cương, giờ làm bài, giới hạn mỗi ngày, huy chương tuần, xếp hạng, bạn khách, quyền truy cập, ngân hàng Archimes, Kỹ năng sống & Khoa học…) |
 | `npm run seed:generate` | Sinh lại `supabase/seed.sql`, dữ liệu demo và file CSV mẫu |
 | `npm run archimes:check` | Chỉ kiểm tra dữ liệu ngân hàng Archimes (thêm tên quyển để kiểm 1 file, VD `-- tv2`) |
 | `npm run archimes:build` | Kiểm tra + sinh lại `supabase/archimes.sql` và `data/archimes.csv` |

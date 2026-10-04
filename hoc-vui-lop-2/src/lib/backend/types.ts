@@ -44,6 +44,7 @@ const KNOWN_CODES = [
   'student_not_found', 'student_disabled', 'self_register_disabled', 'invalid_name', 'lesson_not_available',
   'no_questions', 'attempt_not_found', 'attempt_completed', 'question_not_in_attempt', 'invalid_period',
   'invalid_exercise_type', 'not_admin', 'student_exists', 'subject_not_found',
+  'closed_hours', 'daily_limit_reached', 'invalid_week',
 ];
 
 export function toBackendError(err: unknown): BackendError {

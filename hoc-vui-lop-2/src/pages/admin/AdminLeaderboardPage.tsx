@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { Download, PieChart } from 'lucide-react';
-import { EmptyState, PageHeader, pct } from '../../components/admin';
+import { EmptyState, GuestBadge, PageHeader, pct } from '../../components/admin';
 import { PERIOD_LABEL } from '../../components/Leaderboard';
+import { WeeklyMedalsPanel } from '../../components/WeeklyMedalsPanel';
 import { AdminError, Avatar, LoadingBlock } from '../../components/ui';
 import { useAsync } from '../../hooks/useAsync';
 import { adminApi } from '../../lib/api';
@@ -12,6 +13,36 @@ import type { Period } from '../../types';
 const MEDAL = ['🥇', '🥈', '🥉'];
 
 export default function AdminLeaderboardPage() {
+  const [params, setParams] = useSearchParams();
+  const tab = params.get('tab') === 'medals' ? 'medals' : 'rank';
+  const setTab = (t: 'rank' | 'medals') => {
+    const next = new URLSearchParams(params);
+    if (t === 'medals') next.set('tab', 'medals'); else next.delete('tab');
+    setParams(next, { replace: true });
+  };
+  const tabs = (
+    <div className="flex w-fit rounded-lg bg-slate-100 p-1" role="tablist" aria-label="Chế độ xem">
+      <button type="button" role="tab" aria-selected={tab === 'rank'} onClick={() => setTab('rank')} className={pillClass(tab === 'rank')}>Xếp hạng điểm</button>
+      <button type="button" role="tab" aria-selected={tab === 'medals'} onClick={() => setTab('medals')} className={pillClass(tab === 'medals')}>Huy chương tuần</button>
+    </div>
+  );
+
+  if (tab === 'medals') {
+    return (
+      <div className="space-y-5">
+        <PageHeader title="Huy chương tuần" description="Xếp loại theo % điểm bài cơ bản làm lần đầu trong tuần so với điểm tối đa của các bài đã mở." />
+        {tabs}
+        <WeeklyMedalsPanel />
+      </div>
+    );
+  }
+  return <RankingView tabs={tabs} />;
+}
+
+const pillClass = (active: boolean) =>
+  `rounded-md px-4 py-1.5 text-sm font-medium whitespace-nowrap ${active ? 'bg-white text-blue-700 shadow-sm' : 'text-slate-600'}`;
+
+function RankingView({ tabs }: { tabs: ReactNode }) {
   const [period, setPeriod] = useState<Period>('week');
   const [params, setParams] = useSearchParams();
   const subjectId = params.get('subject') || null;
@@ -35,19 +66,20 @@ export default function AdminLeaderboardPage() {
     ]),
   );
 
-  const pill = (active: boolean) =>
-    `rounded-md px-4 py-1.5 text-sm font-medium whitespace-nowrap ${active ? 'bg-white text-blue-700 shadow-sm' : 'text-slate-600'}`;
+  const pill = pillClass;
 
   return (
     <div className="space-y-5">
       <PageHeader
         title={subject ? `Bảng xếp hạng môn ${subject.name}` : 'Bảng xếp hạng'}
-        description={<>Tính theo điểm các bài làm lần đầu{subject ? ` của môn ${subject.name}` : ' (cộng tất cả các môn)'}. {range && <b>{range}</b>}</>}
+        description={<>Tính theo điểm các bài làm lần đầu{subject ? ` của môn ${subject.name}` : ' (cộng tất cả các môn)'}. {range && <b>{range}</b>}
+          {data?.rows.some((r) => r.is_guest) && <> Bạn có nhãn <GuestBadge /> thấy bảng xếp hạng của tất cả mọi người; các bạn trong lớp chỉ thấy các bạn trong lớp.</>}</>}
         actions={<>
           <Link to="/admin/subject-stats" className="btn btn-secondary"><PieChart className="h-4 w-4" /> Thống kê theo môn</Link>
           <button type="button" className="btn btn-secondary" onClick={exportCsv} disabled={!data?.rows.length}><Download className="h-4 w-4" /> Xuất CSV</button>
         </>}
       />
+      {tabs}
       <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <div className="flex rounded-lg bg-slate-100 p-1 sm:w-fit">
           {(Object.keys(PERIOD_LABEL) as Period[]).map((p) => (
@@ -83,6 +115,7 @@ export default function AdminLeaderboardPage() {
                     <div className="flex items-center gap-3">
                       <Avatar name={r.full_name} id={r.student_id} size="h-8 w-8 text-xs" />
                       <span className="font-medium text-slate-800">{r.full_name}</span>
+                      {r.is_guest && <GuestBadge />}
                     </div>
                   </td>
                   <td className="td font-bold text-blue-700">{r.score}</td>

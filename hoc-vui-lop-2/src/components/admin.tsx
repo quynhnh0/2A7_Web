@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { ArrowDown, ArrowUp, ArrowUpDown } from 'lucide-react';
 import { DIFFICULTY_LABEL, TYPE_LABEL } from '../lib/text';
 
 export function PageHeader({ title, description, actions }: { title: string; description?: ReactNode; actions?: ReactNode }) {
@@ -71,6 +72,28 @@ export function DifficultyChip({ value }: { value: number }) {
 
 export function TypeChip({ value }: { value: string }) {
   return <span className="chip bg-slate-100 text-slate-700">{TYPE_LABEL[value] ?? value}</span>;
+}
+
+type SortProps = { label: string; active: boolean; asc: boolean; onClick: () => void; title?: string };
+
+/** Nút sắp xếp trong tiêu đề bảng; bấm lại để đảo chiều. */
+export function SortButton({ label, active, asc, onClick, title }: SortProps) {
+  const Icon = active ? (asc ? ArrowUp : ArrowDown) : ArrowUpDown;
+  return (
+    <button type="button" onClick={onClick} title={title ?? `Sắp xếp theo ${label.toLowerCase()}`}
+      aria-label={`${label}${active ? (asc ? ', đang xếp tăng dần' : ', đang xếp giảm dần') : ''}`}
+      className={`group inline-flex items-center gap-1 uppercase ${active ? 'text-blue-700' : 'hover:text-slate-700'}`}>
+      {label} <Icon className={`h-3 w-3 ${active ? '' : 'opacity-30 group-hover:opacity-70'}`} />
+    </button>
+  );
+}
+
+export function SortTh({ className = '', ...props }: SortProps & { className?: string }) {
+  return (
+    <th className={`th ${className}`} aria-sort={props.active ? (props.asc ? 'ascending' : 'descending') : 'none'}>
+      <SortButton {...props} />
+    </th>
+  );
 }
 
 export function EmptyState({ title, children }: { title: string; children?: ReactNode }) {

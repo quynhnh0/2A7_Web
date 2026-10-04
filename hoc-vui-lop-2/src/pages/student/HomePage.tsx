@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router';
-import { ChevronRight, Flame, Medal, Rocket, Star, Trophy, Zap } from 'lucide-react';
+import { ChevronRight, Clock, Flame, Gem, Lock, Medal, Moon, Rocket, Star, Trophy, Zap } from 'lucide-react';
 import { studentApi } from '../../lib/api';
 import { clearStudent, getStoredStudent, storeStudent } from '../../lib/studentSession';
-import { formatNumber, lessonLabel } from '../../lib/text';
+import { formatNumber, formatOpenTime, lessonLabel, MEDAL_INFO } from '../../lib/text';
 import { useAsync } from '../../hooks/useAsync';
 import { Avatar, LoadingBlock, StudentError, subjectEmoji, subjectStyle } from '../../components/ui';
 import type { BackendError } from '../../lib/backend';
-import type { HomeLesson, StudentHome } from '../../types';
+import type { DailyQuota, HomeLesson, MedalKind, ScheduleStatus, StudentHome, StudentRewards } from '../../types';
 
 function isDone(l: HomeLesson) {
   return l.basic_best !== null;
@@ -38,7 +38,25 @@ function Stars({ correct }: { correct: string | null }) {
   );
 }
 
-function LessonCard({ lesson }: { lesson: HomeLesson }) {
+/** null = được làm; còn lại là lý do khoá nút bắt đầu đề mới. */
+type LockReason = null | 'closed' | 'limit';
+
+function lockFor(home: StudentHome, subjectCode: string): LockReason {
+  if (home.schedule && !home.schedule.open) return 'closed';
+  const q = home.daily?.[subjectCode];
+  if (q && q.max > 0 && q.used >= q.max) return 'limit';
+  return null;
+}
+
+function LockedButton({ reason, className = '' }: { reason: Exclude<LockReason, null>; className?: string }) {
+  return (
+    <span className={`btn-kid btn-soft min-h-12 flex-1 cursor-not-allowed px-3 text-base opacity-70 ${className}`} aria-disabled>
+      <Lock className="h-5 w-5" /> {reason === 'closed' ? 'Chưa đến giờ' : 'Mai làm tiếp'}
+    </span>
+  );
+}
+
+function LessonCard({ lesson, lock, quota }: { lesson: HomeLesson; lock: LockReason; quota?: DailyQuota }) {
   const st = subjectStyle(lesson.subject_color);
   const done = isDone(lesson);
   const label = lessonLabel(lesson);
@@ -62,16 +80,112 @@ function LessonCard({ lesson }: { lesson: HomeLesson }) {
           {lesson.basic_ranked_score !== null && <span className="text-amber-600">• {lesson.basic_ranked_score} điểm</span>}
         </div>
       )}
+      {quota && quota.max > 0 && !lock && (
+        <p className="text-xs font-semibold text-slate-500">Hôm nay còn {quota.max - quota.used}/{quota.max} đề {lesson.subject_name}</p>
+      )}
       <div className="mt-auto flex gap-2">
-        <Link to={`/lesson/${lesson.id}?mode=basic`} className={`btn-kid ${done ? 'btn-soft' : 'btn-blue'} min-h-12 flex-1 px-3 text-base`}>
-          {done ? 'Làm lại' : 'Làm bài'}
-        </Link>
-        {lesson.has_advanced && (
-          <Link to={`/lesson/${lesson.id}?mode=advanced`} className="btn-kid btn-amber min-h-12 px-4 text-base" title="Thử thách nâng cao">
-            <Zap className="h-5 w-5" /> {lesson.advanced_correct ? lesson.advanced_correct : 'Nâng cao'}
-          </Link>
+        {lock ? (
+          <LockedButton reason={lock} />
+        ) : (
+          <>
+            <Link to={`/lesson/${lesson.id}?mode=basic`} className={`btn-kid ${done ? 'btn-soft' : 'btn-blue'} min-h-12 flex-1 px-3 text-base`}>
+              {done ? 'Làm lại' : 'Làm bài'}
+            </Link>
+            {lesson.has_advanced && (
+              <Link to={`/lesson/${lesson.id}?mode=advanced`} className="btn-kid btn-amber min-h-12 px-4 text-base" title="Thử thách nâng cao">
+                <Zap className="h-5 w-5" /> {lesson.advanced_correct ? lesson.advanced_correct : 'Nâng cao'}
+              </Link>
+            )}
+          </>
         )}
       </div>
+    </div>
+  );
+}
+
+function ScheduleBanner({ schedule }: { schedule: ScheduleStatus }) {
+  if (!schedule.enabled) return null;
+  if (!schedule.open) {
+    return (
+      <div className="flex items-center gap-3 rounded-3xl bg-indigo-50 px-5 py-4 text-indigo-900 ring-2 ring-indigo-200" role="status">
+        <Moon className="h-8 w-8 shrink-0 text-indigo-500" />
+        <div>
+          <p className="font-display text-lg font-bold">Bây giờ là giờ nghỉ ngơi 🌙</p>
+          <p className="text-sm">
+            {schedule.next_open_at ? <>Giờ làm bài mở lại lúc <b>{formatOpenTime(schedule.next_open_at)}</b>. </> : null}
+            Bạn vẫn xem được điểm và bảng xếp hạng nhé!
+          </p>
+        </div>
+      </div>
+    );
+  }
+  const minutesLeft = schedule.closes_at ? Math.round((new Date(schedule.closes_at).getTime() - Date.now()) / 60000) : null;
+  if (minutesLeft === null || minutesLeft > 60) return null;
+  return (
+    <div className="flex items-center gap-3 rounded-3xl bg-amber-50 px-5 py-3 font-semibold text-amber-900 ring-2 ring-amber-200" role="status">
+      <Clock className="h-6 w-6 shrink-0 text-amber-500" /> Còn khoảng {Math.max(1, minutesLeft)} phút nữa là hết giờ làm bài hôm nay.
+    </div>
+  );
+}
+
+function RewardsCard({ rewards }: { rewards: StudentRewards }) {
+  const toNext = rewards.stars_per_diamond - rewards.stars;
+  const week = rewards.this_week;
+  const t = rewards.thresholds;
+  const counts = (['gold', 'silver', 'bronze', 'encourage'] as MedalKind[]).filter((k) => rewards.medal_counts[k]);
+  return (
+    <div className="card flex flex-col gap-4 p-5">
+      <h2 className="flex items-center gap-2 font-display text-xl font-bold text-slate-800"><Gem className="h-6 w-6 text-sky-500" /> Kho báu của bạn</h2>
+      <div className="flex items-center gap-3">
+        <div className="flex flex-1 items-center gap-2 rounded-2xl bg-sky-50 px-3 py-2 ring-1 ring-sky-200">
+          <span className="text-2xl" aria-hidden>💎</span>
+          <div><div className="font-display text-2xl font-bold text-sky-700">{formatNumber(rewards.diamonds)}</div><div className="text-xs font-semibold text-slate-500">kim cương</div></div>
+        </div>
+        <div className="flex flex-1 items-center gap-2 rounded-2xl bg-amber-50 px-3 py-2 ring-1 ring-amber-200">
+          <span className="text-2xl" aria-hidden>⭐</span>
+          <div><div className="font-display text-2xl font-bold text-amber-600">{formatNumber(rewards.stars)}</div><div className="text-xs font-semibold text-slate-500">sao</div></div>
+        </div>
+      </div>
+      <div>
+        <div className="h-3 overflow-hidden rounded-full bg-slate-100" role="progressbar" aria-valuemin={0} aria-valuemax={rewards.stars_per_diamond} aria-valuenow={rewards.stars}>
+          <div className="h-full rounded-full bg-gradient-to-r from-amber-300 to-sky-400" style={{ width: `${(100 * rewards.stars) / rewards.stars_per_diamond}%` }} />
+        </div>
+        <p className="mt-1 text-xs font-semibold text-slate-500">Thêm {toNext} sao nữa để đổi 1 kim cương ({rewards.stars_per_diamond} sao = 1 💎)</p>
+      </div>
+
+      {rewards.medal_eligible === false && (
+        <p className="rounded-2xl bg-slate-50 p-3 text-xs font-semibold text-slate-500">Huy chương tuần chỉ dành cho các bạn trong lớp. Bạn vẫn nhận sao và kim cương như mọi bạn nhé!</p>
+      )}
+      {week && (
+        <div className="rounded-2xl bg-slate-50 p-3">
+          <div className="flex items-center justify-between gap-2">
+            <span className="font-bold text-slate-700">Huy chương tuần này</span>
+            {week.medal && <span className={`chip ${MEDAL_INFO[week.medal].className}`}>{MEDAL_INFO[week.medal].emoji} {MEDAL_INFO[week.medal].label}</span>}
+          </div>
+          <div className="relative mt-3 h-3 rounded-full bg-slate-200">
+            <div className="h-full rounded-full bg-emerald-500" style={{ width: `${Math.min(100, week.pct)}%` }} />
+            {[t.bronze, t.silver, t.gold].map((p, i) => (
+              <span key={p + '-' + i} className="absolute -top-1 h-5 w-0.5 bg-slate-400" style={{ left: `${p}%` }} aria-hidden />
+            ))}
+          </div>
+          <div className="relative mt-1 h-4 text-[10px] font-bold text-slate-500">
+            <span className="absolute -translate-x-1/2" style={{ left: `${t.bronze}%` }}>🥉</span>
+            <span className="absolute -translate-x-1/2" style={{ left: `${t.silver}%` }}>🥈</span>
+            <span className="absolute -translate-x-1/2" style={{ left: `${t.gold}%` }}>🥇</span>
+          </div>
+          <p className="mt-1 text-xs font-semibold text-slate-500">
+            {formatNumber(week.score)}/{formatNumber(week.max_score)} điểm ({week.pct}%) các bài tuần {week.class_week}. Trên {t.gold}% được Vàng, trên {t.silver}% Bạc, trên {t.bronze}% Đồng.
+          </p>
+        </div>
+      )}
+      {(rewards.last_week?.medal || counts.length > 0) && (
+        <div className="flex flex-wrap items-center gap-2 text-sm">
+          {rewards.last_week?.medal && (
+            <span className={`chip ${MEDAL_INFO[rewards.last_week.medal].className}`}>Tuần trước: {MEDAL_INFO[rewards.last_week.medal].emoji} {MEDAL_INFO[rewards.last_week.medal].label}</span>
+          )}
+          {counts.map((k) => <span key={k} className="chip bg-white text-slate-600 ring-1 ring-slate-200">{MEDAL_INFO[k].emoji} × {rewards.medal_counts[k]}</span>)}
+        </div>
+      )}
     </div>
   );
 }
@@ -141,6 +255,9 @@ export default function HomePage() {
   const current = lessons.filter((l) => l.week_number >= week);
   const pastWeeks = Array.from(new Set(lessons.filter((l) => l.week_number < week).map((l) => l.week_number))).sort((a, b) => b - a);
   const doneCount = current.filter(isDone).length;
+  const card = (l: HomeLesson) => <LessonCard key={l.id} lesson={l} lock={lockFor(home, l.subject_code)} quota={home.daily?.[l.subject_code]} />;
+  const todayLock = today ? lockFor(home, today.subject_code) : null;
+  const todayQuota = today ? home.daily?.[today.subject_code] : undefined;
 
   return (
     <div className="flex flex-col gap-8">
@@ -162,11 +279,18 @@ export default function HomePage() {
               <span className="flex items-center gap-2 rounded-2xl bg-white/90 px-4 py-2 font-bold text-slate-700 shadow-sm">
                 <Flame className="h-5 w-5 text-rose-500" /> {formatNumber(home.points.week)} điểm tuần
               </span>
+              {home.rewards && (
+                <span className="flex items-center gap-2 rounded-2xl bg-white/90 px-4 py-2 font-bold text-slate-700 shadow-sm">
+                  💎 {formatNumber(home.rewards.diamonds)} · ⭐ {formatNumber(home.rewards.stars)}
+                </span>
+              )}
             </div>
           </div>
           <div className="hidden h-36 w-36 shrink-0 items-center justify-center rounded-3xl bg-white/70 text-8xl shadow-inner sm:flex" aria-hidden>🦉</div>
         </div>
       </section>
+
+      {home.schedule && <ScheduleBanner schedule={home.schedule} />}
 
       {/* Bài hôm nay */}
       <section>
@@ -183,12 +307,16 @@ export default function HomePage() {
                   <span className="chip bg-emerald-100 text-emerald-800 uppercase">{today.subject_name} • {lessonLabel(today).tag}</span>
                   <h3 className="mt-1 font-display text-2xl font-bold text-emerald-700">🟢 Luyện tập cơ bản</h3>
                 </div>
-                <span className="rounded-2xl bg-slate-100 px-3 py-1.5 text-sm font-bold whitespace-nowrap text-slate-600">{home.basic_count} câu</span>
+                <span className="rounded-2xl bg-slate-100 px-3 py-1.5 text-sm font-bold whitespace-nowrap text-slate-600">{todayQuota?.basic_count ?? home.basic_count} câu</span>
               </div>
               <p className="text-lg text-slate-700"><strong>{lessonLabel(today).title}</strong></p>
-              <Link to={`/lesson/${today.id}?mode=basic`} className="btn-kid btn-green mt-auto text-xl">
-                <Rocket className="h-6 w-6" /> BẮT ĐẦU LÀM BÀI
-              </Link>
+              {todayLock ? (
+                <LockedButton reason={todayLock} className="mt-auto flex-none text-xl" />
+              ) : (
+                <Link to={`/lesson/${today.id}?mode=basic`} className="btn-kid btn-green mt-auto text-xl">
+                  <Rocket className="h-6 w-6" /> BẮT ĐẦU LÀM BÀI
+                </Link>
+              )}
             </div>
             {today.has_advanced && (
               <div className="card relative flex flex-col gap-4 overflow-hidden p-6 pt-8">
@@ -198,12 +326,16 @@ export default function HomePage() {
                     <span className="chip bg-amber-100 text-amber-800 uppercase">Dành cho bạn giỏi</span>
                     <h3 className="mt-1 font-display text-2xl font-bold text-amber-600">🔥 Thử thách nâng cao</h3>
                   </div>
-                  <span className="rounded-2xl bg-amber-100 px-3 py-1.5 text-sm font-bold whitespace-nowrap text-amber-800">{home.advanced_count} câu</span>
+                  <span className="rounded-2xl bg-amber-100 px-3 py-1.5 text-sm font-bold whitespace-nowrap text-amber-800">{todayQuota?.advanced_count ?? home.advanced_count} câu</span>
                 </div>
                 <p className="text-lg text-slate-700">Nhiều câu khó hơn, <strong>nhiều sao hơn</strong>!</p>
-                <Link to={`/lesson/${today.id}?mode=advanced`} className="btn-kid btn-amber mt-auto text-xl">
-                  <Zap className="h-6 w-6" /> THỬ SỨC NGAY
-                </Link>
+                {todayLock ? (
+                  <LockedButton reason={todayLock} className="mt-auto flex-none text-xl" />
+                ) : (
+                  <Link to={`/lesson/${today.id}?mode=advanced`} className="btn-kid btn-amber mt-auto text-xl">
+                    <Zap className="h-6 w-6" /> THỬ SỨC NGAY
+                  </Link>
+                )}
               </div>
             )}
           </div>
@@ -243,7 +375,7 @@ export default function HomePage() {
             )}
             {current.length ? (
               <div className="grid gap-4 sm:grid-cols-2">
-                {current.map((l) => <LessonCard key={l.id} lesson={l} />)}
+                {current.map(card)}
               </div>
             ) : (
               <p className="card p-6 text-center text-slate-500">Tuần này chưa có bài mới. Bạn ôn lại các tuần trước nhé!</p>
@@ -265,7 +397,7 @@ export default function HomePage() {
                       </span>
                     </summary>
                     <div className="grid gap-4 border-t border-slate-100 p-4 sm:grid-cols-2">
-                      {items.map((l) => <LessonCard key={l.id} lesson={l} />)}
+                      {items.map(card)}
                     </div>
                   </details>
                 );
@@ -274,6 +406,7 @@ export default function HomePage() {
           )}
         </div>
         <aside className="flex flex-col gap-6">
+          {home.rewards && <RewardsCard rewards={home.rewards} />}
           <MiniLeaderboard studentId={stored.id} />
         </aside>
       </div>

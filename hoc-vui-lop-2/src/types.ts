@@ -3,6 +3,12 @@ export type ExerciseType = 'basic' | 'advanced';
 export type Period = 'day' | 'week' | 'month';
 export type PublishMode = 'always' | 'week' | 'date';
 export type SubjectColor = 'blue' | 'green' | 'amber' | 'rose' | 'purple';
+export type RetakeMode = 'per_correct' | 'pair';
+/** 'ranked' = lần làm đầu (tính BXH); còn lại là kiểu tính sao của lần làm lại. */
+export type ScoringMode = 'ranked' | RetakeMode;
+export type MedalKind = 'gold' | 'silver' | 'bronze' | 'encourage';
+/** Thứ theo ISO: '1' = thứ Hai … '7' = Chủ nhật → [giờ mở, giờ đóng] dạng 'HH:MM'. */
+export type WeekSchedule = Partial<Record<'1' | '2' | '3' | '4' | '5' | '6' | '7', [string, string]>>;
 
 export interface PublicConfig {
   class_name: string;
@@ -10,6 +16,50 @@ export interface PublicConfig {
   current_week: number;
   leaderboard_enabled: boolean;
   allow_self_register: boolean;
+  stars_per_diamond?: number;
+}
+
+export interface WeekMedal {
+  score: number;
+  max_score: number;
+  pct: number;
+  medal: MedalKind | null;
+  class_week: number;
+}
+
+export interface StudentRewards {
+  stars_total: number;
+  stars_per_diamond: number;
+  diamonds: number;
+  stars: number;
+  thresholds: { gold: number; silver: number; bronze: number };
+  /** false = bạn khách (tên có dấu "-"): không xét huy chương, vẫn có sao/kim cương. */
+  medal_eligible?: boolean;
+  this_week: WeekMedal | null;
+  last_week: WeekMedal | null;
+  medal_counts: Partial<Record<MedalKind, number>>;
+}
+
+export interface ScheduleStatus {
+  enabled: boolean;
+  open: boolean;
+  closes_at?: string | null;
+  next_open_at?: string | null;
+  schedule: WeekSchedule;
+}
+
+export interface DailyQuota {
+  used: number;
+  /** 0 = không giới hạn */
+  max: number;
+  basic_count: number;
+  advanced_count: number;
+}
+
+export interface ScoringInfo {
+  mode: ScoringMode;
+  wrong_penalty: number;
+  floor_zero: boolean;
 }
 
 export interface StudentIdentity {
@@ -53,6 +103,10 @@ export interface StudentHome {
   basic_count: number;
   advanced_count: number;
   lessons: HomeLesson[];
+  /** Các field dưới đây chỉ có khi database đã chạy 0006. */
+  rewards?: StudentRewards;
+  schedule?: ScheduleStatus;
+  daily?: Record<string, DailyQuota>;
 }
 
 export interface LessonInfo {
@@ -69,7 +123,8 @@ export interface ExerciseQuestion {
   type: QuestionType;
   text: string;
   difficulty: 1 | 2 | 3;
-  points: number;
+  /** null = làm lại kiểu "cặp" (sao được chốt khi nộp bài). */
+  points: number | null;
   options: string[] | null;
 }
 
@@ -86,6 +141,7 @@ export interface AttemptPayload {
   is_ranked: boolean;
   exercise_type: ExerciseType;
   completed: boolean;
+  scoring?: ScoringInfo;
   lesson: LessonInfo;
   questions: ExerciseQuestion[];
   answered: Record<string, AnswerResult>;
@@ -115,6 +171,9 @@ export interface AttemptResult {
   total_questions: number;
   duration_seconds: number | null;
   completed_at: string | null;
+  scoring?: ScoringInfo;
+  points_gained?: number;
+  points_lost?: number;
   lesson: LessonInfo;
   review: ReviewItem[];
 }
@@ -128,13 +187,6 @@ export interface LeaderboardRow {
   accuracy: number;
   rank: number;
   is_guest?: boolean;
-}
-
-export interface LeaderboardSubject {
-  id: string;
-  code: string;
-  name: string;
-  color: SubjectColor;
 }
 
 export interface LeaderboardSubject {
@@ -175,6 +227,63 @@ export interface AppSettings {
   points_easy: number;
   points_normal: number;
   points_advanced: number;
+  // 0006
+  adv_points_easy: number;
+  adv_points_normal: number;
+  adv_points_advanced: number;
+  wrong_penalty: number;
+  score_floor_zero: boolean;
+  retake_mode: RetakeMode;
+  daily_max_lessons: number;
+  stars_per_diamond: number;
+  medal_gold_pct: number;
+  medal_silver_pct: number;
+  medal_bronze_pct: number;
+  medal_include_advanced: boolean;
+  schedule_enabled: boolean;
+  schedule: WeekSchedule;
+  adapt_min_answers: number;
+  adapt_up_pct: number;
+  adapt_down_pct: number;
+}
+
+/** Cài đặt riêng của môn: null = theo cài đặt chung. */
+export interface SubjectSettings {
+  subject_id: string;
+  daily_max_lessons: number | null;
+  basic_easy: number | null;
+  basic_normal: number | null;
+  basic_advanced: number | null;
+  adv_easy: number | null;
+  adv_normal: number | null;
+  adv_advanced: number | null;
+  points_easy: number | null;
+  points_normal: number | null;
+  points_advanced: number | null;
+  adv_points_easy: number | null;
+  adv_points_normal: number | null;
+  adv_points_advanced: number | null;
+  wrong_penalty: number | null;
+  retake_mode: RetakeMode | null;
+}
+
+export interface WeeklyMedalRow extends WeekMedal {
+  student_id: string;
+  full_name: string;
+  display_name: string;
+  medal: MedalKind;
+  is_guest: boolean;
+}
+
+export interface AdminWeeklyMedals {
+  week_start: string;
+  is_current: boolean;
+  class_week: number | null;
+  max_score: number;
+  include_advanced: boolean;
+  thresholds: { gold: number; silver: number; bronze: number };
+  rows: WeeklyMedalRow[];
+  weeks: Array<{ week_start: string; class_week: number }>;
 }
 
 export interface Subject {
@@ -243,6 +352,9 @@ export interface QuestionView extends Question {
   answered_count: number;
   correct_count: number;
 }
+
+/** Số liệu của 1 học sinh trong một khoảng thời gian (cùng cách tính với v_student_stats). */
+export type StudentActivity = Pick<StudentStats, 'attempts_completed' | 'total_score' | 'accuracy' | 'last_active_at'>;
 
 export interface StudentStats {
   id: string;

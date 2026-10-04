@@ -9,6 +9,7 @@ import { isMuted, playCorrect, playFinish, playWrong, setMuted } from '../../lib
 import { useAsync } from '../../hooks/useAsync';
 import { ChoiceAnswer, NumberAnswer, QuestionText, TextAnswer } from '../../components/QuestionInput';
 import { LoadingBlock, StudentError, studentMessage, subjectStyle } from '../../components/ui';
+import type { BackendError } from '../../lib/backend';
 import type { AnswerResult, ExerciseType } from '../../types';
 
 const PRAISE = ['Đúng rồi! Giỏi quá! 🎉', 'Chính xác! 🌟', 'Tuyệt vời! 👏', 'Xuất sắc! 🏆', 'Hay lắm! 💪'];
@@ -47,7 +48,11 @@ export default function LessonPage() {
   const result = question ? answered[question.id] ?? null : null;
   const total = attempt?.questions.length ?? 0;
   const answeredCount = Object.keys(answered).length;
-  const earned = Object.values(answered).reduce((s, a) => s + a.score_awarded, 0);
+  const rawEarned = Object.values(answered).reduce((s, a) => s + a.score_awarded, 0);
+  const earned = attempt?.scoring?.floor_zero === false ? rawEarned : Math.max(0, rawEarned);
+  const correctSoFar = Object.values(answered).filter((a) => a.is_correct).length;
+  const scoringMode = attempt?.scoring?.mode ?? (attempt?.is_ranked ? 'ranked' : 'per_correct');
+  const penalty = attempt?.scoring?.wrong_penalty ?? 0;
   const isLast = index === total - 1;
 
   const options = useMemo(() => {
@@ -98,6 +103,15 @@ export default function LessonPage() {
 
   if (!student) return <Navigate to="/select-student" replace />;
   if (loading && !attempt) return <LoadingBlock label="Đang lấy câu hỏi…" />;
+  const errCode = (error as BackendError | null)?.code;
+  if (errCode === 'closed_hours' || errCode === 'daily_limit_reached') {
+    return (
+      <div className="flex flex-col items-center gap-4">
+        <StudentError error={error} />
+        <Link to="/home" className="btn-kid btn-blue"><ArrowLeft className="h-5 w-5" /> Về trang bài tập</Link>
+      </div>
+    );
+  }
   if (error || !attempt) return <StudentError error={error} onRetry={reload} />;
   if (!question) return <StudentError error={{ code: 'no_questions' }} />;
 
@@ -117,8 +131,11 @@ export default function LessonPage() {
           </div>
           <h1 className="truncate font-display text-lg font-bold text-slate-800 sm:text-xl">{lessonLabel(attempt.lesson).tag}: {lessonLabel(attempt.lesson).title}</h1>
         </div>
-        <span className="flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1.5 font-bold text-amber-800">
-          <Star className="h-5 w-5 text-amber-500" fill="currentColor" /> {earned}
+        <span className="flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1.5 font-bold text-amber-800"
+          title={scoringMode === 'pair' ? 'Số câu đúng' : 'Điểm/sao đã nhận'}>
+          {scoringMode === 'pair'
+            ? <><CheckCircle2 className="h-5 w-5 text-emerald-600" /> {correctSoFar}</>
+            : <><Star className="h-5 w-5 text-amber-500" fill="currentColor" /> {earned}</>}
         </span>
         <button type="button" className="rounded-xl bg-slate-100 p-2.5 text-slate-600" onClick={() => { setMuted(!muted); setMutedState(!muted); }}
           aria-label={muted ? 'Bật âm thanh' : 'Tắt âm thanh'}>
@@ -126,11 +143,19 @@ export default function LessonPage() {
         </button>
       </div>
 
-      {!attempt.is_ranked && (
+      {!attempt.is_ranked ? (
         <div className="flex items-center gap-2 rounded-2xl bg-sky-50 px-4 py-3 text-sm font-semibold text-sky-800 ring-1 ring-sky-200">
-          <Info className="h-5 w-5 shrink-0" /> Bạn đã làm bài này rồi. Lần này để luyện tập thêm, không tính điểm xếp hạng.
+          <Info className="h-5 w-5 shrink-0" />
+          <span>
+            Bạn đã làm bài này rồi. Lần này để luyện tập: không tính bảng xếp hạng, nhưng vẫn được cộng sao
+            {scoringMode === 'pair' ? ' (cứ 2 câu đúng được 1 sao, 2 câu sai bị trừ 1 sao).' : ' (mỗi câu đúng 1 sao).'}
+          </span>
         </div>
-      )}
+      ) : penalty > 0 && answeredCount === 0 ? (
+        <div className="flex items-center gap-2 rounded-2xl bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-800 ring-1 ring-amber-200">
+          <Info className="h-5 w-5 shrink-0" /> Mỗi câu sai bị trừ {penalty} điểm. Đọc kỹ đề rồi hãy trả lời nhé!
+        </div>
+      ) : null}
 
       {/* Tiến độ */}
       <div className="flex items-center gap-3">
@@ -152,7 +177,8 @@ export default function LessonPage() {
       <div key={question.id} className="card flex flex-col gap-6 p-5 sm:p-8 animate-rise">
         <div className="flex items-center justify-between gap-2">
           <span className="chip bg-slate-100 text-slate-600">
-            Câu {index + 1} • {question.difficulty === 3 ? '🔥 Khó' : question.difficulty === 2 ? 'Vừa' : 'Dễ'} • +{question.points} điểm
+            Câu {index + 1} • {question.difficulty === 3 ? '🔥 Khó' : question.difficulty === 2 ? 'Vừa' : 'Dễ'}
+            {question.points !== null && <> • +{question.points} {scoringMode === 'ranked' ? 'điểm' : 'sao'}</>}
           </span>
           {canSpeak && (
             <button type="button" onClick={() => speak(question.text)} className="flex items-center gap-1.5 rounded-xl bg-blue-50 px-3 py-2 text-sm font-bold text-blue-700 hover:bg-blue-100">
@@ -182,7 +208,8 @@ export default function LessonPage() {
               <span className={`font-display text-2xl font-bold ${result.is_correct ? 'text-emerald-700' : 'text-rose-600'}`}>
                 {result.is_correct ? PRAISE[index % PRAISE.length] : ENCOURAGE[index % ENCOURAGE.length]}
               </span>
-              {result.is_correct && <span className="ml-auto rounded-full bg-amber-400 px-3 py-1 font-bold text-white">+{result.score_awarded} ⭐</span>}
+              {result.score_awarded > 0 && <span className="ml-auto rounded-full bg-amber-400 px-3 py-1 font-bold text-white">+{result.score_awarded} ⭐</span>}
+              {result.score_awarded < 0 && <span className="ml-auto rounded-full bg-rose-400 px-3 py-1 font-bold text-white">{result.score_awarded}</span>}
             </div>
             {!result.is_correct && (
               <p className="text-lg text-slate-700">Đáp án đúng là: <strong className="text-emerald-700">{result.correct_answer}</strong></p>

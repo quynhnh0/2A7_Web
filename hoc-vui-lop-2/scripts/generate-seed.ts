@@ -138,7 +138,11 @@ on conflict do nothing;
 do $$
 declare
   s record; l record; a jsonb; q jsonb; ans text; skill float; ago interval; aid uuid; dur int;
+  v_sched boolean; v_daily int;
 begin
+  -- Tạm tắt giờ làm bài / giới hạn mỗi ngày (0006) để sinh dữ liệu ở bất kỳ giờ nào.
+  select schedule_enabled, daily_max_lessons into v_sched, v_daily from public.app_settings where id = 1;
+  update public.app_settings set schedule_enabled = false, daily_max_lessons = 0 where id = 1;
   for s in select id from public.students order by full_name loop
     skill := 0.55 + random() * 0.42;
     for l in select id from public.lessons where is_published and week_number <= 4 order by random() limit 3 + floor(random() * 5)::int loop
@@ -160,6 +164,7 @@ begin
       update public.attempt_answers set answered_at = answered_at - ago where attempt_id = aid;
     end loop;
   end loop;
+  update public.app_settings set schedule_enabled = v_sched, daily_max_lessons = v_daily where id = 1;
 end $$;
 `);
 
